@@ -747,6 +747,7 @@ def CH_Up2(request):
     return render(request, 'HTML/CH/Bottom-up/blank2.html', {
         "tech": tech,
         "task":task,
+        "de":de,
     })
 
 
