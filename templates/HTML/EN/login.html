@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/enlanguage.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>Login</title>
+</head>
+<body onload="repeating()">
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="button" name="" value="Next" id="butt-next" onclick="showregisteren()">
+	</div>
+
+	<div class="bannder3">
+		
+	</div>
+
+	<div class="instructionen">
+			<p>Please use your email address or a random number to register.</p>
+			<p>As the three tasks have correct answer, we expected you to answer the questions as best you can.</p>
+			<p>If you register with your email address, we will choose the top 10% participants and they will be rewarded with a XX gift card upon XXX.</p>
+			<div class="log_in">
+				<form method="post" action="">
+				<span><input type="text"  name="username" id="username" value="Email/Random Name" onfocus='if(this.value=="Email/Random Name"){this.value="";}; 'onblur='if(this.value==""){this.value="Email/Random Name";};'/>
+                      <label class="remindingen" id="repeated">{{ msg }}</label>
+                </span>
+				</form>
+			</div>
+	</div>
+</body>
+</html>

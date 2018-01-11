@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="../../CSS/body.css"  />
+    <link rel="stylesheet" type="text/css" href="../../CSS/task.css"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="../../JS/myscript.js"></script>
+    <script type="text/javascript">
+    $(function(){
+    	$('.bottoming').click(function(){
+   			$('.showing').slideToggle(1000);
+    	})
+    })
+	
+</script>
+    <title>Blank</title>
+</head>
+<body onload="time_fun()">
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="../../img/kit2.png">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<div class="timing">
+ 			<span>Time</span>	<span id="mytime">0 min 00 sec</span>
+ 			</div>
+			<input type="button" name="" value="Next" id="queren" onclick="checkrepeat()">
+	</div>
+
+	<div class="bannder7">
+		
+	</div>
+
+	<div class="mainbody">
+		<div class="bottomup">  <!-- Taxonomy部分 -->
+			<dl id="notshow">
+				<dt>Design Phase</dt>
+					<dd class="bottomin" onclick="filter(this)">User Research</dd>
+					<dd class="bottomin">Idea Generation</dd>
+					<dd class="bottomin">Creation and Evaluation
+						<dd class="topin">Prototype Evaluation</dd>
+						<dd class="topin">Product Evaluation</dd>
+					</dd>
+				<dt>Design Data Collection</dt>
+					<dd class="bottomin">Information Organization</dd>
+					<dd class="bottomin">Observation</dd>
+					<dd class="bottomin">User Simulation</dd>
+					<dd class="bottomin">Relationship and Dependency</dd>
+					<dd class="bottomin">Prototyping</dd>
+					<dd class="bottomin">Feedback Collection</dd>
+					<dd class="bottomin">UX Evaluation</dd>
+				<dt>Duration</dt>
+					<dd class="bottomin">Short-term</dd>
+					<dd class="bottomin">Long-term</dd>
+					<dd class="bottomin">Flexible</dd>
+				<dt>Participant</dt>
+					<dd class="bottomin">User</dd>
+					<dd class="bottomin">Stakeholder</dd>
+					<dd class="bottomin">Expert</dd>
+				</dl>
+		</div> 
+		
+		<div class="teches">	
+				<table>
+					<tr>
+						<td>
+							<div class="tech">
+							<div class="sstyle">
+							<h4>3-12-3 Brainstorming</h4><img class="topshow" src="../../img/plus1.png" 
+							onclick="addtech(this)">
+							</div>
+							<div class="contenting">
+								<p class="dd">AAABBBCCCDDD</p>
+								<div class="showing">
+									<p>
+									I am a princesee and surroundings when using the App and generate some ideas.when using the App and generate some ideas.when using the App and generate some ideas.when using the App and generate some ideas.when using the App and generate some ideas.hen using the App and generate some ideas.hen using the App and generate some ideas.
+									</p>
+								</div>
+							</div>
+						</div></td>
+						<td>
+							<div class="tech">
+							<div class="sstyle">
+							<h4 >3E- Expressing Emotion and Experience</h4><img class="topshow" src="../../img/plus1.png" 
+							onclick="addtech(this)">
+							</div>	
+							<div class="contenting">
+								
+							<div class="showing">
+									<p>
+									between different roles and surroundings when using the App and generate some ideas.when using the App and generate some ideas.when using the App and generate some ideas.when using the App and generate some ideas.when using the App and generate some ideas.hen using the App and generate some ideas.hen using the App and generate some ideas.
+									</p>
+								</div>
+							</div>
+						</div></td>
+						<td><div class="tech">
+							<h4 class="cc" onclick="showchoisen(this)">6-3-5 Brainwriting</h4>
+							<div class="contenting">
+								
+						</div>
+						</div></td>
+						<td><div class="tech">
+							<h4 onclick="showchoisen(this)">A/B Testing</h4>
+							<div class="contenting">
+								
+							</div>
+						</div></td>
+					</tr>
+					<tr>
+						<td><div class="tech">稍微加几个</div></td>
+						<td><div class="tech">rhgsaigyawhe</div></td>
+						<td><div class="tech">dfhsfh</div></td>
+					</tr>
+					<tr>
+						<td><div class="tech">
+							<h4>3-12-3 Brainstorming</h4>
+							<p>3-12-3 Brainstorming is a time-limited brainstorming technique, which enables a group (not exceed 10 group members) to focus on generating.</p>
+						</div></td>
+						<td><div class="tech">kgyufhv</div></td>
+						<td><div class="tech">dfhsfh</div></td>
+					</tr>
+					<tr>
+						<td><div class="tech">
+							<h4>3-12-3 Brainstorming</h4>
+							<p>3-12-3 Brainstorming is a time-limited brainstorming technique, which enables a group (not exceed 10 group members) to focus on generating.</p>
+						</div></td>
+						<td><div class="tech">rhgsaigyawhe</div></td>
+						<td><div class="tech">dfhsfh</div></td>
+					</tr>
+					<tr>
+						<td><div class="tech">
+							<h4>3-12-3 Brainstorming</h4>
+							<p>3-12-3 Brainstorming is a time-limited brainstorming technique, which enables a group (not exceed 10 group members) to focus on generating.</p>
+						</div></td>
+						<td><div class="tech">rhgsaigyawhe</div></td>
+						<td><div class="tech">dfhsfh</div></td>
+					</tr>
+					<tr>
+						<td><div class="tech">
+							<h4>3-12-3 Brainstorming</h4>
+							<p>3-12-3 Brainstorming is a time-limited brainstorming technique, which enables a group (not exceed 10 group members) to focus on generating.</p>
+						</div></td>
+						<td><div class="tech">rhgsaigyawhe</div></td>
+						<td><div class="tech">dfhsfh</div></td>
+					</tr>
+					<tr>
+						<td><div class="tech">
+							<span class="topshow"><h4>3-12-3 Brainstorming</h4></span>
+							<p>3-12-3 Brainstorming is a time-limited brainstorming technique, which enables a group (not exceed 10 group members) to focus on generating.</p>
+						</div></td>
+						<td><div class="tech">rhgsaigyawhe</div></td>
+						<td><div class="tech">dfhsfh</div></td>
+					</tr>
+				</table>
+		</div>
+
+		<div class="selected">  
+ 			<div class="taskdiscription">
+ 				<h4 class="aa">Task1</h4>
+ 				<p class="bb">You are at an early stage of the project. You can get a group of people from different backgrounds (e.g., users, stakeholders) to discuss the project. You plan to understand and analyze the relations between different roles and surroundings when using the App and generate some ideas.
+				</p>
+ 			</div>
+ 			
+ 			<div class="biaoge">
+ 				<form method="post" action="">
+ 					<dl>
+ 					<dt>Please select 3 design techniques for task 1</dt>
+					<dt>Please click on "+" and the selected design techniques will be appeared here.</dt>
+					<dd id="sam1"><span id="same1"></span><img id="same11" src="../../img/chacha3.png" onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(1);"></dd>
+					<dd id="sam2"><span id="same2">brainstromdgae</span><img id="same22" src="../../img/chacha3.png" onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(2);"></dd>
+					<dd id="sam3"><span id="same3">brga</span><img src="../../img/chacha3.png" id="same33" onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(3);"></dd>
+					</dl>
+				</form>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="feet">
+		
+	</div>
+</body>
+</html>

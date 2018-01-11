@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>Instruction</title>
+</head>
+<body>
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+        <form action="{% url 'classification:LogCh' %}">
+            {% csrf_token %}
+			<input type="submit" name="" value="下一步"  id="butt-next">
+        </form>
+	</div>
+
+	<div class="bannder2">
+		
+	</div>
+
+	<div class="instruction">
+			<p>指示：</p>
+			<p>在线实验包括三个步骤：</p></br>
+
+            <p>步骤1.注册</p>
+        	<p>在下一页中，您需要注册在线实验。 您可以使用电子邮件地址或随机数字进行注册。</p></br>
+
+			<p>步骤2.问卷</p>
+			<p>注册实验后，您将首先填写一个简短的问卷。</p></br>
+
+			<p>步骤3：三个任务+三个问卷</p>
+			<p>将有三个任务。 每个任务完成后，会有一个简短的问卷。</p></br>
+	</div>
+</body>
+</html>

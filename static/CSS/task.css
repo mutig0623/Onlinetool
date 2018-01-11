@@ -1,0 +1,16 @@
+.biaoge #queren{
+	float: right;
+	margin-top: 30px;
+	margin-right: 20px;
+	position:relative;
+	width: 80px;
+	height: 30px;
+	color:#7B68FF;
+	border-radius: 5px;
+	box-shadow: 4px 1px #C0C0C0;
+}
+
+#queren:hover{
+	background-color: #41C7DB;
+	cursor: pointer;
+}

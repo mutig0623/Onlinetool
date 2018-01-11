@@ -1,0 +1,203 @@
+.instructionen{
+	padding-top: 30px;
+	margin:0 auto;
+	width: 800px;
+	height: 600px;
+	padding-left: 30px;
+}
+
+.instructionen p{
+	margin-bottom: 5px;
+}
+
+.Quesen{
+	margin-left: 10px;
+	width: 400px;
+	display:inline-block;
+	vertical-align:middle;
+	font-size: 14px;
+}
+
+.seclowen{
+	display:inline-block;
+	vertical-align: middle;
+	margin-left: 6px;
+}
+
+#sti{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.main p{
+	width: 800px;
+}
+
+.bottomupen{
+	width: 15%;
+	float: left;
+	height: auto;
+	margin: 0 auto;
+	overflow:auto;
+}
+
+.bottomupen dt{
+	text-decoration:underline;
+	width: auto;
+	margin-left: 5px;
+	font-size: 18px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+.bottomupen a{
+	text-decoration: none;
+	color: black;
+}
+
+.bottomupen dd{
+	margin-bottom: 10px;
+	font-size: 16px;
+	margin-left: 16px;
+	width: 130px;
+	border-radius: 14px;
+	padding: 3px 10px;
+	font-weight: bold;
+}
+
+.bottomupen dd:hover{
+	background-color: #00CED1;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.bottomupen ul{
+	margin-top: 0px;
+}
+.bottomupen li{
+	border-radius: 13px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	width: 90px;
+	padding: 3px 10px;
+	list-style-type:none;
+}
+
+.bottomupen li:hover{
+	cursor: pointer;
+	background-color: #00CED1;
+}
+
+.taskdiscriptionen{
+	margin-left:5%;
+	width: 90%;
+	margin-top: 0;
+}
+
+.taskdiscriptionen p{
+	margin-top: 5px;
+	font-size: 15px;
+	margin-left: 5px;
+}
+
+.taskdiscriptionen h4{
+	margin-bottom: 2px;
+	margin-top: 15px;
+}
+
+.toneen{
+	color: #41C7DB;
+	font-weight: bold; 
+}
+
+#endshowen{
+	margin-left: 19%;
+	margin-top:20%;
+}
+
+.entop-down{
+	width: 15%;
+	float: left;
+	height: auto;
+	margin: 0 auto;
+	overflow:auto;
+}
+
+.entop-down dt{
+	margin-bottom:10px;
+	margin-top: 23px;
+	font-size: 18px;
+	margin-left: 15px;
+	font-weight: bold;
+}
+
+.entop-down dd{
+	margin-left: 35px;
+	margin-top: 5px;
+	border-radius: 15px;
+	font-size: 16px;
+	height: auto;
+	width: 150px;
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.entop-down dd:hover{
+	background-color: #00CED1;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.entop-down a{
+	text-decoration: none;
+	color: black;
+}
+
+.biaogeen{
+	width: 90%;
+}
+
+.biaogeen form{
+	margin-left: 5%;
+	width: 95%;
+}
+.biaogeen dl{
+	position: relative;
+	margin-top: 10px;
+}
+
+.biaogeen dt{
+	margin-bottom: 5px;
+	font-size: 15px;
+	margin-left: 6%;
+}
+
+.biaogeen dd{
+	width: auto;
+	height: auto;
+	background-color: #41C7DB;
+	border-radius: 17px;
+	margin-top:5px;
+	padding:5px 12px;
+	float: left;
+	margin-left: 10%;
+	display: none;
+	font-size: 11px;
+}
+
+.biaogeen img{
+	float: right;
+	margin-top: 10px;
+	vertical-align:middle;
+}
+
+.biaogeen input{
+	width: 150px;
+	width: 50px;
+	overflow-y: visible;
+	overflow-x: visible;
+}
+

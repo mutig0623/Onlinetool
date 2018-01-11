@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/task.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>Bottom-Up</title>
+</head>
+<body onload="time_funch()">
+	<form method="post" action="{% url 'classification:B_Addtech2' %}" onsubmit="return check()">
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<div class="timing">
+ 			<span>您还剩</span>	<span id="mytime">0 分 00 秒</span>
+ 			</div>
+            {% if request.user.is_authenticated %}
+            <label name="userid">{{ request.user.id }}</label>
+            {% endif %}
+			<input type="submit" name="" value="下一步" id="queren">
+	</div>
+
+	<div class="bannder7">
+		
+	</div>
+
+	<div class="mainbody">
+		<div class="bottomup">  <!-- Taxonomy部分 -->
+			<dl>
+				<a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"> <dt class="{% ifequal de_id ''%}active2{% endifequal %}">设计阶段</dt></a>
+                {%  for attri in attribut1%}
+                    {% if attri.id == 1 %}
+                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" ><dd class="{% ifequal de_id  attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.id == 2 %}
+                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" ><dd  class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                    {% endif %}
+
+                    {% if attri.id == 3 %}
+                         <dd>创作和评估</dd>
+                        <ul>
+                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</li></a>
+                        </ul>
+                    {% endif %}
+                    {% if attri.id == 4 %}
+                        <ul>
+                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</li></a>
+                        </ul>
+                    {% endif %}
+
+                {% endfor %}
+
+				<a href="?de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"> <dt class="{% ifequal col_id '' %}active2{% endifequal %}">收集设计数据</dt></a>
+                {% for attri in attribut2 %}
+                    <a href="?col={{ attri.id }}&de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"><dd  class="{%  ifequal col_id attri.id|stringformat:"i" %}active2{% endifequal %}" >{{ attri.Collection_Name }}</dd></a>
+                {% endfor %}
+
+				<a href="?de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><dt class="{% ifequal du_id '' %}active2{% endifequal %}">持续时间</dt></a>
+                {% for attri in attribut3 %}
+                   <a href="?du={{ attri.id }}&de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><dd  class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" >{{ attri.Duration_Name }}</dd></a>
+                {% endfor %}
+
+                <a href="?de={{ de_id }}& du={{ du_id }}&col={{ col_id }}" ><dt class="{% ifequal pa_id '' %}active2{% endifequal %}">参与者</dt></a>
+                {% for attri in attribut4 %}
+                   <a href="?pa={{ attri.id }}&de={{ de_id }}& du={{ du_id }}&col={{ col_id }}"><dd class="bottomin">{{ attri.Participant_Name }}</dd></a>
+                {% endfor %}
+				</dl>
+		</div> 
+		
+		<div class="teches">
+            {% for tech in all_techch %}
+                <div class="postcard">
+                    <div class="lantian">
+                    <h4 class="biaotich">{{ tech.Tech_Name}}</h4><img class="topshow" src="{% static 'img/plus1.png' %}"
+                            onclick="addtech(this)">
+                    </div>
+				<div class="contented">
+					<p>{{ tech.Short_Description }}</p>
+					<div class="showed">
+						<p>{{ tech.Long_Description|linebreaksbr }}</p>
+                    </div>
+                </div>
+				</div>
+            {% endfor %}
+        </div>
+
+
+		<div class="selected">  
+ 			<div class="taskdiscription">
+                {% for task1 in task %}
+ 				<h4 class="aa">任务 {{ task1.id }}</h4>
+ 				<p class="bb">{{ task1.Description }}</p>
+                {% endfor %}
+ 			</div>
+ 			<div class="biaoge">
+				<dl>
+				<dt>请使用类别来缩小范围！</dt>
+				<dt>请选择3个设计技术。</dt>
+				<dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
+				<dd id="sam1"><input type="text" id="same1" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}" onclick="Delete(1);"></dd>
+				<dd id="sam2"><input type="text" id="same2" class="tijiao"><img id="same22" src="{% static 'img/chacha3.png' %}" onclick="Delete(2);"></dd>
+				<dd id="sam3"><input type="text" id="same3" class="tijiao"><img id="same33" src="{% static 'img/chacha3.png' %}" onclick="Delete(3);"></dd>
+				</dl>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+    </div>
+</form>
+</body>
+</html>

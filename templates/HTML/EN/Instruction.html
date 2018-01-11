@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/enlanguage.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>Instruction</title>
+</head>
+<body>
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+            <form action="{% url 'classification:LogEn' %}">
+			<input type="submit" name="" value="Next" id="butt-next">
+            </form>
+	</div>
+
+	<div class="bannder2">
+		
+	</div>
+
+	<div class="instructionen">
+				<h3>Instruction:</h3>
+				<p>The online experiment includes four steps</p>
+
+                <h4>Step 1. Register</h4>
+            	<p>On the next page, you need to register the online experiment, you can either use an email address or a random number to register.</p>
+
+				<h4>Step 2. A questionnaire</h4>
+				<p>After registering the experiment, you will at first fill out a short questionnaire with XX questions.</p>
+
+				<h4>Step 3. Three tasks</h4>
+				<p>Three tasks will present to you and you need to use the online.</p>
+
+				<h4>Step 4. A questionnaire</h4>
+				<p>After finishing the three tasks, you will fill out a questionnaire with XX questions.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/task.css' %}"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/enlanguage.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <script type="text/javascript">
+    $(function(){
+    	$('.bottoming').click(function(){
+   			$('.showing').slideToggle(1000);
+    	})
+    })
+	
+</script>
+    <title>Tag Cloud</title>
+</head>
+<body onload="time_funen()">
+	<form method="post" action="" onsubmit="return checken()">
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<div class="timing">
+ 			<span>Time</span>	<span id="mytime">0 min 00 sec</span>
+ 			</div>
+			<input type="submit" name="" value="Next" id="queren">
+	</div>
+
+	<div class="bannder7">
+		
+	</div>
+
+	<div class="mainbody">
+		<div class="Categories">  <!-- Taxonomy部分 -->
+			<dl>
+				 {% for attri in attribut1 %}
+                    {% if attri.TagCloud_Name == "User Participation (user group)" %}
+                        <a href="?attri1={{ attri.id }}&attri2={{ arrri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'10'}}px" class="{% ifequal attri1_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Mid-term Duration" %}
+                        <a href="?attri2={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri2_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Observation" %}
+                        <a href="?attri3={{ attri.id }}&attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri3_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Idea generation" %}
+                        <a href="?attri4={{ attri.id }}&attri3={{ attri3_id }}&attri2={{ attri2_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri4_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Collaboration with Stakeholders" %}
+                        <a href="?attri5={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri2={{ attri2_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri5_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Feedback Collection (Online)" %}
+                        <a href="?attri6={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri2={{ attri2_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri6_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Prototype Evaluation" %}
+                        <a href="?attri7={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri2={{ attri2_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px" class="{% ifequal attri7_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Data Collection" %}
+                        <a href="?attri8={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri2={{ attri2_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px" class="{% ifequal attri8_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Prototyping" %}
+                        <a href="?attri9={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri2={{ attri2_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri9_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Short-term Duration" %}
+                        <a href="?attri10={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri2={{ attri2_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri10_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Evaluation" %}
+                        <a href="?attri11={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri2={{ attri2_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri11_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Product Evaluation" %}
+                        <a href="?attri12={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri2={{ attri2_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri12_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Project Organization" %}
+                        <a href="?attri13={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri2={{ attri2_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri13_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Flexible Time Length" %}
+                        <a href="?attri14={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri2={{ attri2_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri14_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "User Participation" %}
+                        <a href="?attri15={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri2={{ attri2_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri15_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Information Organization" %}
+                        <a href="?attri16={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri2={{ attri2_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri16_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Feedback Collection (Offline)" %}
+                        <a href="?attri17={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri2={{ attri2_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri17_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Long term duration" %}
+                        <a href="?attri18={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri2={{ attri2_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri18_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "User Research " %}
+                        <a href="?attri19={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri2={{ attri2_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'10'}}px " class="{% ifequal attri19_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Relationship and Dependency" %}
+                        <a href="?attri20={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri2={{ attri2_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri20_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "User simulation" %}
+                        <a href="?attri21={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri2={{ attri2_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri21_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Expert participation" %}
+                        <a href="?attri22={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri2={{ attri2_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri22_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "UX Evaluation" %}
+                        <a href="?attri23={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri2={{ attri2_id }}&attri24={{ attri24_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri23_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                    {% if attri.TagCloud_Name == "Feedback collection" %}
+                        <a href="?attri24={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri2={{ attri2_id }}" ><dd style="font-size:{{ attri.frequency|add:'7'}}px " class="{% ifequal attri24_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</dd></a>
+                    {% endif %}
+                {% endfor %}
+			</dl>
+		</div>	
+		
+		<div class="teches">
+            {% for tech in all_techch %}
+                <div class="postcard">
+                    <div class="lantian">
+                    <h4 class="biaoti">{{ tech.Tech_Name }}</h4><img class="topshow" src="{% static 'img/plus1.png' %}"
+                            onclick="addtech(this)">
+                    </div>
+                    <div class="contented">
+                        <p>{{ tech.Short_Description }}</p>
+                        <div class="showed">
+                            <p>{{ tech.Long_Description|linebreaksbr}}</p>
+                        </div>
+				    </div>
+			    </div>
+            {% endfor %}
+		</div>
+
+		<div class="selected">  
+ 			<div class="taskdiscriptionen">
+ 				<h4 class="aa">Task1</h4>
+ 				<p class="bben">You are at an early stage of the project. You can get a group of people from different backgrounds (e.g., users, stakeholders) to discuss the project. You plan to understand and analyze the relations between different roles and surroundings when using the App and generate some ideas.
+				</p>
+ 			</div>
+ 			
+ 			<div class="biaoge">
+				<dl>
+				<dt>Please use the categories to narrow down the scope!</dt>
+				<dt>Please select 3 design techniques.</dt>
+				<dt class="toneen">Please click on "+" and the selected design techniques will be appeared here.</dt>
+				<dd id="sam1"><input type="textarea" id="same1" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}" onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(1);"></dd>
+				<dd id="sam2"><input type="text" id="same2" class="tijiao"><img id="same22" src="{% static 'img/chacha3.png' %}" 	onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(2);"></dd>
+				<dd id="sam3"><input type="text" id="same3" class="tijiao"><img src="{% static 'img/chacha3.png' %}" id="same33"
+					onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(3);"></dd>
+				</dl>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="feet">
+		
+	</div>
+</form>
+</body>
+</html>

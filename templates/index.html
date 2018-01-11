@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html >
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>Index</title>
+</head>
+<body>
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+	</div>
+
+	<div class="bannder1">
+		
+	</div>
+	
+	<div class="intro-ch" id="intro-ch">
+		<p>感谢您参与我们的在线实验。 这项研究大约需要30分钟才能完成。</p> 
+
+        <p>您的答复将保持秘密和匿名。 这项研究的数据经不会被做细节公布，报告只会是一个集体总和的形式呈现的。 除了研究人员之外，没有人会知道你对这个问卷的答案。</p>
+
+		<p>如果您同意参与此项目，请尽可能回答问题。</p>
+
+		<p>感谢您在这项重要的尝试中提供的帮助。</p>
+
+		<p>请选择您想要用于在线实验的语言。 然后点击“中文”到下一页。</p>
+	</div>
+	<dir class="intro-en" id="intro-en">
+		<p>Thanks for participating in our online experiment. This study takes approximately 30 minutes to complete. </p> 
+
+        <p>Your responses will remain confidential and anonymous. Data from this research will be kept under lock and key and reported only as a collective combined total. No one other than the researchers will know your individual answers to this questionnaire.</p>
+
+		<p>If you agree to participate in this project, please answer the questions as best you can.</p>
+
+		<p>Thank you for your assistance in this important endeavor.</p>
+
+		<p>Please choose a language you would like to use for the online experiment. And click “English” to the next page.</p>
+	</dir>
+	<dir class="intro-de" id="intro-de">
+		<p>Danke for participating in our online experiment. This study takes approximately 30 minutes to complete. </p> 
+
+        <p>Your responses will remain confidential and anonymous. Data from this research will be kept under lock and key and reported only as a collective combined total. No one other than the researchers will know your individual answers to this questionnaire.</p>
+
+		<p>If you agree to participate in this project, please answer the questions as best you can.</p>
+
+		<p>Thank you for your assistance in this important endeavor.</p>
+
+		<p>Please choose a language you would like to use for the online experiment. And click “Deutsch” to the next page.</p>
+	</dir>
+
+	<div class="tab" id="tab">
+		<table>
+		<tr>
+		<td>
+		<a href="{% url 'classification:Enlink' %}" class="lang" onmouseover="enshow()" id="enshow">English</a>
+		</td>
+		<td class="colored">
+		<a  href="{% url 'classification:Chlink' %}" class="lang" id="chshow" onmouseover="chshow()">中文</a>
+		</td>
+		<td>
+		<a href="{% url 'classification:Delink' %}" class="lang" onmouseover="deshow()" id="deshow">Deutsch</a>
+		</td>
+	</tr>
+	</table>
+	</div>
+	
+</body>
+</html>

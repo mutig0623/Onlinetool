@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>Login</title>
+</head>
+<body>
+<form action="{% url 'classification:LoginCh' %}" method="post">
+{% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="下一步" id="butt-next" onclick="showregistercn()">
+	</div>
+
+	<div class="bannder3">
+		
+	</div>
+
+  <!-- logo部分 -->
+	<div class="instruction-ch">
+		<p>请使用您的电子邮件地址或随机数字进行注册。</p>
+		<p>由于这三个任务有正确的答案，我们希望您尽可能地回答问题。</p>
+		<p>如果您用邮箱地址注册，我们将选择前10％的参与者，他们将收到我们的一个小礼物。</p>
+	</div>
+
+	<div class="log_in-ch">
+		<form method="post" action="">
+		<span>
+            <label class="userlable">用户名：</label><input type="text"  name="username" class="userinput" id="username" value="邮箱/任意名称" onfocus='if(this.value=="邮箱/任意名称"){this.value="";}; 'onblur='if(this.value==""){this.value="邮箱/任意名称";};'/>
+		    <label class="reminding" id="repeated">{{ msg }}</label></span><br/>
+        </form>
+	</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>post-test 1</title>
+</head>
+<body>
+<form action="{% url 'classification:T_Addpost1' %}" method="post">
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="下一步" onclick="" id="butt-next">
+	</div>
+
+	<div class="bannder8">
+		
+	</div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+		<p>请回答以下问题。</p>
+		
+		<table id="tab2">
+			<tr class="dark">
+				<td><span style="margin-left: 35px;">您同意或不同意以下声明的程度如何？ 1 =极不赞同; 7 =非常赞同</span><td>
+			</tr>
+            <tr class="light">
+                <td>
+                    <span class="number">1.</span><span class="Ques">所选择的设计技术适合任务的情景。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post1" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post1" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post1" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post1" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post1" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post1" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post1" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">2.</span><span class="Ques">所选择的设计技术不适合任务的情景。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post2" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post2" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post2" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post2" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post2" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post2" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post2" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">3.</span><span class="Ques">我觉得使用的用于筛选的网页影响了对合适的设计技术的选择。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post3" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post3" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post3" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post3" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post3" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post3" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post3" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">4.</span><span class="Ques">所选的设计技术是正确的。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post4" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post4" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post4" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post4" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post4" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post4" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post4" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">5.</span><span class="Ques">我不确定所选择的设计技术是否合适。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post5" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post5" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post5" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post5" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post5" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post5" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post5" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">6.</span><span class="Ques">我对这项任务所选择的设计技术并不自信。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post6" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post6" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post6" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post6" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post6" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post6" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post6" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">7.</span><span class="Ques">选择最合适的设计技术来完成任务是不可能的。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post7" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">8.</span><span class="Ques">选择设计技术时，我感到很自信。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post8" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">9.</span><span class="Ques">我理解了任务情景中的问题。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post9" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">10.</span><span class="Ques">我有一个结构化的解决方案，通过选择设计技术来解决问题。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post10" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">11.</span><span class="Ques">我可以解释做选择的原因。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post11" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">12.</span><span class="Ques">所选择的设计技术可以解决情景中发现的问题。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post12" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">13.</span><span class="Ques">我选择的设计技术可以影响任务目标的实现。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post13" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">14.</span><span class="Ques">所选择的设计技术针对于任务的要求。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post14" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">15.</span><span class="Ques">我明确提出了针对具体情况选择设计技术的建议。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post15" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">16.</span><span class="Ques">我的表现并不尽如人意，因为我没有积极的表现。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post16" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">17.</span><span class="Ques">我真的很想在这个任务中取得成功。</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post17" value="1" checked><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post17" value="2"><label class="labposition">2</label></span>
+                        <span class="seclow"><input type="radio" name="post17" value="3"><label class="labposition">3</label></span>
+                        <span class="seclow"><input type="radio" name="post17" value="4"><label class="labposition">4</label></span>
+                        <span class="seclow"><input type="radio" name="post17" value="5"><label class="labposition">5</label></span>
+                        <span class="seclow"><input type="radio" name="post17" value="6"><label class="labposition">6</label></span>
+                        <span class="seclow"><input type="radio" name="post17" value="7"><label class="labposition">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">18.</span><span class="Ques">我希望将来能够做同样的任务。</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post18" value="1" checked><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post18" value="2"><label class="labposition">2</label></span>
+                    <span class="seclow"><input type="radio" name="post18" value="3"><label class="labposition">3</label></span>
+                    <span class="seclow"><input type="radio" name="post18" value="4"><label class="labposition">4</label></span>
+                    <span class="seclow"><input type="radio" name="post18" value="5"><label class="labposition">5</label></span>
+                    <span class="seclow"><input type="radio" name="post18" value="6"><label class="labposition">6</label></span>
+                    <span class="seclow"><input type="radio" name="post18" value="7"><label class="labposition">7</label></span>
+                </span>
+                </td>
+            </tr>
+		</table>
+	</div>
+	</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>TaskDetail 1</title>
+</head>
+<body>
+<form action="{% url 'classification:SwitchCH' %}" method="post">
+{% csrf_token %}
+    <div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+            {% if request.user.is_authenticated %}
+            <label name="userid">{{ request.user.id }}</label>
+            {% endif %}
+			<input type="submit" name="" value="下一步" onclick="jumpcn3()" id="butt-next">
+	</div>
+
+	<div class="bannder6">
+		
+	</div>
+
+	<div class="maincn">
+        {% for task in taskdes %}
+            {% if task.id == 1 %}
+            <h3>您现在在开发一个用于预订电影票的移动应用程序的团队中工作。</h3>
+            {% endif %}
+            <h3>任务 {{ task.id }}</h3>
+            <p>{{ task.Description }}</p>
+        {% endfor %}
+        <h4>请使用以下网页为此任务选择三个设计技术。</h4>
+	</div>
+</form>
+</body>
+</html>
