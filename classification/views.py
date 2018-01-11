@@ -41,6 +41,7 @@ class LoginChView(View):
         userinfor.start_time = datetime.now()
         userinfor.save()
         user_um = userinfor.id % 4
+        userinfor.Mode_id = user_um
         user = authenticate(username=user_name,password=user_password)
         if user is not None:
             login(request,user)

@@ -12,6 +12,7 @@ class SelectedTechniqueOne(models.Model):
     chose_Tech1 = models.TextField(max_length=200, verbose_name=u"选择的技术1", default="")
     chose_Tech2 = models.TextField(max_length=200, verbose_name=u"选择的技术2", default="")
     chose_Tech3 = models.TextField(max_length=200, verbose_name=u"选择的技术3", default="")
+    mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
 
     def __unicode__(self):
         return self.subject
@@ -26,6 +27,7 @@ class SelectedTechniqueTwo(models.Model):
     chose_Tech1 = models.TextField(max_length=200, verbose_name=u"选择的技术1", default="")
     chose_Tech2 = models.TextField(max_length=200, verbose_name=u"选择的技术2", default="")
     chose_Tech3 = models.TextField(max_length=200, verbose_name=u"选择的技术3", default="")
+    mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
 
     class Meta:
         verbose_name = "场景Two的选择结果"
@@ -37,6 +39,7 @@ class SelectedTechniqueThree(models.Model):
     chose_Tech1 = models.TextField(max_length=200, verbose_name=u"选择的技术1", default="")
     chose_Tech2 = models.TextField(max_length=200, verbose_name=u"选择的技术2", default="")
     chose_Tech3 = models.TextField(max_length=200, verbose_name=u"选择的技术3", default="")
+    mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
 
     class Meta:
         verbose_name = "场景Three的选择结果"
@@ -45,6 +48,7 @@ class SelectedTechniqueThree(models.Model):
 
 class PreQuestionResult(models.Model):
     Test_User = models.ForeignKey(UserProfile, verbose_name=u"测试用户")
+    mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
     Q1_age = models.CharField(max_length=20, choices=((u"<20", u"<20"), (u"21-30", u"21-30"), (u"31-40", u"31-40"), (u"41-50", u"41-50"), (u">51", u">51")), verbose_name=u"年龄",null=True)
     Q2_gender = models.CharField(choices=((u"female", u"女"), (u"male", u"男"), (u"other", u"其他")), max_length=10, verbose_name=u"性别",null=True)
     Q3_nationa = models.CharField(max_length=20, default="", verbose_name=u"国籍",null=True)
@@ -102,6 +106,7 @@ class PreQuestionResult(models.Model):
 
 class PostQuestionResultOne(models.Model):
     Test_User = models.ForeignKey(UserProfile, verbose_name=u"测试用户")
+    mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
     degree_choices = (
         (1, u"1"), (2, u"2"), (3, u"3"), (4, u"4"), (5, u"5"), (6, u"6"), (7, u"7")
     )
@@ -131,6 +136,7 @@ class PostQuestionResultOne(models.Model):
 
 class PostQuestionResultTwo(models.Model):
     Test_User = models.ForeignKey(UserProfile, verbose_name=u"测试用户")
+    mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
     degree_choices = (
         (1, u"1"), (2, u"2"), (3, u"3"), (4, u"4"), (5, u"5"), (6, u"6"), (7, u"7")
     )
@@ -160,6 +166,7 @@ class PostQuestionResultTwo(models.Model):
 
 class PostQuestionResultThree(models.Model):
     Test_User = models.ForeignKey(UserProfile, verbose_name=u"测试用户")
+    mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
     degree_choices = (
         (1, u"1"), (2, u"2"), (3, u"3"), (4, u"4"), (5, u"5"), (6, u"6"), (7, u"7")
     )
@@ -193,11 +200,4 @@ class PostQuestionResultThree(models.Model):
         verbose_name = "Post问卷结果Three"
         verbose_name_plural = verbose_name
 
-
-class Testing(models.Model):
-    age = models.CharField(choices=((u"female", u"女"), (u"male", u"男"), (u"other", u"其他")),max_length=10, verbose_name=u"性别")
-
-    class Meta:
-        verbose_name = "测试"
-        verbose_name_plural = verbose_name
 
