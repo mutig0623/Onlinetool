@@ -301,8 +301,9 @@ def B_AddTech1(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
-    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
-    return render(request, 'HTML/CH/Blank/post-test.html',{ })
+    mode_id = request.user.id % 4
+    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id,mode_id= mode_id )
+    return render(request, 'HTML/CH/Blank/post-test .html',{ })
 
 
 # 添加Post-question1到数据库，并跳转到Task-Detail 2页面
@@ -327,7 +328,8 @@ def B_AddPost1(request):
         post17 = request.POST.get('post17')
         post18 = request.POST.get('post18')
         user_id = request.user.id
-        PostQuestionResultOne.objects.create(Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
+        mode = request.user.id % 4
+        PostQuestionResultOne.objects.create(mode_id=mode,Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
         TaskDes = TaskDescriptionCH.objects.all()
         taskdes = TaskDes.filter(id=2)
         return render(request, 'HTML/CH/Blank/TaskDetailtwo.html',{
@@ -352,9 +354,10 @@ def B_AddTech2(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
+    mode = request.user.id % 4
     taskdes_all = TaskDescriptionCH.objects.all()
     taskdes = taskdes_all.filter(id=2)
-    SelectedTechniqueTwo.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    SelectedTechniqueTwo.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
     return render(request, 'HTML/CH/Blank/post-test 2.html',{
         "taskdes":taskdes,
     })
@@ -382,7 +385,8 @@ def B_AddPost2(request):
         post17 = request.POST.get('post17')
         post18 = request.POST.get('post18')
         user_id = request.user.id
-        PostQuestionResultOne.objects.create(Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
+        mode = request.user.id % 4
+        PostQuestionResultOne.objects.create(mode_id=mode,Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
         TaskDes = TaskDescriptionCH.objects.all()
         taskdes = TaskDes.filter(id=3)
         return render(request, 'HTML/CH/Blank/TaskDetailthree.html',{
@@ -407,9 +411,10 @@ def B_AddTech3(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
+    mode = request.user.id % 4
     taskdes_all = TaskDescriptionCH.objects.all()
     taskdes = taskdes_all.filter(id=3)
-    SelectedTechniqueThree.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    SelectedTechniqueThree.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
     return render(request, 'HTML/CH/post-test Q3.html',{
         "taskdes":taskdes,
     })
@@ -444,7 +449,8 @@ def AddPost3(request):
         post24 = request.POST.get('post24')
         post25 = request.POST.get('post25')
         user_id = request.user.id
-        PostQuestionResultTwo.objects.create(Test_User_id=user_id, Q1_proficiency=post1, Q2_globalapproach=post2,
+        mode = request.user.id % 4
+        PostQuestionResultTwo.objects.create(mode_id=mode,Test_User_id=user_id, Q1_proficiency=post1, Q2_globalapproach=post2,
                                              Q3_localizedapproach=post3, Q4_objects=post4, Q5_rulesbased=post5,
                                              Q6_learncategory=post6, Q7_organize=post7, Q8_formallogic=post8,
                                              Q9_logicalrules=post9, Q10_individual=post10, Q11_surrounding=post11,
@@ -469,7 +475,8 @@ def T_AddTech1(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
-    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    mode = request.user.id % 4
+    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id ,mode_id = mode)
     return render(request, 'HTML/CH/Top-down/post-test.html',{
     })
 
@@ -496,7 +503,8 @@ def T_AddPost1(request):
         post17 = request.POST.get('post17')
         post18 = request.POST.get('post18')
         user_id = request.user.id
-        PostQuestionResultOne.objects.create(Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
+        mode = request.user.id % 4
+        PostQuestionResultOne.objects.create(mode_id=mode,Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
         TaskDes = TaskDescriptionCH.objects.all()
         taskdes = TaskDes.filter(id=2)
         return render(request, 'HTML/CH/Top-down/TaskDetailtwo.html',{
@@ -547,10 +555,11 @@ def T_AddTech2(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
+    mode = request.user.id % 4
     taskdes_all = TaskDescriptionCH.objects.all()
     taskdes = taskdes_all.filter(id=2)
-    SelectedTechniqueTwo.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
-    return render(request, 'HTML/CH/Top-down/post-test Q2.html',{
+    SelectedTechniqueTwo.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    return render(request, 'HTML/CH/Top-down/post-test 2.html', {
         "taskdes":taskdes,
     })
 
@@ -577,7 +586,8 @@ def T_AddPost2(request):
         post17 = request.POST.get('post17')
         post18 = request.POST.get('post18')
         user_id = request.user.id
-        PostQuestionResultTwo.objects.create(Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
+        mode = request.user.id % 4
+        PostQuestionResultTwo.objects.create(mode_id=mode,Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
         TaskDes = TaskDescriptionCH.objects.all()
         taskdes = TaskDes.filter(id=3)
         return render(request, 'HTML/CH/Top-down/TaskDetailthree.html',{
@@ -628,9 +638,10 @@ def T_AddTech3(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
+    mode = request.user.id % 4
     taskdes_all = TaskDescriptionCH.objects.all()
     taskdes = taskdes_all.filter(id=3)
-    SelectedTechniqueThree.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    SelectedTechniqueThree.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
     return render(request, 'HTML/CH/post-test Q3.html',{
         "taskdes":taskdes,
     })
@@ -665,7 +676,8 @@ def AddPost3(request):
         post24 = request.POST.get('post24')
         post25 = request.POST.get('post25')
         user_id = request.user.id
-        PostQuestionResultThree.objects.create(Test_User_id=user_id, Q1_proficiency=post1, Q2_globalapproach=post2,
+        mode = request.user.id % 4
+        PostQuestionResultThree.objects.create(mode_id=mode,Test_User_id=user_id, Q1_proficiency=post1, Q2_globalapproach=post2,
                                              Q3_localizedapproach=post3, Q4_objects=post4, Q5_rulesbased=post5,
                                              Q6_learncategory=post6, Q7_organize=post7, Q8_formallogic=post8,
                                              Q9_logicalrules=post9, Q10_individual=post10, Q11_surrounding=post11,
@@ -689,7 +701,8 @@ def U_AddTech1(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
-    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    mode = request.user.id % 4
+    SelectedTechniqueOne.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
     return render(request, 'HTML/CH/Bottom-up/post-test.html',{
     })
 
@@ -716,7 +729,8 @@ def U_AddPost1(request):
         post17 = request.POST.get('post17')
         post18 = request.POST.get('post18')
         user_id = request.user.id
-        PostQuestionResultOne.objects.create(Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
+        mode = request.user.id % 4
+        PostQuestionResultOne.objects.create(mode_id=mode,Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
         TaskDes = TaskDescriptionCH.objects.all()
         taskdes = TaskDes.filter(id=2)
         return render(request, 'HTML/CH/Bottom-up/TaskDetailtwo.html',{
@@ -742,9 +756,10 @@ def U_AddTech2(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
+    mode = request.user.id % 4
     taskdes_all = TaskDescriptionCH.objects.all()
     taskdes = taskdes_all.filter(id=2)
-    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    SelectedTechniqueOne.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
     return render(request, 'HTML/CH/Bottom-up/post-test 2.html',{
         "taskdes":taskdes,
     })
@@ -772,7 +787,8 @@ def U_AddPost2(request):
         post17 = request.POST.get('post17')
         post18 = request.POST.get('post18')
         user_id = request.user.id
-        PostQuestionResultOne.objects.create(Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
+        mode = request.user.id % 4
+        PostQuestionResultOne.objects.create(mode_id=mode,Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
         TaskDes = TaskDescriptionCH.objects.all()
         taskdes = TaskDes.filter(id=3)
         return render(request, 'HTML/CH/Bottom-up/TaskDetailthree.html',{
@@ -797,9 +813,10 @@ def U_AddTech3(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
+    mode = request.user.id % 4
     taskdes_all = TaskDescriptionCH.objects.all()
     taskdes = taskdes_all.filter(id=3)
-    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    SelectedTechniqueOne.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
     return render(request, 'HTML/CH/post-test Q3.html',{
         "taskdes":taskdes,
     })
@@ -816,7 +833,8 @@ def C_AddTech1(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
-    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    mode = request.user.id % 4
+    SelectedTechniqueOne.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
     return render(request, 'HTML/CH/Tag-Cloud/post-test.html',{
     })
 
@@ -843,7 +861,8 @@ def C_AddPost1(request):
         post17 = request.POST.get('post17')
         post18 = request.POST.get('post18')
         user_id = request.user.id
-        PostQuestionResultOne.objects.create(Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
+        mode = request.user.id % 4
+        PostQuestionResultOne.objects.create(mode_id=mode,Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
         TaskDes = TaskDescriptionCH.objects.all()
         taskdes = TaskDes.filter(id=2)
         return render(request, 'HTML/CH/Tag-Cloud/TaskDetailtwo.html',{
@@ -853,12 +872,111 @@ def C_AddPost1(request):
 
 # 跳转到blank2，显示tech信息等内容
 def CH_C2(request):
-    tech = TechinforCH.objects.all()
-    task_all=TaskDescriptionCH.objects.all()
-    task=task_all.filter(id=2)
-    return render(request, 'HTML/CH/Tag-Cloud/blank2.html', {
-        "tech": tech,
+    all_techch = TechinforCH.objects.all()
+    attribut1 = TagCloudCH.objects.all()
+    task_all = TaskDescriptionCH.objects.all()
+    task = task_all.filter(id=2)
+
+    attri1_id = request.GET.get('attri1', "")
+    if attri1_id:
+        all_techch = all_techch.filter(UserParticipationgroup=attri1_id)
+
+    attri2_id = request.GET.get('attri2', "")
+    if attri2_id:
+        all_techch = all_techch.filter(MidDuration=attri2_id)
+
+    attri3_id = request.GET.get('attri3', "")
+    if attri3_id:
+        all_techch = all_techch.filter(Observation=attri3_id)
+
+    attri4_id = request.GET.get('attri4', "")
+    if attri4_id:
+        all_techch = all_techch.filter(IdeaGeneration=attri4_id)
+
+    attri5_id = request.GET.get('attri5', "")
+    if attri5_id:
+        all_techch = all_techch.filter(CollaborationStakeholders=attri5_id)
+
+    attri6_id = request.GET.get('attri6', "")
+    if attri6_id:
+        all_techch = all_techch.filter(FeedbackOnline=attri6_id)
+
+    attri7_id = request.GET.get('attri7', "")
+    if attri7_id:
+        all_techch = all_techch.filter(PrototypeEvaluation=attri7_id)
+
+    attri8_id = request.GET.get('attri8', "")
+    if attri8_id:
+        all_techch = all_techch.filter(DataCollection=attri8_id)
+
+    attri9_id = request.GET.get('attri9', "")
+    if attri9_id:
+        all_techch = all_techch.filter(Prototyping=attri9_id)
+
+    attri10_id = request.GET.get('attri10', "")
+    if attri10_id:
+        all_techch = all_techch.filter(ShortDuration=attri10_id)
+
+    attri11_id = request.GET.get('attri11', "")
+    if attri11_id:
+        all_techch = all_techch.filter(Evaluation=attri11_id)
+
+    attri12_id = request.GET.get('attri12', "")
+    if attri12_id:
+        all_techch = all_techch.filter(ProductEvaluation=attri12_id)
+
+    attri13_id = request.GET.get('attri13', "")
+    if attri13_id:
+        all_techch = all_techch.filter(ProjectOrganization=attri13_id)
+
+    attri14_id = request.GET.get('attri14', "")
+    if attri14_id:
+        all_techch = all_techch.filter(FlexibleLength=attri14_id)
+
+    attri15_id = request.GET.get('attri15', "")
+    if attri15_id:
+        all_techch = all_techch.filter(UserParticipation=attri15_id)
+
+    attri16_id = request.GET.get('attri16', "")
+    if attri16_id:
+        all_techch = all_techch.filter(InformationOrganization=attri16_id)
+
+    attri17_id = request.GET.get('attri17', "")
+    if attri17_id:
+        all_techch = all_techch.filter(FeedbackOffline=attri17_id)
+
+    attri18_id = request.GET.get('attri18', "")
+    if attri18_id:
+        all_techch = all_techch.filter(LongDuration=attri18_id)
+
+    attri19_id = request.GET.get('attri19', "")
+    if attri19_id:
+        all_techch = all_techch.filter(UserResearch=attri19_id)
+
+    attri20_id = request.GET.get('attri20', "")
+    if attri20_id:
+        all_techch = all_techch.filter(RelationshipDependency=attri20_id)
+
+    attri21_id = request.GET.get('attri21', "")
+    if attri21_id:
+        all_techch = all_techch.filter(UserSimulation=attri21_id)
+
+    attri22_id = request.GET.get('attri22', "")
+    if attri22_id:
+        all_techch = all_techch.filter(ExpertParticipation=attri22_id)
+
+    attri23_id = request.GET.get('attri23', "")
+    if attri23_id:
+        all_techch = all_techch.filter(UXEvaluation=attri23_id)
+
+    attri24_id = request.GET.get('attri24', "")
+    if attri24_id:
+        all_techch = all_techch.filter(FeedbackCollection=attri24_id)
+
+    return render(request, 'HTML/CH/Tag-Cloud/Tag Cloud2.html', {
+        "all_techch": all_techch,
         "task":task,
+        "attribut1":attribut1,
     })
 
 
@@ -868,10 +986,11 @@ def C_AddTech2(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
+    mode = request.user.id % 4
     taskdes_all = TaskDescriptionCH.objects.all()
     taskdes = taskdes_all.filter(id=2)
-    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
-    return render(request, 'HTML/CH/Tag-Cloud/post-test 2.html',{
+    SelectedTechniqueOne.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    return render(request, 'HTML/CH/Tag-Cloud/post-test 2.html', {
         "taskdes":taskdes,
     })
 
@@ -898,7 +1017,8 @@ def C_AddPost2(request):
         post17 = request.POST.get('post17')
         post18 = request.POST.get('post18')
         user_id = request.user.id
-        PostQuestionResultOne.objects.create(Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
+        mode = request.user.id % 4
+        PostQuestionResultOne.objects.create(mode_id=mode,Test_User_id=user_id,Q1_proficiency=post1,Q2_globalapproach=post2,Q3_localizedapproach=post3,Q4_objects=post4,Q5_rulesbased=post5,Q6_learncategory=post6,Q7_organize=post7,Q8_formallogic=post8,Q9_logicalrules=post9,Q10_individual=post10,Q11_surrounding=post11,Q12_littelrule=post12,Q13_difficultrule=post13,Q14_thematically=post14,Q15_dialectical=post15,Q16_contradiction=post16,Q17_pressures=post17,Q18_thematically=post18, )
         TaskDes = TaskDescriptionCH.objects.all()
         taskdes = TaskDes.filter(id=3)
         return render(request, 'HTML/CH/Tag-Cloud/TaskDetailthree.html',{
@@ -908,13 +1028,109 @@ def C_AddPost2(request):
 
 # 跳转到blank3页面，并显示相关信息
 def CH_C3(request):
-    tech = TechinforCH.objects.all()
-    task_all=TaskDescriptionCH.objects.all()
-    task=task_all.filter(id=3)
-    return render(request, 'HTML/CH/Tag-Cloud/blank3.html', {
-        "tech": tech,
-        "task":task,
-    })
+    all_techch = TechinforCH.objects.all()
+    attribut1 = TagCloudCH.objects.all()
+    task_all = TaskDescriptionCH.objects.all()
+    task = task_all.filter(id=2)
+
+    attri1_id = request.GET.get('attri1', "")
+    if attri1_id:
+        all_techch = all_techch.filter(UserParticipationgroup=attri1_id)
+
+    attri2_id = request.GET.get('attri2', "")
+    if attri2_id:
+        all_techch = all_techch.filter(MidDuration=attri2_id)
+
+    attri3_id = request.GET.get('attri3', "")
+    if attri3_id:
+        all_techch = all_techch.filter(Observation=attri3_id)
+
+    attri4_id = request.GET.get('attri4', "")
+    if attri4_id:
+        all_techch = all_techch.filter(IdeaGeneration=attri4_id)
+
+    attri5_id = request.GET.get('attri5', "")
+    if attri5_id:
+        all_techch = all_techch.filter(CollaborationStakeholders=attri5_id)
+
+    attri6_id = request.GET.get('attri6', "")
+    if attri6_id:
+        all_techch = all_techch.filter(FeedbackOnline=attri6_id)
+
+    attri7_id = request.GET.get('attri7', "")
+    if attri7_id:
+        all_techch = all_techch.filter(PrototypeEvaluation=attri7_id)
+
+    attri8_id = request.GET.get('attri8', "")
+    if attri8_id:
+        all_techch = all_techch.filter(DataCollection=attri8_id)
+
+    attri9_id = request.GET.get('attri9', "")
+    if attri9_id:
+        all_techch = all_techch.filter(Prototyping=attri9_id)
+
+    attri10_id = request.GET.get('attri10', "")
+    if attri10_id:
+        all_techch = all_techch.filter(ShortDuration=attri10_id)
+
+    attri11_id = request.GET.get('attri11', "")
+    if attri11_id:
+        all_techch = all_techch.filter(Evaluation=attri11_id)
+
+    attri12_id = request.GET.get('attri12', "")
+    if attri12_id:
+        all_techch = all_techch.filter(ProductEvaluation=attri12_id)
+
+    attri13_id = request.GET.get('attri13', "")
+    if attri13_id:
+        all_techch = all_techch.filter(ProjectOrganization=attri13_id)
+
+    attri14_id = request.GET.get('attri14', "")
+    if attri14_id:
+        all_techch = all_techch.filter(FlexibleLength=attri14_id)
+
+    attri15_id = request.GET.get('attri15', "")
+    if attri15_id:
+        all_techch = all_techch.filter(UserParticipation=attri15_id)
+
+    attri16_id = request.GET.get('attri16', "")
+    if attri16_id:
+        all_techch = all_techch.filter(InformationOrganization=attri16_id)
+
+    attri17_id = request.GET.get('attri17', "")
+    if attri17_id:
+        all_techch = all_techch.filter(FeedbackOffline=attri17_id)
+
+    attri18_id = request.GET.get('attri18', "")
+    if attri18_id:
+        all_techch = all_techch.filter(LongDuration=attri18_id)
+
+    attri19_id = request.GET.get('attri19', "")
+    if attri19_id:
+        all_techch = all_techch.filter(UserResearch=attri19_id)
+
+    attri20_id = request.GET.get('attri20', "")
+    if attri20_id:
+        all_techch = all_techch.filter(RelationshipDependency=attri20_id)
+
+    attri21_id = request.GET.get('attri21', "")
+    if attri21_id:
+        all_techch = all_techch.filter(UserSimulation=attri21_id)
+
+    attri22_id = request.GET.get('attri22', "")
+    if attri22_id:
+        all_techch = all_techch.filter(ExpertParticipation=attri22_id)
+
+    attri23_id = request.GET.get('attri23', "")
+    if attri23_id:
+        all_techch = all_techch.filter(UXEvaluation=attri23_id)
+
+    attri24_id = request.GET.get('attri24', "")
+    if attri24_id:
+        all_techch = all_techch.filter(FeedbackCollection=attri24_id)
+
+    return render(request, 'HTML/CH/Tag-Cloud/Tag Cloud3.html',
+                  {"all_techch": all_techch, "task": task, "attribut1": attribut1, })
 
 
 # 添加选中技术，并跳转到post-question 3页面
@@ -923,9 +1139,10 @@ def C_AddTech3(request):
     selected2 = request.POST.get('selectedtwo',"")
     selected3 = request.POST.get('selectedthree',"")
     user_id = request.user.id
+    mode = request.user.id % 4
     taskdes_all = TaskDescriptionCH.objects.all()
     taskdes = taskdes_all.filter(id=3)
-    SelectedTechniqueOne.objects.create(chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
+    SelectedTechniqueOne.objects.create(mode_id=mode,chose_Tech1=selected1,chose_Tech2=selected2, chose_Tech3=selected3,Test_User_id=user_id )
     return render(request, 'HTML/CH/post-test Q3.html',{
         "taskdes":taskdes,
     })

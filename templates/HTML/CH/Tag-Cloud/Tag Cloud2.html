@@ -24,10 +24,10 @@
 	</div>
 
 	<div class="bannder7">
-		
+
 	</div>
 
-	<div class="mainbody">
+	<div class="mainbody" >
         <div class="Categories">  <!-- Taxonomy部分 -->
 			<dl>
                 {% for attri in attribut1 %}
@@ -106,7 +106,7 @@
                 {% endfor %}
 			</dl>
 		</div>
-		
+
 		<div class="teches">
             {% for tech in all_techch %}
                 <div class="postcard">
@@ -124,10 +124,11 @@
             {% endfor %}
         </div>
 
-		<div class="selected">  
+		<div class="selected">
  			<div class="taskdiscription">
- 				<h4 class="aa">任务 1</h4>
                 {% for task1 in task %}
+ 				<h4 class="aa">任务 {{ task1.id }}</h4>
+
  				<p class="bb">{{ task1.Description }}</p>
                 {% endfor %}
  			</div>
@@ -135,7 +136,7 @@
  			<div class="biaoge">
  				<form method="post" action="">
  					<dl>
- 					<h4>请使用类别来缩小范围！</h4>
+ 					<dt>请使用类别来缩小范围！</dt>
 					<dt>请选择3个设计技术。</dt>
 					<dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
 					<dd id="sam1"><input type="text" id="same1" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}" onclick="Delete(1);"></dd>

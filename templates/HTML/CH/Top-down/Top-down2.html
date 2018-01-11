@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%" xmlns="http://www.w3.org/1999/html">
+<html  xmlns="http://www.w3.org/1999/html">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -26,12 +26,12 @@
 			<input type="submit" name="" value="下一步" id="queren" >
 	</div>
 
-	<div class="bannder8">
+	<div class="bannder8" style="">
 		
 	</div>
 
 	<div class="mainbody">
-		<div class="top-down">  <!-- Taxonomy部分 -->
+		<div class="top-down" >  <!-- Taxonomy部分 -->
 				<dl>
                     <a href="?dependency={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}" ><dt class="{% ifequal design_id '' %}active2{% endifequal %}">设计阶段</dt></a>
                     {% for attri in attribut1 %}
@@ -60,7 +60,7 @@
 				</dl>
 		</div>  
 
-		<div class="teches">
+		<div class="teches" >
             {% for tech in all_techch %}
                 <div class="postcard">
 					<div class="lantian">
@@ -77,9 +77,9 @@
             {% endfor %}
 		</div>
 
-		<div class="selected">  
+		<div class="selected" >
  			<div class="taskdiscription">
-                <h3>您现在在开发一个用于预订电影票的移动应用程序的团队中工作。</h3>
+                <h4>您现在在开发一个用于预订电影票的移动应用程序的团队中工作。</h4>
  				<h4>任务 1</h4>
                 {% for task1 in task %}
  				<p class="bb">{{ task1.Description }}</p>
@@ -92,18 +92,15 @@
  					<dt>请使用类别来缩小范围！</dt>
 					<dt>请选择3个设计技术。</dt>
 					<dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
-					<dd id="sam1"><input type="text" id="same1" name="selectedone" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}" onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(1);"></dd>
-					<dd id="sam2"><input type="text" id="same2" name="selectedtwo" class="tijiao"><img id="same22" src="{% static 'img/chacha3.png' %}" onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(2);"></dd>
-					<dd id="sam3"><input type="text" id="same3" name="selectedthree" class="tijiao"><img id="same33" src="{% static 'img/chacha3.png' %}" onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(3);"></dd>
+					<dd id="sam1"><input type="text" id="same1" name="selectedone" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}"  onclick="Delete(1);"></dd>
+					<dd id="sam2"><input type="text" id="same2" name="selectedtwo" class="tijiao"><img id="same22" src="{% static 'img/chacha3.png' %}"  onclick="Delete(2);"></dd>
+					<dd id="sam3"><input type="text" id="same3" name="selectedthree" class="tijiao"><img id="same33" src="{% static 'img/chacha3.png' %}"  onclick="Delete(3);"></dd>
 					</dl>
 				</form>
 			</div>
 		</div>
 		<div style="clear:both"></div>
-	</div>
-	<div class="feet">
-		
-	</div>
+    </div>
     </form>
 </body>
 </html>

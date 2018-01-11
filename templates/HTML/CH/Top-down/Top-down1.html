@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%" xmlns="http://www.w3.org/1999/html">
+<html style="" xmlns="http://www.w3.org/1999/html">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -10,10 +10,10 @@
     <script src="{% static 'JS/myscript.js' %}"></script>
     <title>Top-Down</title>
 </head>
-<body onload="time_funch()">
+<body onload="time_funch()"  >
 	<form method="post" action="{% url 'classification:T_Addtech1' %}" onsubmit="return check()">
     {% csrf_token %}
-	<div class="header">  <!-- logo部分 -->
+	<div class="header" >  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
@@ -26,11 +26,11 @@
 			<input type="submit" name="" value="下一步" id="queren" >
 	</div>
 
-	<div class="bannder8">
+	<div class="bannder8" >
 		
 	</div>
 
-	<div class="mainbody">
+	<div class="mainbody" >
 		<div class="top-down">  <!-- Taxonomy部分 -->
 				<dl>
                     <a href="?dependency={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}" ><dt class="{% ifequal design_id '' %}active2{% endifequal %}">设计阶段</dt></a>

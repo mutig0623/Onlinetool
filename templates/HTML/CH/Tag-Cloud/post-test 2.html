@@ -5,19 +5,19 @@
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <title>post-test 1</title>
+    <title>post-test 2</title>
 </head>
 <body>
-<form action="{% url 'classification:U_Addpost1' %}" method="post">
+<form method="post" action="{% url 'classification:C_Addpost2' %}">
     {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="submit" name="" value="下一步" id="butt-next">
+			<input type="submit" name="" value="下一步" onclick="" id="butt-next">
 	</div>
 
-	<div class="bannder8">
+	<div class="bannder11">
 		
 	</div>
 
@@ -33,7 +33,7 @@
                 <td>
                     <span class="number">1.</span><span class="Ques">所选择的设计技术适合任务的情景。</span>
                     <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post1" value="1"><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post1" value="1" ><label class="labposition">1</label></span>
                         <span class="seclow"><input type="radio" name="post1" value="2"><label class="labposition">2</label></span>
                         <span class="seclow"><input type="radio" name="post1" value="3"><label class="labposition">3</label></span>
                         <span class="seclow"><input type="radio" name="post1" value="4"><label class="labposition">4</label></span>
@@ -47,7 +47,7 @@
                 <td>
                 <span class="number">2.</span><span class="Ques">所选择的设计技术不适合任务的情景。</span>
                 <span class="onelow">
-                    <span class="seclow"><input type="radio" name="post2" value="1"><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post2" value="1" ><label class="labposition">1</label></span>
                     <span class="seclow"><input type="radio" name="post2" value="2"><label class="labposition">2</label></span>
                     <span class="seclow"><input type="radio" name="post2" value="3"><label class="labposition">3</label></span>
                     <span class="seclow"><input type="radio" name="post2" value="4"><label class="labposition">4</label></span>
@@ -61,7 +61,7 @@
                 <td>
                     <span class="number">3.</span><span class="Ques">我觉得使用的用于筛选的网页影响了对合适的设计技术的选择。</span>
                     <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post3" value="1"><label class="labposition">1</label></span>
+                        <span class="seclow"><input type="radio" name="post3" value="1" ><label class="labposition">1</label></span>
                         <span class="seclow"><input type="radio" name="post3" value="2"><label class="labposition">2</label></span>
                         <span class="seclow"><input type="radio" name="post3" value="3"><label class="labposition">3</label></span>
                         <span class="seclow"><input type="radio" name="post3" value="4"><label class="labposition">4</label></span>
@@ -75,7 +75,7 @@
                 <td>
                 <span class="number">4.</span><span class="Ques">所选的设计技术是正确的。</span>
                 <span class="onelow">
-                    <span class="seclow"><input type="radio" name="post4" value="1"><label class="labposition">1</label></span>
+                    <span class="seclow"><input type="radio" name="post4" value="1" ><label class="labposition">1</label></span>
                     <span class="seclow"><input type="radio" name="post4" value="2"><label class="labposition">2</label></span>
                     <span class="seclow"><input type="radio" name="post4" value="3"><label class="labposition">3</label></span>
                     <span class="seclow"><input type="radio" name="post4" value="4"><label class="labposition">4</label></span>

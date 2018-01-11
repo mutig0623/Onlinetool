@@ -1,20 +1,27 @@
+body{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+
 .intro{
 	margin-left: 20%;
-	margin-top: 100px;
+	margin-top: 150px;
 	width: 750px;
 	word-wrap:break-word;
 }
 
 .intro-en {
-	margin-left: 20%;
-	margin-top: 100px;
+	margin-left: 25%;
+	margin-top: 150px;
 	width: 750px;
 	word-wrap:break-word;
 }
 
 .intro-ch{
-	margin-left: 25%;
-	margin-top: 100px;
+	margin-left: 28%;
+	margin-top: 160px;
 	display: none;
 	width: 750px;
 	height: 250px;
@@ -26,8 +33,8 @@
 }
 
 .intro-de {
-	margin-left: 20%;
-	margin-top: 100px;
+	margin-left: 23%;
+	margin-top: 150px;
 	display: none;
 	width: 750px;
 	word-wrap:break-word;
@@ -39,6 +46,10 @@
 	text-align: center;
 	align-items: center;
 	border-bottom: 2px gray solid;
+	position:fixed;
+	width:100%;
+	top:0px;
+	background-color: white;
 }
 
 .header p{
@@ -75,6 +86,8 @@
 	height: 10px;
 	width: 6.7%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder2{
@@ -82,6 +95,8 @@
 	height: 10px;
 	width: 13.4%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder3{
@@ -89,6 +104,8 @@
 	height: 10px;
 	width: 20.1%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder4{
@@ -96,6 +113,8 @@
 	height: 10px;
 	width: 26.8%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder5{
@@ -103,6 +122,8 @@
 	height: 10px;
 	width: 33.5%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder6{
@@ -110,6 +131,8 @@
 	height: 10px;
 	width: 40.2%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder7{
@@ -117,6 +140,8 @@
 	height: 10px;
 	width: 46.9%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder8{
@@ -124,6 +149,8 @@
 	height: 10px;
 	width: 53.6%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder9{
@@ -131,6 +158,8 @@
 	height: 10px;
 	width: 60.3%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder10{
@@ -138,6 +167,8 @@
 	height: 10px;
 	width: 67%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder11{
@@ -145,6 +176,8 @@
 	height: 10px;
 	width: 73.7%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder12{
@@ -152,6 +185,8 @@
 	height: 10px;
 	width: 80.7%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder13{
@@ -159,6 +194,8 @@
 	height: 10px;
 	width: 87.1%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder14{
@@ -166,6 +203,8 @@
 	height: 10px;
 	width: 93.8%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 .bannder15{
@@ -173,6 +212,8 @@
 	height: 10px;
 	width: 100%;
 	margin-top: 0.3px;
+	position:fixed;
+	top:47px;
 }
 
 
@@ -209,7 +250,7 @@
 .instruction-ch{
 	width: 800px;
 	margin:0 auto;
-	margin-top: 100px;
+	margin-top: 180px;
 }
 
 .instruction-ch p{
@@ -235,7 +276,7 @@
 .instruction{
 	width: 800px;
 	margin:0 auto;
-	margin-top: 100px;
+	margin-top: 160px;
 }
 
 .instruction p{
@@ -347,9 +388,12 @@
 
 .mainbody{
 	overflow-x: hidden;
-	height: auto;
-	/*background-color: pink;*/
+	overflow-y: auto;
+	height: 580px;
+	margin-top: 55px;
+	z-index: -9999;
 }
+
 
 .mainbody p{
 	margin-left: 50px;
@@ -365,8 +409,8 @@
 
 
 .maincn{
-	margin-left: 25%;
-	margin-top: 100px;
+	margin-left: 28%;
+	margin-top: 200px;
 	width: 650px;
 }
 
@@ -374,22 +418,17 @@
 	position: relative;
 	float: left;
 	width: 67%;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	height: 8000px;
 	border-radius: 7px 7px 0px 0px;
+	height: 450px;
 }
 
 .selected{
 	float: right;
 	width: 18%;
-	/*background-color: #CDB5CD;*/
 	position: relative;
-	/*box-sizing:content-box;
-	margin:0 auto;
-	display: flex;*/
-	height: 300px;
-
+	/*position: fixed;
+	top:7%;
+	right:2%;*/
 }
 
 .taskdiscription{
@@ -454,9 +493,8 @@
 .top-down{
 	width: 15%;
 	float: left;
-	height: auto;
 	margin: 0 auto;
-	overflow:hidden;
+	overflow:auto;
 }
 
 .top-down dl{
@@ -923,7 +961,7 @@
 }
 
 #endshow{
-	margin-left: 23%;
+	margin-left: 18%;
 	margin-top:23%;
 }
 
@@ -934,9 +972,8 @@
 .bottomup{
 	width: 15%;
 	float: left;
-	height: 9000px;
+    height: 800px;
 	margin: 0 auto;
-	overflow:hidden;
 }
 
 .bottomup dt{
@@ -996,12 +1033,11 @@
 }
 
 .tiankong{
-	width: 50px;
-	border-left: 0px;
-	border-bottom: 15px solid;
-	border-top: 0px;
-	border-right: 0px;
-	background-color:transparent;
+	width: 70px;
+	border-left: 2px groove;
+	border-bottom: 2px groove;
+	border-top: 2px groove;
+	border-right: 2px groove;
 	outline: none;
 }
 

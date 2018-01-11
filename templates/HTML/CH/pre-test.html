@@ -57,7 +57,7 @@
 				<td>
                     <span class="number">3.</span><span class="Ques">你的国籍是什么？</span>
                     <span class="onelow">
-                        <input type="text" name="national" value="" class="tiankong" onfocus="hidden(this);">
+                        <input type="text" name="national" value="在此输入..." class="tiankong" onfocus='if(this.value=="在此输入..."){this.value="";}; 'onblur='if(this.value==""){this.value="在此输入...";};'>
                     </span>
 				</td>
 			</tr>
@@ -71,7 +71,7 @@
                     <span class="seclow"><input type="radio" name="edu" value="Master"><label class ="labposition"> 硕士 </label></span>
                     <span class="seclow"><input type="radio" name="edu" value="DS"><label class ="labposition"> 博士在读 </label></span>
                     <span class="seclow"><input type="radio" name="edu" value="Doctorate"><label class ="labposition"> 博士 </label></span>
-                    <span class="seclow"><input type="text" name="eduother" value="" class="tiankong" onfocus="hidden(this);"></span>
+                    <span class="seclow"><input type="text" name="eduother" value="在此输入..." class="tiankong" onfocus='if(this.value=="在此输入..."){this.value="";}; 'onblur='if(this.value==""){this.value="在此输入...";};'></span>
                     </span>
                 </td>
 			</tr>
@@ -99,7 +99,7 @@
                         <span class="seclow"><input type="checkbox" name="role" value="Consultant"><label class ="labposition"> 顾问 </label></span>
                         <span class="seclow"><input type="checkbox" name="role" value="Researcher"><label class ="labposition"> 科研人员 </label></span>
                         <span class="seclow"><input type="checkbox" name="role" value="Programmer"><label class ="labposition"> 编程员 </label></span>
-                        <span class="seclow"><input type="text" name="roleother" value="" class="tiankong" onfocus="hidden(this);"></span>
+                        <span class="seclow"><input type="text" name="roleother" value="在此输入..." class="tiankong" onfocus='if(this.value=="在此输入..."){this.value="";}; 'onblur='if(this.value==""){this.value="在此输入...";};'></span>
 				</span>
 				</td>
 			</tr>
@@ -107,7 +107,7 @@
 				<td>
 				<span class="number">7.</span><span class="Ques">你有多少年的全职工作经验？</span>
 				<span class="onelow">
-				<span class="seclow"><input type="text" name="years" value="" class="tiankong" onfocus="hidden(this);"> &nbsp;年</span>
+				<span class="seclow"><input type="text" name="years" value="在此输入..." class="tiankong" onfocus='if(this.value=="在此输入..."){this.value="";}; 'onblur='if(this.value==""){this.value="在此输入...";};'> &nbsp;年</span>
 				</span>
 				</td>
 			</tr>
