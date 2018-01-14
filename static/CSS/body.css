@@ -382,7 +382,7 @@ body{
 .mainbody{
 	overflow-x: hidden;
 	overflow-y: auto;
-	height: 600px;
+	height: 570px;
 	margin-top: 55px;
 	z-index: -9999;
 }
@@ -390,7 +390,7 @@ body{
 .mainbodyb{
 	overflow-x: hidden;
 	overflow-y: auto;
-	height: 600px;
+	height: 570px;
 	margin-top: 30px;
 	z-index: -9999;
 }
