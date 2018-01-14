@@ -27,12 +27,35 @@ function remindingcn(){
     else {
         return true;
      }
+}
 
+function remindingb () {
+
+}
+
+function remindingen() {
+   if (document.getElementById("enpart1").style.display !="block" && document.getElementById("enpart2").style.display != "block" && document.getElementById("enpart3").style.display !="block" && document.getElementById("enpart4").style.display != "block") {
+      window.alert("Please watch the show!");
+      return false;
+    }
+
+    if (document.getElementById("enpart1").style.display !="block" || document.getElementById("enpart2").style.display != "block" || document.getElementById("enpart4").style.display != "block" || document.getElementById("enpart3").style.display !="block") {
+     window.alert("Please finish the watching!");
+     return false;
+    }
+    else {
+        return true;
+     }
 }
 
 function removebutton(){
     document.getElementById("showbutton").style.display = "none";
     document.getElementById("part1").style.display = "block";
+}
+
+function removebuttonb(){
+    document.getElementById("showbutton").style.display = "none";
+    document.getElementById("part2B").style.display = "block";
 }
 
 function showpart2(){
@@ -45,11 +68,25 @@ function showpart4(){
     document.getElementById("pbutton2").style.display = "none";
 }
 
+function showpart4T(){
+    document.getElementById("part4T").style.display = "block";
+    document.getElementById("pbutton2").style.display = "none";
+}
+
 function showpart3(){
     document.getElementById("part3").style.display = "block";
     document.getElementById("pbutton3").style.display = "none";
 }
 
+function showpart3T(){
+    document.getElementById("part3T").style.display = "block";
+    document.getElementById("pbutton3").style.display = "none";
+}
+
+function showpart3S(){
+    document.getElementById("part3S").style.display = "block";
+    document.getElementById("pbutton3").style.display = "none";
+}
 function removebuttonen(){
     document.getElementById("showbuttonen").style.display = "none";
     document.getElementById("enpart1").style.display = "block";
@@ -72,17 +109,4 @@ function showpart3en() {
     }
 
 
-function remindingen() {
-   if (document.getElementById("part1").style.display !="block" && document.getElementById("part2").style.display != "block" && document.getElementById("part3").style.display !="block" && document.getElementById("part4").style.display != "block") {
-      window.alert("Please watch the show!");
-      return false;
-    }
 
-    if (document.getElementById("part1").style.display !="block" || document.getElementById("part2").style.display != "block" || document.getElementById("part4").style.display != "block" || document.getElementById("part3").style.display !="block") {
-     window.alert("Please finish the watching!");
-     return false;
-    }
-    else {
-        return true;
-     }
-}

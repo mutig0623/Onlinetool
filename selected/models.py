@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from users.models import UserProfile
 from multiselectfield import MultiSelectField
+from datetime import datetime
 
 from django.db import models
 
@@ -167,6 +168,7 @@ class PostQuestionResultTwo(models.Model):
 class PostQuestionResultThree(models.Model):
     Test_User = models.ForeignKey(UserProfile, verbose_name=u"测试用户")
     mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
+    end_time = models.DateTimeField(default=datetime.now, verbose_name=u"结束时间")
     degree_choices = (
         (1, u"1"), (2, u"2"), (3, u"3"), (4, u"4"), (5, u"5"), (6, u"6"), (7, u"7")
     )

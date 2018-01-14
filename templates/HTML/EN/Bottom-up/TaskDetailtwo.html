@@ -10,11 +10,13 @@
     <title>TaskDetail2</title>
 </head>
 <body>
+<form method="post" action="{% url 'classification:EnU_2' %}">
+    {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="button" name="" value="Next" onclick="jumpen4()" id="butt-next">
+			<input type="submit" name="" value="Next" id="butt-next">
 	</div>
 
 	<div class="bannder9">
@@ -22,9 +24,13 @@
 	</div>
 
 	<div class="main">
-	  <h4>Task 2</h4>
-	  <p>You now plan to make several non-functional prototypes by collaborating with other designers or stakeholders or users and compare the designed prototypes from users’ perspective in order to decide on one or two prototypes for further development.</p>
+        {% for task in taskdes %}
+            <h4>Task {{ task.id }}</h4>
+	        <p>{{ task.Description }}</p>
+        {% endfor %}
+
 	  <p>Please use the following web page to select three design techniques for this scenario.</p>
 	</div>
+</form>
 </body>
 </html>

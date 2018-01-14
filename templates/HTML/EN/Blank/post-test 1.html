@@ -4,20 +4,21 @@
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/enlanguage.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <title>post-test 3</title>
+    <title>post-test 1</title>
 </head>
 <body>
-<form action="{% url 'classification:AddPost3En' %}" method="post">
+<form method="post" action="{% url 'classification:B_Addpost1EN' %}">
     {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="submit" name="" value="Next" onclick="" id="butt-next">
+			<input type="button" name="" value="Next" onclick="" id="butt-next">
 	</div>
 
-	<div class="bannder14">
+	<div class="bannder8">
 		
 	</div>
 
@@ -28,7 +29,7 @@
 			<tr class="dark">
 				<td><span style="margin-left: 35px;">To what extent do you agree or disagree with the following statement? 1= extremely disagree; 7=extremely agree</span><td>
 			</tr>
-            <tr class="light">
+			<tr class="light">
                 <td>
                     <span class="number">1.</span><span class="Ques">The selected design techniques suit the scenario of the task.</span>
                     <span class="onelow">
@@ -280,104 +281,7 @@
                 </span>
                 </td>
             </tr>
-            <tr class="light">
-                <td>
-                    <span class="number">19.</span><span class="Ques">The website for selecting design techniques made it easier to do the tasks.</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post19" value="1"><label class="labposition">1</label></span>
-                        <span class="seclow"><input type="radio" name="post19" value="2"><label class="labposition">2</label></span>
-                        <span class="seclow"><input type="radio" name="post19" value="3"><label class="labposition">3</label></span>
-                        <span class="seclow"><input type="radio" name="post19" value="4"><label class="labposition">4</label></span>
-                        <span class="seclow"><input type="radio" name="post19" value="5"><label class="labposition">5</label></span>
-                        <span class="seclow"><input type="radio" name="post19" value="6"><label class="labposition">6</label></span>
-                        <span class="seclow"><input type="radio" name="post19" value="7"><label class="labposition">7</label></span>
-                    </span>
-                </td>
-            </tr>
-            <tr class="white">
-                <td>
-                    <span class="number">20.</span><span class="Ques">The website for selecting design techniques improved my task performance.</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post20" value="1"><label class="labposition">1</label></span>
-                        <span class="seclow"><input type="radio" name="post20" value="2"><label class="labposition">2</label></span>
-                        <span class="seclow"><input type="radio" name="post20" value="3"><label class="labposition">3</label></span>
-                        <span class="seclow"><input type="radio" name="post20" value="4"><label class="labposition">4</label></span>
-                        <span class="seclow"><input type="radio" name="post20" value="5"><label class="labposition">5</label></span>
-                        <span class="seclow"><input type="radio" name="post20" value="6"><label class="labposition">6</label></span>
-                        <span class="seclow"><input type="radio" name="post20" value="7"><label class="labposition">7</label></span>
-                    </span>
-                </td>
-            </tr>
-            <tr class="light">
-                <td>
-                    <span class="number">21.</span><span class="Ques">The website for selecting design techniques improved my decisions.</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post21" value="1"><label class="labposition">1</label></span>
-                        <span class="seclow"><input type="radio" name="post21" value="2"><label class="labposition">2</label></span>
-                        <span class="seclow"><input type="radio" name="post21" value="3"><label class="labposition">3</label></span>
-                        <span class="seclow"><input type="radio" name="post21" value="4"><label class="labposition">4</label></span>
-                        <span class="seclow"><input type="radio" name="post21" value="5"><label class="labposition">5</label></span>
-                        <span class="seclow"><input type="radio" name="post21" value="6"><label class="labposition">6</label></span>
-                        <span class="seclow"><input type="radio" name="post21" value="7"><label class="labposition">7</label></span>
-                    </span>
-                </td>
-            </tr>
-            <tr class="white">
-                <td>
-                    <span class="number">22.</span><span class="Ques">The website for selecting design techniques gave me the confidence to accomplish the tasks.</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post22" value="1"><label class="labposition">1</label></span>
-                        <span class="seclow"><input type="radio" name="post22" value="2"><label class="labposition">2</label></span>
-                        <span class="seclow"><input type="radio" name="post22" value="3"><label class="labposition">3</label></span>
-                        <span class="seclow"><input type="radio" name="post22" value="4"><label class="labposition">4</label></span>
-                        <span class="seclow"><input type="radio" name="post22" value="5"><label class="labposition">5</label></span>
-                        <span class="seclow"><input type="radio" name="post22" value="6"><label class="labposition">6</label></span>
-                        <span class="seclow"><input type="radio" name="post22" value="7"><label class="labposition">7</label></span>
-                    </span>
-                </td>
-            </tr>
-            <tr class="light">
-                <td>
-                    <span class="number">23.</span><span class="Ques">The website increased my productivity.</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post23" value="1"><label class="labposition">1</label></span>
-                        <span class="seclow"><input type="radio" name="post23" value="2"><label class="labposition">2</label></span>
-                        <span class="seclow"><input type="radio" name="post23" value="3"><label class="labposition">3</label></span>
-                        <span class="seclow"><input type="radio" name="post23" value="4"><label class="labposition">4</label></span>
-                        <span class="seclow"><input type="radio" name="post23" value="5"><label class="labposition">5</label></span>
-                        <span class="seclow"><input type="radio" name="post23" value="6"><label class="labposition">6</label></span>
-                        <span class="seclow"><input type="radio" name="post23" value="7"><label class="labposition">7</label></span>
-                    </span>
-                </td>
-            </tr>
-            <tr class="white">
-                <td>
-                    <span class="number">24.</span><span class="Ques">The website for selecting design techniques improved the quality of my work.</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post24" value="1"><label class="labposition">1</label></span>
-                        <span class="seclow"><input type="radio" name="post24" value="2"><label class="labposition">2</label></span>
-                        <span class="seclow"><input type="radio" name="post24" value="3"><label class="labposition">3</label></span>
-                        <span class="seclow"><input type="radio" name="post24" value="4"><label class="labposition">4</label></span>
-                        <span class="seclow"><input type="radio" name="post24" value="5"><label class="labposition">5</label></span>
-                        <span class="seclow"><input type="radio" name="post24" value="6"><label class="labposition">6</label></span>
-                        <span class="seclow"><input type="radio" name="post24" value="7"><label class="labposition">7</label></span>
-                    </span>
-                </td>
-            </tr>
-            <tr class="light">
-                <td>
-                    <span class="number">25.</span><span class="Ques">The website for selecting design techniques enhanced my problem-solving ability.</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="post25" value="1" ><label class="labposition">1</label></span>
-                        <span class="seclow"><input type="radio" name="post25" value="2"><label class="labposition">2</label></span>
-                        <span class="seclow"><input type="radio" name="post25" value="3"><label class="labposition">3</label></span>
-                        <span class="seclow"><input type="radio" name="post25" value="4"><label class="labposition">4</label></span>
-                        <span class="seclow"><input type="radio" name="post25" value="5"><label class="labposition">5</label></span>
-                        <span class="seclow"><input type="radio" name="post25" value="6"><label class="labposition">6</label></span>
-                        <span class="seclow"><input type="radio" name="post25" value="7"><label class="labposition">7</label></span>
-                    </span>
-                </td>
-            </tr>
+
 		</table>
 	</div>
 	</div>

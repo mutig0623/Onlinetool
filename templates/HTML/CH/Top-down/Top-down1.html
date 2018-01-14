@@ -80,9 +80,9 @@
 		<div class="selected">  
  			<div class="taskdiscription">
                 <h3>您现在在开发一个用于预订电影票的移动应用程序的团队中工作。</h3>
- 				<h4>任务 1</h4>
-                {% for task1 in task %}
- 				<p class="bb">{{ task1.Description }}</p>
+                {% for task in taskdes %}
+                    <h4>任务 {{ task.id }}</h4>
+ 				<p class="bb">{{ task.Description }}</p>
                 {% endfor %}
  			</div>
  			

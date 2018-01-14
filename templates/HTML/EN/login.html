@@ -11,28 +11,32 @@
     <title>Login</title>
 </head>
 <body onload="repeating()">
+<form method="post" action="{% url 'classification:LoginEn' %}">
+    {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="button" name="" value="Next" id="butt-next" onclick="showregisteren()">
+			<input type="submit" name="" value="Next" id="butt-next" onclick="showregisteren()">
 	</div>
 
 	<div class="bannder3">
 		
 	</div>
 
-	<div class="instructionen">
+	<div class="instruction-en">
 			<p>Please use your email address or a random number to register.</p>
 			<p>As the three tasks have correct answer, we expected you to answer the questions as best you can.</p>
 			<p>If you register with your email address, we will choose the top 10% participants and they will be rewarded with a XX gift card upon XXX.</p>
 			<div class="log_in">
 				<form method="post" action="">
-				<span><input type="text"  name="username" id="username" value="Email/Random Name" onfocus='if(this.value=="Email/Random Name"){this.value="";}; 'onblur='if(this.value==""){this.value="Email/Random Name";};'/>
-                      <label class="remindingen" id="repeated">{{ msg }}</label>
-                </span>
+
+                    <input type="text"  name="username" id="username" value="Email/Random Name" onfocus='if(this.value=="Email/Random Name"){this.value="";}; 'onblur='if(this.value==""){this.value="Email/Random Name";};'/><br/>
+                    <p class="remindingen">{{ msg }}</p>
+
 				</form>
 			</div>
 	</div>
+    </form>
 </body>
 </html>

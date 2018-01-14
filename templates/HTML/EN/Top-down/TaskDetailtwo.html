@@ -7,25 +7,31 @@
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/enlanguage.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <script src="{% static 'JS/myscript.js' %}"></script>
-    <title>TaskDetail1</title>
+    <title>TaskDetail2</title>
 </head>
 <body>
+<form method="post" action="{% url 'classification:EnT_2' %}">
+    {% csrf_token %}
+
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="button" name="" value="Next" onclick="jumpen3()" id="butt-next">
+			<input type="submit" name="" value="Next" onclick="jumpen4()" id="butt-next">
 	</div>
 
-	<div class="bannder6">
+	<div class="bannder9">
 		
 	</div>
 
 	<div class="main">
-	  <h3>You are now working in a team for developing a mobile App for booking movie tickets.</h3>
-	  <h4>Task 1</h4>
-	  <p>You are at an early stage of the project. You can get a group of people from different backgrounds (e.g., users, stakeholders) to discuss the project. You plan to understand and analyze the relations between different roles and surroundings when using the App and generate some ideas.</p>
-	  <p>Please using the following website to select three design techniques for this scenario.</p>
+        {% for task in taskdes %}
+            <h4>Task {{ task.id }}</h4>
+	        <p>{{ task.Description }}</p>
+        {% endfor %}
+
+	  <p>Please use the following web page to select three design techniques for this scenario.</p>
 	</div>
+    </form>
 </body>
 </html>

@@ -32,27 +32,40 @@ function time_funch() {
     document.getElementById("same1").innerText = ""; 
     document.getElementById("same2").innerText = "";
     document.getElementById("same3").innerText = "";
-    var sec=5;
-    setInterval(function () {
+     var sec=300;
+      setInterval(function () {
         sec--;
         var date = new Date(0, 0)
         date.setSeconds(sec);
         var m = date.getMinutes(), s = date.getSeconds();
         document.getElementById("mytime").innerText = m + " 分 " + two_char(s) + "秒";
     }, 1000);
-        setTimeout("Repeated()", 3000 )
-}
+        setTimeout("Repeatedch()", 300000 )
+  }
 
-function Repeated() {
-     var sec=3;
-    setInterval(function () {
+
+function Repeatedch() {
+    var con = confirm("确定一个技术也不选？");
+    if (con == true){
+        document.getElementById("same1").value = "none1";
+        document.getElementById("same2").value = "none2";
+        document.getElementById("same3").value = "none3";
+        document.getElementById("sam1").style.display ="block"
+        document.getElementById("sam2").style.display ="block"
+        document.getElementById("sam3").style.display ="block"
+        document.getElementById('queren').click();
+    }
+    if (con == false){
+        var sec=300;
+        setInterval(function () {
         sec--;
         var date = new Date(0, 0)
         date.setSeconds(sec);
         var m = date.getMinutes(), s = date.getSeconds();
         document.getElementById("mytime").innerText = m + " 分 " + two_char(s) + "秒";
     }, 1000);
-    document.getElementById('queren').click();
+        setTimeout("Repeatedch()", 300000 )
+    }
 }
 
 function time_funen() {
@@ -67,7 +80,32 @@ function time_funen() {
         var m = date.getMinutes(), s = date.getSeconds();
         document.getElementById("mytime").innerText = m + " min " + two_char(s) + " sec ";
     }, 1000);
-  }  
+    setTimeout("Repeateden()", 300000 )
+  }
+
+  function Repeateden() {
+    var con = confirm("Are you sure to select none of the Technique?");
+    if (con == true){
+        document.getElementById("same1").value = "none1";
+        document.getElementById("same2").value = "none2";
+        document.getElementById("same3").value = "none3";
+        document.getElementById("sam1").style.display ="block"
+        document.getElementById("sam2").style.display ="block"
+        document.getElementById("sam3").style.display ="block"
+        document.getElementById('queren').click();
+    }
+    if (con == false){
+        var sec=300;
+        setInterval(function () {
+        sec--;
+        var date = new Date(0, 0)
+        date.setSeconds(sec);
+        var m = date.getMinutes(), s = date.getSeconds();
+        document.getElementById("mytime").innerText = m + " min " + two_char(s) + "sec";
+    }, 1000);
+        setTimeout("Repeateden()", 300000 )
+    }
+}
 
 function addtech(obj){   
     var cba = obj.previousSibling;

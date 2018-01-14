@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script src="{% static 'JS/index.js' %}"></script>
+    <title>Introduction</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:ChTask1' %}" onsubmit="return remindingcn()">
+{% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+            {% if request.user.is_authenticated %}
+            <label name="userid">{{ request.user.id }}</label>
+            {% endif %}
+             {% csrf_token   %}
+             <input type="submit" name="" value="下一步" id="butt-next" >
+	</div>
+</form>
+
+	<div class="bannder5">
+		
+	</div>
+
+	<div class="mainbody">
+		<p>在开始第一个任务之前，请看下面关于如何使用网页的介绍。</p>
+		<div class="back-tag">
+	  		<input type="button" name="" value="显示介绍" id="showbutton" onclick="removebutton()">
+
+	  		<div id="part1">
+	  			<p>在这一区域，一些类别可以帮助您在选择设计技术时缩小范围。</p>
+	  			<input type="button" name="" value="Next" id="pbutton1" class="bbotton" onclick="showpart2()">
+	  		</div>
+
+	   		<div id="part2">
+		  		<p>在这一区域，包括50个设计技术。 所有设计技巧都以卡片形式呈现。<br/>
+				请点击“+”，选择设计技巧。 所选的设计技术将出现在网页的底部。<br/>
+				您只能为每个任务选择三种设计技术。</p>
+		  		<input type="button" name="" value="Next" id="pbutton2" class="bbotton" onclick="showpart4()">
+	  		</div>
+
+	  		<div id="part3">
+		  		<p>任务将出现在这个区域作为提醒。 在您进入网页选择设计技术之前，该任务的描述就已经被介绍了。</p>  		
+	  		</div>
+	  		
+	  		<div id="part4">
+		  		<p>所选的设计技术将出现在这个区域。</p>
+		  		<input type="button" name="" value="Next" id="pbutton3" class="bbotton" onclick="showpart3()">
+	  		</div>
+        </div>
+    </div>
+</body>
+</html>

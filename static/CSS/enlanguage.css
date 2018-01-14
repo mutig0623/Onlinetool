@@ -1,5 +1,5 @@
 .instructionen{
-	padding-top: 30px;
+	padding-top: 75px;
 	margin:0 auto;
 	width: 800px;
 	height: 600px;
@@ -7,7 +7,7 @@
 }
 
 .instructionen p{
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 .Quesen{
@@ -201,3 +201,10 @@
 	overflow-x: visible;
 }
 
+.instruction-en{
+	padding-top: 190px;
+	margin:0 auto;
+	width: 800px;
+	height: 600px;
+	padding-left: 50px;
+}
