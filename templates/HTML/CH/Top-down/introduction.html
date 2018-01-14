@@ -9,7 +9,7 @@ introduction.html<!DOCTYPE html>
     <title>Introduction</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:ChTask1' %}" onsubmit="return remindingcn()">
+<form method="post" action="{% url 'classification:ChTask1' %}" onsubmit="return remindingcnt()">
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -27,7 +27,7 @@ introduction.html<!DOCTYPE html>
 		
 	</div>
 
-	<div class="mainbody">
+	<div class="mainbodyb">
 		<p>在开始第一个任务之前，请看下面关于如何使用网页的介绍。</p>
 		<div class="back-top">
 	  		<input type="button" name="" value="显示介绍" id="showbutton" onclick="removebutton()">
