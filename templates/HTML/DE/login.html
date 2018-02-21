@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html style="height: 100%">
+{% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" type="text/css" href="../../CSS/body.css"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
-    <script src="../../JS/myscript.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
     <title>Login</title>
 </head>
 <body>
+<form method="post" action="{% url 'classification:LoginDe' %}">
+    {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
-			<div class="kitlogo"><img src="../../img/kit2.png">
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="button" name="" value="Next" id="butt-next" onclick="showregister()">
+			<input type="submit" name="" value="Weiter" id="butt-next" onclick="showregister()">
 	</div>
 
 	<div class="bannder3">
 		
 	</div>
 
-	<div class="main">  <!-- logo部分 -->
-		<div class="instruction">
-			<p>Please use your email address or a random number to register. As the three tasks have correct answer, we expected you to answer the questions as best you can.</p>
-			<p>If you register with your email address, we will choose the top 10% participants and they will be rewarded with a XX gift card upon XXX.</p>
-			<div class="log_in">
-				<form method="post" action="">
-				<input type="text"  name="username" id="username" value="Email/Random Number" onfocus='if(this.value=="Email/Random Number"){this.value="";}; 'onblur='if(this.value==""){this.value="Email/Random Number";};'/>
-				</form>
+	<div class="main" style="margin-left:15%;">  <!-- logo部分 -->
+		<div class="instructionde">
+			<p>Bitte verwenden Sie Ihre E-Mail-Adresse oder Zufallszahlen, um sich zu registrieren. </p>
+			<p>Wir bitten Sie die Fragen so gut wie möglich zu beantworten. Wenn Sie sich mit Ihrer E-Mail-Adresse anmelden, wählen wir zufällig aus den besten 10% der Teilnehmer aus. Diese erhalten ein kleines Geschenk von uns.</p>
+			<div class="log_inde" >
+				<input type="text"  name="username" id="username" value="E-Mail-Adresse/Zufallszahlen" onfocus='if(this.value=="E-Mail-Adresse/Zufallszahlen"){this.value="";}; 'onblur='if(this.value==""){this.value="E-Mail-Adresse/Zufallszahlen";};'/>
+				<label class="reminding" id="repeated">{{ msg }}</label>
 			</div>
 		</div>
 	</div>
+    </form>
 </body>
 </html>

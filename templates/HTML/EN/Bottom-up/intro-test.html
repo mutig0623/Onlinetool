@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>post-test 3</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:ENCheckblank' %}">
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="Next" onclick="jumpcn6();" id="butt-next">
+	</div>
+
+	<div class="bannder14">
+		
+	</div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+          <br>
+		<p>Please answer the following questions</p>
+		
+		<table id="tab2">
+			<tr class="dark">
+				<td><span class="number">No.</span><span class="Ques">Question</span><td>
+			</tr>
+
+            <tr class="white">
+                <td>
+                    <span class="number">1.</span><span class="Ques">What is the purpose of this task?</span>
+                    <span class="onelow">
+                        <span class="seclowlong"><input type="radio" name="test1" value="1"><label class="labpositionlong">Choose design techniques for a scenario</label></span>
+                        <span class="seclowlong"><input type="radio" name="test1" value="2"><label class="labpositionlong">Describe a design scenario</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                <span class="number">2.</span><span class="Ques">Where will you see the description of task on the website?</span>
+                <span class="onelow">
+                    <span class="seclowlong"><input type="radio" name="test2" value="1"><label class="labpositionlong">On the left hand side</label></span>
+                    <span class="seclowlong"><input type="radio" name="test2" value="2"><label class="labpositionlong">On the right hand side</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">3.</span><span class="Ques">Where will you see the categories for filtering design techniques on the  website?</span>
+                    <span class="onelow">
+                        <span class="seclowlong"><input type="radio" name="test3" value="1"><label class="labpositionlong">On the left and side</label></span>
+                        <span class="seclowlong"><input type="radio" name="test3" value="2"><label class="labpositionlong">On the right hand side</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                <span class="number">4.</span><span class="Ques">By using which button can you submit the selected design techniques?</span>
+                <span class="onelow">
+                    <span class="seclowlong"><input type="radio" name="test4" value="1"><label class="labpositionlong">Next buttom</label></span>
+                    <span class="seclowlong"><input type="radio" name="test4" value="2"><label class="labpositionlong">Submit buttom</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="white" style="height: 2px;">
+                <td></td>
+            </tr>
+		</table>
+	</div>
+	</div>
+</form>
+</body>
+</html>

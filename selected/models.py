@@ -58,10 +58,6 @@ class PreQuestionResult(models.Model):
         (u"Master", u"Master's degree"), (u"DS", u"Doctoral student"), (u"Doctorate", u"Doctorate degree")),
         verbose_name=u"教育程度")
     Q41_educationlevel = models.CharField(null=True,max_length=20, default="", verbose_name=u"其他教育程度")
-    Q5_expertise = MultiSelectField(null=True,choices=(
-        ("CP", u"Computer program"), ("DS", u"Design service"), ("MA", u"Management"), ("TS", u"Technical service"),
-        ("SR", u"Scientific research"), ("EDU", u"Education")), verbose_name=u"设计经验", max_choices=3, max_length=50)
-    Q51_expertise = models.CharField(null=True,max_length=20, default="", verbose_name=u"其他专业知识")
     Q6_role = MultiSelectField(null=True,choices=(
     ("M", u"Manager"), ("S", u"Student"), ("D", u"Designer"), ("C", u"Consultant"), ("R", u"Researcher"),
     ("P", u"Programmer")), max_choices=3, verbose_name=u"设计角色", max_length=50)
@@ -75,34 +71,44 @@ class PreQuestionResult(models.Model):
         choices=((1, u"角色模型"), (2, u"场景"), (3, u"出声思考"), (4, u"卡诺分析"), (5, u"角色扮演"), (6, u"行为地图"), (7, u"以上都不是")),
         verbose_name=u"熟悉的技术", max_choices=3)
 
-    degree_choices = (
-        (1, u"1"), (2, u"2"), (3, u"3"), (4, u"4"), (5, u"5"), (6, u"6"), (7, u"7")
-    )
-    Q12_knewpretty = models.IntegerField(null=True,choices=degree_choices,verbose_name=u"精通程度")
-    Q13_experts = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"全局")
-    Q14_knewless = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q15_donotknow = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q16_donotfeel = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q17_lotofexperiences = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q18_familiar = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q19_focusobjects = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q20_basedcategories = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q21_easylearncategories = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q22_organizefunctionally = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q23_useformallogic = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q24_adherelogicalrules = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q25_individualbehavior = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q26_focussurobj = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q27_focussurfeld = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q28_difflearncate = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q29_organthematically = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q30_diareasoning = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q31_preflogic = models.IntegerField(null=True,choices=degree_choices, verbose_name=u"")
-    Q32_peopbehav = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
+    degree_choices = ((1, u"1"), (2, u"2"), (3, u"3"), (4, u"4"), (5, u"5"), (6, u"6"), (7, u"7"))
+
+    Q12_knewpretty = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"精通程度")
+    Q13_experts = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"全局")
+    Q14_knewless = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q15_donotknow = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q16_donotfeel = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q17_lotofexperiences = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q18_familiar = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q19_focusobjects = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q20_basedcategories = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q21_easylearncategories = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q22_organizefunctionally = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q23_useformallogic = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q24_adherelogicalrules = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q25_individualbehavior = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q26_focussurobj = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q27_focussurfeld = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q28_difflearncate = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q29_organthematically = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q30_diareasoning = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q31_preflogic = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    Q32_peopbehav = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+
+    livecountry = models.CharField(max_length=6, null= True, default="", choices=((u"Yes", u"是"), (u"No", u"否")))
+    CountryName = models.CharField(max_length=100, null=True, default="", verbose_name=u"国家名称")
+    CountryYears = models.CharField(null=True, max_length=15,default="", verbose_name=u"年长")
+    FC_1 = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    FC_2 = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    FC_3 = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    FC_4 = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    FC_5 = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
+    FC_6 = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
 
     class Meta:
         verbose_name = "Pre问卷结果"
         verbose_name_plural = verbose_name
+
 
 
 class PostQuestionResultOne(models.Model):
@@ -117,22 +123,20 @@ class PostQuestionResultOne(models.Model):
     Q4_objects = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
     Q5_rulesbased = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
     Q6_learncategory = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q7_organize = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q8_formallogic = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q9_logicalrules = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q10_individual = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q11_surrounding = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q12_littelrule = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q13_difficultrule = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q14_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q15_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q16_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q17_pressures = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q18_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-
+    Q7_organize = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q8_formallogic = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q9_logicalrules = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q10_individual = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q11_surrounding = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q12_littelrule = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q13_difficultrule = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q14_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q15_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q16_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
     class Meta:
         verbose_name = "Post问卷结果One"
         verbose_name_plural = verbose_name
+
 
 
 class PostQuestionResultTwo(models.Model):
@@ -147,22 +151,21 @@ class PostQuestionResultTwo(models.Model):
     Q4_objects = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
     Q5_rulesbased = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
     Q6_learncategory = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q7_organize = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q8_formallogic = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q9_logicalrules = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q10_individual = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q11_surrounding = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q12_littelrule = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q13_difficultrule = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q14_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q15_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q16_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q17_pressures = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q18_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
+    Q7_organize = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q8_formallogic = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q9_logicalrules = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q10_individual = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q11_surrounding = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q12_littelrule = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q13_difficultrule = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q14_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q15_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q16_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
 
     class Meta:
         verbose_name = "Post问卷结果Two"
         verbose_name_plural = verbose_name
+
 
 
 class PostQuestionResultThree(models.Model):
@@ -178,28 +181,25 @@ class PostQuestionResultThree(models.Model):
     Q4_objects = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
     Q5_rulesbased = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
     Q6_learncategory = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q7_organize = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q8_formallogic = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q9_logicalrules = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q10_individual = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q11_surrounding = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q12_littelrule = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q13_difficultrule = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q14_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q15_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q16_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q17_pressures = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q18_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q19_littelrule = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q20_difficultrule = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q21_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q22_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q23_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q24_pressures = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
-    Q25_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"",null=True)
+    Q7_organize = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q8_formallogic = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q9_logicalrules = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q10_individual = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q11_surrounding = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q12_littelrule = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q13_difficultrule = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q14_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q15_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q16_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q17_pressures = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q18_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q19_littelrule = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q20_difficultrule = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q21_thematically = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+    Q22_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
+
 
     class Meta:
         verbose_name = "Post问卷结果Three"
         verbose_name_plural = verbose_name
-
 

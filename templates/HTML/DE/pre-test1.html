@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>pre-test</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:PreAddDe1'%}">
+{% csrf_token %}
+
+	<div class="header">  <!-- logo部分 -->
+		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+			<p>Welcome to the Online Experiment</p>
+		</div>
+		<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
+	</div>
+
+	<div class="bannder4"></div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+          <br/>
+		<p>Bitte beantworten Sie die folgenden Fragen.</p>
+		<table id="tab2">
+            <tr class="dark">
+				<td><span style="margin-left: 35px;">Knowledge of Design Techniques</span><td>
+			</tr>
+			<tr class="white">
+				<td><span style="margin-left: 35px;">Inwieweit stimmen Sie den folgenden Aussage zu?</span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">1= stimme überhaupt nicht zu; 7=stimme vollkommen zu</span><td>
+			</tr>
+            <tr class="light">
+                <td>
+                <span class="number">1.</span><span class="Ques">Ich weiss so ziemlich alles übler Designtechniken.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="que11" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="que11" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="que11" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="que11" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="que11" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="que11" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="que11" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">2.</span><span class="Ques">Im Team bin ich einer der Experten, wenn es um den Einsatz von Designtechniken geht.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="que12" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="que12" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="que12" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="que12" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="que12" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="que12" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="que12" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                <span class="number">3.</span><span class="Ques">Im Vergleich zu den meisten anderen Mitgliedern in einem Team, weiß ich weniger über Designtechniken.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="que13" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="que13" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="que13" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="que13" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="que13" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="que13" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="que13" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">4.</span><span class="Ques">Wenn ich Designtechniken benutzte, weiß ich nicht wirklich viel darüber.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="que14" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="que14" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="que14" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="que14" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="que14" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="que14" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="que14" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                <span class="number">5.</span><span class="Ques">Ich fühlte mich nicht sehr gut über Designtechniken informiert.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="que15" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="que15" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="que15" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="que15" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="que15" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="que15" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="que15" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">6.</span><span class="Ques">Ich habe viele Erfahrungen mit Designtechniken.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="que16" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="que16" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="que16" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="que16" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="que16" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="que16" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="que16" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                <span class="number">7.</span><span class="Ques">Ich fühlte mich vertraut mit Designtechniken.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="que17" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="que17" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="que17" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="que17" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="que17" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="que17" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="que17" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+		</table>
+	</div>
+	</div>
+    </form>
+</body>
+</html>

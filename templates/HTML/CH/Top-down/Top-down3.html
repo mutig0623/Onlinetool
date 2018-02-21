@@ -33,29 +33,29 @@
 	<div class="mainbody">
 		<div class="top-down">  <!-- Taxonomy部分 -->
 				<dl>
-                    <a href="?dependency={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}" ><dt class="{% ifequal design_id '' %}active2{% endifequal %}">设计阶段</dt></a>
+                    <dt>设计阶段</dt>
                     {% for attri in attribut1 %}
-                      <a href="?design={{ attri.id }}&dependency={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><dd  class="{% ifequal design_id attri.id|stringformat:"i"  %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                        <dd onclick="showtop1()" class="{% ifequal design_id attri.id|stringformat:"i"  %}active2{% endifequal %}"><a onclick="showtop1();" class="taga" href="?design={{ attri.id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"> {{ attri.Design_Name }}</a><a  href="?dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 
-					<a href="?design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><dt class="{% ifequal dependency_id '' %}active2{% endifequal %}">时间依赖性</dt></a>
+					<dt>时间依赖性</dt>
                     {% for attri in attribut2  %}
-                        <a href="?dependency={{ attri.id }}&design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><dd class="{% ifequal dependency_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Dependency_Name }}</dd></a>
+                       <dd onclick="showtop2()" class="{% ifequal dependency_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?dependency={{ attri.id }}&design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}">{{ attri.Dependency_Name }}</a><a  id="top2" href="?design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 
-					<a href="?design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"> <dt class="{% ifequal duration_id '' %}active2{% endifequal %}">持续时间</dt></a>
+					<dt>持续时间</dt>
                     {% for attri in attribut3 %}
-                        <a href="?duration={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><dd class="{% ifequal duration_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Duration_Name }}</dd></a>
+                       <dd onclick="showtop3()" class="{% ifequal duration_id attri.id|stringformat:"i" %}active2{% endifequal %}"> <a href="?duration={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}">{{ attri.Duration_Name }}</a><a  id="top3" href="?design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 
-                    <a href="?design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}" ><dt class="{% ifequal participant_id '' %}active2{% endifequal %}">用户参与情况</dt></a>
-                        {% for attri in attribut4 %}
-                            <a href="?participant={{ attri.id }}&design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}"><dd class="{% ifequal participant_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Participation_Name }}</dd></a>
-                        {% endfor %}
+                    <dt>用户参与情况</dt>
+                    {% for attri in attribut4 %}
+                            <dd onclick="showtop4()" class="{% ifequal participant_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?participant={{ attri.id }}&design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}">{{ attri.Participation_Name }}</a><a  id="top4" href="?design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
+                    {% endfor %}
 
-					<a href="?design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}"> <dt class="{% ifequal evaluation_id '' %}active2{% endifequal %}">评估类型</dt></a>
+					<dt >评估类型</dt>
                         {% for attri in attribut5 %}
-                            <a href="?evaluation={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}"><dd class="{% ifequal evaluation_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Evaluation_Name }}</dd></a>
+                            <dd onclick="showtop5()" class="{% ifequal evaluation_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?evaluation={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}">{{ attri.Evaluation_Name }}</a><a id="top5" href="?design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                         {% endfor %}
 				</dl>
 		</div>  
@@ -81,7 +81,6 @@
  			<div class="taskdiscription">
             {% for task in taskdes %}
                 <h4>任务 {{ task.id }}</h4>
-
  				<p class="bb">{{ task.Description }}</p>
 
             {% endfor %}
@@ -91,7 +90,7 @@
  			<div class="biaoge">
  				<form method="post" action="">
  					<dl>
- 					<dt>请使用类别来缩小范围！</dt>
+ 					<dt>您可以使用左侧的类别来选择设计技术。</dt>
 					<dt>请选择3个设计技术。</dt>
 					<dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
 					<dd id="sam1"><input type="text" id="same1" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}" onmouseover="changeImg(this,1);" onmouseout="changeImg(this,2);" onclick="Delete(1);"></dd>

@@ -4,7 +4,6 @@
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
-    <link rel="stylesheet" type="text/css" href="{% static 'CSS/enlanguage.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
@@ -25,16 +24,12 @@
 	</div>
 
 	<div class="instruction-en">
-			<p>Please use your email address or a random number to register.</p>
-			<p>As the three tasks have correct answer, we expected you to answer the questions as best you can.</p>
-			<p>If you register with your email address, we will choose the top 10% participants and they will be rewarded with a XX gift card upon XXX.</p>
+			<p>Please use your email address or random numbers to register.</p>
+			<p>For each of the three tasks there is a correct answer, we expected you to answer the questions as best you can.</p>
+			<p>If you register with your email address, we will choose the top 10% participants, and they will receive a small present from us.</p>
 			<div class="log_in">
-				<form method="post" action="">
-
-                    <input type="text"  name="username" id="username" value="Email/Random Name" onfocus='if(this.value=="Email/Random Name"){this.value="";}; 'onblur='if(this.value==""){this.value="Email/Random Name";};'/><br/>
-                    <p class="remindingen">{{ msg }}</p>
-
-				</form>
+                <input type="text"  name="username" id="username" value="Email/Random Name" onfocus='if(this.value=="Email/Random Name"){this.value="";}; 'onblur='if(this.value==""){this.value="Email/Random Name";};'/><br/>
+                <p class="remindingen">{{ msg }}</p>
 			</div>
 	</div>
     </form>

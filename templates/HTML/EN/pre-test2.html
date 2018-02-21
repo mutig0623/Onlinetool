@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>pre-test</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:PreAddEn2' %}" >
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+			<p>Welcome to the Online Experiment</p>
+		</div>
+		<input type="submit" name="" value="Next" id="butt-next">
+	</div>
+
+	<div class="bannder4"></div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+		<p>Please answer the following question</p>
+		<table id="tab2">
+			<tr class="dark">
+				<td><span style="margin-left: 35px;">Approaches for Problem Solving</span><td>
+			</tr>
+			<tr class="white">
+				<td><span style="margin-left: 35px;">To what extent do you agree or disagree with the following statement? </span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">1= extremely disagree; 7=extremely agree</span><td>
+			</tr>
+            <tr class="light">
+                <td>
+                    <span class="number">1.</span><span class="Quesen">When solving problems, I focus on attributes of projects.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que18" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que18" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que18" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que18" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que18" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que18" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que18" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">2.</span><span class="Quesen">When solving problems, I apply rules based on the categories to predict and explain the objects' behavior.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que19" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que19" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que19" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que19" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que19" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que19" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que19" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">3.</span><span class="Quesen">I find it is easy to learn categories.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que20" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que20" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que20" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que20" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que20" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que20" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que20" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">4.</span><span class="Quesen">When solving problems, I organize things functionally.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que21" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que21" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que21" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que21" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que21" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que21" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que21" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">5.</span><span class="Quesen">When solving problems, I use formal logic for reasoning, making categories, and apply and justifying rules.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que22" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que22" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que22" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que22" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que22" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que22" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que22" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">6.</span><span class="Quesen">When logic and experiential knowledge are in conflict, usually, I adhere to formal logical rules.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que23" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que23" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que23" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que23" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que23" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que23" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que23" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">7.</span><span class="Quesen">I interpret individual's behavior as a result of their disposition or personality.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que24" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que24" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que24" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que24" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que24" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que24" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que24" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">8.</span><span class="Quesen">When solving problems, I focus on the field surrounding objects.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que25" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que25" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que25" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que25" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que25" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que25" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que25" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">9.</span><span class="Quesen">When solving problems, I think the behavior of an object is explained by situational forces and factors in the surrounding field..</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que26" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que26" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que26" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que26" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que26" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que26" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que26" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">10.</span><span class="Quesen">I find it is difficult to learn categories.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que27" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que27" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que27" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que27" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que27" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que27" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que27" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">11.</span><span class="Quesen">When solving problems, I prefer to organize things thematically (e.g., use the context or environment as a basis for identifying similarities).</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que28" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que28" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que28" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que28" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que28" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que28" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que28" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">12.</span><span class="Quesen">When solving problems, I prefer dialectical reasoning.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que29" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que29" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que29" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que29" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que29" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que29" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que29" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">13.</span><span class="Quesen">I prefer a logic that accepts contradiction</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que30" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que30" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que30" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que30" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que30" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que30" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que30" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">14.</span><span class="Quesen">I interpret peoples' behavior as the result of situational pressures.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que31" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que31" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que31" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que31" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que31" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que31" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que31" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+		</table>
+	</div>
+	</div>
+</body>
+</html>

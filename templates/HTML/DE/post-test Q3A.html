@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>post-test 3</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:Addpost3ADE' %}">
+    {% csrf_token %}
+
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
+	</div>
+
+	<div class="bannder14">
+		
+	</div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+          <br>
+		<p>Bitte beantworten Sie die folgenden Fragen. </p>
+		<table id="tab2">
+            <tr class="dark">
+				<td><span style="margin-left: 35px;">Individual Task Performance</span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">Inwieweit stimmen Sie den folgenden Aussage zu? 1= stimme überhaupt nicht zu; 7=stimme vollkommen zu</span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">1= stimme überhaupt nicht zu; 7=stimme vollkommen zu</span><td>
+			</tr>
+            <tr class="light">
+                <td>
+                    <span class="number">7.</span><span class="Quesde">Ich habe die im Szenario aufgeworfenen Probleme verstanden.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post7" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="post7" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">8.</span><span class="Quesde">Ich habe eine strukturierte Vorgehensweise bei der Auswahl von Designtechniken verfolgt.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post8" value="1" ><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="post8" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">9.</span><span class="Quesde">Ich kann die Auswahl begründen.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post9" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="post9" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">10.</span><span class="Quesde">Die ausgewählten Designtechniken können die im Szenario beschriebenen Probleme lösen.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post10" value="1" ><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="post10" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">11.</span><span class="Quesde">Die von mir gewählten Designtechniken können dazu beitragen, das in der Aufgabe artikulierte Ziel zu erreichen.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post11" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="post11" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">12.</span><span class="Quesde">Die ausgewählten Designtechniken orientierten sich an den Anforderungen der Aufgabenstellung.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post12" value="1" ><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="post12" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">13.</span><span class="Quesde">Ich kann eine klare Empfehlung für die Auswahl der Designtechniken für das Szenario geben.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post13" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="post13" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+              <tr style="height: 25px; background-color: white;" >
+				<td>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</div>
+    </form>
+</body>
+</html>

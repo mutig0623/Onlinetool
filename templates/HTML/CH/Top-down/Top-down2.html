@@ -7,12 +7,81 @@
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/task.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#design").click(function (){
+                var des = $("#design").text();
+                    $.ajax({
+                       type:"POST",
+                        url:{% url 'classification:Ajaxadd' %},
+                        data:{'design':des},
+                        datatype:"json",
+
+                        success:function(ret){
+                            $(".showed").empty();
+                            $("h4").empty();
+                            $(".contented").empty();
+                            $.each(ret,function (key, value){
+                                $(".showed").append(ret.)
+                            });
+                        }
+                    });
+            });
+            $("#dependency").click(function (){
+                var dep = $("#dependency").text();
+                    $.ajax({
+                       type:"POST",
+                        url:{% url 'classification:Ajaxadd' %},
+                        data:{'dependency':dep},
+                        datatype:"json",
+                        success:function(ret){
+                        }
+                    });
+            });
+            $("#duration").click(function (){
+                 var des = $("#duration").text();
+                    $.ajax({
+                       type:"POST",
+                        url:{% url 'classification:Ajaxadd' %},
+                        data:{},
+                        datatype:"json",
+                        success:function(ret){
+                        }
+                    });
+            });
+            $("#participant").click(function (){
+                 var des = $("#participant").text();
+                    $.ajax({
+                       type:"POST",
+                        url:{% url 'classification:Ajaxadd' %},
+                        data:{},
+                        datatype:"json",
+                        success:function(ret){
+                        }
+                    });
+            });
+            $("#evaluation").click(function (){
+                 var des = $("#evaluation").text();
+                    $.ajax({
+                       type:"POST",
+                        url:{% url 'classification:Ajaxadd' %},
+                        data:{},
+                        datatype:"json",
+                        success:function(ret){
+                        }
+                    });
+            });
+        });
+    </script>
     <title>Top-Down</title>
 </head>
 <body onload="time_funch()">
 	<form method="post" action="{% url 'classification:T_Addtech2' %}" onsubmit="return check()">
     {% csrf_token %}
+
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
@@ -20,10 +89,10 @@
 			<div class="timing">
  			<span>您还剩</span>	<span id="mytime">0 分 00 秒</span>
  			</div>
-            {% if request.user.is_authenticated %}
-                <label>{{ request.user.id }}</label>
+        {% if request.user.is_authenticated %}
+            <label name="userid">{{ request.user.id }}</label>
             {% endif %}
-			<input type="submit" name="" value="下一步" id="queren" >
+        	<input type="submit" name="" value="下一步" id="queren" >
 	</div>
 
 	<div class="bannder8" style="">
@@ -31,32 +100,32 @@
 	</div>
 
 	<div class="mainbody">
-		<div class="top-down" >  <!-- Taxonomy部分 -->
+		<div class="top-down">  <!-- Taxonomy部分 -->
 				<dl>
-                    <a href="?dependency={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}" ><dt class="{% ifequal design_id '' %}active2{% endifequal %}">设计阶段</dt></a>
+                    <dt id="dd3">设计阶段</dt>
                     {% for attri in attribut1 %}
-                      <a href="?design={{ attri.id }}&dependency={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><dd  class="{% ifequal design_id attri.id|stringformat:"i"  %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                        <dd id="design" name="design" >{{ attri.Design_Name }}<a class="hiddeimga" href="?dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img  src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 
-					<a href="?design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><dt class="{% ifequal dependency_id '' %}active2{% endifequal %}">时间依赖性</dt></a>
+					<dt>时间依赖性</dt>
                     {% for attri in attribut2  %}
-                        <a href="?dependency={{ attri.id }}&design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><dd class="{% ifequal dependency_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Dependency_Name }}</dd></a>
+                       <dd id="dependency" name="dependency">{{ attri.Dependency_Name }}<a ><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 
-					<a href="?design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"> <dt class="{% ifequal duration_id '' %}active2{% endifequal %}">持续时间</dt></a>
+					<dt>持续时间</dt>
                     {% for attri in attribut3 %}
-                        <a href="?duration={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><dd class="{% ifequal duration_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Duration_Name }}</dd></a>
+                       <dd id="duration" name="duration" > {{ attri.Duration_Name }}<a ><img class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 
-                    <a href="?design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}" ><dt class="{% ifequal participant_id '' %}active2{% endifequal %}">用户参与情况</dt></a>
-                        {% for attri in attribut4 %}
-                            <a href="?participant={{ attri.id }}&design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}"><dd class="{% ifequal participant_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Participation_Name }}</dd></a>
-                        {% endfor %}
+                    <dt>用户参与情况</dt>
+                    {% for attri in attribut4 %}
+                        <dd id="participant" name="participant" >{{ attri.Participation_Name }}<a><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
+                    {% endfor %}
 
-					<a href="?design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}"> <dt class="{% ifequal evaluation_id '' %}active2{% endifequal %}">评估类型</dt></a>
-                        {% for attri in attribut5 %}
-                            <a href="?evaluation={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}"><dd class="{% ifequal evaluation_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Evaluation_Name }}</dd></a>
-                        {% endfor %}
+					<dt>评估类型</dt>
+                    {% for attri in attribut5 %}
+                        <dd id="evaluation" name="evaluation" >{{ attri.Evaluation_Name }}<a><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
+                    {% endfor %}
 				</dl>
 		</div>  
 
@@ -79,17 +148,16 @@
 
 		<div class="selected" >
  			<div class="taskdiscription">
-                <h4>您现在在开发一个用于预订电影票的移动应用程序的团队中工作。</h4>
- 				<h4>任务 1</h4>
-                {% for task1 in task %}
- 				<p class="bb">{{ task1.Description }}</p>
+                {% for task in task %}
+                    <h4>任务 {{ task.id }}</h4>
+ 				<p class="bb">{{ task.Description }}</p>
                 {% endfor %}
  			</div>
  			
  			<div class="biaoge">
  				<form method="post" action="">
  					<dl>
- 					<dt>请使用类别来缩小范围！</dt>
+ 					<dt>您可以使用左侧的类别来选择设计技术。</dt>
 					<dt>请选择3个设计技术。</dt>
 					<dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
 					<dd id="sam1"><input type="text" id="same1" name="selectedone" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}"  onclick="Delete(1);"></dd>
@@ -104,3 +172,5 @@
     </form>
 </body>
 </html>
+
+

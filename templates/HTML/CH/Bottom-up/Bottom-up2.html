@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="height: 100%;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -8,10 +8,11 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
+
     <title>Bottom-Up</title>
 </head>
 <body onload="time_funch()">
-	<form method="post" action="{% url 'classification:B_Addtech2' %}" onsubmit="return check()">
+	<form method="post" action="{% url 'classification:U_Addtech2' %}" onsubmit="return check()">
     {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -33,42 +34,42 @@
 	<div class="mainbody">
 		<div class="bottomup">  <!-- Taxonomy部分 -->
 			<dl>
-				<a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"> <dt class="{% ifequal de_id ''%}active2{% endifequal %}">设计阶段</dt></a>
+				<dt>设计阶段</dt>
                 {%  for attri in attribut1%}
                     {% if attri.id == 1 %}
-                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" ><dd class="{% ifequal de_id  attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                        <dd class="{% ifequal de_id  attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" >{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endif %}
                     {% if attri.id == 2 %}
-                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" ><dd  class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                       <dd  class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" >{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endif %}
 
                     {% if attri.id == 3 %}
                          <dd>创作和评估</dd>
                         <ul>
-                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</li></a>
+                        <li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img class="hiddeimga"  src="{% static 'img/chacha3.png' %}"></a></li>
                         </ul>
                     {% endif %}
                     {% if attri.id == 4 %}
                         <ul>
-                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</li></a>
+                        <li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></li>
                         </ul>
                     {% endif %}
 
                 {% endfor %}
 
-				<a href="?de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"> <dt class="{% ifequal col_id '' %}active2{% endifequal %}">收集设计数据</dt></a>
+				<dt >收集设计数据</dt>
                 {% for attri in attribut2 %}
-                    <a href="?col={{ attri.id }}&de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"><dd  class="{%  ifequal col_id attri.id|stringformat:"i" %}active2{% endifequal %}" >{{ attri.Collection_Name }}</dd></a>
+                    <dd  class="{%  ifequal col_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?col={{ attri.id }}&de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Collection_Name }}</a><a href="?de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"> <img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                 {% endfor %}
 
-				<a href="?de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><dt class="{% ifequal du_id '' %}active2{% endifequal %}">持续时间</dt></a>
+				<dt >持续时间</dt></a>
                 {% for attri in attribut3 %}
-                   <a href="?du={{ attri.id }}&de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><dd  class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" >{{ attri.Duration_Name }}</dd></a>
+                   <dd  class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?du={{ attri.id }}&de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}">{{ attri.Duration_Name }}</a><a href="?de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                 {% endfor %}
 
-                <a href="?de={{ de_id }}& du={{ du_id }}&col={{ col_id }}" ><dt class="{% ifequal pa_id '' %}active2{% endifequal %}">参与者</dt></a>
+                <dt>参与者</dt></a>
                 {% for attri in attribut4 %}
-                   <a href="?pa={{ attri.id }}&de={{ de_id }}& du={{ du_id }}&col={{ col_id }}"><dd class="bottomin">{{ attri.Participant_Name }}</dd></a>
+                   <dd class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?pa={{ attri.id }}&de={{ de_id }}& du={{ du_id }}&col={{ col_id }}">{{ attri.Participant_Name }}</a><a href="?de={{ de_id }}& du={{ du_id }}&col={{ col_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                 {% endfor %}
 				</dl>
 		</div> 
@@ -100,12 +101,13 @@
  			</div>
  			<div class="biaoge">
 				<dl>
-				<dt>请使用类别来缩小范围！</dt>
+				<dt>您可以使用左侧的类别来选择设计技术。</dt>
 				<dt>请选择3个设计技术。</dt>
 				<dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
-				<dd id="sam1"><input type="text" id="same1" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}" onclick="Delete(1);"></dd>
+				<dd id="sam1"><input type="text" id="same1" class="tijiao"><img id="same11" src="{% static 'img/btn2.png' %}" onclick="Delete(1);"></dd>
 				<dd id="sam2"><input type="text" id="same2" class="tijiao"><img id="same22" src="{% static 'img/chacha3.png' %}" onclick="Delete(2);"></dd>
 				<dd id="sam3"><input type="text" id="same3" class="tijiao"><img id="same33" src="{% static 'img/chacha3.png' %}" onclick="Delete(3);"></dd>
+
 				</dl>
 			</div>
 		</div>

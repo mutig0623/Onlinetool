@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>TaskDetail1</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:SwitchDE' %}">
+    {% csrf_token %}
+
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
+	</div>
+
+	<div class="bannder6">
+		
+	</div>
+
+	<div class="main">
+	  <h4>Sie arbeiten in einem Team in einem Entwicklungsprojekt für eine mobile App für den Kauf von Kinokarten.</h4>
+        {% for task in taskdes  %}
+            <h4>Task {{ task.id }}</h4>
+	        <p>{{ task.Description }}</p><br/>
+        {% endfor %}
+	  <h4>Bitte benutzen Sie die folgende Webseite, um drei hierfür relevante Designtechniken für diese Szenario auszuwählen.</h4>
+	</div>
+</form>
+</body>
+</html>

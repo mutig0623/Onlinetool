@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'AAS5B';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+    <title>Index</title>
+</head>
+<body>
+<form action="{% url 'classification:Eninstro'  %}" method="post">
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+        <input type="submit" name="" value="Next"  id="butt-next">
+	</div>
+
+	<div class="bannder1">
+		<span style="font-size: 1pt; maring-top:0px; float:right; height: 5px;">5%</span>
+	</div>
+
+	<dir class="intro-en" id="intro-en">
+		<p>Thanks for participating in our online experiment. This study takes approximately 10 minutes to complete. </p>
+
+        <p>Your responses will remain confidential and anonymous. Data from this research will be kept under lock and key and reported only as a collective combined total. No one other than the researchers will know your individual answers to this questionnaire.</p>
+
+		<p>If you agree to participate in this project, please answer the questions as best you can.</p>
+
+		<p>Thank you for your assistance in this important endeavor.</p>
+
+		<p>Please choose a language you would like to use for the online experiment. And click “English” to the next page.</p>
+	</dir>
+</form>
+</body>
+</html>

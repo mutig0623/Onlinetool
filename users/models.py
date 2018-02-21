@@ -13,7 +13,8 @@ from django.db import models
 
 class UserProfile(AbstractUser):
     start_time = models.DateTimeField(default=datetime.now)
-
+    endtime = models.DateTimeField(default=datetime.now)
+    mode_id = models.CharField(default="",max_length=5, verbose_name=u"模运算结果")
     def __unicode__(self):
         return self.username
 

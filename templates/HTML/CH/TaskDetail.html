@@ -29,12 +29,12 @@
 	<div class="maincn">
         {% for task in taskdes %}
             {% if task.id == 1 %}
-            <h3>您现在在开发一个用于预订电影票的移动应用程序的团队中工作。</h3>
+            <p>您现在在开发一个用于预订电影票的移动应用程序的团队中工作。<p/>
             {% endif %}
             <h3>任务 {{ task.id }}</h3>
             <p>{{ task.Description }}</p>
         {% endfor %}
-        <h4>请使用以下网页为此任务选择三个设计技术。</h4>
+        <p>请使用以下网页为此任务选择三个设计技术。</p>
 	</div>
 </form>
 </body>

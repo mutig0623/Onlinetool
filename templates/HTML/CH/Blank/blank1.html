@@ -56,7 +56,6 @@
 
 		<div class="selected">  
  			<div class="taskdiscription">
-             <h3>您现在在开发一个用于预订电影票的移动应用程序的团队中工作。</h3>
                 {% for task1 in task %}
  				<h4 class="aa">任务 {{ task1.id }}</h4>
  				<p class="bb">{{ task1.Description }}</p>
@@ -65,7 +64,7 @@
  			
  			<div class="biaoge">
  					<dl>
- 					<dt>请使用类别来缩小范围！</dt>
+ 					<dt>您可以使用左侧的类别来选择设计技术。</dt>
 					<dt>请选择3个设计技术。</dt>
 					<dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
 					<dd id="sam1"><input type="text" id="same1" class="tijiao" name="selectedone"><img  id="same11" src="{% static 'img/chacha3.png' %}"  onclick="Delete(1);"></dd>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>pre-test</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:PreAddEn1' %}" >
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+			<p>Welcome to the Online Experiment</p>
+		</div>
+		<input type="submit" name="" value="Next" id="butt-next">
+	</div>
+
+	<div class="bannder4"></div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+          <br/>
+		<p>Please answer the following question</p>
+		<table id="tab2">
+            <tr class="dark">
+				<td><span style="margin-left: 35px;">Knowledge of Design Techniques</span><td>
+			</tr>
+			<tr class="white">
+				<td><span style="margin-left: 35px;">To what extent do you agree or disagree with the following statement? </span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">1= extremely disagree; 7=extremely agree</span><td>
+			</tr>
+            <tr class="light">
+                <td>
+                    <span class="number">1.</span><span class="Quesen">I knew pretty much about design techniques.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que11" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que11" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que11" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que11" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que11" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que11" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que11" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">2.</span><span class="Quesen">In a team, I was one of the experts when using design techniques.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que12" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que12" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que12" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que12" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que12" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que12" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que12" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">3.</span><span class="Quesen">Comparing to most other members in a team, I knew less about design techniques.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que13" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que13" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que13" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que13" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que13" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que13" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que13" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">4.</span><span class="Quesen">When using design techniques, I really do not know a lot about it.</span>
+                    <span class="onelow">
+                        <span class="seclowen"><input type="radio" name="que14" value="1" ><label class="labpositionshort">1</label></span>
+                        <span class="seclowen"><input type="radio" name="que14" value="2" ><label class="labpositionshort">2</label></span>
+                        <span class="seclowen"><input type="radio" name="que14" value="3" ><label class="labpositionshort">3</label></span>
+                        <span class="seclowen"><input type="radio" name="que14" value="4" ><label class="labpositionshort">4</label></span>
+                        <span class="seclowen"><input type="radio" name="que14" value="5" ><label class="labpositionshort">5</label></span>
+                        <span class="seclowen"><input type="radio" name="que14" value="6" ><label class="labpositionshort">6</label></span>
+                        <span class="seclowen"><input type="radio" name="que14" value="7" ><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+            <td>
+                <span class="number">5.</span><span class="Quesen">I do not feel very knowledgeable about design techniques.</span>
+                <span class="onelow">
+                    <span class="seclowen"><input type="radio" name="que15" value="1" ><label class="labpositionshort">1</label></span>
+                    <span class="seclowen"><input type="radio" name="que15" value="2" ><label class="labpositionshort">2</label></span>
+                    <span class="seclowen"><input type="radio" name="que15" value="3" ><label class="labpositionshort">3</label></span>
+                    <span class="seclowen"><input type="radio" name="que15" value="4" ><label class="labpositionshort">4</label></span>
+                    <span class="seclowen"><input type="radio" name="que15" value="5" ><label class="labpositionshort">5</label></span>
+                    <span class="seclowen"><input type="radio" name="que15" value="6" ><label class="labpositionshort">6</label></span>
+                    <span class="seclowen"><input type="radio" name="que15" value="7" ><label class="labpositionshort">7</label></span>
+                </span>
+            </td>
+            </tr>
+            <tr class="white">
+                <td>
+                <span class="number">6.</span><span class="Quesen">I have a lot of experiences with design techniques.</span>
+                <span class="onelow">
+                    <span class="seclowen"><input type="radio" name="que16" value="1" ><label class="labpositionshort">1</label></span>
+                    <span class="seclowen"><input type="radio" name="que16" value="2" ><label class="labpositionshort">2</label></span>
+                    <span class="seclowen"><input type="radio" name="que16" value="3" ><label class="labpositionshort">3</label></span>
+                    <span class="seclowen"><input type="radio" name="que16" value="4" ><label class="labpositionshort">4</label></span>
+                    <span class="seclowen"><input type="radio" name="que16" value="5" ><label class="labpositionshort">5</label></span>
+                    <span class="seclowen"><input type="radio" name="que16" value="6" ><label class="labpositionshort">6</label></span>
+                    <span class="seclowen"><input type="radio" name="que16" value="7" ><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+            <td>
+                <span class="number">7.</span><span class="Quesen">I felt familiar with design techniques.</span>
+                <span class="onelow">
+                    <span class="seclowen"><input type="radio" name="que17" value="1" ><label class="labpositionshort">1</label></span>
+                    <span class="seclowen"><input type="radio" name="que17" value="2" ><label class="labpositionshort">2</label></span>
+                    <span class="seclowen"><input type="radio" name="que17" value="3" ><label class="labpositionshort">3</label></span>
+                    <span class="seclowen"><input type="radio" name="que17" value="4" ><label class="labpositionshort">4</label></span>
+                    <span class="seclowen"><input type="radio" name="que17" value="5" ><label class="labpositionshort">5</label></span>
+                    <span class="seclowen"><input type="radio" name="que17" value="6" ><label class="labpositionshort">6</label></span>
+                    <span class="seclowen"><input type="radio" name="que17" value="7" ><label class="labpositionshort">7</label></span>
+                </span>
+            </td>
+            </tr>
+		</table>
+	</div>
+	</div>
+</form>
+</body>
+</html>

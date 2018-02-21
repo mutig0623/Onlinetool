@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>post-test 3</title>
+</head>
+<body>
+<form action="{% url 'classification:AddPost3CEn' %}" method="post">
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="Next" onclick="" id="butt-next">
+	</div>
+
+	<div class="bannder14">
+		
+	</div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+		<p>Please answer the following questions.</p>
+		<table id="tab2">
+			<tr class="dark">
+				<td><span style="margin-left: 35px;">Task Motivation</span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">To what extent do you agree or disagree with the following statement? </span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">1= extremely disagree; 7=extremely agree</span><td>
+			</tr>
+            <tr class="light">
+                <td>
+                <span class="number">14.</span><span class="Ques">I did not perform as well as I could because I was not motivated to do well.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post14" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="post14" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">15.</span><span class="Ques">I really wanted to succeed in this task.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post15" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="post15" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                <span class="number">16.</span><span class="Ques">I would look forward to conducting the same task in the future.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post16" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="post16" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr style="height: 25px; background-color: white;" >
+				<td>
+				</td>
+			</tr>
+            <tr class="dark">
+				<td><span style="margin-left: 35px;">Perceived Usefulness</span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">To what extent do you agree or disagree with the following statement? </span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">1= extremely disagree; 7=extremely agree</span><td>
+			</tr>
+             <tr class="light">
+                <td>
+                <span class="number">17.</span><span class="Ques">Using the Website improved my ability to make good decisions.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post17" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="post17" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="post17" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="post17" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="post17" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="post17" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="post17" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="white">
+                <td>
+                    <span class="number">18.</span><span class="Ques">The Website allowed me to get my work done more quickly.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post18" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="post18" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="post18" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="post18" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="post18" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="post18" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="post18" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+             <tr class="light">
+                <td>
+                <span class="number">19.</span><span class="Ques">Using the Website enhanced my effectiveness on the task.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post19" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="post19" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="post19" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="post19" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="post19" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="post19" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="post19" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr style="height: 25px; background-color: white;" >
+				<td>
+				</td>
+			</tr>
+            <tr class="dark">
+				<td><span style="margin-left: 35px;">Perceived Ease of Use</span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">To what extent do you agree or disagree with the following statement? </span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">1= extremely disagree; 7=extremely agree</span><td>
+			</tr>
+            <tr class="light">
+                <td>
+                    <span class="number">20.</span><span class="Ques">The Website is easy to use.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post20" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="post20" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="post20" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="post20" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="post20" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="post20" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="post20" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+             <tr class="white">
+                <td>
+                <span class="number">21.</span><span class="Ques">It is easy to get the Website to do what I want it to do.</span>
+                <span class="onelow">
+                    <span class="seclow"><input type="radio" name="post21" value="1"><label class="labpositionshort">1</label></span>
+                    <span class="seclow"><input type="radio" name="post21" value="2"><label class="labpositionshort">2</label></span>
+                    <span class="seclow"><input type="radio" name="post21" value="3"><label class="labpositionshort">3</label></span>
+                    <span class="seclow"><input type="radio" name="post21" value="4"><label class="labpositionshort">4</label></span>
+                    <span class="seclow"><input type="radio" name="post21" value="5"><label class="labpositionshort">5</label></span>
+                    <span class="seclow"><input type="radio" name="post21" value="6"><label class="labpositionshort">6</label></span>
+                    <span class="seclow"><input type="radio" name="post21" value="7"><label class="labpositionshort">7</label></span>
+                </span>
+                </td>
+            </tr>
+            <tr class="light">
+                <td>
+                    <span class="number">22.</span><span class="Ques">The Website is easy to operate.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="post22" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="post22" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="post22" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="post22" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="post22" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="post22" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="post22" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+	</div>
+	</div>
+    </form>
+</body>
+</html>

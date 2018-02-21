@@ -1,4 +1,4 @@
-introduction.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html style="height: 100%">
 {% load staticfiles %}
 <head>
@@ -9,7 +9,7 @@ introduction.html<!DOCTYPE html>
     <title>Introduction</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:ChTask1' %}" onsubmit="return remindingcnt()">
+<form method="post" action="{% url 'classification:Chintrotop' %}" onsubmit="return remindingcnt()">
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -27,10 +27,10 @@ introduction.html<!DOCTYPE html>
 		
 	</div>
 
-	<div class="mainbodyb">
-		<p>在开始第一个任务之前，请看下面关于如何使用网页的介绍。</p>
+	<div class="mainbody">
+		<p>在开始第一个任务之前，请点击<span id="sti">“显示介绍”</span>观看关于如何使用网页的介绍。</p>
 		<div class="back-top">
-	  		<input type="button" name="" value="显示介绍" id="showbutton" onclick="removebutton()">
+	  		<input type="button" name="" value="显示介绍" id="showbutton" onclick="removebuttontop()">
 
 	  		<div id="part1">
 	  			<p>在这一区域，一些类别可以帮助您在选择设计技术时缩小范围。</p>

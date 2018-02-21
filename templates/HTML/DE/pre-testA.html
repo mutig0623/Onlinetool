@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>pre-test</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:PreAddDeA'%}">
+{% csrf_token %}
+
+	<div class="header">  <!-- logo部分 -->
+		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+			<p>Welcome to the Online Experiment</p>
+		</div>
+		<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
+	</div>
+
+	<div class="bannder4"></div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+          <br/>
+		<p>Bitte beantworten Sie die folgenden Fragen.</p>
+        <table id="tab1">
+			<tr class="dark">
+				<td><span class="number">No.</span><span class="Ques">Question</span><td>
+			</tr>
+			<tr class="white">
+				<td>
+				<span class="number">1.</span><span class="Ques">Bitte nennen Sie das Land im Ausland, in dem Sie am längsten gelebt haben.</span>
+				<span class="onelow">
+				<span class="seclowde"><input type="text" name="countryname" value="Gib here ein..." class="tiankong" onfocus='if(this.value=="Gib here ein..."){this.value="";}; 'onblur='if(this.value==""){this.value="Gib here ein...";};'></span>
+				</span>
+				</td>
+			</tr>
+            <tr class="light">
+				<td>
+				<span class="number">2.</span><span class="Ques">Wie viele Jahre haben Sie in diesem Land gelebt?</span>
+				<span class="onelow">
+				<span class="seclowde"><input type="text" name="yearslong" value="Gib here ein..." class="tiankong" onfocus='if(this.value=="Gib here ein..."){this.value="";}; 'onblur='if(this.value==""){this.value="Gib here ein...";};'> &nbsp;Jahr</span>
+				</span>
+				</td>
+			</tr>
+			<tr style="height: 25px; background-color: white;" >
+				<td>
+
+				</td>
+			</tr>
+		</table>
+
+		<table id="tab2">
+            <tr class="dark">
+				<td><span style="margin-left: 35px;">Bitte wählen Sie die Antwort, die Sie am besten beschreibt, wie Sie wirklich sind.</span><td>
+			</tr>
+			<tr class="white">
+				<td><span style="margin-left: 35px;">Inwieweit stimmen Sie den folgenden Aussage zu?</span><td>
+			</tr>
+            <tr class="white">
+				<td><span style="margin-left: 35px;">1= stimme überhaupt nicht zu; 7=stimme vollkommen zu</span><td>
+			</tr>
+            <tr class="light">
+                    <td><form>
+                    <span class="number">1.</span><span class="Ques">Ich kenne die Rechts- und Wirtschaftssysteme dieses Landes.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="F1" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="F1" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="F1" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="F1" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="F1" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="F1" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="F1" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                    </form> </td>
+            </tr>
+            <tr class="white">
+                <td><form >
+                <span class="number">2.</span><span class="Ques">Ich kenne die Regeln der Sprache (z. B. Vokabular, Grammatik) dieses Landes.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="F2" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="F2" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="F2" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="F2" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="F2" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="F2" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="F2" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </form></td>
+            </tr>
+            <tr class="light">
+                    <td><form>
+                    <span class="number">3.</span><span class="Ques">Ich kenne die kulturellen Werte und religiösen Überzeugungen dieses Landes.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="F3" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="F3" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="F3" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="F3" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="F3" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="F3" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="F3" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                    </form> </td>
+            </tr>
+            <tr class="white">
+                <td><form >
+                <span class="number">4.</span><span class="Ques">Ich kenne die Regularien der Ehe in diesem Land.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="F4" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="F4" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="F4" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="F4" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="F4" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="F4" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="F4" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </form></td>
+            </tr>
+            <tr class="light">
+                    <td><form>
+                    <span class="number">5.</span><span class="Ques">Ich kenne die Künste und das Handwerk dieses Landes.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="F5" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="F5" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="F5" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="F5" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="F5" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="F5" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="F5" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                    </form> </td>
+            </tr>
+            <tr class="white">
+                <td><form >
+                <span class="number">6.</span><span class="Ques">Ich kenne die Regeln für nonverbales Verhalten dieses Landes.</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="F6" value="1"><label class="labpositionshort">1</label></span>
+                        <span class="seclow"><input type="radio" name="F6" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclow"><input type="radio" name="F6" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclow"><input type="radio" name="F6" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclow"><input type="radio" name="F6" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclow"><input type="radio" name="F6" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclow"><input type="radio" name="F6" value="7"><label class="labpositionshort">7</label></span>
+                    </span>
+                </form></td>
+            </tr>
+            <tr class="light" style="height: 35px;">
+                    <td></td>
+            </tr>
+		</table>
+	</div>
+	</div>
+    </form>
+</body>
+</html>

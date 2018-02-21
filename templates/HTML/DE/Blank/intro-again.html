@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/enlanguage.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script src="{% static 'JS/index.js' %}"></script>
+    <title>Introduction</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:DEintroblank' %}" onsubmit="return remindingenb()">
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="Next" id="butt-next" >
+	</div>
+
+	<div class="bannder5">
+		
+	</div>
+
+	<div class="mainbody">
+		<p>Verstehen Sie wirklich wie diese Seite benutzt wird?</p>
+		<p>Bitte klicken Sie auf<span id="sti">Lies Wieder</span>und lesen Sie die Einführung.</p>
+	  	<div class="backtesten">
+	  		<div><input type="button" name="" value="Einführung anzeigen" id="showbutttest" onclick="removebuttonenbl()"></div>
+            <div style="margin-top:-35%;margin-left:-5%;">
+              <input type="button" name="" value="Lies Wieder" id="showbig" onclick="removebuttonbig()">
+            </div>
+	  		<div id="enpart1">
+	  			<p>In this area, there are some categories which can help you to narrow down the scope when selecting design techniques.</p>
+	  			<input type="button" name="" value="Weiter" id="enpbutton1" class="bbotton" onclick="showpart2en()">
+	  		</div>
+
+	   		<div id="enpart2">
+		  		<p>In diesem Bereich gibt es insgesamt 50 Designtechniken. Alle Techniken werden in einem einfachen Kartenformat präsentiert.</p>
+				<p>Bitte klicken Sie einfach auf "+" und schon wird die entsprechende Designtechnik ausgewählt. Die ausgewählten Designtechniken werden unten auf der Webseite angezeigt.</p>
+				<p>Sie sollten für die Aufgabe drei hierfür relevante Designtechniken auswählen.</p>
+		  		<div><input type="button" name="" value="Weiter" id="enpbutton2" class="bbotton" onclick="showpart4en()"></div>
+	  		</div>
+
+	  		<div id="enpart3">
+		  		<p>Bevor Sie auf die Webseite zur Auswahl von Designtechniken kommen, wurde die Beschreibung der Aufgabe bereits vorgestellt.  </p>
+		  		<p>Die konkrete Aufgabe erscheint in diesem Bereich noch einmal als Erinnerungsstütze.  </p>
+	  		</div>
+	  		
+	  		<div id="enpart4">
+		  		<p>In diesem Bereich werden die ausgewählten Designtechniken angezeigt.</p>
+                <input type="button" name="" value="Weiter" id="enpbutton3" class="bbotton" onclick="showpart3en()">
+	  		</div>
+        </div>
+	  </div>
+    </form>
+</body>
+</html>

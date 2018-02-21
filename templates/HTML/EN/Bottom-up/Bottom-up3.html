@@ -31,42 +31,42 @@
 	<div class="mainbody">
 		<div class="bottomupen">  <!-- Taxonomy部分 -->
 			<dl>
-				<a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"> <dt class="{% ifequal de_id ''%}active2{% endifequal %}">Design Phase</dt></a>
+				<dt>Design Phase</dt>
                 {%  for attri in attribut1%}
                     {% if attri.id == 1 %}
-                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" ><dd class="{% ifequal de_id  attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                        <dd class="{% ifequal de_id  attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" >{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endif %}
                     {% if attri.id == 2 %}
-                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" ><dd  class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                       <dd  class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" >{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endif %}
 
                     {% if attri.id == 3 %}
                          <dd>Creation and Evaluation</dd>
                         <ul>
-                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</li></a>
+                        <li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img class="hiddeimga"  src="{% static 'img/chacha3.png' %}"></a></li>
                         </ul>
                     {% endif %}
                     {% if attri.id == 4 %}
                         <ul>
-                        <a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</li></a>
+                        <li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></li>
                         </ul>
                     {% endif %}
 
                 {% endfor %}
 
-				<a href="?de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"> <dt class="{% ifequal col_id '' %}active2{% endifequal %}">Design Data Collection</dt></a>
+				<dt >Design Data Collection</dt>
                 {% for attri in attribut2 %}
-                    <a href="?col={{ attri.id }}&de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"><dd  class="{%  ifequal col_id attri.id|stringformat:"i" %}active2{% endifequal %}" >{{ attri.Collection_Name }}</dd></a>
+                    <dd  class="{%  ifequal col_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?col={{ attri.id }}&de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Collection_Name }}</a><a href="?de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"> <img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                 {% endfor %}
 
-				<a href="?de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><dt class="{% ifequal du_id '' %}active2{% endifequal %}">Duration</dt></a>
+				<dt >Duration</dt>
                 {% for attri in attribut3 %}
-                   <a href="?du={{ attri.id }}&de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><dd  class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" >{{ attri.Duration_Name }}</dd></a>
+                   <dd  class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?du={{ attri.id }}&de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}">{{ attri.Duration_Name }}</a><a href="?de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                 {% endfor %}
 
-                <a href="?de={{ de_id }}& du={{ du_id }}&col={{ col_id }}" ><dt class="{% ifequal pa_id '' %}active2{% endifequal %}">Participant</dt></a>
+                <dt>Participant</dt>
                 {% for attri in attribut4 %}
-                   <a href="?pa={{ attri.id }}&de={{ de_id }}& du={{ du_id }}&col={{ col_id }}"><dd class="bottomin">{{ attri.Participant_Name }}</dd></a>
+                   <dd class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?pa={{ attri.id }}&de={{ de_id }}& du={{ du_id }}&col={{ col_id }}">{{ attri.Participant_Name }}</a><a href="?de={{ de_id }}& du={{ du_id }}&col={{ col_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
                 {% endfor %}
 				</dl>
 		</div> 
@@ -78,7 +78,7 @@
 				<h4 class="biaoti">{{tech.Tech_Name }}</h4><img class="topshow" src="{% static 'img/plus1.png' %}"
 						onclick="addtechen(this)">
 				</div>
-				<div class="contented">
+				<div class="contenteden">
 					<p>{{ tech.Short_Description }}</p>
 					<div class="showed">
 						<p>{{ tech.Long_Description|linebreaksbr }}</p>

@@ -9,7 +9,7 @@
     <title>Introduction</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:ChTask1' %}" onsubmit="return remindingb()">
+<form method="post" action="{% url 'classification:Chintroblank' %}" onsubmit="return remindingblank()">
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -28,9 +28,9 @@
 	</div>
 
 	<div class="mainbody">
-		<p>在开始第一个任务之前，请看下面关于如何使用网页的介绍。</p>
+		<p>在开始第一个任务之前，请点击<span id="sti">“显示介绍”</span>观看关于如何使用网页的介绍。</p>
 		<div class="back-blank">
-	  		<input type="button" name="" value="显示介绍" id="showbutton" onclick="removebuttonb()">
+	  		<input type="button" name="" value="显示介绍" id="showbutttest" onclick="removebuttonb()">
 
 	   		<div id="part2B">
 		  		<p>在这一区域，包括50个设计技术。 所有设计技巧都以卡片形式呈现。<br/>

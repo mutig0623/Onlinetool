@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html >
+{% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" type="text/css" href="../../CSS/body.css"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>Instruction</title>
 </head>
 <body>
+<form method="post" action="{% url 'classification:LogDe' %}">
+    {% csrf_token %}
+
 	<div class="header">  <!-- logo部分 -->
-			<div class="kitlogo"><img src="../../img/kit2.png">
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="button" name="" value="Next" onclick="" id="butt-next">
+			<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
 	</div>
 
 	<div class="bannder2">
 		
 	</div>
 
-	<div class="main">
-		<div class="instruction">
-				<p>Instruction:</p>
-				<p>Die online experiment includes four steps</p></br>
+	<div class="mainde">
+		<div class="instructionde" >
+				<p>Anweisung:</p>
+				<p>Das Online-Experiment besteht aus drei Schritten:</p>
 
-                <p>Step 1. Register</p>
-            	<p>On the next page, you need to register the online experiment, you can either use an email address or a random number to register.</p></br>
+                <h4>Schritt 1. Registrierung</h4>
+            	<p>Auf der nächsten Seite müssen Sie sich für das Online-Experiment registrieren. Sie können entweder eine E-Mail-Adresse oder Zufallszahlen verwenden, um sich zu registrieren.</p>
 
-				<p>Step 2. A questionnaire</p>
-				<p>After registering the experiment, you will at first fill out a short questionnaire with XX questions.</p></br>
+				<h4>Schritt 2. Fragebogen</h4>
+				<p>Nach der Registrierung füllen Sie zunächst bitte einen kurzen Fragebogen aus.</p>
 
-				<p>Step 3. Three tasks</p>
-				<p>Three tasks will present to you and you need to use the online.</p></br>
+				<h4>Schritt 3. Aufgabenbearbeitung  </h4>
+				<p>Sie erhalten eine Aufgabe. Das Ziel der Aufgabe ist, geeignete Designtechniken für unterschiedliche Designsituationen auszuwählen. Designtechniken bedeuten, dass Sie einem bestimmten Verfahren folgen, um Designaktivitäten systematisch durchzuführen. </p><br/>
 
-				<p>Step 4. A questionnaire</p>
-				<p>After finishing the three tasks, you will fill out a questionnaire with XX questions.</p></br>
+				<p>Nach jeder Aufgabe folgt ein kurzer Fragebogen.</p>
 		</div>
 	</div>
+    </form>
 </body>
 </html>

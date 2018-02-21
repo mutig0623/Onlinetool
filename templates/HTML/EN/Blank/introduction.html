@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/enlanguage.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script src="{% static 'JS/index.js' %}"></script>
+    <title>Introduction</title>
+</head>
+<body style="height: auto;  overflow-x:scroll; width: 110%; ">
+<form method="post" action="{% url 'classification:ENintroblank' %}" onsubmit="return remindingenblank()">
+    {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="Next" id="butt-next" >
+	</div>
+
+	<div class="bannder5">
+		
+	</div>
+
+	<div class="mainbody">
+		<p>Before starting the first task, please have a look at the following introduction of the way of using the website.</p>
+		<p>The task is presented to you before the webpage for selecting design techniques appear. </p>
+		<p>Please click on <span id="sti">Show the Instruction</span></p>
+	  	<div class="backtesten">
+	  		<input type="button" name="" value="Show the Instruction" id="showbutttest" onclick="removebuttonenblank()">
+
+	  		<div id="Eenpart1">
+	  			<p>In this area, there are some categories which can help you to narrow down the scope when selecting design techniques.</p>
+	  			<input type="button" name="" value="next" id="enpbutton1" class="bbotton" onclick="showpart2enE()">
+	  		</div>
+
+	   		<div id="Eenpart2">
+		  		<p>In this area, there are 50 design techniques. All design techniques are presented in a card format.</p>
+				<p>Please just click on “+” and the design technique will be selected. The selected design techniques will appear at the bottom-down of the webpage.</p>
+				<p>You should select three design techniques for each task.</p>
+		  		<input type="button" name="" value="next" id="enpbutton2" class="bbotton" onclick="showpart4enE()">
+	  		</div>
+
+	  		<div id="Eenpart3">
+		  		<p>The task will appear in this area as a reminder. </p>
+		  		<p>Before you come to the web page for selecting design techniques, the description of the task was already presented.</p>
+	  		</div>
+	  		
+	  		<div id="Eenpart4">
+		  		<p>The selected design techniques will appear in this area.</p>
+                <input type="button" name="" value="next" id="enpbutton3" class="bbotton" onclick="showpart3enE()">
+	  		</div>
+        </div>
+	  </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/task.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'JS/myscript.js' %}"></script>
+    <title>Bottom-Up</title>
+</head>
+<body onload="time_funen()">
+	<form method="post" action="{% url 'classification:U_Addtech3DE' %}" onsubmit="return checken()">
+        {% csrf_token %}
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<div class="timing">
+ 			<span>Time</span>	<span id="mytime">0 min 00 sec</span>
+ 			</div>
+			<input type="submit" name="" value="Next" id="queren" >
+	</div>
+
+	<div class="bannder7">
+		
+	</div>
+
+	<div class="mainbody">
+		<div class="bottomup">  <!-- Taxonomy部分 -->
+			<dl>
+				<dt>Deisgnphase</dt>
+                {%  for attri in attribut1%}
+                    {% if attri.id == 1 %}
+                        <dd class="{% ifequal de_id  attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" >{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
+                    {% endif %}
+                    {% if attri.id == 2 %}
+                       <dd  class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" >{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
+                    {% endif %}
+
+                    {% if attri.id == 3 %}
+                         <dd>Erstellung und Bewertung</dd>
+                        <ul>
+                        <li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img class="hiddeimga"  src="{% static 'img/chacha3.png' %}"></a></li>
+                        </ul>
+                    {% endif %}
+                    {% if attri.id == 4 %}
+                        <ul>
+                        <li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></li>
+                        </ul>
+                    {% endif %}
+
+                {% endfor %}
+
+				<dt >Design Datensammlung</dt>
+                {% for attri in attribut2 %}
+                    <dd  class="{%  ifequal col_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?col={{ attri.id }}&de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Collection_Name }}</a><a href="?de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"> <img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
+                {% endfor %}
+
+				<dt >Zeitlicher Rahmen</dt>
+                {% for attri in attribut3 %}
+                   <dd  class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?du={{ attri.id }}&de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}">{{ attri.Duration_Name }}</a><a href="?de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
+                {% endfor %}
+
+                <dt>Teilnehmer</dt>
+                {% for attri in attribut4 %}
+                   <dd class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?pa={{ attri.id }}&de={{ de_id }}& du={{ du_id }}&col={{ col_id }}">{{ attri.Participant_Name }}</a><a href="?de={{ de_id }}& du={{ du_id }}&col={{ col_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
+                {% endfor %}
+				</dl>
+		</div> 
+		
+		<div class="teches">	
+			<div class="postcard">
+				<div class="lantian">
+				<h4 class="biaoti">3E- Expressing Emotion and Experience</h4><img class="topshow" src="{% static 'img/plus1.png' %}"
+						onclick="addtech(this)">
+				</div>
+				<div class="contented">
+					<p>halkghkjlajaslajgfaijeiutoeytgusrh8470398wytugsdh</p>
+					<div class="showed">
+						<p>sgdjlsdjkgf</p>
+					</div>
+				</div>
+			</div>
+			<div class="postcard">
+				<div class="lantian">
+				<h4 class="biaoti">3E- Expressing Emotion and Experience</h4><img class="topshow" src="../../img/plus1.png" 
+						onclick="addtech(this)">
+				</div>
+				<div class="contented">
+					<p>halkghkjlajaslajgfaijeiutoeytgusrh8470398wytugsdh</p>
+					<div class="showed">
+						<p>sglskjdg</p>
+					</div>
+				</div>
+			</div>
+			<div class="postcard">
+				<div class="lantian">
+				<h4 class="biaoti">3E- Expressing Emotion and Experience</h4><img class="topshow" src="../../img/plus1.png" 
+						onclick="addtech(this)">
+				</div>
+				<div class="contented">
+					<p>halkghkjlajaslajgfaijeiutoeytgusrh8470398wytugsdh</p>
+					<div class="showed">
+						<p>fsjldja</p>
+					</div>
+				</div>
+			</div>
+			<div class="postcard">
+				<div class="lantian">
+				<h4 class="biaoti">3E- Expressing Emotion and Experience</h4><img class="topshow" src="../../img/plus1.png" 
+						onclick="addtech(this)">
+				</div>
+				<div class="contented">
+					<p>halkghkjlajaslajgfaijeiutoeytgusrh8470398wytugsdh</p>
+					<div class="showed">
+						<p>jlajglasj</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="selected">  
+ 			<div class="taskdiscription">
+ 				<h4 class="aa">Task1</h4>
+ 				<p class="bb">You are at an early stage of the project. You can get a group of people from different backgrounds (e.g., users, stakeholders) to discuss the project. You plan to understand and analyze the relations between different roles and surroundings when using the App and generate some ideas.
+				</p>
+ 			</div>
+ 			
+ 			<div class="biaoge">
+ 				<dl>
+ 					<dt>Please select 3 design techniques for task 1</dt>
+					<dt class="tone">Please click on "+" and the selected design techniques will be appeared here.</dt>
+					<dd id="sam1"><input type="text" id="same1" class="tijiao" name="selectedone"><img id="same11" src="{% static 'img/chacha3.png' %}" onclick="Delete(1);"></dd>
+					<dd id="sam2"><input type="text" id="same2" class="tijiao" name="selectedtwo"><img id="same22" src="{% static 'img/chacha3.png' %}" onclick="Delete(2);"></dd>
+					<dd id="sam3"><input type="text" id="same3" class="tijiao" name="selectedthree"><img src="{% static 'img/chacha3.png' %}" id="same33" onclick="Delete(3);"></dd>
+				</dl>
+			</div>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="feet">	
+	</div>
+</form>
+</body>
+</html>

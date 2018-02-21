@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>pre-test</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:PreAddDeB'%}">
+{% csrf_token %}
+
+	<div class="header">  <!-- logo部分 -->
+		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+			<p>Welcome to the Online Experiment</p>
+		</div>
+		<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
+	</div>
+
+	<div class="bannder4"></div>
+
+	<div class="mainbody">
+	  <div class="opptions">
+          <br/>
+		<p>Bitte beantworten Sie die folgenden Fragen.</p>
+        <table id="tab1">
+			<tr class="dark">
+				<td><span class="number">No.</span><span class="Ques">Question</span><td>
+			</tr>
+			<tr class="white">
+				<td>
+                    <span class="number">1.</span><span class="Ques">Welches ist Ihr höchster Bildungsabschluss?</span>
+                    <span class="onelow">
+                    <span class="seclowde"><input type="radio" name="edu" value="UG" ><label class="labpositionde"> Schulabschluss </label></span>
+                    <span class="seclowde"><input type="radio" name="edu" value="Bachelor" ><label class="labpositionde"> Ausbildung </label></span>
+                    <span class="seclowde"><input type="radio" name="edu" value="MS"><label class ="labpositionde"> (Fach-)Hochschule (Bachelor) </label></span>
+                    <span class="seclowde"><input type="radio" name="edu" value="Master"><label class ="labpositionde"> (Fach-)Hochschule (Master) </label></span><br/>
+                    <span class="seclowde"><input type="radio" name="edu" value="DS"><label class ="labpositionde"> Promotion </label></span>
+                    <span class="seclowde"><input type="text" name="eduother" value="Gib here ein..." class="tiankong" onfocus='if(this.value=="Gib here ein..."){this.value="";}; 'onblur='if(this.value==""){this.value="Gib here ein...";};'></span>
+                    </span>
+                </td>
+			</tr>
+			<tr class="light">
+				<td>
+				    <span class="number">2.</span><span class="Ques">Welcher der folgenden Bezeichnungen beschreibt Ihre Rolle am besten?</span>
+                    <span class="onelow">
+                        <span class="seclowde"><input type="checkbox" name="role" value="Manager" ><label class="labpositionde"> Manager/in</label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Student"><label class ="labpositionde"> Student/in</label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Designer"><label class ="labpositionde"> Designer/in </label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Consultant"><label class ="labpositionde"> Berater/in </label></span><br/>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Researcher"><label class ="labpositionde"> Wissenschaftler/in </label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Programmer"><label class ="labpositionde"> Programmierer/in </label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Programmer"><label class ="labpositionde"> Projektleiter/in </label></span>
+                        <span class="seclowde"><input type="text" name="roleother" value="Gib here ein..." class="tiankong" onfocus='if(this.value=="Gib here ein..."){this.value="";}; 'onblur='if(this.value==""){this.value="Gib here ein...";};'></span>
+				</span>
+				</td>
+			</tr>
+			<tr class="white">
+				<td>
+				<span class="number">3.</span><span class="Ques">Wie viele Jahre Berufserfahrung haben Sie insgesamt?</span>
+				<span class="onelow">
+				<span class="seclowde"><input type="text" name="years" value="Gib here ein..." class="tiankong" onfocus='if(this.value=="Gib here ein..."){this.value="";}; 'onblur='if(this.value==""){this.value="Gib here ein...";};'> &nbsp;Jahr</span>
+				</span>
+				</td>
+			</tr>
+			<tr class="light">
+				<td><form >
+					<span class="number">4.</span><span class="Ques">An wie vielen Designprojekten haben Sie bereits teilgenommen (auch im Rahmen ihrer Ausbildung, z.B.  Studentenprojekte)?</span>
+                    <span class="onelow">
+                        <span class="seclowde"><input type="radio" name="pronu" value="" ><label class="labpositionshort"> 0 </label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value=""><label class="labpositionshort">&lt;3</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value=""><label class="labpositionshort">3-5</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value=""><label class="labpositionshort">6-10</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value=""><label class="labpositionshort">11-15</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value=""><label class="labpositionshort">&gt;15</label></span>
+                    </span>
+				</form></td>
+			</tr>
+			<tr class="white">
+				<td><form>
+                    <span class="number">5.</span><span class="Ques">Haben Sie an Kursen, Vorträgen oder Workshops zum Thema Design teilgenommen?</span>
+                    <span class="onelow">
+                        <span class="seclowde"><input type="radio" name="cours" value="Y" ><label class="labposition"> Ja</label></span>
+                        <span class="seclowde"><input type="radio" name="cours" value="N"><label class="labposition">Nein</label></span>
+                    </span>
+				</form></td>
+			</tr>
+			<tr class="light">
+				<td><form>
+				<span class="number">6.</span><span class="Ques">Haben Sie jemals während des Designprozesses in Projekten konkrete Designtechniken (Designtechniken bedeuten, dass Sie einem bestimmten Verfahren folgen, um Designaktivitäten?</span>
+				<span class="onelow">
+				<span class="seclowde"><input type="radio" name="tech" value="1" ><label class="labposition"> Ja</label></span>
+				<span class="seclowde"><input type="radio" name="tech" value="2"><label class="labposition">Nein</label></span>
+                </span>
+				</form> </td>
+			</tr>
+			<tr class="white">
+				<td><form >
+				<span class="number">7.</span><span class="Ques">Bitte wählen Sie die Ihnen bekannten Designtechniken aus?</span>
+				<span class="onelow">
+				<span class="seclowde"><input type="checkbox" name="samtech" value="Persona" ><label class="labpositionshort"> Persona</label></span>
+				<span class="seclowde"><input type="checkbox" name="samtech" value="Scenario"><label class ="labpositionshort"> Scenario</label></span>
+				<span class="seclowde"><input type="checkbox" name="samtech" value="ThinkAloud"><label class ="labpositionshort"> Think-aloud </label></span>
+				<span class="seclowde"><input type="checkbox" name="samtech" value="KanoAnalysis"><label class ="labpositionshort"> Kano Analysis </label></span>
+				<span class="seclowde"><input type="checkbox" name="samtech" value="RolePlaying"><label class ="labpositionshort"> Role-playing </label></span><br/>
+				<span class="seclowde"><input type="checkbox" name="samtech" value="Behavior"><label class ="labpositionshort"> Behavior Mapping </label></span>
+				<span class="seclowde"><input type="checkbox" name="samtech" value="None"><label class ="labpositionshort"> Keine davon </label></span>
+				</span>
+				</form></td>
+			</tr>
+            <tr style="height: 5px;" class="light">
+                <td></td>
+            </tr>
+		</table>
+	</div>
+	</div>
+    </form>
+</body>
+</html>

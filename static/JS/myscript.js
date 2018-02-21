@@ -27,12 +27,11 @@ function Delete(num){
 function two_char(n) {
             return n >= 10 ? n : "0" + n;
         }
-        
 function time_funch() {
-    document.getElementById("same1").innerText = ""; 
+    document.getElementById("same1").innerText = "";
     document.getElementById("same2").innerText = "";
     document.getElementById("same3").innerText = "";
-     var sec=300;
+      var sec=300;
       setInterval(function () {
         sec--;
         var date = new Date(0, 0)
@@ -40,9 +39,13 @@ function time_funch() {
         var m = date.getMinutes(), s = date.getSeconds();
         document.getElementById("mytime").innerText = m + " 分 " + two_char(s) + "秒";
     }, 1000);
-        setTimeout("Repeatedch()", 300000 )
+        setTimeout("Repeatedch()", 5000 )
   }
 
+function peatedch(){
+    window.alert("您还有1分钟时间！")
+
+  }
 
 function Repeatedch() {
     var con = confirm("确定一个技术也不选？");
@@ -56,6 +59,7 @@ function Repeatedch() {
         document.getElementById('queren').click();
     }
     if (con == false){
+
         var sec=300;
         setInterval(function () {
         sec--;
@@ -104,6 +108,45 @@ function time_funen() {
         document.getElementById("mytime").innerText = m + " min " + two_char(s) + "sec";
     }, 1000);
         setTimeout("Repeateden()", 300000 )
+    }
+}
+
+function time_funde() {
+    document.getElementById("same1").innerText = "";
+    document.getElementById("same2").innerText = "";
+    document.getElementById("same3").innerText = "";
+    var sec=300;
+    setInterval(function () {
+        sec--;
+        var date = new Date(0, 0)
+        date.setSeconds(sec);
+        var m = date.getMinutes(), s = date.getSeconds();
+        document.getElementById("mytime").innerText = m + " min " + two_char(s) + " sec ";
+    }, 1000);
+    setTimeout("Repeatedde()", 300000 )
+}
+
+function Repeatedde() {
+    var con = confirm("Sind Sie sicher, dass Sie keine Technik auswählen?");
+    if (con == true){
+        document.getElementById("same1").value = "none1";
+        document.getElementById("same2").value = "none2";
+        document.getElementById("same3").value = "none3";
+        document.getElementById("sam1").style.display ="block"
+        document.getElementById("sam2").style.display ="block"
+        document.getElementById("sam3").style.display ="block"
+        document.getElementById('queren').click();
+    }
+    if (con == false){
+        var sec=300;
+        setInterval(function () {
+        sec--;
+        var date = new Date(0, 0)
+        date.setSeconds(sec);
+        var m = date.getMinutes(), s = date.getSeconds();
+        document.getElementById("mytime").innerText = m + " min " + two_char(s) + "sec";
+    }, 1000);
+        setTimeout("Repeatedde()", 300000 )
     }
 }
 
@@ -243,7 +286,7 @@ function showregisteren(){
         window.alert = function (text) {
             text = text.toString().replace(/\\/g, '\\').replace(/\n/g, '<br />').replace(/\r/g, '<br />');
 
-            var alertdiv = '<div id="alertdiv" style="position:absolute; width:auto; display:none ; overflow:hidden; padding:10px 10px 8px; top: 50%; left: 50%; text-align:center; line-height:22px; background-color:#A9A9A9; border-radius: 17px; border:1px solid #ccc">' + text + '<br /><input type="submit" name="button" id="button" value="确定" style="margin-top:8px; width:90%;"onclick="$(this).parent().remove(); " /></div>';
+            var alertdiv = '<div id="alertdiv" style="position:absolute; width:auto; display:none ; overflow:hidden; padding:10px 10px 8px; top: 50%; left: 50%; text-align:center; line-height:22px; background-color:#A9A9A9; border-radius: 17px; border:1px solid #ccc">' + text + '<br /><input type="submit" name="button" id="button" value="OK" style="margin-top:8px; width:90%;"onclick="$(this).parent().remove(); " /></div>';
             $(document.body).append(alertdiv);
 
             $("#alertdiv").css({
@@ -278,6 +321,7 @@ function deshow(){
 }
 
 function check(){
+
     if(document.getElementById("sam1").style.display!="block" && document.getElementById("sam2").style.display!="block"
         && document.getElementById("sam3").style.display!="block"
     ){
@@ -342,22 +386,29 @@ function checken(){
 }
 
 function checkde(){
-    if(document.getElementById("same1").value == "" && document.getElementById("same2").value == "" 
-    && document.getElementById("same3").value == "")
-    {         
-         window.alert("请至少选择一个技术！");
+    if(document.getElementById("sam1").style.display!="block" && document.getElementById("sam2").style.display!="block"
+        && document.getElementById("sam3").style.display!="block"
+    ){
+        window.alert("Bitte wählen Sie mindestens\neine Technik!");
          return false;
-    } 
+    }
+
+    if(document.getElementById("same1").value == "" && document.getElementById("same2").value == ""
+    && document.getElementById("same3").value == "")
+    {
+        window.alert("Bitte wählen Sie mindestens\neine Technik!");
+        return false;
+    }
   else {
     if(
-        (document.getElementById("same1").value == document.getElementById("same2").value && 
-        document.getElementById("same1").value != "" && document.getElementById("same2").value != "")|| 
-        (document.getElementById("same2").value == document.getElementById("same3").value && 
+        (document.getElementById("same1").value == document.getElementById("same2").value &&
+        document.getElementById("same1").value != "" && document.getElementById("same2").value != "")||
+        (document.getElementById("same2").value == document.getElementById("same3").value &&
         document.getElementById("same2").value != "" && document.getElementById("same3").value != "") ||
-        (document.getElementById("same1").value == document.getElementById("same3").value && 
-        document.getElementById("same1").value != "" && document.getElementById("same3").value != "") 
+        (document.getElementById("same1").value == document.getElementById("same3").value &&
+        document.getElementById("same1").value != "" && document.getElementById("same3").value != "")
     ){
-         window.alert("您的选择重复了，请删除\n重复的选择再重新选择！");
+        window.alert("Ihre Wahl wird wiederholt, bitte\nLöschen Sie die wiederholte Auswahl\nund dann wähle wieder!");
         return false
       }
     else{
@@ -389,4 +440,21 @@ function remindingen(){
           return true;
       }
    }
+}
+
+function showtop1() {
+    // event.preventDefault();
+    console.log("test");
+    document.getElementById("top1").style.visibility = "visible";
+
+}
+
+function showtop2(){
+    document.getElementById("top2").style.visibility = "visible";
+
+}
+
+function hiddetop1() {
+    document.getElementById("top1").style.visibility = "hidden";
+    document.getElementById("topp").innerText="detele";
 }

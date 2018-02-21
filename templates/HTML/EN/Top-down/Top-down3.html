@@ -31,35 +31,35 @@
 	<div class="mainbody">
 		<div class="entop-down">  <!-- Taxonomy部分 -->
 				<dl>
-					<a href="?td={{ td_id }}&du={{ du_id }}&pa={{ pa_id }}&ev={{ ev_id }}"><dt class="{% ifequal de_id '' %}active2{% endifequal %}">Design Phase</dt></a>
-                    {% for attri in attribut1  %}
-                        <a href="?de={{ attri.id }}&td={{ td_id }}&du={{ du_id }}&pa={{ pa_id }}&ev={{ ev_id }}"><dd class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Design_Name }}</dd></a>
+                    <dt>Design Phase</dt>
+                    {% for attri in attribut1 %}
+                        <dd onclick="showtop1()" class="{% ifequal design_id attri.id|stringformat:"i"  %}active2{% endifequal %}"><a class="taga" href="?design={{ attri.id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"> {{ attri.Design_Name }}</a><a  href="?dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 
-					<a href="?de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}&ev={{ ev_id }}"><dt class="{% ifequal td_id '' %}active2{% endifequal %}">Time Dependency</dt></a>
+					<dt>Time dependency</dt>
                     {% for attri in attribut2  %}
-                        <a href="?td={{ attri.id }}&de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}&ev={{ ev_id }}"><dd class="{% ifequal td_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Dependency_Name }}</dd></a>
+                       <dd onclick="showtop2()" class="{% ifequal dependency_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?dependency={{ attri.id }}&design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}">{{ attri.Dependency_Name }}</a><a  id="top2" href="?design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 
-					<a href="?de={{ de_id }}&td={{ td_id }}&pa={{ pa_id }}&ev={{ ev_id }}"><dt class="{% ifequal de_id '' %}active2{% endifequal %}">Duration </dt></a>
-                     {% for attri in attribut3 %}
-                         <a href="?du={{ attri.id }}&de={{ de_id }}&td={{ td_id }}&pa={{ pa_id }}&ev={{ ev_id }}"><dd class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Duration_Name }}</dd></a>
-                     {% endfor %}
+					<dt>Duration</dt>
+                    {% for attri in attribut3 %}
+                       <dd onclick="showtop3()" class="{% ifequal duration_id attri.id|stringformat:"i" %}active2{% endifequal %}"> <a href="?duration={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}">{{ attri.Duration_Name }}</a><a  id="top3" href="?design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
+                    {% endfor %}
 
-                    <a href="?de={{ de.id }}&td={{ td_id }}&du={{ du_id }}&ev={{ ev_id }}"><dt class="{% ifequal pa_id '' %}active2{% endifequal %}">User Participation</dt></a>
-                     {% for attri in attribut4 %}
-                         <a href="?pa={{ attri.id }}&de={{ de.id }}&td={{ td_id }}&du={{ du_id }}&ev={{ ev_id }}"><dd class="{% ifequal pa_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.Participation_Name }}</dd></a>
-                     {% endfor  %}
+                    <dt>User participation</dt>
+                    {% for attri in attribut4 %}
+                        <dd onclick="showtop4()" class="{% ifequal participant_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?participant={{ attri.id }}&design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}">{{ attri.Participation_Name }}</a><a  id="top4" href="?design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
+                    {% endfor %}
 
-					<a href="?de={{ de.id }}&td={{ td_id }}&du={{ du_id }}&pa={{ pa_id }}"> <dt class="{% ifequal ev_id '' %}active2{% endifequal %}">Evaluation Type</dt></a>
+					<dt>Evaluation types</dt>
                     {% for attri in attribut5 %}
-                        <a href="?ev={{ attri.id }}&de={{ de.id }}&td={{ td_id }}&du={{ du_id }}&pa={{ pa_id }}"><dd class="{% ifequal ev_id attri.id|stringformat:"i" %}active2{% endifequal %}" >{{ attri.Evaluation_Name }}</dd></a>
+                        <dd onclick="showtop5()" class="{% ifequal evaluation_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?evaluation={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}">{{ attri.Evaluation_Name }}</a><a id="top5" href="?design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
                     {% endfor %}
 				</dl>
 		</div>  
 
 		<div class="teches">
-            {% for tech in all_techen %}
+            {% for tech in all_techch %}
                 <div class="postcard">
 				<div class="lantian">
 				<h4 class="biaoti">{{ tech.Tech_Name }}</h4><img class="topshow" src="{% static 'img/plus1.png' %}"

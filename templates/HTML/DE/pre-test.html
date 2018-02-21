@@ -1,160 +1,75 @@
 <!DOCTYPE html>
 <html style="height: 100%">
+{% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" type="text/css" href="../../CSS/body.css"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>pre-test</title>
 </head>
 <body>
+<form method="post" action="{% url 'classification:PreAddDe'%}">
+{% csrf_token %}
+
 	<div class="header">  <!-- logo部分 -->
-		<div class="kitlogo"><img src="../../img/kit2.png">
+		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 			<p>Welcome to the Online Experiment</p>
 		</div>
-		<input type="button" name="" value="Next" onclick="" id="butt-next">
+		<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
 	</div>
 
 	<div class="bannder4"></div>
 
 	<div class="mainbody">
 	  <div class="opptions">
-		<p>Please answer the following question</p>
-		<table id="tab1">
+          <br/>
+		<p>Bitte beantworten Sie die folgenden Fragen.</p>
+        <table id="tab1">
 			<tr class="dark">
 				<td><span class="number">No.</span><span class="Ques">Question</span><td>
 			</tr>
-		
-			<tr class="light">
-				<td><form>
-				<span class="number">1.</span><span class="Ques">In what age group are you?</span>
-				<span class="onelow">
-				<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition"> &lt;20  </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">21-30</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">31-40</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">41-50</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">&gt;51</label></span>
-				</span>
-				</form> </td>
-			</tr>
-			<tr class="white">
-				<td><form >
-				<span class="number">2.</span><span class="Ques">Gender</span>
-				<span class="onelow">
-				<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition"> female </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">male</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">other</label></span>
-				</span>
-				</form></td>
-			</tr>
-			<tr class="light">
-				<td>
-					<form >
-						<span class="number">3.</span><span class="Ques">Nationality</span>
-						<span class="onelow">
-					
-						</span>
-				</form>
-				</td>
-			</tr>
 			<tr class="white">
 				<td>
-					<form >
-						<span class="number">4.</span><span class="Ques">What is your highest education level?</span>
-						<span class="onelow">
-						<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition"> Under-graduate </label></span>
-						<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition"> Bachelor’s degree </label></span>
-						<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Postgraduate (Master) </label></span>
-						<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Master’s degree </label></span>
-						<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Doctoral student </label></span>
-						<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Doctorate degree </label></span>
-						</span>
-					</form>
-				</td>
-			</tr>
-			<tr class="light">
-				<td><form >
-				<span class="number">5.</span><span class="Ques">What are your areas of expertise?</span>
+				<span class="number">1.</span><span class="Ques">In welche Altersgruppe fallen Sie?</span>
 				<span class="onelow">
-				<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Computer program </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Design service </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Management </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Technical service </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Scientific research </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Education </label></span>
+				<span class="seclow"><input type="radio" name="age" value="&lt;20 " ><label class="labposition"> &lt;20  </label></span>
+				<span class="seclow"><input type="radio" name="age" value="21-30"><label class="labposition">21-30</label></span>
+				<span class="seclow"><input type="radio" name="age" value="31-40"><label class="labposition">31-40</label></span>
+				<span class="seclow"><input type="radio" name="age" value="41-50"><label class="labposition">41-50</label></span>
+				<span class="seclow"><input type="radio" name="age" value="&gt;51"><label class="labposition">&gt;51</label></span>
 				</span>
-				</form></td>
-			</tr>
-			<tr class="white">
-				<td><form >
-				<span class="number">6.</span><span class="Ques">Which of the following best describes your role?</span>
-				<span class="onelow">
-				<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition"> Manager </label></span>
-					<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition"> Student </label></span>
-					<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Designer </label></span>
-					<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Consultant </label></span>
-					<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> Researcher </label></span>
-					<span class="seclow"><input type="radio" name="sex" value=""><label class ="labposition"> programmer </label></span>
-				</span>
-				</form></td>
-			</tr>
-			<tr class="light">
-				<td><form >
-				<span class="number">7.</span><span class="Ques">How many total years of full-time work experience do you have?</span>
-				<span class="onelow">
-
-				</span>
-				</form></td>
-			</tr>
-			<tr class="white">
-				<td><form >
-				<span class="number">8.</span><span class="Ques">Have you ever used any design techniques (design techniques mean following a specific procedure to conduct design activities, e.g., persona, mind mapping) during the design process?</span>
-				<span class="onelow">
-					<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition"> YES </label></span>
-					<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition"> NO </label></span>
-				</span>
-				</form></td>
-			</tr>
-			<tr style="height: 25px; background-color: gray;" >
-				<td>
-					
-				</td>
-			</tr>
-		</table>
-
-		<table id="tab2">
-			<tr class="dark">
-				<td><span style="margin-left: 35px;">In the following questions, 1 means extremely disagree, 7 means extremely agree.</span><td>
+				 </td>
 			</tr>
 			<tr class="light">
 				<td><form>
-				<span class="number">1.</span><span class="Ques">In what age group are you?</span>
+				<span class="number">2.</span><span class="Ques">Welches Geschlecht haben Sie?</span>
 				<span class="onelow">
-				<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition">1  </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">2</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">3</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">4</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">5</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">6</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">7</label></span>
+                        <span class="seclow"><input type="radio" name="sex" value="weiblich" ><label class="labposition">Weiblich  </label></span>
+                        <span class="seclow"><input type="radio" name="sex" value="männlich" ><label class="labposition">Männlich</label></span>
+                        <span class="seclow"><input type="radio" name="sex" value="anderes" ><label class="labposition">Anderes </label></span>
 				</span>
-				</form> </td>
+                </form></td>
 			</tr>
 			<tr class="white">
-				<td><form >
-				<span class="number">2.</span><span class="Ques">Gender</span>
-				<span class="onelow">
-				<span class="seclow"><input type="radio" name="sex" value="" checked><label class="labposition">1  </label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">2</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">3</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">4</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">5</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">6</label></span>
-				<span class="seclow"><input type="radio" name="sex" value=""><label class="labposition">7</label></span>
-				</span>
-				</form></td>
+				<td>
+                    <span class="number">3.</span><span class="Ques">Welche Nationalität haben Sie?</span>
+                    <span class="onelow">
+                        <input type="text" name="national" value="Gib here ein..." class="tiankong" onfocus='if(this.value=="Gib here ein..."){this.value="";}; 'onblur='if(this.value==""){this.value="Gib here ein...";};'>
+                    </span>
+				</td>
+			</tr>
+			<tr class="light">
+				<td>
+                    <span class="number">4.</span><span class="Ques">Haben Sie jemals im Ausland gelebt?</span>
+                    <span class="onelow">
+                        <span class="seclow"><input type="radio" name="othercontry" value="Ja" ><label class="labposition"> Ja</label></span>
+                        <span class="seclow"><input type="radio" name="othercontry" value="Nein"><label class="labposition">Nein</label></span>
+                    </span>
+                </td>
 			</tr>
 		</table>
 	</div>
 	</div>
+    </form>
 </body>
 </html>

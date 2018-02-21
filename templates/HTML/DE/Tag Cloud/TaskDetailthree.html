@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+{% load staticfiles %}
+<head>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>TaskDetail1</title>
+</head>
+<body>
+<form method="post" action="{% url 'classification:C_3DE' %}">
+    {% csrf_token %}
+
+	<div class="header">  <!-- logo部分 -->
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+				<p>Welcome to the Online Experiment</p>
+			</div>
+			<input type="submit" name="" value="Next" onclick="" id="butt-next">
+	</div>
+
+	<div class="bannder12">
+		
+	</div>
+
+	<div class="main">
+        {% for task in taskdes %}
+             <p>Aufgabe {{ task.id }}<p>
+	         <p>{{ task.Description }}</p><br/>
+        {% endfor %}
+
+	  <p>Bitte benutzen Sie die folgende Webseite, um drei hierfür relevante Designtechniken für diese Szenario auszuwählen.</p>
+	</div>
+    </form>
+</body>
+</html>
