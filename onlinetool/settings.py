@@ -85,8 +85,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'experimenttool',
         'USER': 'root',
-        'PASSWORD': 'mutig0623',
-        'HOST': '127.0.0.1'
+        'PASSWORD': 'Mutig0623+-',
+        'HOST': ''
     }
 }
 
