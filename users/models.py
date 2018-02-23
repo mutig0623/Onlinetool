@@ -19,7 +19,7 @@ class UserProfile(AbstractUser):
         return self.username
 
     class Meta:
-        verbose_name = "用户信息"
+        verbose_name = u"用户信息"
         verbose_name_plural = verbose_name
 
 
@@ -62,7 +62,7 @@ class TechinforCH(models.Model):
     FeedbackCollection = models.CharField(max_length=5, default="", verbose_name=u"TagCloud分类名称24")
 
     class Meta:
-        verbose_name="中文设计技术信息"
+        verbose_name=u"中文设计技术信息"
         verbose_name_plural = verbose_name
 
 
@@ -105,7 +105,7 @@ class TechinforEN(models.Model):
     FeedbackCollection = models.CharField(max_length=5, default="", verbose_name=u"TagCloud分类名称24")
 
     class Meta:
-        verbose_name="英文设计技术信息"
+        verbose_name=u"英文设计技术信息"
         verbose_name_plural = verbose_name
 
 
@@ -148,7 +148,7 @@ class TechinforDE(models.Model):
     FeedbackCollection = models.CharField(max_length=5, default="", verbose_name=u"TagCloud分类名称24")
 
     class Meta:
-        verbose_name="德语设计技术信息"
+        verbose_name=u"德语设计技术信息"
         verbose_name_plural = verbose_name
 
 
@@ -166,5 +166,5 @@ class PreResultTasks(models.Model):
     Re_Result10 = models.CharField(max_length=50, default="", verbose_name=u"预先设定答案10")
 
     class Meta:
-        verbose_name="场景的预设答案"
+        verbose_name=u"场景的预设答案"
         verbose_name_plural = verbose_name
