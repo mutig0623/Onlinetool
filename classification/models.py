@@ -7,34 +7,34 @@ from django.db import models
 
 
 class TDDesignCH(models.Model):
-    Design_Name = models.CharField(max_length=20, default="", verbose_name=u"中文TopDown设计阶段属性")
+    Design_Name = models.CharField(max_length=20, default="", verbose_name=unicode("中文TopDown设计阶段属性"))
 
     class Meta:
-        verbose_name=u"中文TopDown设计阶段"
+        verbose_name=unicode("中文TopDown设计阶段")
         verbose_name_plural = verbose_name
 
 
 class TDDependencyCH(models.Model):
-    Dependency_Name = models.CharField(max_length=20, default="", verbose_name=u"中文TopDown时间依赖")
+    Dependency_Name = models.CharField(max_length=20, default="", verbose_name=unicode("中文TopDown时间依赖"))
 
     class Meta:
-        verbose_name=u"中文TopDown时间依赖性"
+        verbose_name=unicode("中文TopDown时间依赖性")
         verbose_name_plural = verbose_name
 
 
 class TDDurationCH(models.Model):
-    Duration_Name = models.CharField(max_length=20, default="", verbose_name=u"中文TopDown持续时间")
+    Duration_Name = models.CharField(max_length=20, default="", verbose_name=unicode("中文TopDown持续时间"))
 
     class Meta:
-        verbose_name=u"中文TopDown持续时间"
+        verbose_name=unicode("中文TopDown持续时间")
         verbose_name_plural = verbose_name
 
 
 class TDParticipationCH(models.Model):
-    Participation_Name = models.CharField(max_length=20, default="", verbose_name=u"中文TopDown用户参与")
+    Participation_Name = models.CharField(max_length=20, default="", verbose_name=unicode("中文TopDown用户参与"))
 
     class Meta:
-        verbose_name=u"中文TopDown用户参与"
+        verbose_name=unicode("中文TopDown用户参与")
         verbose_name_plural = verbose_name
 
 
