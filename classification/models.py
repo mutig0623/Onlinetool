@@ -62,6 +62,7 @@ class TDDependencyEN(models.Model):
         verbose_name_plural = verbose_name
 
 
+
 class TDDurationEN(models.Model):
     Duration_Name = models.CharField(max_length=20, default="", verbose_name=u"英文TopDown持续时间")
 
