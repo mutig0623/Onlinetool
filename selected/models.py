@@ -19,7 +19,7 @@ class SelectedTechniqueOne(models.Model):
         return self.subject
 
     class Meta:
-        verbose_name = "场景One选择的结果"
+        verbose_name = u"场景One选择的结果"
         verbose_name_plural = verbose_name
 
 
@@ -31,7 +31,7 @@ class SelectedTechniqueTwo(models.Model):
     mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
 
     class Meta:
-        verbose_name = "场景Two的选择结果"
+        verbose_name = u"场景Two的选择结果"
         verbose_name_plural = verbose_name
 
 
@@ -43,7 +43,7 @@ class SelectedTechniqueThree(models.Model):
     mode_id = models.CharField(max_length=1, verbose_name=u"模Id", default="")
 
     class Meta:
-        verbose_name = "场景Three的选择结果"
+        verbose_name = u"场景Three的选择结果"
         verbose_name_plural = verbose_name
 
 
@@ -106,7 +106,7 @@ class PreQuestionResult(models.Model):
     FC_6 = models.IntegerField(null=True, choices=degree_choices, verbose_name=u"")
 
     class Meta:
-        verbose_name = "Pre问卷结果"
+        verbose_name = u"Pre问卷结果"
         verbose_name_plural = verbose_name
 
 
@@ -134,7 +134,7 @@ class PostQuestionResultOne(models.Model):
     Q15_dialectical = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
     Q16_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
     class Meta:
-        verbose_name = "Post问卷结果One"
+        verbose_name = u"Post问卷结果One"
         verbose_name_plural = verbose_name
 
 
@@ -163,7 +163,7 @@ class PostQuestionResultTwo(models.Model):
     Q16_contradiction = models.IntegerField(choices=degree_choices, verbose_name=u"", null=True)
 
     class Meta:
-        verbose_name = "Post问卷结果Two"
+        verbose_name = u"Post问卷结果Two"
         verbose_name_plural = verbose_name
 
 
@@ -200,6 +200,6 @@ class PostQuestionResultThree(models.Model):
 
 
     class Meta:
-        verbose_name = "Post问卷结果Three"
+        verbose_name = u"Post问卷结果Three"
         verbose_name_plural = verbose_name
 
