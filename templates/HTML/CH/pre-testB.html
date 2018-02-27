@@ -9,10 +9,36 @@
     <script type="text/javascript" language="javascript" src="JavaScript/jquery-1.6.1.min.js" ></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
     <script src="{% static 'JS/index.js' %}"></script>
+    <script type="text/javascript" language="javascript">
+function check(){
+    if(conn()==false){
+        return false;
+    }
+}
+function conn(){
+    var inputs=document.getElementsByTagName("input");
+    for(var i=0 ; i<inputs.length ; ++i){
+        if(inputs[i].type.toLowerCase()=='checkbox'){  //在这里进行input文本框类别判断剩下的input  radio自己写吧。复制整个if里面东西将checkbox改成radio或者text
+            var mark = false;
+            $("input[name='"+inputs[i].name+"']").each(function(){
+                if($(this).prop("checked")){
+                    mark = true;
+                }
+            });
+            if(!mark){
+
+                alert("第 "+(inputs[i].name.replace(/[^\d]/g,''))+" 道题没有作答");
+                return false;
+                break;
+            }
+        }
+    }
+}
+</script>
     <title>pre-test</title>
 </head>
 <body >
-<form method="post" action="{% url 'classification:PreAddB' %}" onsubmit="return checknull()">
+<form method="post" action="{% url 'classification:PreAddB' %}" onsubmit="return check()">
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -35,7 +61,7 @@
 			<tr class="dark">
 				<td><span class="number">No.</span><span class="Ques">Question</span><td>
 			</tr>
-			<tr class="white">
+			<tr class="white" id="eduname">
 				<td>
                     <span class="number">1.</span><span class="Ques">你最高的教育水平是什么？</span>
                     <span class="onelow">
