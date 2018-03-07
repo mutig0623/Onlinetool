@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -8,9 +8,6 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
-    <script>
-
-    </script>
     <title>Bottom-Up</title>
 </head>
 <body onload="time_funch()">
@@ -23,57 +20,47 @@
 			<div class="timing">
  			<span>您还剩</span>	<span id="mytime">0 分 00 秒</span>
  			</div>
-			<input type="submit" name="" value="下一步" id="queren">
+			<input type="submit" name="" value="下一步" id="butt-next">
 	</div>
 
 	<div class="bannder7" >
 		
 	</div>
 
-	<div class="mainbody">
+	<div class="select-area">
 		<div class="bottomup">  <!-- Taxonomy部分 -->
 			<dl>
 				<dt>设计阶段</dt>
-                {%  for attri in attribut1%}
-                    {% if attri.id == 1 %}
-                        <dd class="{% ifequal de_id  attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" >{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.id == 2 %}
-                       <dd  class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}" >{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-
-                    {% if attri.id == 3 %}
-                         <dd>创作和评估</dd>
+                    <dd id="design1" data-select="0" name="design">用户研究<img id="design1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd id="design2" data-select="0" name="design">产生想法<img id="design2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd>创作和评估</dd>
                         <ul>
-                        <li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img class="hiddeimga"  src="{% static 'img/chacha3.png' %}"></a></li>
+                        <li id="design3" data-select="0" name="evaluation">模型评价<img id="design3img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></li>
+                        <li id="design4" data-select="0" name="evaluation">产品评价<img id="design4img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></li>
                         </ul>
-                    {% endif %}
-                    {% if attri.id == 4 %}
-                        <ul>
-                        <li class="{% ifequal de_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?de={{ attri.id }}&col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Design_Name }}</a><a href="?col={{ col_id }}&du={{ du_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></li>
-                        </ul>
-                    {% endif %}
-
-                {% endfor %}
 
 				<dt >收集设计数据</dt>
-                {% for attri in attribut2 %}
-                    <dd  class="{%  ifequal col_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?col={{ attri.id }}&de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}">{{ attri.Collection_Name }}</a><a href="?de={{ de_id }}&du={{ du_id }}&pa={{ pa_id }}"> <img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                {% endfor %}
+                    <dd  id="collect1" data-select="0" name="collect">组织信息<img id="collect1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="collect2" data-select="0" name="collect">观察<img id="collect2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="collect3" data-select="0" name="collect">用户模拟<img id="collect3img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="collect4" data-select="0" name="collect">关系和依赖<img id="collect4img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="collect5" data-select="0" name="collect">模型制作<img id="collect5img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="collect6" data-select="0" name="collect">收集反馈<img id="collect6img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="collect7" data-select="0" name="collect">用户体验反馈<img id="collect7img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
 
 				<dt >持续时间</dt>
-                {% for attri in attribut3 %}
-                   <dd  class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?du={{ attri.id }}&de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}">{{ attri.Duration_Name }}</a><a href="?de={{ de_id }}&col={{ col_id }}&pa={{ pa_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                {% endfor %}
+                    <dd  id="duration1" data-select="0" name="duration">短期<img id="duration1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="duration2" data-select="0" name="duration">长期<img id="duration2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="duration3" data-select="0" name="duration">时间灵活<img id="duration3img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
 
                 <dt>参与者</dt>
-                {% for attri in attribut4 %}
-                   <dd class="bottomin" class="{% ifequal du_id attri.id|stringformat:"i" %}active2{% endifequal %}" ><a href="?pa={{ attri.id }}&de={{ de_id }}& du={{ du_id }}&col={{ col_id }}">{{ attri.Participant_Name }}</a><a href="?de={{ de_id }}& du={{ du_id }}&col={{ col_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                {% endfor %}
-				</dl>
+                    <dd  id="participant1" data-select="0" name="participant">用户<img id="participant1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="participant2" data-select="0" name="participant">利益共享者<img id="participant2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+                    <dd  id="participant3" data-select="0" name="participant">专家<img id="participant3img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+            </dl>
 		</div> 
 		
-		<div class="teches">
+		<div class="teches1">
             {% for tech in all_techch %}
                 <div class="postcard">
                     <div class="lantian">
@@ -109,8 +96,879 @@
 				</dl>
 			</div>
 		</div>
-		<div style="clear:both"></div>
     </div>
 </form>
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){
+         var des1;
+         var col1;
+         var dur1;
+         var part1;
+         var design1Value;
+         var design2Value;
+         var design3Value;
+         var design4Value;
+         var collect1Value;
+         var collect2Value;
+         var collect3Value;
+         var collect4Value;
+         var collect5Value;
+         var collect6Value;
+         var collect7Value;
+         var duration1Value;
+         var duration2Value;
+         var duration3Value;
+         var participant1Value;
+         var participant2Value;
+         var participant3Value;
+         function AddElement(ElementA,ElementB,ElementC) {
+                 var element = '<div class="postcard">' +'<div class="lantian">' + '<h4 class="biaoti">'+ ElementA + '</h4>' +
+                     '<img class="topshow" src="/static/img/plus1.png" onclick="addtech(this)">' + '</div>'+ '<div class="contented" id="content_{{ tech.pk }}">'
+                     + '<p>' + ElementB + '</p>' + '<div class="showed">' +  '<p>' + ElementC + '</p>' + '</div>' + '</div>' + '</div>';
+                 return element;
+             }
+            $("#design1").click(function (){
+            design1Value = $('#design1').prop('data-select');
+            if (design1Value == undefined || design1Value == 0 || design2Value == 1 || design3Value ==1 || design4Value == 1) {
+                design1Value = 1;
+                design2Value = 0;
+                design3Value = 0;
+                design4Value = 0;
+            }else {
+                design1Value = 0;
+            }
+            if(design1Value == 1){
+                des1 = $(this).text();
+                $("#design1img").css("visibility","visible");
+                $("#design2img").css("visibility","hidden");
+                $("#design3img").css("visibility","hidden");
+                $("#design4img").css("visibility","hidden");
+                $("#design1").css("background-color","#41C7DB");
+                $("#design2").css("background-color","white");
+                $("#design3").css("background-color","white");
+                $("#design4").css("background-color","white");
+            }else {
+                des1 = null;
+                $("#design1img").css("visibility","hidden");
+                $("#design1").css("background-color","white");
+            }
+             $('#design1').prop('data-select', design1Value);
+             if(design2Value == 0 && design1Value == 0 && design3Value == 0 && design4Value ==0){
+             $("#design1").prop('data-select',0);
+             $("#design2").prop('data-select',0);
+             $("#design3").prop('data-select',0);
+             $("#design4").prop('data-select',0);
+            }
+            $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+            function(tt){
+                $('.teches1').empty();
+                $.each(tt,function(i,n){
+                    var title = n.fields['Tech_Name'];
+                    var showd = n.fields['Short_Description'];
+                    var contents = n.fields['Long_Description'];
+                    var reg = new RegExp("；","g");
+                    var contents = contents.replace(reg,"<br>");
+                    $('.teches1').append(AddElement(title,showd,contents))
+                })
+            })
+            });
+            $("#design2").click(function (){
+            design2Value = $('#design2').prop('data-select');
+            if (design2Value == undefined || design2Value == 0 || design1Value == 1 || design3Value == 1 || design4Value == 1) {
+                design2Value = 1;
+                design1Value = 0;
+                design3Value = 0;
+                design4Value = 0;
+            }else {
+                design2Value = 0;
+            }
+            if(design2Value == 1){
+                des1 = $(this).text();
+                $("#design2img").css("visibility","visible");
+                $("#design1img").css("visibility","hidden");
+                $("#design3img").css("visibility","hidden");
+                $("#design4img").css("visibility","hidden");
+                $("#design2").css("background-color","#41C7DB");
+                $("#design1").css("background-color","white");
+                $("#design3").css("background-color","white");
+                $("#design4").css("background-color","white");
+            }else{
+                des1 = null;
+                $("#design2img").css("visibility","hidden");
+                $("#design2").css("background-color","white");
+            }
+            $('#design2').prop('data-select', design2Value);
+             if(design2Value == 0 && design1Value == 0 && design3Value == 0 && design4Value == 0){
+             $("#design1").prop('data-select',0);
+             $("#design2").prop('data-select',0);
+             $("#design3").prop('data-select',0);
+             $("#design4").prop('data-select',0);
+            }
+            console.log(design1Value);
+            $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+            function(tt){
+                $('.teches1').empty();
+                $.each(tt,function(i,n){
+                    var title = n.fields['Tech_Name'];
+                    var showd = n.fields['Short_Description']
+                    var contents = n.fields['Long_Description']
+                    var reg = new RegExp("；","g");
+                    var contents = contents.replace(reg,"<br>");
+                    $('.teches1').append(AddElement(title,showd,contents))
+                })
+            })
+            });
+            $("#design3").click(function (){
+            design3Value = $('#design3').prop('data-select');
+            if (design3Value == undefined || design3Value == 0 || design1Value == 1 || design2Value == 1 || design4Value == 1) {
+                design3Value = 1;
+                design1Value = 0;
+                design2Value = 0;
+                design4Value = 0;
+            }else {
+                design3Value = 0;
+            }
+            if(design3Value == 1){
+                des1 = $(this).text();
+                $("#design3img").css("visibility","visible");
+                $("#design1img").css("visibility","hidden");
+                $("#design2img").css("visibility","hidden");
+                $("#design4img").css("visibility","hidden");
+                $("#design3").css("background-color","#41C7DB");
+                $("#design1").css("background-color","white");
+                $("#design2").css("background-color","white");
+                $("#design4").css("background-color","white");
+            }else{
+                des1 = null;
+                $("#design3img").css("visibility","hidden");
+                $("#design3").css("background-color","white");
+            }
+            $('#design3').prop('data-select', design3Value);
+             if(design2Value == 0 && design1Value == 0 && design3Value == 0 && design4Value == 0){
+             $("#design1").prop('data-select',0);
+             $("#design2").prop('data-select',0);
+             $("#design3").prop('data-select',0);
+             $("#design4").prop('data-select',0);
+            }
+            $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+            function(tt){
+                $('.teches1').empty();
+                $.each(tt,function(i,n){
+                    var title = n.fields['Tech_Name'];
+                    var showd = n.fields['Short_Description']
+                    var contents = n.fields['Long_Description']
+                    var reg = new RegExp("；","g");
+                    var contents = contents.replace(reg,"<br>");
+                    $('.teches1').append(AddElement(title,showd,contents))
+                })
+            })
+            });
+            $("#design4").click(function (){
+                design4Value = $('#design4').prop('data-select');
+                if (design4Value == undefined || design4Value == 0 || design1Value == 1 || design2Value == 1 || design3Value ==1) {
+                    design4Value = 1;
+                    design1Value = 0;
+                    design2Value = 0;
+                    design3Value = 0;
+                }else {
+                    design4Value = 0;
+                }
+               $('#design4').prop('data-select', design4Value);
+                if(design4Value == 1){
+                    $("#design4img").css("visibility","visible");
+                    $("#design1img").css("visibility","hidden");
+                    $("#design2img").css("visibility","hidden");
+                    $("#design3img").css("visibility","hidden");
+                    $("#design4").css("background-color","#41C7DB");
+                    $("#design1").css("background-color","white");
+                    $("#design3").css("background-color","white");
+                    $("#design2").css("background-color","white");
+                    des1 = $(this).text();
+                }else {
+                    $("#design4img").css("visibility","hidden");
+                    $("#design4").css("background-color","white");
+                    des1 = null;
+                }
+                if(design2Value == 0 && design1Value == 0 && design3Value == 0 && design4Value ==0){
+                 $("#design1").prop('data-select',0);
+                 $("#design2").prop('data-select',0);
+                 $("#design3").prop('data-select',0);
+                 $("#design4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+            $("#collect1").click(function (){
+                collect1Value = $('#collect1').prop('data-select');
+                if (collect1Value == undefined || collect1Value == 0 || collect2Value == 1 || collect3Value == 1 || collect4Value ==1 || collect5Value ==1 || collect6Value ==1 ||collect7Value ==1) {
+                    collect1Value = 1;
+                    collect2Value = 0;
+                    collect3Value = 0;
+                    collect4Value = 0;
+                    collect5Value = 0;
+                    collect6Value = 0;
+                    collect7Value = 0;
+                }else {
+                    collect1Value = 0;
+                }
+               $('#collect1').prop('data-select', collect1Value);
+                if(collect1Value == 1){
+                    $("#collect1img").css("visibility","visible");
+                    $("#collect2img").css("visibility","hidden");
+                    $("#collect3img").css("visibility","hidden");
+                    $("#collect4img").css("visibility","hidden");
+                    $("#collect5img").css("visibility","hidden");
+                    $("#collect6img").css("visibility","hidden");
+                    $("#collect7img").css("visibility","hidden");
+                    $("#collect1").css("background-color","#41C7DB");
+                    $("#collect2").css("background-color","white");
+                    $("#collect3").css("background-color","white");
+                    $("#collect4").css("background-color","white");
+                    $("#collect5").css("background-color","white");
+                    $("#collect6").css("background-color","white");
+                    $("#collect7").css("background-color","white");
+                    col1 = $(this).text();
+                }else {
+                    $("#collect1img").css("visibility","hidden");
+                    $("#collect1").css("background-color","white");
+                    col1 = null;
+                }
+                if(collect1Value == 0 && collect2Value == 0 && collect3Value == 0 && collect4Value ==0 && collect5Value == 0 && collect6Value ==0 && collect7Value == 0){
+                 $("#collect1").prop('data-select',0);
+                 $("#collect2").prop('data-select',0);
+                 $("#collect3").prop('data-select',0);
+                 $("#collect5").prop('data-select',0);
+                 $("#collect6").prop('data-select',0);
+                 $("#collect7").prop('data-select',0);
+                 $("#collect4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+
+            $("#collect2").click(function (){
+                collect2Value = $('#collect2').prop('data-select');
+                if (collect2Value == undefined || collect2Value == 0 || collect1Value == 1 || collect3Value == 1 || collect4Value ==1 || collect5Value ==1 || collect6Value ==1 ||collect7Value ==1) {
+                    collect2Value = 1;
+                    collect1Value = 0;
+                    collect3Value = 0;
+                    collect4Value = 0;
+                    collect5Value = 0;
+                    collect6Value = 0;
+                    collect7Value = 0;
+                }else {
+                    collect2Value = 0;
+                }
+               $('#collect2').prop('data-select', collect2Value);
+                if(collect2Value == 1){
+                    $("#collect2img").css("visibility","visible");
+                    $("#collect1img").css("visibility","hidden");
+                    $("#collect3img").css("visibility","hidden");
+                    $("#collect4img").css("visibility","hidden");
+                    $("#collect5img").css("visibility","hidden");
+                    $("#collect6img").css("visibility","hidden");
+                    $("#collect7img").css("visibility","hidden");
+                    $("#collect2").css("background-color","#41C7DB");
+                    $("#collect1").css("background-color","white");
+                    $("#collect3").css("background-color","white");
+                    $("#collect4").css("background-color","white");
+                    $("#collect5").css("background-color","white");
+                    $("#collect6").css("background-color","white");
+                    $("#collect7").css("background-color","white");
+                    col1 = $(this).text();
+                }else {
+                    $("#collect2img").css("visibility","hidden");
+                    $("#collect2").css("background-color","white");
+                    col1 = null;
+                }
+                if(collect1Value == 0 && collect2Value == 0 && collect3Value == 0 && collect4Value ==0 && collect5Value == 0 && collect6Value ==0 && collect7Value == 0){
+                 $("#collect1").prop('data-select',0);
+                 $("#collect2").prop('data-select',0);
+                 $("#collect3").prop('data-select',0);
+                 $("#collect5").prop('data-select',0);
+                 $("#collect6").prop('data-select',0);
+                 $("#collect7").prop('data-select',0);
+                 $("#collect4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+
+
+
+
+
+
+
+
+
+            $("#collect3").click(function (){
+                collect3Value = $('#collect3').prop('data-select');
+                if (collect3Value == undefined || collect3Value == 0 || collect2Value == 1 || collect1Value == 1 || collect4Value ==1 || collect5Value ==1 || collect6Value ==1 ||collect7Value ==1) {
+                    collect3Value = 1;
+                    collect2Value = 0;
+                    collect1Value = 0;
+                    collect4Value = 0;
+                    collect5Value = 0;
+                    collect6Value = 0;
+                    collect7Value = 0;
+                }else {
+                    collect3Value = 0;
+                }
+               $('#collect3').prop('data-select', collect3Value);
+                if(collect3Value == 1){
+                    $("#collect3img").css("visibility","visible");
+                    $("#collect2img").css("visibility","hidden");
+                    $("#collect1img").css("visibility","hidden");
+                    $("#collect4img").css("visibility","hidden");
+                    $("#collect5img").css("visibility","hidden");
+                    $("#collect6img").css("visibility","hidden");
+                    $("#collect7img").css("visibility","hidden");
+                    $("#collect3").css("background-color","#41C7DB");
+                    $("#collect2").css("background-color","white");
+                    $("#collect1").css("background-color","white");
+                    $("#collect4").css("background-color","white");
+                    $("#collect5").css("background-color","white");
+                    $("#collect6").css("background-color","white");
+                    $("#collect7").css("background-color","white");
+                    col1 = $(this).text();
+                }else {
+                    $("#collect3img").css("visibility","hidden");
+                    $("#collect3").css("background-color","white");
+                    col1 = null;
+                }
+                if(collect1Value == 0 && collect2Value == 0 && collect3Value == 0 && collect4Value ==0 && collect5Value == 0 && collect6Value ==0 && collect7Value == 0){
+                 $("#collect1").prop('data-select',0);
+                 $("#collect2").prop('data-select',0);
+                 $("#collect3").prop('data-select',0);
+                 $("#collect5").prop('data-select',0);
+                 $("#collect6").prop('data-select',0);
+                 $("#collect7").prop('data-select',0);
+                 $("#collect4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#collect4").click(function (){
+                collect4Value = $('#collect4').prop('data-select');
+                if (collect4Value == undefined || collect4Value == 0 || collect2Value == 1 || collect3Value == 1 || collect1Value ==1 || collect5Value ==1 || collect6Value ==1 ||collect7Value ==1) {
+                    collect4Value = 1;
+                    collect2Value = 0;
+                    collect3Value = 0;
+                    collect1Value = 0;
+                    collect5Value = 0;
+                    collect6Value = 0;
+                    collect7Value = 0;
+                }else {
+                    collect4Value = 0;
+                }
+               $('#collect4').prop('data-select', collect4Value);
+                if(collect4Value == 1){
+                    $("#collect4img").css("visibility","visible");
+                    $("#collect2img").css("visibility","hidden");
+                    $("#collect3img").css("visibility","hidden");
+                    $("#collect1img").css("visibility","hidden");
+                    $("#collect5img").css("visibility","hidden");
+                    $("#collect6img").css("visibility","hidden");
+                    $("#collect7img").css("visibility","hidden");
+                    $("#collect4").css("background-color","#41C7DB");
+                    $("#collect2").css("background-color","white");
+                    $("#collect3").css("background-color","white");
+                    $("#collect1").css("background-color","white");
+                    $("#collect5").css("background-color","white");
+                    $("#collect6").css("background-color","white");
+                    $("#collect7").css("background-color","white");
+                    col1 = $(this).text();
+                }else {
+                    $("#collect4img").css("visibility","hidden");
+                    $("#collect4").css("background-color","white");
+                    col1 = null;
+                }
+                if(collect1Value == 0 && collect2Value == 0 && collect3Value == 0 && collect4Value ==0 && collect5Value == 0 && collect6Value ==0 && collect7Value == 0){
+                 $("#collect1").prop('data-select',0);
+                 $("#collect2").prop('data-select',0);
+                 $("#collect3").prop('data-select',0);
+                 $("#collect5").prop('data-select',0);
+                 $("#collect6").prop('data-select',0);
+                 $("#collect7").prop('data-select',0);
+                 $("#collect4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#collect5").click(function (){
+                collect5Value = $('#collect5').prop('data-select');
+                if (collect5Value == undefined || collect5Value == 0 || collect2Value == 1 || collect3Value == 1 || collect4Value ==1 || collect1Value ==1 || collect6Value ==1 ||collect7Value ==1) {
+                    collect5Value = 1;
+                    collect2Value = 0;
+                    collect3Value = 0;
+                    collect4Value = 0;
+                    collect1Value = 0;
+                    collect6Value = 0;
+                    collect7Value = 0;
+                }else {
+                    collect5Value = 0;
+                }
+               $('#collect5').prop('data-select', collect5Value);
+                if(collect5Value == 1){
+                    $("#collect5img").css("visibility","visible");
+                    $("#collect2img").css("visibility","hidden");
+                    $("#collect3img").css("visibility","hidden");
+                    $("#collect4img").css("visibility","hidden");
+                    $("#collect1img").css("visibility","hidden");
+                    $("#collect6img").css("visibility","hidden");
+                    $("#collect7img").css("visibility","hidden");
+                    $("#collect5").css("background-color","#41C7DB");
+                    $("#collect2").css("background-color","white");
+                    $("#collect3").css("background-color","white");
+                    $("#collect4").css("background-color","white");
+                    $("#collect1").css("background-color","white");
+                    $("#collect6").css("background-color","white");
+                    $("#collect7").css("background-color","white");
+                    col1 = $(this).text();
+                }else {
+                    $("#collect5img").css("visibility","hidden");
+                    $("#collect5").css("background-color","white");
+                    col1 = null;
+                }
+                if(collect1Value == 0 && collect2Value == 0 && collect3Value == 0 && collect4Value ==0 && collect5Value == 0 && collect6Value ==0 && collect7Value == 0){
+                 $("#collect1").prop('data-select',0);
+                 $("#collect2").prop('data-select',0);
+                 $("#collect3").prop('data-select',0);
+                 $("#collect5").prop('data-select',0);
+                 $("#collect6").prop('data-select',0);
+                 $("#collect7").prop('data-select',0);
+                 $("#collect4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#collect6").click(function (){
+                collect6Value = $('#collect6').prop('data-select');
+                if (collect6Value == undefined || collect6Value == 0 || collect2Value == 1 || collect3Value == 1 || collect4Value ==1 || collect5Value ==1 || collect1Value ==1 ||collect7Value ==1) {
+                    collect6Value = 1;
+                    collect2Value = 0;
+                    collect3Value = 0;
+                    collect4Value = 0;
+                    collect5Value = 0;
+                    collect1Value = 0;
+                    collect7Value = 0;
+                }else {
+                    collect6Value = 0;
+                }
+               $('#collect6').prop('data-select', collect6Value);
+                if(collect6Value == 1){
+                    $("#collect6img").css("visibility","visible");
+                    $("#collect2img").css("visibility","hidden");
+                    $("#collect3img").css("visibility","hidden");
+                    $("#collect4img").css("visibility","hidden");
+                    $("#collect5img").css("visibility","hidden");
+                    $("#collect1img").css("visibility","hidden");
+                    $("#collect7img").css("visibility","hidden");
+                    $("#collect6").css("background-color","#41C7DB");
+                    $("#collect2").css("background-color","white");
+                    $("#collect3").css("background-color","white");
+                    $("#collect4").css("background-color","white");
+                    $("#collect5").css("background-color","white");
+                    $("#collect1").css("background-color","white");
+                    $("#collect7").css("background-color","white");
+                    col1 = $(this).text();
+                }else {
+                    $("#collect6img").css("visibility","hidden");
+                    $("#collect6").css("background-color","white");
+                    col1 = null;
+                }
+                if(collect1Value == 0 && collect2Value == 0 && collect3Value == 0 && collect4Value ==0 && collect5Value == 0 && collect6Value ==0 && collect7Value == 0){
+                 $("#collect1").prop('data-select',0);
+                 $("#collect2").prop('data-select',0);
+                 $("#collect3").prop('data-select',0);
+                 $("#collect5").prop('data-select',0);
+                 $("#collect6").prop('data-select',0);
+                 $("#collect7").prop('data-select',0);
+                 $("#collect4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#collect7").click(function (){
+                collect7Value = $('#collect7').prop('data-select');
+                if (collect7Value == undefined || collect7Value == 0 || collect2Value == 1 || collect3Value == 1 || collect4Value ==1 || collect5Value ==1 || collect6Value ==1 ||collect1Value ==1) {
+                    collect7Value = 1;
+                    collect2Value = 0;
+                    collect3Value = 0;
+                    collect4Value = 0;
+                    collect5Value = 0;
+                    collect6Value = 0;
+                    collect1Value = 0;
+                }else {
+                    collect7Value = 0;
+                }
+               $('#collect7').prop('data-select', collect7Value);
+                if(collect7Value == 1){
+                    $("#collect7img").css("visibility","visible");
+                    $("#collect2img").css("visibility","hidden");
+                    $("#collect3img").css("visibility","hidden");
+                    $("#collect4img").css("visibility","hidden");
+                    $("#collect5img").css("visibility","hidden");
+                    $("#collect6img").css("visibility","hidden");
+                    $("#collect1img").css("visibility","hidden");
+                    $("#collect7").css("background-color","#41C7DB");
+                    $("#collect2").css("background-color","white");
+                    $("#collect3").css("background-color","white");
+                    $("#collect4").css("background-color","white");
+                    $("#collect5").css("background-color","white");
+                    $("#collect6").css("background-color","white");
+                    $("#collect1").css("background-color","white");
+                    col1 = $(this).text();
+                }else {
+                    $("#collect7img").css("visibility","hidden");
+                    $("#collect7").css("background-color","white");
+                    col1 = null;
+                }
+                if(collect1Value == 0 && collect2Value == 0 && collect3Value == 0 && collect4Value ==0 && collect5Value == 0 && collect6Value ==0 && collect7Value == 0){
+                 $("#collect1").prop('data-select',0);
+                 $("#collect2").prop('data-select',0);
+                 $("#collect3").prop('data-select',0);
+                 $("#collect5").prop('data-select',0);
+                 $("#collect6").prop('data-select',0);
+                 $("#collect7").prop('data-select',0);
+                 $("#collect4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+         $("#duration1").click(function (){
+                duration1Value = $('#duration1').prop('data-select');
+                if (duration1Value == undefined || duration1Value == 0 || duration2Value == 1 || duration3Value == 1) {
+                    duration1Value = 1;
+                    duration2Value = 0;
+                    duration3Value = 0;
+                }else {
+                    duration1Value = 0;
+                }
+               $('#duration1').prop('data-select', duration1Value);
+                if(duration1Value == 1){
+                    $("#duration1img").css("visibility","visible");
+                    $("#duration2img").css("visibility","hidden");
+                    $("#duration3img").css("visibility","hidden");
+                    $("#duration1").css("background-color","#41C7DB")
+                    $("#duration2").css("background-color","white")
+                    $("#duration3").css("background-color","white")
+                    dur1 = $(this).text();
+                }else {
+                    $("#duration1img").css("visibility","hidden");
+                    $("#duration1").css("background-color","white")
+                    dur1 = null;
+                }
+                if(duration1Value == 0 && duration2Value == 0 && duration3Value == 0){
+                 $("#duration1").prop('data-select',0);
+                 $("#duration2").prop('data-select',0);
+                 $("#duration3").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+         $("#duration2").click(function (){
+                duration2Value = $('#duration2').prop('data-select');
+                if (duration2Value == undefined || duration2Value == 0 || duration1Value == 1 || duration3Value == 1) {
+                    duration2Value = 1;
+                    duration1Value = 0;
+                    duration3Value = 0;
+                }else {
+                    duration2Value = 0;
+                }
+               $('#duration2').prop('data-select', duration2Value);
+                if(duration2Value == 1){
+                    $("#duration2img").css("visibility","visible");
+                    $("#duration1img").css("visibility","hidden");
+                    $("#duration3img").css("visibility","hidden");
+                    $("#duration2").css("background-color","#41C7DB")
+                    $("#duration1").css("background-color","white")
+                    $("#duration3").css("background-color","white")
+                    dur1 = $(this).text();
+                }else {
+                    $("#duration2img").css("visibility","hidden");
+                    $("#duration2").css("background-color","white")
+                    dur1 = null;
+                }
+                if(duration1Value == 0 && duration2Value == 0 && duration3Value == 0){
+                 $("#duration1").prop('data-select',0);
+                 $("#duration2").prop('data-select',0);
+                 $("#duration3").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+         $("#duration3").click(function (){
+                duration3Value = $('#duration3').prop('data-select');
+                if (duration3Value == undefined || duration3Value == 0 || duration2Value == 1 || duration1Value == 1) {
+                    duration3Value = 1;
+                    duration2Value = 0;
+                    duration1Value = 0;
+                }else {
+                    duration3Value = 0;
+                }
+               $('#duration3').prop('data-select', duration3Value);
+                if(duration3Value == 1){
+                    $("#duration3img").css("visibility","visible");
+                    $("#duration2img").css("visibility","hidden");
+                    $("#duration1img").css("visibility","hidden");
+                    $("#duration3").css("background-color","#41C7DB")
+                    $("#duration2").css("background-color","white")
+                    $("#duration1").css("background-color","white")
+                    dur1 = $(this).text();
+                }else {
+                    $("#duration3img").css("visibility","hidden");
+                    $("#duration3").css("background-color","white")
+                    dur1 = null;
+                }
+                if(duration1Value == 0 && duration2Value == 0 && duration3Value == 0){
+                 $("#duration1").prop('data-select',0);
+                 $("#duration2").prop('data-select',0);
+                 $("#duration3").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+         $("#participant1").click(function (){
+                participant1Value = $('#participant1').prop('data-select');
+                if (participant1Value == undefined || participant1Value == 0 || participant2Value == 1 || participant3Value == 1) {
+                    participant1Value = 1;
+                    participant2Value = 0;
+                    participant3Value = 0;
+                }else {
+                    participant1Value = 0;
+                }
+               $('#participant1').prop('data-select', participant1Value);
+                if(participant1Value == 1){
+                    $("#participant1img").css("visibility","visible");
+                    $("#participant2img").css("visibility","hidden");
+                    $("#participant3img").css("visibility","hidden");
+                    $("#participant1").css("background-color","#41C7DB")
+                    $("#participant2").css("background-color","white")
+                    $("#participant3").css("background-color","white")
+                    part1 = $(this).text();
+                }else {
+                    $("#participant1img").css("visibility","hidden");
+                    $("#participant1").css("background-color","white")
+                    part1 = null;
+                }
+                if(participant1Value == 0 && participant2Value == 0 && participant3Value == 0){
+                 $("#participant1").prop('data-select',0);
+                 $("#participant2").prop('data-select',0);
+                 $("#participant3").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+         $("#participant2").click(function (){
+                participant2Value = $('#participant2').prop('data-select');
+                if (participant2Value == undefined || participant2Value == 0 || participant3Value == 1 || participant1Value == 1) {
+                    participant2Value = 1;
+                    participant3Value = 0;
+                    participant1Value = 0;
+                }else {
+                    participant2Value = 0;
+                }
+               $('#participant2').prop('data-select', participant2Value);
+                if(participant2Value == 1){
+                    $("#participant2img").css("visibility","visible");
+                    $("#participant3img").css("visibility","hidden");
+                    $("#participant1img").css("visibility","hidden");
+                    $("#participant2").css("background-color","#41C7DB")
+                    $("#participant3").css("background-color","white")
+                    $("#participant1").css("background-color","white")
+                    part1 = $(this).text();
+                }else {
+                    $("#participant2img").css("visibility","hidden");
+                    $("#participant2").css("background-color","white")
+                    part1 = null;
+                }
+                if(participant2Value == 0 && participant1Value == 0 && participant3Value == 0){
+                 $("#participant1").prop('data-select',0);
+                 $("#participant2").prop('data-select',0);
+                 $("#participant3").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+         $("#participant3").click(function (){
+                participant3Value = $('#participant3').prop('data-select');
+                if (participant3Value == undefined || participant3Value == 0 || participant2Value == 1 || participant1Value == 1) {
+                    participant3Value = 1;
+                    participant2Value = 0;
+                    participant1Value = 0;
+                }else {
+                    participant3Value = 0;
+                }
+               $('#participant3').prop('data-select', participant3Value);
+                if(participant3Value == 1){
+                    $("#participant3img").css("visibility","visible");
+                    $("#participant2img").css("visibility","hidden");
+                    $("#participant1img").css("visibility","hidden");
+                    $("#participant3").css("background-color","#41C7DB")
+                    $("#participant2").css("background-color","white")
+                    $("#participant1").css("background-color","white")
+                    part1 = $(this).text();
+                }else {
+                    $("#participant3img").css("visibility","hidden");
+                    $("#participant3").css("background-color","white")
+                    part1 = null;
+                }
+                if(participant1Value == 0 && participant2Value == 0 && participant3Value == 0){
+                 $("#participant1").prop('data-select',0);
+                 $("#participant2").prop('data-select',0);
+                 $("#participant3").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Up_add' %}",{"des1":des1,"col1":col1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches1').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches1').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+    })
+</script>
 </html>
