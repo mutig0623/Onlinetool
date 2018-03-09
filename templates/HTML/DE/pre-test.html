@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script src="{% static 'JS/index.js' %}"></script>
     <title>pre-test</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:PreAddDe'%}">
+<form method="post" action="{% url 'classification:PreAddDe'%}" onsubmit="return Pretest()">
 {% csrf_token %}
 
 	<div class="header">  <!-- logo部分 -->
@@ -20,55 +21,54 @@
 
 	<div class="bannder4"></div>
 
-	<div class="mainbody">
-	  <div class="opptions">
+
+	  <div class="questionspage" >
           <br/>
-		<p>Bitte beantworten Sie die folgenden Fragen.</p>
-        <table id="tab1">
+		  <p>Bitte beantworten Sie die folgenden Fragen.</p>
+        <table>
 			<tr class="dark">
-				<td><span class="number">No.</span><span class="Ques">Question</span><td>
+				<td><span class="number">No.</span><span class="Ques">Question</span></td>
 			</tr>
-			<tr class="white">
+			<tr class="white" id="agename">
 				<td>
 				<span class="number">1.</span><span class="Ques">In welche Altersgruppe fallen Sie?</span>
-				<span class="onelow">
-				<span class="seclow"><input type="radio" name="age" value="&lt;20 " ><label class="labposition"> &lt;20  </label></span>
-				<span class="seclow"><input type="radio" name="age" value="21-30"><label class="labposition">21-30</label></span>
-				<span class="seclow"><input type="radio" name="age" value="31-40"><label class="labposition">31-40</label></span>
-				<span class="seclow"><input type="radio" name="age" value="41-50"><label class="labposition">41-50</label></span>
-				<span class="seclow"><input type="radio" name="age" value="&gt;51"><label class="labposition">&gt;51</label></span>
+				<span class="onelowde">
+				<span class="seclowde"><input type="radio" name="age" value="&lt;20 " ><label class="labposition"> &lt;20  </label></span>
+				<span class="seclowde"><input type="radio" name="age" value="21-30"><label class="labposition">21-30</label></span>
+				<span class="seclowde"><input type="radio" name="age" value="31-40"><label class="labposition">31-40</label></span>
+				<span class="seclowde"><input type="radio" name="age" value="41-50"><label class="labposition">41-50</label></span>
+				<span class="seclowde"><input type="radio" name="age" value="&gt;51"><label class="labposition">&gt;51</label></span>
 				</span>
 				 </td>
 			</tr>
-			<tr class="light">
+			<tr class="light" id="sexname">
 				<td><form>
 				<span class="number">2.</span><span class="Ques">Welches Geschlecht haben Sie?</span>
-				<span class="onelow">
-                        <span class="seclow"><input type="radio" name="sex" value="weiblich" ><label class="labposition">Weiblich  </label></span>
-                        <span class="seclow"><input type="radio" name="sex" value="männlich" ><label class="labposition">Männlich</label></span>
-                        <span class="seclow"><input type="radio" name="sex" value="anderes" ><label class="labposition">Anderes </label></span>
+				<span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="sex" value="weiblich" ><label class="labposition">Weiblich  </label></span>
+                        <span class="seclowde"><input type="radio" name="sex" value="männlich" ><label class="labposition">Männlich</label></span>
+                        <span class="seclowde"><input type="radio" name="sex" value="anderes" ><label class="labposition">Anderes </label></span>
 				</span>
                 </form></td>
 			</tr>
-			<tr class="white">
+			<tr class="white" id="nationalname">
 				<td>
                     <span class="number">3.</span><span class="Ques">Welche Nationalität haben Sie?</span>
-                    <span class="onelow">
-                        <input type="text" name="national" value="Gib here ein..." class="tiankong" onfocus='if(this.value=="Gib here ein..."){this.value="";}; 'onblur='if(this.value==""){this.value="Gib here ein...";};'>
+                    <span class="onelowde" >
+                        <input type="text" class="quest-input" name="national" id="national" value="Gib here ein..." onfocus='if(this.value=="Gib here ein..."){this.value="";}; 'onblur='if(this.value==""){this.value="Gib here ein...";};'>
                     </span>
 				</td>
 			</tr>
-			<tr class="light">
+			<tr class="light" id="othercontryname">
 				<td>
                     <span class="number">4.</span><span class="Ques">Haben Sie jemals im Ausland gelebt?</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="othercontry" value="Ja" ><label class="labposition"> Ja</label></span>
-                        <span class="seclow"><input type="radio" name="othercontry" value="Nein"><label class="labposition">Nein</label></span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="othercontry" value="Ja" ><label class="labposition"> Ja</label></span>
+                        <span class="seclowde"><input type="radio" name="othercontry" value="Nein"><label class="labposition">Nein</label></span>
                     </span>
                 </td>
 			</tr>
 		</table>
-	</div>
 	</div>
     </form>
 </body>

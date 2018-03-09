@@ -7,22 +7,6 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
-    <script>
-window['_fs_debug'] = false;
-window['_fs_host'] = 'fullstory.com';
-window['_fs_org'] = 'AAS5B';
-window['_fs_namespace'] = 'FS';
-(function(m,n,e,t,l,o,g,y){
-    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
-    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
-    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
-    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
-    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-    g.clearUserCookie=function(){};
-})(window,document,window['_fs_namespace'],'script','user');
-</script>
     <title>Index</title>
 </head>
 <body>
@@ -36,10 +20,11 @@ window['_fs_namespace'] = 'FS';
 	</div>
 
 	<div class="bannder1">
-		<span style="font-size: 1pt; maring-top:0px; float:right; height: 5px;">5%</span>
+
 	</div>
 
-	<div class="intro-de" id="intro-de">
+	<div style="" class="questionspage" >
+        <div class="index" style="width: 800px;">
 		<p>Vielen Dank für die Teilnahme an unserem Online-Experiment. Die Durchführung des Experimentes dauert ca. 10 Minuten.  </p>
 
         <p>Ihre Antworten werden vertraulich und anonym behandelt. Die Daten aus dieser Untersuchung werden unter Verschluss gehalten und nur auf aggregierter Ebene ausgewiesen. Niemand außer den beteiligten Wissenschaftlerinnen wird Zugriff auf Ihre individuellen Antworten bekommen.</p>
@@ -47,7 +32,7 @@ window['_fs_namespace'] = 'FS';
 		<p>Wenn Sie sich bereit erklären, an unserem Forschungsprojekt teilzunehmen, beantworten Sie bitte die Fragen so exakt und vollständig wie möglich. Vielen Dank für Ihre Mithilfe bei diesem Forschungsprojekt.</p>
 
 		<p>Bitte wählen Sie nun die für sie passende Sprache, in welcher sie das Online-Experiment durchführen möchten. Klicken Sie auf "Weiter" um zur nächsten Seite zu gelangen.</p>
-
+</div>
 	</div>
 </form>
 </body>

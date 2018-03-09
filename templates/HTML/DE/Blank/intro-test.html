@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -10,7 +10,7 @@
     <title>post-test 3</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:DECheckblank' %}">
+<form method="post" action="{% url 'classification:DECheckblank' %}" >
     {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -19,14 +19,13 @@
 			<input type="submit" name="" value="Weiter" onclick="jumpcn6();" id="butt-next">
 	</div>
 
-	<div class="bannder14">
+	<div class="bannder10">
 		
 	</div>
 
-	<div class="mainbody">
-	  <div class="opptions">
+	  <div class="questionspage">
           <br>
-		<p>请回答以下问题。</p>
+		<p>Bitte beantworten Sie die folgenden Fragen.</p>
 		
 		<table id="tab2">
 			<tr class="dark">
@@ -36,7 +35,7 @@
             <tr class="white">
                 <td>
                     <span class="number">1.</span><span class="Ques">Was ist der Zweck dieser Aufgabe?</span>
-                    <span class="onelow">
+                    <span class="onelowde">
                         <span class="seclowlong"><input type="radio" name="test1" value="1"><label class="labpositionlong">Wählen Sie Entwurfstechniken für ein Szenario</label></span>
                         <span class="seclowlong"><input type="radio" name="test1" value="2"><label class="labpositionlong">Beschreiben Sie ein Design-Szenario</label></span>
                     </span>
@@ -45,7 +44,7 @@
             <tr class="light">
                 <td>
                 <span class="number">2.</span><span class="Ques">Wo sehen Sie die Beschreibung der Aufgabe auf der Website?</span>
-                <span class="onelow">
+                <span class="onelowde">
                     <span class="seclowlong"><input type="radio" name="test2" value="1"><label class="labpositionlong">Auf der linken Seite</label></span>
                     <span class="seclowlong"><input type="radio" name="test2" value="2"><label class="labpositionlong">Auf der rechten Seite</label></span>
                 </span>
@@ -54,7 +53,7 @@
             <tr class="white">
                 <td>
                     <span class="number">3.</span><span class="Ques">Wo sehen Sie die Kategorien zum Filtern von Design-Techniken auf der Website?</span>
-                    <span class="onelow">
+                    <span class="onelowde">
                         <span class="seclowlong"><input type="radio" name="test3" value="1"><label class="labpositionlong">Auf der linken Seite</label></span>
                         <span class="seclowlong"><input type="radio" name="test3" value="2"><label class="labpositionlong">Auf der rechten Seite</label></span>
                     </span>
@@ -63,7 +62,7 @@
             <tr class="light">
                 <td>
                 <span class="number">4.</span><span class="Ques">Mit welcher Schaltfläche können Sie die ausgewählten Designtechniken einreichen?</span>
-                <span class="onelow">
+                <span class="onelowde">
                     <span class="seclowlong"><input type="radio" name="test4" value="1"><label class="labpositionlong">Weiter</label></span>
                     <span class="seclowlong"><input type="radio" name="test4" value="2"><label class="labpositionlong">Submit</label></span>
                 </span>
@@ -73,7 +72,6 @@
                 <td></td>
             </tr>
 		</table>
-	</div>
 	</div>
 </form>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -10,7 +10,7 @@
     <title>Introduction</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:DEintrotag' %}" onsubmit="return remindingen()">
+<form method="post" action="{% url 'classification:DEintrotag' %}" onsubmit="return remindingen()" class="introde-form" >
     {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -19,11 +19,11 @@
 			<input type="submit" name="" value="Next" id="butt-next" >
 	</div>
 
-	<div class="bannder5">
+	<div class="bannder9">
 		
 	</div>
 
-	<div class="mainbody">
+	<div class="introde-page">
 		<p>Bevor Sie mit der ersten Aufgabe beginnen, würden wir Sie gerne noch mit der Bedienung der folgenden Webseite vertraut machen.</p>
 		<p>Bitte klicken Sie auf<span id="sti">Einführung anzeigen</span>und lesen Sie die Einführung.</p>
 	  	<div class="tagen">
@@ -48,7 +48,7 @@
 	  		
 	  		<div id="Eenpart4"  >
 		  		<p>In diesem Bereich werden die ausgewählten Designtechniken angezeigt.</p>
-                <input type="button" name="" value="Weiter" id="enpbutton3" class="bbotton" onclick="showpart3enE()">
+                <input type="button" name="" value="Weiter" id="enpbutton3" style="margin-top:5px;" class="bbotton" onclick="showpart3enE()">
 	  		</div>
         </div>
 	  </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;height: 100%;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -10,7 +10,7 @@
     <script src="{% static 'JS/myscript.js' %}"></script>
     <title>Blank</title>
 </head>
-<body onload="time_funde()">
+<body onload="time_funde()" >
 <form method="post" action="{% url 'classification:B_Addtech1De' %}" onsubmit="return checkde()">
     {% csrf_token %}
 
@@ -21,14 +21,14 @@
 			<div class="timing">
  			<span>Zeit</span>	<span id="mytime">0 min 00 sec</span>
  			</div>
-			<input type="submit" name="" value="Weiter" id="queren" onclick="checken()">
+			<input type="submit" name="" value="Weiter" id="butt-next">
 	</div>
 
-	<div class="bannder7">
+	<div class="bannder13">
 		
 	</div>
 
-	<div class="mainbody">
+	<div class="select-area">
 		<div class="bottomup">  <!-- Taxonomy部分 -->
 			<dl id="notshow">
 				<dt>Participant</dt>
@@ -43,7 +43,7 @@
                 <div class="postcard">
                     <div class="lantian">
                     <h4 class="biaoti">{{ tech.Tech_Name }}</h4><img class="topshow" src="{% static 'img/plus1.png' %}"
-                            onclick="addtechen(this)">
+                            onclick="addtechde(this)">
                     </div>
                     <div class="contented">
                         <p>{{ tech.Short_Description }}</p>
@@ -65,7 +65,6 @@
  			</div>
  			
  			<div class="biaoge">
- 				<form method="post" action="">
  					<dl>
  					<dt>Bitte wählen Sie drei Designtechniken aus.</dt>
 					<dt class="tone">Bitte klicken Sie auf "+" und die ausgewählten Designtechniken werden hier angezeigt.</dt>
@@ -73,13 +72,8 @@
 					<dd id="sam2"><input type="text" id="same2" class="tijiao" name="selectedtwo"><img id="same22" src="{% static 'img/chacha3.png' %}" onclick="Delete(2);"></dd>
 					<dd id="sam3"><input type="text" id="same3" class="tijiao" name="selectedthree"><img src="{% static 'img/chacha3.png' %}" id="same33" onclick="Delete(3);"></dd>
 					</dl>
-				</form>
 			</div>
 		</div>
-		<div style="clear:both"></div>
-	</div>
-	<div class="feet">
-		
 	</div>
     </form>
 </body>

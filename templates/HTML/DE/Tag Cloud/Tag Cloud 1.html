@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -10,8 +10,8 @@
     <script src="{% static 'JS/myscript.js' %}"></script>
     <title>Tag Cloud</title>
 </head>
-<body onload="time_funen()">
-	<form method="post" action="{% url 'classification:C_Addtech1DE' %}" onsubmit="return checken()">
+<body onload="time_funde()">
+	<form method="post" action="{% url 'classification:C_Addtech1DE' %}" onsubmit="return checkde()">
         {% csrf_token%}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -20,114 +20,40 @@
 			<div class="timing">
  			<span>Zeit</span>	<span id="mytime">0 min 00 sec</span>
  			</div>
-			<input type="submit" name="" value="Weiter" id="queren">
+			<input type="submit" name="" value="Weiter" id="butt-next">
 	</div>
 
-	<div class="bannder7">
+	<div class="bannder13">
 		
 	</div>
 
-	<div class="mainbody">
-		 <div class="Categories">  <!-- Taxonomy部分 -->
+	<div class="select-area">
+        <div class="Categoriesen">  <!-- Taxonomy部分 -->
 			<dl>
-                {% for attri in attribut1 %}
-                    {% if attri.TagCloud_Name == "Nutzereinbindung (Nutzergruppen)" %}
-                        <dd class="{% ifequal attri1_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri1={{ attri.id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Mittlere Zeitraum" %}
-                        <dd class="{% ifequal attri2_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri2={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Beobachtung" %}
-                        <a href="?attri3={{ attri.id }}&attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><dd class="{% ifequal attri3_id attri.id|stringformat:"i" %}active2{% endifequal %}">{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Ideengenerierung" %}
-                        <dd class="{% ifequal attri4_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri4={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri2={{ attri2_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Zusammenarbeit mit Interessenvertreter" %}
-                        <dd class="{% ifequal attri5_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri5={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri2={{ attri2_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Feedbacksammlung (online)" %}
-                        <dd class="{% ifequal attri6_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri6={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri2={{ attri2_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Prototypevaluation" %}
-                        <dd class="{% ifequal attri7_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri7={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri2={{ attri2_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Datensammlung" %}
-                        <dd class="{% ifequal attri8_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri8={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri2={{ attri2_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Prototyping" %}
-                        <dd class="{% ifequal attri9_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri9={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri2={{ attri2_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" > <img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Kurzer Zeitraum" %}
-                        <dd class="{% ifequal attri10_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri10={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri2={{ attri2_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Evaluation" %}
-                        <dd class="{% ifequal attri11_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri11={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri2={{ attri2_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Produktevaluation" %}
-                        <dd class="{% ifequal attri12_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri12={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri2={{ attri2_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" ><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Projektmanagement" %}
-                        <dd class="{% ifequal attri13_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri13={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri2={{ attri2_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Flexibler Zeitraum" %}
-                        <dd class="{% ifequal attri14_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri14={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri2={{ attri2_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Nutzereinbindung" %}
-                        <dd class="{% ifequal attri15_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri15={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri2={{ attri2_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Informationsorganisation" %}
-                        <dd class="{% ifequal attri16_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri16={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri2={{ attri2_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Feedbacksammlung (offline)" %}
-                        <dd class="{% ifequal attri17_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri17={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri2={{ attri2_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Längerer Zeitraum" %}
-                        <dd class="{% ifequal attri18_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri18={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri2={{ attri2_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Nutzerforschung" %}
-                        <dd class="{% ifequal attri19_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri19={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri2={{ attri2_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Beziehung und Abhängigkeit" %}
-                        <dd class="{% ifequal attri20_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri20={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri2={{ attri2_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Nutzersimulation" %}
-                        <dd class="{% ifequal attri21_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri21={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri2={{ attri2_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Expertenbeteiligung" %}
-                        <dd class="{% ifequal attri22_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri22={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri2={{ attri2_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri23={{ attri23_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "UX Evaluation" %}
-                        <dd class="{% ifequal attri23_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri23={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri2={{ attri2_id }}&attri24={{ attri24_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri24={{ attri24_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                    {% if attri.TagCloud_Name == "Feedbacksammlung" %}
-                        <dd class="{% ifequal attri24_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?attri24={{ attri.id }}&attri1={{ attri1_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}&attri2={{ attri2_id }}" >{{ attri.TagCloud_Name }}</a>
-                        <a href="?attri1={{ attri1_id }}&attri2={{ attri2_id }}&attri3={{ attri3_id }}&attri4={{ attri4_id }}&attri5={{ attri5_id }}&attri6={{ attri6_id }}&attri7={{ attri7_id }}&attri8={{ attri8_id }}&attri9={{ attri9_id }}&attri10={{ attri10_id }}&attri11={{ attri11_id }}&attri12={{ attri12_id }}&attri13={{ attri13_id }}&attri14={{ attri14_id }}&attri15={{ attri15_id }}&attri16={{ attri16_id }}&attri17={{ attri17_id }}&attri18={{ attri18_id }}&attri19={{ attri19_id }}&attri20={{ attri20_id }}&attri21={{ attri21_id }}&attri22={{ attri22_id }}&attri23={{ attri23_id }}"><img  class="hiddeimga" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endif %}
-                {% endfor %}
+                <dd id="attr1" data-select="0" class="Attribute">Nutzereinbindung (Nutzergruppen)<img id="attr1img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr2" data-select="0" class="Attribute">Mittlere Zeitraum<img id="attr2img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr3" data-select="0" class="Attribute">Beobachtung<img id="attr3img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr4" data-select="0" class="Attribute">Ideengenerierung<img id="attr4img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr5" data-select="0" class="Attribute">Zusammenarbeit mit Interessenvertreter<img id="attr5img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr6" data-select="0" class="Attribute">Feedbacksammlung (online)<img id="attr6img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr7" data-select="0" class="Attribute">Prototypevaluation<img id="attr7img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr8" data-select="0" class="Attribute">Datensammlung<img id="attr8img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr9" data-select="0" class="Attribute">Prototyping<img id="attr9img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr10" data-select="0" class="Attribute">Kurzer Zeitraum<img id="attr10img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr11" data-select="0" class="Attribute">Evaluation<img id="attr11img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr12" data-select="0" class="Attribute">Produktevaluation<img id="attr12img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr13" data-select="0" class="Attribute">Projektmanagement<img id="attr13img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr14" data-select="0" class="Attribute">Flexibler Zeitraum<img id="attr14img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr15" data-select="0" class="Attribute">Nutzereinbindung<img id="attr15img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr16" data-select="0" class="Attribute">Informationsorganisation<img id="attr16img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr17" data-select="0" class="Attribute">Feedbacksammlung (offline)<img id="attr17img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr18" data-select="0" class="Attribute">Längerer Zeitraum<img id="attr18img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr19" data-select="0" class="Attribute">Nutzerforschung<img id="attr19img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr20" data-select="0" class="Attribute">Beziehung und Abhängigkeit<img id="attr20img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr21" data-select="0" class="Attribute">Nutzersimulation<img id="attr21img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr22" data-select="0" class="Attribute">Expertenbeteiligung<img id="attr22img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr23" data-select="0" class="Attribute">UX Evaluation<img id="attr23img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
+                <dd id="attr24" data-select="0" class="Attribute">Feedbacksammlung<img id="attr24img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd>
 			</dl>
 		</div>
 		
@@ -136,7 +62,7 @@
                 <div class="postcard">
 					<div class="lantian">
 					<h4 class="biaoti">{{ tech.Tech_Name }}</h4><img class="topshow" src="{% static 'img/plus1.png' %}"
-							onclick="addtech(this)">
+							onclick="addtechde(this)">
 					</div>
 					<div class="contented">
 						<p>{{ tech.Short_Description }}</p>
@@ -158,22 +84,991 @@
  			</div>
  			
  			<div class="biaoge">
- 				<form method="post" action="">
- 					<dl>
- 					<dt>Please select 3 design techniques for task 1</dt>
-					<dt class="tone">Please click on "+" and the selected design techniques will be appeared here.</dt>
-					<dd id="sam1"><input type="text" id="same1" class="tijiao" name="selectedone"><img id="same11" src="{% static 'img/chacha3.png' %}" onclick="Delete(1);"></dd>
-					<dd id="sam2"><input type="text" id="same2" class="tijiao" name="selectedtwo"><img id="same22" src="{% static 'img/chacha3.png' %}" onclick="Delete(2);"></dd>
-					<dd id="sam3"><input type="text" id="same3" class="tijiao" name="selectedthree"><img src="{% static 'img/chacha3.png' %}" id="same33" onclick="Delete(3);"></dd>
-					</dl>
-				</form>
+                <dl>
+                <dt>Bitte wählen Sie drei Designtechniken aus.</dt>
+                <dt class="tone">Bitte klicken Sie auf "+" und die ausgewählten Designtechniken werden hier angezeigt.</dt>
+                <dd id="sam1"><input type="text" id="same1" class="tijiao" name="selectedone"><img id="same11" src="{% static 'img/chacha3.png' %}" onclick="Delete(1);"></dd>
+                <dd id="sam2"><input type="text" id="same2" class="tijiao" name="selectedtwo"><img id="same22" src="{% static 'img/chacha3.png' %}" onclick="Delete(2);"></dd>
+                <dd id="sam3"><input type="text" id="same3" class="tijiao" name="selectedthree"><img src="{% static 'img/chacha3.png' %}" id="same33" onclick="Delete(3);"></dd>
+                </dl>
 			</div>
 		</div>
-		<div style="clear:both"></div>
-	</div>
-	<div class="feet">
-		
+        <div style="clear: both"></div>
 	</div>
 </form>
 </body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var attr1Value;
+        var attr2Value;
+        var attr3Value;
+        var attr4Value;
+        var attr5Value;
+        var attr6Value;
+        var attr7Value;
+        var attr8Value;
+        var attr9Value;
+        var attr10Value;
+        var attr11Value;
+        var attr12Value;
+        var attr13Value;
+        var attr14Value;
+        var attr15Value;
+        var attr16Value;
+        var attr17Value;
+        var attr18Value;
+        var attr19Value;
+        var attr20Value;
+        var attr21Value;
+        var attr22Value;
+        var attr23Value;
+        var attr24Value;
+
+        var TagValue1;
+        var TagValue2;
+        var TagValue3;
+        var TagValue4;
+        var TagValue5;
+        var TagValue6;
+        var TagValue7;
+        var TagValue8;
+        var TagValue9;
+        var TagValue10;
+        var TagValue11;
+        var TagValue12;
+        var TagValue13;
+        var TagValue14;
+        var TagValue15;
+        var TagValue16;
+        var TagValue17;
+        var TagValue18;
+        var TagValue19;
+        var TagValue20;
+        var TagValue21;
+        var TagValue22;
+        var TagValue23;
+        var TagValue24;
+        function AddElement(ElementA,ElementB,ElementC) {
+             var element = '<div class="postcard">' +'<div class="lantian">' + '<h4 class="biaoti">'+ ElementA + '</h4>' +
+                 '<img class="topshow" src="/static/img/plus1.png" onclick="addtechde(this)">' + '</div>'+ '<div class="contented" id="content_{{ tech.pk }}">'
+                 + '<p>' + ElementB + '</p>' + '<div class="showed">' +  '<p>' + ElementC + '</p>' + '</div>' + '</div>' + '</div>';
+             return element;
+             }
+        $("#attr1").click(function () {
+            attr1Value = $('#attr1').prop('data-select');
+            if(attr1Value == undefined || attr1Value == 0){
+               attr1Value = 1;
+            }
+            else {
+                attr1Value = 0;
+            }
+            if(attr1Value == 1){
+                TagValue1 = $(this).text();
+                $("#attr1img").css("display","inline");
+                $("#attr1").css("background-color","#41C7DB");
+                $("#attr1").css("font-weight","bold");
+            }
+            else{
+                TagValue1 = null;
+                $("#attr1img").css("display","none");
+                $("#attr1").css("font-weight","normal");
+                $("#attr1").css("background-color","#ADADAD");
+            }
+            $('#attr1').prop('data-select',attr1Value);
+            console.log(TagValue1);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr2").click(function () {
+            attr2Value = $('#attr2').prop('data-select');
+            if(attr2Value == undefined || attr2Value == 0){
+               attr2Value = 1;
+            }
+            else {
+                attr2Value = 0;
+            }
+            if(attr2Value == 1){
+                TagValue2 = $(this).text();
+                $("#attr2img").css("display","inline");
+                $("#attr2").css("background-color","#41C7DB");
+                $("#attr2").css("font-weight","bold");
+            }
+            else{
+                TagValue2 = null;
+                $("#attr2img").css("display","none");
+                $("#attr2").css("font-weight","normal");
+                $("#attr2").css("background-color","#ADADAD");
+            }
+            $('#attr2').prop('data-select',attr2Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr3").click(function () {
+            attr3Value = $('#attr3').prop('data-select');
+            if(attr3Value == undefined || attr3Value == 0){
+               attr3Value = 1;
+            }
+            else {
+                attr3Value = 0;
+            }
+            if(attr3Value == 1){
+                TagValue3 = $(this).text();
+                $("#attr3img").css("display","inline");
+                $("#attr3").css("background-color","#41C7DB");
+                $("#attr3").css("font-weight","bold");
+            }
+            else{
+                TagValue3 = null;
+                $("#attr3img").css("display","none");
+                $("#attr3").css("font-weight","normal");
+                $("#attr3").css("background-color","#ADADAD");
+            }
+            $('#attr3').prop('data-select',attr3Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr4").click(function () {
+            attr4Value = $('#attr4').prop('data-select');
+            if(attr4Value == undefined || attr4Value == 0){
+               attr4Value = 1;
+            }
+            else {
+                attr4Value = 0;
+            }
+            if(attr4Value == 1){
+                TagValue4 = $(this).text();
+                $("#attr4img").css("display","inline");
+                $("#attr4").css("background-color","#41C7DB");
+                $("#attr4").css("font-weight","bold");
+            }
+            else{
+                TagValue4 = null;
+                $("#attr4img").css("display","none");
+                $("#attr4").css("font-weight","normal");
+                $("#attr4").css("background-color","#ADADAD");
+            }
+            $('#attr4').prop('data-select',attr4Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr5").click(function () {
+            attr5Value = $('#attr5').prop('data-select');
+            if(attr5Value == undefined || attr5Value == 0){
+               attr5Value = 1;
+            }
+            else {
+                attr5Value = 0;
+            }
+            if(attr5Value == 1){
+                TagValue5 = $(this).text();
+                $("#attr5img").css("display","inline");
+                $("#attr5").css("background-color","#41C7DB");
+                $("#attr5").css("font-weight","bold");
+            }
+            else{
+                TagValue5 = null;
+                $("#attr5img").css("display","none");
+                $("#attr5").css("font-weight","normal");
+                $("#attr5").css("background-color","#ADADAD");
+            }
+            $('#attr5').prop('data-select',attr5Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr6").click(function () {
+            attr6Value = $('#attr6').prop('data-select');
+            if(attr6Value == undefined || attr6Value == 0){
+               attr6Value = 1;
+            }
+            else {
+                attr6Value = 0;
+            }
+            if(attr6Value == 1){
+                TagValue6 = $(this).text();
+                $("#attr6img").css("display","inline");
+                $("#attr6").css("background-color","#41C7DB");
+                $("#attr6").css("font-weight","bold");
+            }
+            else{
+                TagValue6 = null;
+                $("#attr6img").css("display","none");
+                $("#attr6").css("font-weight","normal");
+                $("#attr6").css("background-color","#ADADAD");
+            }
+            $('#attr6').prop('data-select',attr6Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr7").click(function () {
+            attr7Value = $('#attr7').prop('data-select');
+            if(attr7Value == undefined || attr7Value == 0){
+               attr7Value = 1;
+            }
+            else {
+                attr7Value = 0;
+            }
+            if(attr7Value == 1){
+                TagValue7 = $(this).text();
+                $("#attr7img").css("display","inline");
+                $("#attr7").css("background-color","#41C7DB");
+                $("#attr7").css("font-weight","bold");
+            }
+            else{
+                TagValue7 = null;
+                $("#attr7img").css("display","none");
+                $("#attr7").css("font-weight","normal");
+                $("#attr7").css("background-color","#ADADAD");
+            }
+            $('#attr7').prop('data-select',attr7Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr8").click(function () {
+            attr8Value = $('#attr8').prop('data-select');
+            if(attr8Value == undefined || attr8Value == 0){
+               attr8Value = 1;
+            }
+            else {
+                attr8Value = 0;
+            }
+            if(attr8Value == 1){
+                TagValue8 = $(this).text();
+                $("#attr8img").css("display","inline");
+                $("#attr8").css("background-color","#41C7DB");
+                $("#attr8").css("font-weight","bold");
+            }
+            else{
+                TagValue8 = null;
+                $("#attr8img").css("display","none");
+                $("#attr7").css("font-weight","normal");
+                $("#attr8").css("background-color","#ADADAD");
+            }
+            $('#attr8').prop('data-select',attr8Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr9").click(function () {
+            attr9Value = $('#attr9').prop('data-select');
+            if(attr9Value == undefined || attr9Value == 0){
+               attr9Value = 1;
+            }
+            else {
+                attr9Value = 0;
+            }
+            if(attr9Value == 1){
+                TagValue9 = $(this).text();
+                $("#attr9img").css("display","inline");
+                $("#attr9").css("background-color","#41C7DB");
+                $("#attr9").css("font-weight","bold");
+            }
+            else{
+                TagValue9 = null;
+                $("#attr9img").css("display","none");
+                $("#attr9").css("font-weight","normal");
+                $("#attr9").css("background-color","#ADADAD");
+            }
+            $('#attr9').prop('data-select',attr9Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr10").click(function () {
+            attr10Value = $('#attr10').prop('data-select');
+            if(attr10Value == undefined || attr10Value == 0){
+               attr10Value = 1;
+            }
+            else {
+                attr10Value = 0;
+            }
+            if(attr10Value == 1){
+                TagValue10 = $(this).text();
+                $("#attr10img").css("display","inline");
+                $("#attr10").css("background-color","#41C7DB");
+                $("#attr10").css("font-weight","bold");
+            }
+            else{
+                TagValue10 = null;
+                $("#attr10img").css("display","none");
+                $("#attr10").css("font-weight","normal");
+                $("#attr10").css("background-color","#ADADAD");
+            }
+            $('#attr10').prop('data-select',attr10Value);
+            console.log(TagValue10);
+            console.log(attr10Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr11").click(function () {
+            attr11Value = $('#attr11').prop('data-select');
+            if(attr11Value == undefined || attr11Value == 0){
+               attr11Value = 1;
+            }
+            else {
+                attr11Value = 0;
+            }
+            if(attr11Value == 1){
+                TagValue11 = $(this).text();
+                $("#attr11img").css("display","inline");
+                $("#attr11").css("background-color","#41C7DB");
+                $("#attr11").css("font-weight","bold");
+            }
+            else{
+                TagValue11 = null;
+                $("#attr11img").css("display","none");
+                $("#attr11").css("font-weight","normal");
+                $("#attr11").css("background-color","#ADADAD");
+            }
+            $('#attr11').prop('data-select',attr11Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr12").click(function () {
+            attr12Value = $('#attr12').prop('data-select');
+            if(attr12Value == undefined || attr12Value == 0){
+               attr12Value = 1;
+            }
+            else {
+                attr12Value = 0;
+            }
+            if(attr12Value == 1){
+                TagValue12 = $(this).text();
+                $("#attr12img").css("display","inline");
+                $("#attr12").css("background-color","#41C7DB");
+                $("#attr12").css("font-weight","bold");
+            }
+            else{
+                TagValue12 = null;
+                $("#attr12img").css("display","none");
+                $("#attr12").css("font-weight","normal");
+                $("#attr12").css("background-color","#ADADAD");
+            }
+            $('#attr12').prop('data-select',attr12Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr13").click(function () {
+            attr13Value = $('#attr13').prop('data-select');
+            if(attr13Value == undefined || attr13Value == 0){
+               attr13Value = 1;
+            }
+            else {
+                attr13Value = 0;
+            }
+            if(attr13Value == 1){
+                TagValue13 = $(this).text();
+                $("#attr13img").css("display","inline");
+                $("#attr13").css("background-color","#41C7DB");
+                $("#attr13").css("font-weight","bold");
+            }
+            else{
+                TagValue13 = null;
+                $("#attr13img").css("display","none");
+                $("#attr13").css("background-color","#ADADAD");
+                $("#attr13").css("font-weight","normal");
+            }
+            $('#attr13').prop('data-select',attr13Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr14").click(function () {
+            attr14Value = $('#attr14').prop('data-select');
+            if(attr14Value == undefined || attr14Value == 0){
+               attr14Value = 1;
+            }
+            else {
+                attr14Value = 0;
+            }
+            if(attr14Value == 1){
+                TagValue14 = $(this).text();
+                $("#attr14img").css("display","inline");
+                $("#attr14").css("background-color","#41C7DB");
+                $("#attr14").css("font-weight","bold");
+            }
+            else{
+                TagValue14 = null;
+                $("#attr14img").css("display","none");
+                $("#attr14").css("font-weight","normal");
+                $("#attr14").css("background-color","#ADADAD");
+            }
+            $('#attr14').prop('data-select',attr14Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr15").click(function () {
+            attr15Value = $('#attr15').prop('data-select');
+            if(attr15Value == undefined || attr15Value == 0){
+               attr15Value = 1;
+            }
+            else {
+                attr15Value = 0;
+            }
+            if(attr15Value == 1){
+                TagValue15 = $(this).text();
+                $("#attr15img").css("display","inline");
+                $("#attr15").css("background-color","#41C7DB");
+                $("#attr15").css("font-weight","bold");
+            }
+            else{
+                TagValue15 = null;
+                $("#attr15img").css("display","none");
+                $("#attr15").css("font-weight","normal");
+                $("#attr15").css("background-color","#ADADAD");
+            }
+            $('#attr15').prop('data-select',attr15Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr16").click(function () {
+            attr16Value = $('#attr16').prop('data-select');
+            if(attr16Value == undefined || attr16Value == 0){
+               attr16Value = 1;
+            }
+            else {
+                attr16Value = 0;
+            }
+            if(attr16Value == 1){
+                TagValue16 = $(this).text();
+                $("#attr16img").css("display","inline");
+                $("#attr16").css("background-color","#41C7DB");
+                $("#attr16").css("font-weight","bold");
+            }
+            else{
+                TagValue16 = null;
+                $("#attr16img").css("display","none");
+                $("#attr16").css("font-weight","normal");
+                $("#attr16").css("background-color","#ADADAD");
+            }
+            $('#attr16').prop('data-select',attr16Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr17").click(function () {
+            attr17Value = $('#attr17').prop('data-select');
+            if(attr17Value == undefined || attr17Value == 0){
+               attr17Value = 1;
+            }
+            else {
+                attr17Value = 0;
+            }
+            if(attr17Value == 1){
+                TagValue17 = $(this).text();
+                $("#attr17img").css("display","inline");
+                $("#attr17").css("background-color","#41C7DB");
+                $("#attr17").css("font-weight","bold");
+            }
+            else{
+                TagValue17 = null;
+                $("#attr17img").css("display","none");
+                $("#attr17").css("font-weight","normal");
+                $("#attr17").css("background-color","#ADADAD");
+            }
+            $('#attr17').prop('data-select',attr17Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr18").click(function () {
+            attr18Value = $('#attr18').prop('data-select');
+            if(attr18Value == undefined || attr18Value == 0){
+               attr18Value = 1;
+            }
+            else {
+                attr18Value = 0;
+            }
+            if(attr18Value == 1){
+                TagValue18 = $(this).text();
+                $("#attr18img").css("display","inline");
+                $("#attr18").css("background-color","#41C7DB");
+                $("#attr18").css("font-weight","bold");
+            }
+            else{
+                TagValue18 = null;
+                $("#attr18img").css("display","none");
+                $("#attr18").css("font-weight","normal");
+                $("#attr18").css("background-color","#ADADAD");
+            }
+            $('#attr18').prop('data-select',attr18Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr19").click(function () {
+            attr19Value = $('#attr19').prop('data-select');
+            if(attr19Value == undefined || attr19Value == 0){
+               attr19Value = 1;
+            }
+            else {
+                attr19Value = 0;
+            }
+            if(attr19Value == 1){
+                TagValue19 = $(this).text();
+                $("#attr19img").css("display","inline");
+                $("#attr19").css("background-color","#41C7DB");
+                $("#attr19").css("font-weight","bold");
+            }
+            else{
+                TagValue19 = null;
+                $("#attr19img").css("display","none");
+                $("#attr19").css("font-weight","normal");
+                $("#attr19").css("background-color","#ADADAD");
+            }
+            $('#attr19').prop('data-select',attr19Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr20").click(function () {
+            attr20Value = $('#attr20').prop('data-select');
+            if(attr20Value == undefined || attr20Value == 0){
+               attr20Value = 1;
+            }
+            else {
+                attr20Value = 0;
+            }
+            if(attr20Value == 1){
+                TagValue20 = $(this).text();
+                $("#attr20img").css("display","inline");
+                $("#attr20").css("background-color","#41C7DB");
+                $("#attr20").css("font-weight","bold");
+            }
+            else{
+                TagValue20 = null;
+                $("#attr20img").css("display","none");
+                $("#attr20").css("font-weight","normal");
+                $("#attr20").css("background-color","#ADADAD");
+            }
+            $('#attr20').prop('data-select',attr20Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr21").click(function () {
+            attr21Value = $('#attr21').prop('data-select');
+            if(attr21Value == undefined || attr21Value == 0){
+               attr21Value = 1;
+            }
+            else {
+                attr21Value = 0;
+            }
+            if(attr21Value == 1){
+                TagValue21 = $(this).text();
+                $("#attr21img").css("display","inline");
+                $("#attr21").css("background-color","#41C7DB");
+                $("#attr21").css("font-weight","bold");
+            }
+            else{
+                TagValue21 = null;
+                $("#attr21img").css("display","none");
+                $("#attr21").css("font-weight","normal");
+                $("#attr21").css("background-color","#ADADAD");
+            }
+            $('#attr21').prop('data-select',attr21Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr22").click(function () {
+            attr22Value = $('#attr22').prop('data-select');
+            if(attr22Value == undefined || attr22Value == 0){
+               attr22Value = 1;
+            }
+            else {
+                attr22Value = 0;
+            }
+            if(attr22Value == 1){
+                TagValue22 = $(this).text();
+                $("#attr22img").css("display","inline");
+                $("#attr22").css("background-color","#41C7DB");
+                $("#attr22").css("font-weight","bold");
+            }
+            else{
+                TagValue22 = null;
+                $("#attr22img").css("display","none");
+                $("#attr22").css("font-weight","normal");
+                $("#attr22").css("background-color","#ADADAD");
+            }
+            $('#attr22').prop('data-select',attr22Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr23").click(function () {
+            attr23Value = $('#attr23').prop('data-select');
+            if(attr23Value == undefined || attr23Value == 0){
+               attr23Value = 1;
+            }
+            else {
+                attr23Value = 0;
+            }
+            if(attr23Value == 1){
+                TagValue23 = $(this).text();
+                $("#attr23img").css("display","inline");
+                $("#attr23").css("background-color","#41C7DB");
+                $("#attr23").css("font-weight","bold");
+            }
+            else{
+                TagValue23 = null;
+                $("#attr23img").css("display","none");
+                $("#attr23").css("font-weight","normal");
+                $("#attr23").css("background-color","#ADADAD");
+            }
+            $('#attr23').prop('data-select',attr23Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+        $("#attr24").click(function () {
+            attr24Value = $('#attr24').prop('data-select');
+            if(attr24Value == undefined || attr24Value == 0){
+               attr24Value = 1;
+            }
+            else {
+                attr24Value = 0;
+            }
+            if(attr24Value == 1){
+                TagValue24 = $(this).text();
+                $("#attr24img").css("display","inline");
+                $("#attr24").css("background-color","#41C7DB");
+                $("#attr24").css("font-weight","bold");
+            }
+            else{
+                TagValue24 = null;
+                $("#attr24img").css("display","none");
+                $("#attr24").css("font-weight","normal");
+                $("#attr24").css("background-color","#ADADAD");
+            }
+            $('#attr24').prop('data-select',attr24Value);
+            $.post("{% url 'classification:Ajax_DE_Tag_add' %}",
+                    {"TagValue1":TagValue1,"TagValue2":TagValue2,"TagValue3":TagValue3,"TagValue4":TagValue4,"TagValue5":TagValue5,"TagValue6":TagValue6,"TagValue7":TagValue7,"TagValue8":TagValue8,
+                     "TagValue9":TagValue9,"TagValue10":TagValue10,"TagValue11":TagValue11,"TagValue12":TagValue12,"TagValue13":TagValue13,"TagValue14":TagValue14,"TagValue15":TagValue15,
+                    "TagValue16":TagValue16,"TagValue17":TagValue17,"TagValue18":TagValue18,"TagValue19":TagValue19,"TagValue20":TagValue20,"TagValue21":TagValue21,"TagValue22":TagValue22,
+                    "TagValue23":TagValue23,"TagValue24":TagValue24},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description'];
+                        var contents = n.fields['Long_Description'];
+                        var reg = new RegExp(";","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents));
+                    })
+                })
+        });
+    })
+</script>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -23,16 +23,20 @@
 		
 	</div>
 
-	<div class="main" style="margin-left:15%;">  <!-- logo部分 -->
-		<div class="instructionde">
+	  <!-- logo部分 -->
+		<div class="log-in">
+            <div class="logp">
 			<p>Bitte verwenden Sie Ihre E-Mail-Adresse oder Zufallszahlen, um sich zu registrieren. </p>
 			<p>Wir bitten Sie die Fragen so gut wie möglich zu beantworten. Wenn Sie sich mit Ihrer E-Mail-Adresse anmelden, wählen wir zufällig aus den besten 10% der Teilnehmer aus. Diese erhalten ein kleines Geschenk von uns.</p>
-			<div class="log_inde" >
-				<input type="text"  name="username" id="username" value="E-Mail-Adresse/Zufallszahlen" onfocus='if(this.value=="E-Mail-Adresse/Zufallszahlen"){this.value="";}; 'onblur='if(this.value==""){this.value="E-Mail-Adresse/Zufallszahlen";};'/>
-				<label class="reminding" id="repeated">{{ msg }}</label>
-			</div>
+            </div>
+            <div class="log_in">
+                <div class="log_input">
+				<input id="inputtext" type="text" name="username" id="username" value="E-Mail-Adresse/Zufallszahlen" onfocus='if(this.value=="E-Mail-Adresse/Zufallszahlen"){this.value="";}; 'onblur='if(this.value==""){this.value="E-Mail-Adresse/Zufallszahlen";};'/>
+                </div>
+                <div class="log_inp"> <p class="remindingen" id="repeated">{{ msg }}</p></div>
+            </div>
 		</div>
-	</div>
+
     </form>
 </body>
 </html>

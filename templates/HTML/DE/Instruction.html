@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html style="overflow-y:hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -7,23 +7,25 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>Instruction</title>
 </head>
-<body>
-<form method="post" action="{% url 'classification:LogDe' %}">
+<body >
+<form method="post" action="{% url 'classification:LogDe' %}" class="longform">
     {% csrf_token %}
 
 	<div class="header">  <!-- logo部分 -->
-			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}" >
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
+			<input type="submit" style="position: fixed; right: 10%;" name="" value="Weiter" onclick="" id="butt-next">
 	</div>
 
 	<div class="bannder2">
 		
 	</div>
 
-	<div class="mainde">
-		<div class="instructionde" >
+	<div class="questionspage">
+		<div class="index-instru" >
+            <br/>
+            <br/>
 				<p>Anweisung:</p>
 				<p>Das Online-Experiment besteht aus drei Schritten:</p>
 
@@ -33,10 +35,9 @@
 				<h4>Schritt 2. Fragebogen</h4>
 				<p>Nach der Registrierung füllen Sie zunächst bitte einen kurzen Fragebogen aus.</p>
 
-				<h4>Schritt 3. Aufgabenbearbeitung  </h4>
+				<h4>Schritt 3. Aufgabebearbeitung  </h4>
 				<p>Sie erhalten eine Aufgabe. Das Ziel der Aufgabe ist, geeignete Designtechniken für unterschiedliche Designsituationen auszuwählen. Designtechniken bedeuten, dass Sie einem bestimmten Verfahren folgen, um Designaktivitäten systematisch durchzuführen. </p><br/>
 
-				<p>Nach jeder Aufgabe folgt ein kurzer Fragebogen.</p>
 		</div>
 	</div>
     </form>
