@@ -10,7 +10,7 @@
     <title>pre-test</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:PreAddDeA'%}" onsubmit="return PretestA()">
+<form method="post" action="{% url 'classification:PreAddDeA'%}" onsubmit="return PretestA()" class="longform">
 {% csrf_token %}
 
 	<div class="header">  <!-- logo部分 -->
@@ -76,7 +76,7 @@
                     </form> </td>
             </tr>
             <tr class="white" id="F2name">
-                <td><form >
+                <td>
                 <span class="number">2.</span><span class="Ques">Ich kenne die Regeln der Sprache (z. B. Vokabular, Grammatik) dieses Landes.</span>
                     <span class="onelowde">
                         <span class="seclowde"><input type="radio" name="F2" value="1"><label class="labpositionshort">1</label></span>
@@ -87,7 +87,7 @@
                         <span class="seclowde"><input type="radio" name="F2" value="6"><label class="labpositionshort">6</label></span>
                         <span class="seclowde"><input type="radio" name="F2" value="7"><label class="labpositionshort">7</label></span>
                     </span>
-                </form></td>
+               </td>
             </tr>
             <tr class="light" id="F3name">
                     <td><form>
