@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -10,20 +10,18 @@
     <title>TaskDetail1</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:SwitchEN' %}">
+<form method="post" action="{% url 'classification:SwitchEN' %}" class="longform">
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
-			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
+			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">6
 				<p>Welcome to the Online Experiment</p>
 			</div>
 			<input type="submit" name="" value="Next" onclick="jumpen3()" id="butt-next">
 	</div>
 
-	<div class="bannder6">
-		
-	</div>
+	<div class="bannder12"></div>
 
-	<div class="main">
+	<div class="main-upen">
 	  <h3>You are now working in a team for developing a mobile App for booking movie tickets.</h3>
         {% for task in taskdes  %}
             <h4>Task {{ task.id }}</h4>
