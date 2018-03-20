@@ -6,8 +6,14 @@
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/task.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
+    <style type="text/css">
+        #nopoint:hover{color: black;
+	                    cursor: text;
+                        font-weight: normal;
+        }
+</style>
     <title>Bottom-Up</title>
 </head>
 <body onload="time_funen()">
@@ -31,7 +37,7 @@
 				<dt>Design Phase</dt>
                     <dd id="design1" data-select="0" name="design">User Research<img id="design1img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd><br/>
                     <dd id="design2" data-select="0" name="design">Idea Generation<img id="design2img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></dd><br/>
-                    <dd>Erstellung und Bewertung</dd><br/>
+                    <dd id="nopoint">Creation and Evaluation</dd><br/>
                         <ul>
                         <li id="design3" data-select="0" name="evaluation">Prototype Evaluation<img id="design3img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></li><br/>
                         <li id="design4" data-select="0" name="evaluation">Product Evaluation<img id="design4img" class="hiddeimga" src="{% static 'img/chacha3.png' %}"></li>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -9,8 +9,8 @@
     <script src="{% static 'JS/index.js' %}"></script>
     <title>Introduction</title>
 </head>
-<body style="height: auto;  overflow-x:scroll; width: 110%; ">
-<form method="post" action="{% url 'classification:ENintroblank' %}" onsubmit="return remindingenblank()">
+<body style="height: 100%;  overflow-x:scroll; ">
+<form method="post" action="{% url 'classification:ENintroblank' %}" onsubmit="return remindingenblank()" class="longform">
     {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -19,12 +19,12 @@
 			<input type="submit" name="" value="Next" id="butt-next" >
 	</div>
 
-	<div class="bannder5">
+	<div class="bannder9">
 		
 	</div>
 
-	<div class="mainbody">
-		<p>Before starting the first task, please have a look at the following introduction of the way of using the website.</p>
+	<div class="introde-page">
+		<p>The task is about selecting design techniques for a scenario. Before reading the task, please have a look at the following introduction of the way of using the website.</p>
 		<p>The task is presented to you before the webpage for selecting design techniques appear. </p>
 		<p>Please click on <span id="sti">Show the Instruction</span></p>
 	  	<div class="backtesten">
@@ -37,8 +37,8 @@
 
 	   		<div id="Eenpart2">
 		  		<p>In this area, there are 50 design techniques. All design techniques are presented in a card format.</p>
-				<p>Please just click on “+” and the design technique will be selected. The selected design techniques will appear at the bottom-down of the webpage.</p>
-				<p>You should select three design techniques for each task.</p>
+				<p>Please just click on “+” and the design technique will be selected. The selected design techniques will appear at the bottom-right of the webpage.</p>
+				<p>You should select three design techniques for the task.</p>
 		  		<input type="button" name="" value="next" id="enpbutton2" class="bbotton" onclick="showpart4enE()">
 	  		</div>
 
@@ -49,7 +49,7 @@
 	  		
 	  		<div id="Eenpart4">
 		  		<p>The selected design techniques will appear in this area.</p>
-                <input type="button" name="" value="next" id="enpbutton3" class="bbotton" onclick="showpart3enE()">
+                <input type="button" name="" value="next" style="margin-top: 8px;" id="enpbutton3" class="bbotton" onclick="showpart3enE()">
 	  		</div>
         </div>
 	  </div>

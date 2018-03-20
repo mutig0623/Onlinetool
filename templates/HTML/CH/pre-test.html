@@ -1,73 +1,68 @@
 <!DOCTYPE html>
-<html style="height: 100%" xmlns="http://www.w3.org/1999/html">
+<html style="overflow-y: hidden;" >
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="{% static 'JS/myscript.js' %}"></script>
+    <script src="{% static 'JS/index.js' %}"></script>
     <title>pre-test</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:PreAdd' %}">
+<form method="post" action="{% url 'classification:PreAdd' %}" onsubmit="return Pretest()" class="longform">
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 			<p>Welcome to the Online Experiment</p>
 		</div>
-        {% if request.user.is_authenticated %}
-            <label name="userid">{{ request.user.id }}</label>
-        {% endif %}
         <input type="submit" name="" value="下一步" id="butt-next">
 	</div>
 
 	<div class="bannder4"></div>
 
-	<div class="mainbody">
-	  <div class="opptions">
+	<div class="questionspage">
           <br/>
 		<p>请回答以下问题。</p>
 		<table id="tab1">
 			<tr class="dark">
-				<td><span class="number">No.</span><span class="Ques">Question</span><td>
+				<td><span class="number">No.</span><span class="Ques">Question</span></td>
 			</tr>
-			<tr class="light">
+			<tr class="white" id="agename">
 				<td>
 				<span class="number">1.</span><span class="Ques">你属于年龄组？</span>
-				<span class="onelow">
-				<span class="seclow"><input type="radio" name="age" value="<20" ><label class="labposition"> &lt;20  </label></span>
-				<span class="seclow"><input type="radio" name="age" value="21-30"><label class="labposition">21-30</label></span>
-				<span class="seclow"><input type="radio" name="age" value="31-40"><label class="labposition">31-40</label></span>
-				<span class="seclow"><input type="radio" name="age" value="41-50"><label class="labposition">41-50</label></span>
-				<span class="seclow"><input type="radio" name="age" value="&gt;51"><label class="labposition">&gt;51</label></span>
+				<span class="onelowde">
+				<span class="seclowde"><input type="radio" name="age" value="<20" ><label class="labposition"> &lt;20  </label></span>
+				<span class="seclowde"><input type="radio" name="age" value="21-30"><label class="labposition">21-30</label></span>
+				<span class="seclowde"><input type="radio" name="age" value="31-40"><label class="labposition">31-40</label></span>
+				<span class="seclowde"><input type="radio" name="age" value="41-50"><label class="labposition">41-50</label></span>
+				<span class="seclowde"><input type="radio" name="age" value="&gt;51"><label class="labposition">&gt;51</label></span>
 				</span>
 				 </td>
 			</tr>
-			<tr class="white">
+			<tr class="light" id="sexname">
 				<td>
 				<span class="number">2.</span><span class="Ques">你的性别是什么？</span>
-				<span class="onelow">
-                        <span class="seclow"><input type="radio" name="sex" value="女" ><label class="labposition">女 </label></span>
-                        <span class="seclow"><input type="radio" name="sex" value="男" ><label class="labposition">男</label></span>
-                        <span class="seclow"><input type="radio" name="sex" value="其他" ><label class="labposition">其他 </label></span>
+				<span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="sex" value="女" ><label class="labposition">女 </label></span>
+                        <span class="seclowde"><input type="radio" name="sex" value="男" ><label class="labposition">男</label></span>
+                        <span class="seclowde"><input type="radio" name="sex" value="其他" ><label class="labposition">其他 </label></span>
 				</span>
                 </td>
 			</tr>
-			<tr class="light">
+			<tr class="white" id="nationalname">
 				<td>
                     <span class="number">3.</span><span class="Ques">你的国籍是什么？</span>
-                    <span class="onelow">
-                        <input type="text" name="national" value="在此输入..." class="tiankong" onfocus='if(this.value=="在此输入..."){this.value="";}; 'onblur='if(this.value==""){this.value="在此输入...";};'>
+                    <span class="onelowde">
+                        <input type="text" name="national" class="quest-input" id="national" value="在此输入..."  onfocus='if(this.value=="在此输入..."){this.value="";}; 'onblur='if(this.value==""){this.value="在此输入...";};'>
                     </span>
 				</td>
 			</tr>
-			<tr class="white">
+			<tr class="light" id="othercontryname">
 				<td>
                     <span class="number">4.</span><span class="Ques">您曾经在国外生活过吗？</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="othercontry" value="YES" ><label class="labposition"> 是</label></span>
-                        <span class="seclow"><input type="radio" name="othercontry" value="NO"><label class="labposition">否</label></span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="othercontry" value="YES" ><label class="labposition"> 是</label></span>
+                        <span class="seclowde"><input type="radio" name="othercontry" value="NO"><label class="labposition">否</label></span>
                     </span>
 				</td>
 			</tr>

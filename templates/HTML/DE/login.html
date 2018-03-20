@@ -5,7 +5,6 @@
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
     <title>Login</title>
 </head>
@@ -16,7 +15,7 @@
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="submit" name="" value="Weiter" id="butt-next" onclick="showregister()">
+
 	</div>
 
 	<div class="bannder3">
@@ -35,6 +34,7 @@
                 </div>
                 <div class="log_inp"> <p class="remindingen" id="repeated">{{ msg }}</p></div>
             </div>
+            <input type="submit" class="tesinput" style="margin-top: 20px;" value="Weiter" id="butt-next" onclick="showregister()">
 		</div>
 
     </form>

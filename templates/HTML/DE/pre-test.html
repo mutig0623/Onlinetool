@@ -9,14 +9,13 @@
     <title>pre-test</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:PreAddDe'%}" onsubmit="return Pretest()">
+<form method="post" action="{% url 'classification:PreAddDe'%}" onsubmit="return Pretest()" class="longform">
 {% csrf_token %}
 
 	<div class="header">  <!-- logo部分 -->
 		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 			<p>Welcome to the Online Experiment</p>
 		</div>
-		<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
 	</div>
 
 	<div class="bannder4"></div>
@@ -24,10 +23,10 @@
 
 	  <div class="questionspage" >
           <br/>
-		  <p>Bitte beantworten Sie die folgenden Fragen.</p>
+		  <p>Bitte beantworten Sie die folgende Fragen.</p>
         <table>
 			<tr class="dark">
-				<td><span class="number">No.</span><span class="Ques">Question</span></td>
+				<td><span class="number">Nr.</span><span class="Ques">Fragen</span></td>
 			</tr>
 			<tr class="white" id="agename">
 				<td>
@@ -69,6 +68,7 @@
                 </td>
 			</tr>
 		</table>
+          <input type="submit" class="tesinput" value="Weiter" onclick="" id="butt-next">
 	</div>
     </form>
 </body>

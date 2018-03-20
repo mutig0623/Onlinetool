@@ -1,58 +1,45 @@
 <!DOCTYPE html>
-<html >
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
-     <script>
-window['_fs_debug'] = false;
-window['_fs_host'] = 'fullstory.com';
-window['_fs_org'] = 'AAS5B';
-window['_fs_namespace'] = 'FS';
-(function(m,n,e,t,l,o,g,y){
-    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-    g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
-    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
-    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-    g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
-    y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
-    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-    g.clearUserCookie=function(){};
-})(window,document,window['_fs_namespace'],'script','user');
-</script>
     <title>Instruction</title>
 </head>
 <body>
+<form action="{% url 'classification:LogCh' %}" class="longform">
+    {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-        <form action="{% url 'classification:LogCh' %}">
-            {% csrf_token %}
 			<input type="submit" name="" value="下一步"  id="butt-next">
-        </form>
+
 	</div>
 
 	<div class="bannder2">
 		
 	</div>
 
-	<div class="instruction">
+	<div class="questionspage">
+        <div class="index-instru">
+            <br/>
+            <br/>
 			<p>指示：</p>
-			<p>在线实验包括三个步骤：</p></br>
+			<p>在线实验包括三个步骤：</p>
 
             <p>步骤1.注册</p>
-        	<p>在下一页中，您需要注册在线实验。 您可以使用电子邮件地址或随机数字进行注册。</p></br>
+        	<p>在下一页中，您需要注册在线实验。 您可以使用电子邮件地址或随机数字进行注册。</p>
 
 			<p>步骤2.问卷</p>
-			<p>注册实验后，您将首先填写一个简短的问卷。</p></br>
+			<p>注册实验后，您将首先填写一个简短的问卷。</p>
 
-			<p>步骤3：三个任务+三个问卷</p>
-            <p >您需要完成一个任务。这个任务关于针对不同的设计情况选择合适的设计技术。设计技术指着根据特定的程序来进行设计活动。</p></br>
-            <p>每个任务完成后，会有一个简短的问卷。</p>
+			<p>步骤3：一个任务+一个问卷</p>
+            <p >您需要完成一个任务。这个任务关于针对不同的设计情况选择合适的设计技术。设计技术指着根据特定的程序来进行设计活动。</p>
 	</div>
+        </div>
+</form>
 </body>
 </html>

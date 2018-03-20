@@ -188,8 +188,7 @@ def Checktop(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 =="1" and test2 == "2" and test3 =="1" and test4 =="1":
+        if test1 =="1" and test2 == "2" and test3 =="1" :
             TaskDes = TaskDescriptionCH.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/CH/TaskDetail.html', {"taskdes": taskdes, })
@@ -207,8 +206,7 @@ def Checkup(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 =="1" and test2 == "2" and test3 =="1" and test4 =="1":
+        if test1 =="1" and test2 == "2" and test3 =="1" :
             TaskDes = TaskDescriptionCH.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/CH/TaskDetail.html', {"taskdes": taskdes, })
@@ -225,8 +223,7 @@ def Checktag(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 =="1" and test2 == "2" and test3 =="1"and test4 =="1":
+        if test1 =="1" and test2 == "2" and test3 =="1":
             TaskDes = TaskDescriptionCH.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/CH/TaskDetail.html', {"taskdes": taskdes, })
@@ -242,9 +239,7 @@ def Checkblank(request):
     if request.method =="POST":
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
-        test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 =="1" and test2 == "2" and test3 =="1" and test4 =="1":
+        if test1 =="1" and test2 == "2" :
             TaskDes = TaskDescriptionCH.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/CH/TaskDetail.html', {"taskdes": taskdes, })
@@ -951,7 +946,7 @@ def ajax_EN_Top_add(request):
             design3=2
             design1=3
     else:
-        design4=256
+        design2=256
         design3=256
         design1=256
 
@@ -1157,7 +1152,7 @@ def ajax_DE_Up_add(request):
             design2=1
             design3=2
             design4=4
-        if design == "Produkte-evaluation":
+        if design == "Produkt-evaluation":
             design2=1
             design3=2
             design4=3
@@ -2570,7 +2565,7 @@ def PreAddEnB(request):
 def PreAddEn1(request):
     if request.method == "POST":
         que1 = request.POST.get('que11')
-        que2 =request.POST.get('que12')
+        que2 = request.POST.get('que12')
         que3 = request.POST.get('que13')
         que4 = request.POST.get('que14')
         que5 = request.POST.get('que15')
@@ -2578,9 +2573,10 @@ def PreAddEn1(request):
         que7 = request.POST.get('que17')
         user_id = request.user.id
         mode = request.user.id % 4
-        PreQuestionResult.objects.filter(Test_User_id=user_id).update(Q12_knewpretty=que1,Q13_experts=que2,Q14_knewless=que3,Q15_donotknow=que4, Q16_donotfeel=que5,
-                                         Q17_lotofexperiences=que6,Q18_familiar=que7,)
-        return render(request, 'HTML/EN/pre-test2.html', { })
+        PreQuestionResult.objects.filter(Test_User_id=user_id).update( Q12_knewpretty=que1, Q13_experts=que2, Q14_knewless=que3, Q15_donotknow=que4,
+                                         Q16_donotfeel=que5, Q17_lotofexperiences=que6, Q18_familiar=que7,)
+
+        return render(request,'HTML/EN/pre-test2.html',{})
 
 
 # 添加pre question2到数据库，并跳转到introduction.html
@@ -2627,8 +2623,7 @@ def ENChecktop(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 == "1" and test2 == "2" and test3 == "1" and test4 == "1":
+        if test1 == "1" and test2 == "2" and test3 == "1" :
             TaskDes = TaskDescriptionEN.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/EN/TaskDetail.html', {"taskdes": taskdes, })
@@ -2645,8 +2640,7 @@ def ENCheckup(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 == "1" and test2 == "2" and test3 == "1" and test4 == "1":
+        if test1 == "1" and test2 == "2" and test3 == "1" :
             TaskDes = TaskDescriptionEN.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/EN/TaskDetail.html', {"taskdes": taskdes, })
@@ -2663,8 +2657,7 @@ def ENChecktag(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 == "1" and test2 == "2" and test3 == "1" and test4 == "1":
+        if test1 == "1" and test2 == "2" and test3 == "1" :
             TaskDes = TaskDescriptionEN.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/EN/TaskDetail.html', {"taskdes": taskdes, })
@@ -2679,10 +2672,8 @@ def ENIntroblank(request):
 def ENCheckblank(request):
     if request.method == "POST":
         test1 = request.POST.get('test1')
-        test2 = request.POST.get('test2')
-        test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 == "1" and test2 == "2" and test3 == "1" and test4 == "1":
+        test2 = request.POST.get('test2')    
+        if test1 == "1" and test2 == "2":
             TaskDes = TaskDescriptionEN.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/EN/TaskDetail.html', {"taskdes": taskdes, })
@@ -4026,8 +4017,7 @@ def DEChecktop(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 == "1" and test2 == "2" and test3 == "1" and test4 == "1":
+        if test1 == "1" and test2 == "2" and test3 == "1" :
             TaskDes = TaskDescriptionDE.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/DE/TaskDetail.html', {"taskdes": taskdes, })
@@ -4044,8 +4034,7 @@ def DECheckup(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 == "1" and test2 == "2" and test3 == "1" and test4 == "1":
+        if test1 == "1" and test2 == "2" and test3 == "1" :
             TaskDes = TaskDescriptionDE.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/DE/TaskDetail.html', {"taskdes": taskdes, })
@@ -4062,8 +4051,7 @@ def DEChecktag(request):
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
         test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 == "1" and test2 == "2" and test3 == "1" and test4 == "1":
+        if test1 == "1" and test2 == "2" and test3 == "1" :
             TaskDes = TaskDescriptionDE.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/DE/TaskDetail.html', {"taskdes": taskdes, })
@@ -4079,9 +4067,7 @@ def DECheckblank(request):
     if request.method == "POST":
         test1 = request.POST.get('test1')
         test2 = request.POST.get('test2')
-        test3 = request.POST.get('test3')
-        test4 = request.POST.get('test4')
-        if test1 == "1" and test2 == "2" and test3 == "1" and test4 == "1":
+        if test1 == "1" and test2 == "2" :
             TaskDes = TaskDescriptionDE.objects.all()
             taskdes = TaskDes.filter(id=1)
             return render(request, 'HTML/DE/TaskDetail.html', {"taskdes": taskdes, })

@@ -1,237 +1,230 @@
 <!DOCTYPE html>
-<html style="height: 100%" xmlns="http://www.w3.org/1999/html">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="{% static 'JS/myscript.js' %}"></script>
+    <script src="{% static 'JS/index.js' %}"></script>
     <title>pre-test</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:ChPreAdd2' %}">
+<form method="post" action="{% url 'classification:ChPreAdd2' %}" onsubmit="return Pretest2()" class="longform">
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 			<p>Welcome to the Online Experiment</p>
 		</div>
-        {% if reQuesdet.user.is_authenticated %}
-            <label name="userid">{{ reQuesdet.user.id }}</label>
-        {% endif %}
         <input type="submit" name="" value="下一步" id="butt-next">
 	</div>
 
-	<div class="bannder4"></div>
+	<div class="bannder8"></div>
 
-	<div class="mainbody">
-	  <div class="opptions">
-        <br/>
+	<div class="questionspage">
 		<p>请回答以下问题。</p>
 		<table id="tab2">
-
              <tr class="dark">
-				<td><span style="margin-left: 35px;">问题解决方式</span><td>
+				<td><span style="margin-left: 35px;">问题解决方式</span></td>
 			</tr>
             <tr class="white">
-				<td><span style="margin-left: 35px;">您同意或不同意以下声明的程度如何？</span><td>
+				<td><span style="margin-left: 35px;">您同意或不同意以下声明的程度如何？</span></td>
 			</tr>
             <tr class="white">
-            <td><span style="margin-left: 35px;">1 =极不赞同; 7 =非常赞同</span><td>
-            </td>
-            <tr class="light">
+            <td><span style="margin-left: 35px;">1 =极不赞同; 7 =非常赞同</span></td>
+            </tr>
+            <tr class="light" id="que18name">
                 <td>
-                <span class="number">1.</span><span class="Quesde">在解决问题时，我把重点放在对象的属性上。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que18" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que18" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que18" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que18" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que18" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que18" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que18" value="7"><label class="labpositionshort">7</label></span>
+                <span class="number">1.</span><span class="Ques">在解决问题时，我把重点放在对象的属性上。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que18" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que18" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que18" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que18" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que18" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que18" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que18" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                 </td>
             </tr>
-            <tr class="white">
+            <tr class="white" id="que19name">
                     <td>
-                    <span class="number">2.</span><span class="Quesde">在解决问题时，我运用基于类别的规则来预测和解释对象的行为。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que19" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que19" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que19" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que19" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que19" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que19" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que19" value="7"><label class="labpositionshort">7</label></span>
+                    <span class="number">2.</span><span class="Ques">在解决问题时，我运用基于类别的规则来预测和解释对象的行为。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que19" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que19" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que19" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que19" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que19" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que19" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que19" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                      </td>
             </tr>
-            <tr class="light">
-                <td><form >
-                <span class="number">3.</span><span class="Quesde">我发现很容易学习类别。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que20" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que20" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que20" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que20" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que20" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que20" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que20" value="7"><label class="labpositionshort">7</label></span>
+            <tr class="light" id="que20name">
+                <td>
+                <span class="number">3.</span><span class="Ques">我发现很容易学习类别。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que20" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que20" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que20" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que20" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que20" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que20" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que20" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                 </td>
             </tr>
-            <tr class="white">
+            <tr class="white" id="que21name">
                     <td>
-                    <span class="number">4.</span><span class="Quesde">解决问题时，我根据功能组织事物。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que21" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que21" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que21" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que21" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que21" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que21" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que21" value="7"><label class="labpositionshort">7</label></span>
+                    <span class="number">4.</span><span class="Ques">解决问题时，我根据功能组织事物。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que21" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que21" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que21" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que21" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que21" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que21" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que21" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                      </td>
             </tr>
-             <tr class="light">
-                <td><form >
-                <span class="number">5.</span><span class="Quesde">在解决问题的时候，我使用正式的逻辑进行推理，制定分类，并运用和合理化规则。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que22" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que22" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que22" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que22" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que22" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que22" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que22" value="7"><label class="labpositionshort">7</label></span>
+             <tr class="light" id="que22name">
+                <td>
+                <span class="number">5.</span><span class="Ques">在解决问题的时候，我使用正式的逻辑进行推理，制定分类，并运用和合理化规则。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que22" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que22" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que22" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que22" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que22" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que22" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que22" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                 </td>
             </tr>
-            <tr class="white">
+            <tr class="white" id="que23name">
                     <td>
-                    <span class="number">6.</span><span class="Quesde">当逻辑和经验知识发生冲突时，我通常坚持正式的逻辑规则。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que23" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que23" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que23" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que23" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que23" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que23" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que23" value="7"><label class="labpositionshort">7</label></span>
+                    <span class="number">6.</span><span class="Ques">当逻辑和经验知识发生冲突时，我通常坚持正式的逻辑规则。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que23" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que23" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que23" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que23" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que23" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que23" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que23" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                      </td>
             </tr>
-             <tr class="light">
+             <tr class="light" id="que24name">
                 <td><form >
-                <span class="number">7.</span><span class="Quesde">我解释个人的行为是由于他们的性格或个性。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que24" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que24" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que24" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que24" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que24" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que24" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que24" value="7"><label class="labpositionshort">7</label></span>
+                <span class="number">7.</span><span class="Ques">我解释个人的行为是由于他们的性格或个性。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que24" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que24" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que24" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que24" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que24" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que24" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que24" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                 </td>
             </tr>
-            <tr class="white">
+            <tr class="white" id="que25name">
                     <td>
-                    <span class="number">8.</span><span class="Quesde">在解决问题的时候，我把重点放在物体周围的环境。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que25" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que25" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que25" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que25" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que25" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que25" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que25" value="7"><label class="labpositionshort">7</label></span>
+                    <span class="number">8.</span><span class="Ques">在解决问题的时候，我把重点放在物体周围的环境。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que25" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que25" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que25" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que25" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que25" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que25" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que25" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                      </td>
             </tr>
-             <tr class="light">
-                <td><form >
-                <span class="number">9.</span><span class="Quesde">在解决问题的时候，我认为一个物体的行为是由周围环境中的情况和因素来解释的。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que26" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que26" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que26" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que26" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que26" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que26" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que26" value="7"><label class="labpositionshort">7</label></span>
+             <tr class="light" id="que26name">
+                <td>
+                <span class="number">9.</span><span class="Ques">在解决问题的时候，我认为一个物体的行为是由周围环境中的情况和因素来解释的。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que26" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que26" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que26" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que26" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que26" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que26" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que26" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                 </td>
             </tr>
-            <tr class="white">
+            <tr class="white" id="que27name">
                     <td>
-                    <span class="number">10.</span><span class="Quesde">我发现很难学习类别。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que27" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que27" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que27" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que27" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que27" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que27" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que27" value="7"><label class="labpositionshort">7</label></span>
+                    <span class="number">10.</span><span class="Ques">我发现很难学习类别。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que27" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que27" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que27" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que27" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que27" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que27" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que27" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                      </td>
             </tr>
-             <tr class="light">
-                <td><form >
-                <span class="number">11.</span><span class="Quesde">在解决问题的时候，我更喜欢以主题来组织事物（例如，使用上下文或环境作为识别相似性的基础）。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que28" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que28" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que28" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que28" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que28" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que28" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que28" value="7"><label class="labpositionshort">7</label></span>
+             <tr class="light" id="que28name">
+                <td>
+                <span class="number">11.</span><span class="Ques">在解决问题的时候，我更喜欢以主题来组织事物（例如，使用上下文或环境作为识别相似性的基础）。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que28" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que28" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que28" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que28" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que28" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que28" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que28" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                 </td>
             </tr>
-            <tr class="white">
+            <tr class="white" id="que29name">
                     <td>
-                    <span class="number">12.</span><span class="Quesde">在解决问题的时候，我比较喜欢综合的辩证推理。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que29" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que29" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que29" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que29" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que29" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que29" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que29" value="7"><label class="labpositionshort">7</label></span>
+                    <span class="number">12.</span><span class="Ques">在解决问题的时候，我比较喜欢综合的辩证推理。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que29" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que29" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que29" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que29" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que29" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que29" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que29" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                      </td>
             </tr>
-             <tr class="light">
-                <td><form >
-                <span class="number">13.</span><span class="Quesde">我更喜欢可以接受矛盾的逻辑。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que30" value="1" ><label class="labpositionshort">1  </label></span>
-                        <span class="seclow"><input type="radio" name="que30" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que30" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que30" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que30" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que30" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que30" value="7"><label class="labpositionshort">7</label></span>
+             <tr class="light" id="que30name">
+                <td>
+                <span class="number">13.</span><span class="Ques">我更喜欢可以接受矛盾的逻辑。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que30" value="1" ><label class="labpositionshort">1  </label></span>
+                        <span class="seclowde"><input type="radio" name="que30" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que30" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que30" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que30" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que30" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que30" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                 </td>
             </tr>
-            <tr class="white">
+            <tr class="white" id="que31name">
                     <td>
-                    <span class="number">14.</span><span class="Quesde">我把人们的行为解释为情境外力的结果。</span>
-                    <span class="onelow">
-                        <span class="seclow"><input type="radio" name="que31" value="1" ><label class="labpositionshort">1 </label></span>
-                        <span class="seclow"><input type="radio" name="que31" value="2"><label class="labpositionshort">2</label></span>
-                        <span class="seclow"><input type="radio" name="que31" value="3"><label class="labpositionshort">3</label></span>
-                        <span class="seclow"><input type="radio" name="que31" value="4"><label class="labpositionshort">4</label></span>
-                        <span class="seclow"><input type="radio" name="que31" value="5"><label class="labpositionshort">5</label></span>
-                        <span class="seclow"><input type="radio" name="que31" value="6"><label class="labpositionshort">6</label></span>
-                        <span class="seclow"><input type="radio" name="que31" value="7"><label class="labpositionshort">7</label></span>
+                    <span class="number">14.</span><span class="Ques">我把人们的行为解释为情境外力的结果。</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="que31" value="1" ><label class="labpositionshort">1 </label></span>
+                        <span class="seclowde"><input type="radio" name="que31" value="2"><label class="labpositionshort">2</label></span>
+                        <span class="seclowde"><input type="radio" name="que31" value="3"><label class="labpositionshort">3</label></span>
+                        <span class="seclowde"><input type="radio" name="que31" value="4"><label class="labpositionshort">4</label></span>
+                        <span class="seclowde"><input type="radio" name="que31" value="5"><label class="labpositionshort">5</label></span>
+                        <span class="seclowde"><input type="radio" name="que31" value="6"><label class="labpositionshort">6</label></span>
+                        <span class="seclowde"><input type="radio" name="que31" value="7"><label class="labpositionshort">7</label></span>
                     </span>
                      </td>
             </tr>
@@ -239,7 +232,6 @@
                 <td></td>
             </tr>
 		</table>
-	</div>
 	</div>
 </form>
 </body>

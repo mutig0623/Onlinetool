@@ -5,14 +5,14 @@
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+
     <script src="{% static 'JS/index.js' %}"></script>
     <title>pre-test</title>
 </head>
 <body>
 <form method="post" action="{% url 'classification:PreAddEn1' %}" onsubmit="return Pretest1()" class="longform">
     {% csrf_token %}
-	<div class="header">  <!-- logo部分 -->
+	<div class="header">
 		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 			<p>Welcome to the Online Experiment</p>
 		</div>
@@ -132,7 +132,7 @@
                 </span>
             </td>
             </tr>
-		</table>
+	</table>
 	</div>
 	</div>
 </form>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -9,26 +9,22 @@
     <title>Introduction</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:Chintrotag' %}" onsubmit="return remindingcnc()">
+<form method="post" action="{% url 'classification:Chintrotag' %}" onsubmit="return remindingcnc()" class="introde-form" >
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-            {% if request.user.is_authenticated %}
-            <label name="userid">{{ request.user.id }}</label>
-            {% endif %}
-             {% csrf_token   %}
              <input type="submit" name="" value="下一步" id="butt-next" >
 	</div>
-</form>
 
-	<div class="bannder5">
+
+	<div class="bannder9">
 		
 	</div>
 
-	<div class="mainbody">
-		<p>在开始第一个任务之前，请点击<span id="sti">“显示介绍”</span>观看关于如何使用网页的介绍。</p>
+	<div class="introde-page">
+		<p>这个任务是关于为一个场景挑选合适的设计技术。 在开始任务之前，请点击<span id="sti">“显示介绍”</span>观看关于如何使用网页的介绍。</p>
 		<div class="back-tag">
 	  		<input type="button" name="" value="显示介绍" id="showbutttest" onclick="removebuttontag()">
 
@@ -40,7 +36,7 @@
 	   		<div id="part2tag">
 		  		<p>在这一区域，包括50个设计技术。 所有设计技巧都以卡片形式呈现。<br/>
 				请点击“+”，选择设计技巧。 所选的设计技术将出现在网页的底部。<br/>
-				您只能为每个任务选择三种设计技术。</p>
+				您只能为这个任务选择三种设计技术。</p>
 		  		<input type="button" name="" value="Next" id="pbutton2" class="bbotton" onclick="showpart4tag()">
 	  		</div>
 
@@ -54,5 +50,6 @@
 	  		</div>
         </div>
     </div>
+</form>
 </body>
 </html>

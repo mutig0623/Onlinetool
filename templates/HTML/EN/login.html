@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
     <title>Login</title>
 </head>
@@ -23,13 +22,17 @@
 		
 	</div>
 
-	<div class="instruction-en">
+	<div class="log-in">
+        <div class="logp">
 			<p>Please use your email address or random numbers to register.</p>
-			<p>For each of the three tasks there is a correct answer, we expected you to answer the questions as best you can.</p>
+			<p>For the task there is a correct answer, we expected you to answer the questions as best you can.</p>
 			<p>If you register with your email address, we will choose the top 10% participants, and they will receive a small present from us.</p>
+            </div>
 			<div class="log_in">
-                <input type="text"  name="username" id="username" value="Email/Random Name" onfocus='if(this.value=="Email/Random Name"){this.value="";}; 'onblur='if(this.value==""){this.value="Email/Random Name";};'/><br/>
-                <p class="remindingen">{{ msg }}</p>
+                <div class="log_input" >
+                <input type="text" name="username" id="username" value="Email/Random Name" onfocus='if(this.value=="Email/Random Name"){this.value="";}; 'onblur='if(this.value==""){this.value="Email/Random Name";};'/><br/>
+                    </div>
+                <div class="log_inp"> <p class="remindingen">{{ msg }}</p></div>
 			</div>
 	</div>
     </form>

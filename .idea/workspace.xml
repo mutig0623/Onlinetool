@@ -1,203 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d83393ec-f37d-4ad1-a39d-189831a18e89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/EN-Blank.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/EN-Bottom-up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/EN-Tag-Cloud.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/EN-Top-down.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0007_auto_20180203_2253.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0008_auto_20180204_1527.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0009_auto_20180206_1853.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0010_auto_20180206_1903.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0011_auto_20180206_2040.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0012_auto_20180206_2044.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0013_auto_20180206_2054.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0014_auto_20180206_2114.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0015_auto_20180209_1228.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0016_auto_20180209_1537.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0017_auto_20180209_1629.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selected/migrations/0018_auto_20180216_0145.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test1A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test1B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test2A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2copy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test1A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test1B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test2A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test2B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test1A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test1B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test2A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test2B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2copy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test1A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test1B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test2A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test2B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/indexCH.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-test 1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-test 2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-testA.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-testB.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/post-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/TaskDetailthree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/TaskDetailtwo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/introduction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/TaskDetailthree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/TaskDetailtwo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/introduction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/TaskDetailthree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/TaskDetailtwo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/post-test 2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/indexDE.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-test1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-test2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-testA.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-testB.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/introduction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 1A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 2A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/introduction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 1A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 2A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 2B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/introduction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 1B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 2B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-again.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/introduction.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 1A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 1B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 2A.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 2B.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/indexEN.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-test1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-test2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-testA.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-testB.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/migrations/0004_userprofile_endtime.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/migrations/0005_auto_20180213_1657.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/migrations/0006_auto_20180219_1315.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 2.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/CH-Blank-02.png" afterPath="$PROJECT_DIR$/static/img/CH-Blank.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/CH-Tag-Cloud-02.png" afterPath="$PROJECT_DIR$/static/img/CH-Tag-Cloud.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/Ch-Bottom-up-02.png" afterPath="$PROJECT_DIR$/static/img/CH-Bottom-up.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/Ch-Top-down-02.png" afterPath="$PROJECT_DIR$/static/img/CH-Top-down.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test .html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test2B.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test 2.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3A.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/post-test.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test 2.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/post-test 2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/post-test.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test 2.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/post-test.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3A.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/TaskDetail 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/TaskDetail.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/TaskDetail 2.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/TaskDetailtwo.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/TaskDetail 3.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/TaskDetailthree.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/blank.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/introduction.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/post-test Q1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/post-test 2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/DE/post-test Q2.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/post-test 2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 1A.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 2B.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 1B.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3B.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 2A.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 1B.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3A.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/btn2.png" afterPath="$PROJECT_DIR$/static/img/btn2.png" />
+    <list default="true" id="d83393ec-f37d-4ad1-a39d-189831a18e89" name="Default" comment="final">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test1A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test1B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test2A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test2B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2copy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test1A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test1B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test2A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test2B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test1A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test1B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test2A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test2B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/TaggedTaxo-detel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2copy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test1A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test1B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test2A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test2B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/post-test 2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/post-test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/post-test 2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/post-test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/post-test 2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/post-test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/TaggedTaxo-detel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/post-test 2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/post-test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 1A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 1B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 2A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 2B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 1A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 1B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 2A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 2B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 1A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 1B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 2A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 2B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/TaggedTaxo-detel.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/TaskDetailthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/TaskDetailtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 1A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 1B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 2A.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 2B.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/introduction.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classification/urls.py" afterPath="$PROJECT_DIR$/classification/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classification/views.py" afterPath="$PROJECT_DIR$/classification/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selected/models.py" afterPath="$PROJECT_DIR$/selected/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/CSS/body.css" afterPath="$PROJECT_DIR$/static/CSS/body.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/onlinetool/settings.py" afterPath="$PROJECT_DIR$/onlinetool/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/CSS/enlanguage.css" afterPath="$PROJECT_DIR$/static/CSS/enlanguage.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/JS/index.js" afterPath="$PROJECT_DIR$/static/JS/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/JS/myscript.js" afterPath="$PROJECT_DIR$/static/JS/myscript.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank1.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank2.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank3.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up1.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up3.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/intro-test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Instruction.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Instruction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud1.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud2.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud3.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/intro-test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/TaskDetail.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/TaskDetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down1.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down3.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/end.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/end.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/indexCH.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/indexCH.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/login.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3A.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3A.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3B.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3B.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-test 1.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-test 1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-test 2.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-test 2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-test.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-testA.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-testA.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-testB.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-testB.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/introduction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Instruction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Instruction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/end.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/end.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/introduction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/indexDE.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/indexDE.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/login.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3A.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3A.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3B.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3B.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-test1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-test1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-test2.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-test2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-testA.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-testA.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-testB.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-testB.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up3.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/TaskDetailthree.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/TaskDetailthree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Instruction.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Instruction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud3.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down3.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-again.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/introduction.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/end.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/end.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/indexEN.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/indexEN.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/login.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3A.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3A.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3B.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3B.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/pre-test.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/pre-test1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-test1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/pre-test2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-test2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/pre-testA.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-testA.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/pre-testB.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-testB.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/models.py" afterPath="$PROJECT_DIR$/users/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -206,100 +194,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/onlinetool$views.coverage" NAME="views Coverage Results" MODIFIED="1519669616269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification" />
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="myscript.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/JS/myscript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="16" />
-              <folding>
-                <element signature="n#!!block;n#Repeatedch#0" expanded="false" />
-                <element signature="n#!!block;n#checken#0" expanded="false" />
-                <marker date="1519136246744" expanded="true" signature="11026:11238" ph="..." />
-                <marker date="1519136246744" expanded="true" signature="11323:11349" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/JS/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6593">
-              <caret line="347" column="69" lean-forward="false" selection-start-line="347" selection-start-column="58" selection-end-line="347" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classification/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9614">
-              <caret line="744" column="27" lean-forward="false" selection-start-line="744" selection-start-column="27" selection-end-line="744" selection-end-column="27" />
-              <folding>
-                <element signature="e#24#59#0" expanded="true" />
-                <element signature="e#7056#7598#0" expanded="false" />
-                <element signature="e#7650#7711#0" expanded="false" />
-                <element signature="e#7749#8291#0" expanded="false" />
-                <element signature="e#8347#8408#0" expanded="false" />
-                <element signature="e#8447#8988#0" expanded="false" />
-                <element signature="e#9042#9099#0" expanded="false" />
-                <element signature="e#9140#9681#0" expanded="false" />
-                <element signature="e#9720#17799#0" expanded="false" />
-                <element signature="e#35314#35850#0" expanded="false" />
-                <element signature="e#42127#43241#0" expanded="false" />
-                <element signature="e#64302#64365#0" expanded="false" />
-                <element signature="e#64407#64955#0" expanded="false" />
-                <element signature="e#67563#68773#0" expanded="false" />
-                <element signature="e#68826#73497#0" expanded="false" />
-                <element signature="e#90559#92139#0" expanded="false" />
-                <element signature="e#92204#92740#0" expanded="false" />
-                <element signature="e#111299#114854#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Top-down2.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="body.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/CSS/body.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12654">
-              <caret line="666" column="9" lean-forward="false" selection-start-line="666" selection-start-column="1" selection-end-line="666" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classification/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="0">
+              <caret line="27" column="64" lean-forward="false" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="body.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/CSS/body.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="580" column="16" lean-forward="true" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -317,128 +234,150 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>attri2_id</find>
-      <find>arrri2_idattri2_id</find>
-      <find>arrri2_id</find>
-      <find>main</find>
-      <find>endshow</find>
-      <find>end</find>
-      <find>update</find>
-      <find>Id</find>
-      <find>body</find>
-      <find>Id=user_id</find>
-      <find>border</find>
-      <find>border-color</find>
-      <find>tr</find>
-      <find>td</find>
-      <find>pronu</find>
-      <find>PreAddA</find>
-      <find>taga</find>
-      <find>CH_to</find>
-      <find>background</find>
-      <find>background-cloud</find>
-      <find>hiddeimg</find>
-      <find>tim</find>
-      <find>time_funch</find>
-      <find>testing</find>
-      <find>true</find>
-      <find>T_Addtech2</find>
-      <find>alert</find>
-      <find>dd1</find>
-      <find>CH_top2</find>
-      <find>contented</find>
+      <find>kitlogo</find>
+      <find>labposition</find>
+      <find>.header in</find>
+      <find>butt</find>
+      <find>index-instru</find>
+      <find>index</find>
+      <find>input</find>
+      <find>nopoint</find>
+      <find>.bottomupen dd</find>
+      <find>#nop</find>
+      <find>.nopoint:</find>
+      <find>.nopoint</find>
+      <find>timing</find>
+      <find>font</find>
+      <find>butt-next</find>
+      <find>butt-next:</find>
+      <find>white</find>
+      <find>.white</find>
+      <find>que</find>
+      <find>number</find>
+      <find>light</find>
+      <find>labpositionshort</find>
+      <find>tab2</find>
+      <find>checkde</find>
+      <find>.light</find>
+      <find>time</find>
+      <find>detele</find>
+      <find>delete</find>
+      <find>butt-next-detail</find>
+      <find>addtechde</find>
     </findStrings>
     <replaceStrings>
-      <replace />
-      <replace>seclowshort</replace>
-      <replace>labposition</replace>
-      <replace>F1</replace>
-      <replace>F6</replace>
-      <replace>labpositionlong</replace>
+      <replace>Ajax_DE_Tag_add</replace>
+      <replace>#696969</replace>
+      <replace>#ADADADAD</replace>
+      <replace>hiddeimga</replace>
+      <replace>display</replace>
+      <replace>inline</replace>
+      <replace>class</replace>
+      <replace>none</replace>
+      <replace>Ajax_CH_Top_add</replace>
+      <replace>Ajax_DE_Top_add</replace>
+      <replace>#FFA54F</replace>
+      <replace>#EEC591</replace>
       <replace>seclowlong</replace>
-      <replace>ttr</replace>
-      <replace>seclow</replace>
-      <replace>seclowde</replace>
-      <replace>labpositionshort</replace>
-      <replace>seclowen</replace>
       <replace>Quesde</replace>
-      <replace>attri2_id</replace>
+      <replace>Ques</replace>
+      <replace>40</replace>
+      <replace>onelowed</replace>
+      <replace>#EEEEEE</replace>
+      <replace>seclowde</replace>
+      <replace>seclowd</replace>
+      <replace>onelowlong</replace>
+      <replace>onelowdelong</replace>
+      <replace>white</replace>
+      <replace>#ADADAD</replace>
+      <replace>ADADAD</replace>
+      <replace>html</replace>
+      <replace>text</replace>
+      <replace>Ajax_DE_Up_add</replace>
+      <replace>onelowde</replace>
+      <replace>Ajax_EN_Top_add</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up1.html" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud1.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/users/models.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down1.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates/HTML/CH/pre-test.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates/HTML/CH/Blank/blank2.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates/HTML/CH/Blank/blank1.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/classification/urls.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/static/JS/myscript.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/classification/views.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/classification/models.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates/HTML/CH/post-test Q3B.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/static/JS/index.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates/HTML/DE/pre-test.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates/HTML/CH/pre-testB.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/users/models.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates/HTML/EN/pre-test.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates/index.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/templates/HTML/EN/post-test Q3B.html" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/onlinetool/urls.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/onlinetool/settings.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/selected/models.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/templates/HTML/EN/Instruction.html" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/indexCH.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Blank/introduction.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/introduction.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/introduction.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Top-down/introduction.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/CH/pre-test.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/CH/TaskDetail.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/EN/Instruction.html" />
         <option value="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/introduction.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/CH/pre-testA.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/CH/pre-test 1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/CH/pre-testB.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/EN/pre-test1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/EN/pre-test2.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down1.html" />
+        <option value="$PROJECT_DIR$/classification/views.py" />
+        <option value="$PROJECT_DIR$/onlinetool/settings.py" />
+        <option value="$PROJECT_DIR$/classification/urls.py" />
+        <option value="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/introduction.html" />
         <option value="$PROJECT_DIR$/templates/HTML/DE/indexDE.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/indexEN.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/pre-test 2.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/intro-again.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud3.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud2.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/post-test Q1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/post-test Q3.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/post-test Q3A.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/post-test Q3B.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/pre-test.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/pre-test1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/pre-test2.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/pre-testA.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/pre-testB.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/TaskDetail.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-test.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Blank/introduction.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 2.html" />
         <option value="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 1.html" />
         <option value="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 2.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 3.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud1.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud2.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud3.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/end.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/end.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/DE/end.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Instruction.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/Instruction.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 2.html" />
         <option value="$PROJECT_DIR$/templates/HTML/DE/Instruction.html" />
-        <option value="$PROJECT_DIR$/users/models.py" />
-        <option value="$PROJECT_DIR$/templates/HTML/EN/pre-testA.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/pre-testA.html" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/pre-testB.html" />
-        <option value="$PROJECT_DIR$/static/JS/index.js" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 1.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 2.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/login.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-test.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-test.html" />
         <option value="$PROJECT_DIR$/static/CSS/body.css" />
         <option value="$PROJECT_DIR$/static/JS/myscript.js" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up1.html" />
-        <option value="$PROJECT_DIR$/classification/views.py" />
-        <option value="$PROJECT_DIR$/classification/urls.py" />
-        <option value="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up2.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down2.html" />
+        <option value="$PROJECT_DIR$/templates/HTML/EN/TaskDetailthree.html" />
       </list>
     </option>
   </component>
@@ -449,8 +388,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1362" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -477,6 +418,68 @@
               <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
               <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="classification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="selected" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="CSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+              <item name="CH" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+              <item name="DE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="onlinetool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onlinetool" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -484,7 +487,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/zqxt_json" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/__init__.py" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -541,6 +544,33 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classification" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="onlinetool" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classification/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Django server.onlinetool" />
+      <item index="1" class="java.lang.String" itemvalue="Python.views" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.views" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -598,23 +628,150 @@
       <option name="project" value="LOCAL" />
       <updated>1515970555757</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="version 3">
+      <created>1519207578876</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1519207578876</updated>
+    </task>
+    <task id="LOCAL-00008" summary="version 3">
+      <created>1519732405206</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1519732405206</updated>
+    </task>
+    <task id="LOCAL-00009" summary="version 4">
+      <created>1519733300396</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1519733300396</updated>
+    </task>
+    <task id="LOCAL-00010" summary="version 5">
+      <created>1519733357754</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1519733357754</updated>
+    </task>
+    <task id="LOCAL-00011" summary="version 6">
+      <created>1520298347060</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1520298347060</updated>
+    </task>
+    <task id="LOCAL-00012" summary="version 7">
+      <created>1520430808251</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1520430808251</updated>
+    </task>
+    <task id="LOCAL-00013" summary="version 7">
+      <created>1520590817327</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1520590817328</updated>
+    </task>
+    <task id="LOCAL-00014" summary="version 9">
+      <created>1520610453096</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1520610453096</updated>
+    </task>
+    <task id="LOCAL-00015" summary="version 10">
+      <created>1520611658258</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1520611658258</updated>
+    </task>
+    <task id="LOCAL-00016" summary="version 11">
+      <created>1520612544570</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1520612544570</updated>
+    </task>
+    <task id="LOCAL-00017" summary="version 11.1">
+      <created>1520612773862</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1520612773862</updated>
+    </task>
+    <task id="LOCAL-00018" summary="version 11.2">
+      <created>1520613318664</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1520613318664</updated>
+    </task>
+    <task id="LOCAL-00019" summary="version 11.3">
+      <created>1520615333829</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1520615333829</updated>
+    </task>
+    <task id="LOCAL-00020" summary="version 11.4">
+      <created>1520615389403</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1520615389403</updated>
+    </task>
+    <task id="LOCAL-00021" summary="version 12 final">
+      <created>1520618056722</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1520618056722</updated>
+    </task>
+    <task id="LOCAL-00022" summary="version 12.2">
+      <created>1520639204686</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1520639204686</updated>
+    </task>
+    <task id="LOCAL-00023" summary="version 5">
+      <created>1521561530700</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1521561530700</updated>
+    </task>
+    <task id="LOCAL-00024" summary="final 1">
+      <created>1521561677984</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1521561677984</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16837482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32488114" sideWeight="0.50292826" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5270864" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3312203" sideWeight="0.4795022" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36925516" sideWeight="0.45607615" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21303074" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.47291362" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39936608" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -622,9 +779,30 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.4941435" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@onlinetool" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32488114" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5270864" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36925516" sideWeight="0.45607615" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21303074" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.47291362" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39936608" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -638,404 +816,415 @@
     <MESSAGE value="version 1" />
     <MESSAGE value="version 2" />
     <MESSAGE value="version 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 3" />
+    <MESSAGE value="version 4" />
+    <MESSAGE value="version 6" />
+    <MESSAGE value="version 7" />
+    <MESSAGE value="version 9" />
+    <MESSAGE value="version 10" />
+    <MESSAGE value="version 11" />
+    <MESSAGE value="version 11.1" />
+    <MESSAGE value="version 11.2" />
+    <MESSAGE value="version 11.3" />
+    <MESSAGE value="version 11.4" />
+    <MESSAGE value="version 12 final" />
+    <MESSAGE value="version 12.2" />
+    <MESSAGE value="version 5" />
+    <MESSAGE value="final 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="final 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Envs/experimenttool/Lib/site-packages/django/conf/__init__.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="26" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression=" des_id" />
+        <watch expression="des_id" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Blank/introduction.html">
+    <entry file="file://$PROJECT_DIR$/classification/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Blank/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="27" column="63" lean-forward="true" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Bottom-up/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="26" column="61" lean-forward="true" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="27" column="98" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="77" lean-forward="false" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="27" column="78" lean-forward="false" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Bottom-up/introduction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="85" lean-forward="false" selection-start-line="27" selection-start-column="85" selection-end-line="27" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="26" column="135" lean-forward="false" selection-start-line="26" selection-start-column="135" selection-end-line="26" selection-end-column="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state relative-caret-position="19">
+          <caret line="1012" column="28" lean-forward="false" selection-start-line="1012" selection-start-column="28" selection-end-line="1012" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/indexDE.html">
+    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/post-test Q3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="42" column="117" lean-forward="false" selection-start-line="42" selection-start-column="117" selection-end-line="42" selection-end-column="117" />
+        <state relative-caret-position="1083">
+          <caret line="57" column="117" lean-forward="false" selection-start-line="57" selection-start-column="101" selection-end-line="57" selection-end-column="117" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/indexEN.html">
+    <entry file="file://$PROJECT_DIR$/classification/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="38" column="89" lean-forward="true" selection-start-line="38" selection-start-column="89" selection-end-line="38" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="34" column="54" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="34" column="160" lean-forward="false" selection-start-line="34" selection-start-column="160" selection-end-line="34" selection-end-column="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="34" column="160" lean-forward="false" selection-start-line="34" selection-start-column="151" selection-end-line="34" selection-end-column="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1871">
-          <caret line="127" column="76" lean-forward="false" selection-start-line="127" selection-start-column="76" selection-end-line="127" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1871">
-          <caret line="127" column="76" lean-forward="false" selection-start-line="127" selection-start-column="76" selection-end-line="127" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1871">
-          <caret line="127" column="76" lean-forward="false" selection-start-line="127" selection-start-column="76" selection-end-line="127" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-219">
-          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="43" column="160" lean-forward="false" selection-start-line="43" selection-start-column="160" selection-end-line="43" selection-end-column="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="43" column="160" lean-forward="false" selection-start-line="43" selection-start-column="160" selection-end-line="43" selection-end-column="160" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Bottom-up/intro-again.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="11" column="96" lean-forward="false" selection-start-line="11" selection-start-column="83" selection-end-line="11" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/pre-test 2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="239" column="17" lean-forward="true" selection-start-line="239" selection-start-column="17" selection-end-line="239" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/end.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/end.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/end.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Instruction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Instruction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="36" column="61" lean-forward="false" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Instruction.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/pre-test1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2396">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/pre-testA.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-817">
-          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/pre-test 1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/pre-testA.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#24#63#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/HTML/EN/pre-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1161">
+        <state relative-caret-position="-519">
+          <caret line="34" column="114" lean-forward="false" selection-start-line="34" selection-start-column="103" selection-end-line="34" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/indexDE.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/post-test Q1.html" />
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/introduction.html" />
+    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/TaskDetailthree.html" />
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/post-test Q3A.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="194" column="7" lean-forward="true" selection-start-line="194" selection-start-column="7" selection-end-line="194" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/post-test Q3B.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="138" column="47" lean-forward="false" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/pre-test1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="138" column="7" lean-forward="true" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/pre-test2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="235" column="47" lean-forward="false" selection-start-line="235" selection-start-column="47" selection-end-line="235" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/pre-testA.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="149" column="47" lean-forward="false" selection-start-line="149" selection-start-column="47" selection-end-line="149" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/pre-testB.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="119" column="7" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/TaskDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Blank/blank 2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="73" column="95" lean-forward="false" selection-start-line="73" selection-start-column="95" selection-end-line="73" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Blank/introduction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="92" column="95" lean-forward="true" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="57" column="7" lean-forward="true" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="108" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Instruction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/pre-test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="64" column="84" lean-forward="false" selection-start-line="64" selection-start-column="73" selection-end-line="64" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="36" column="74" lean-forward="false" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="92" column="91" lean-forward="false" selection-start-line="92" selection-start-column="91" selection-end-line="92" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-again.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/pre-testB.html">
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="73" column="43" lean-forward="false" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="43" />
+        <state relative-caret-position="342">
+          <caret line="18" column="81" lean-forward="true" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Blank/intro-again.html">
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="41" lean-forward="false" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+        <state relative-caret-position="398">
+          <caret line="64" column="97" lean-forward="false" selection-start-line="64" selection-start-column="97" selection-end-line="64" selection-end-column="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down1.html">
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Blank/intro-test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="62" column="17" lean-forward="true" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="64" column="97" lean-forward="false" selection-start-line="64" selection-start-column="97" selection-end-line="64" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/post-test Q3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1577">
+          <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+          <folding>
+            <marker date="1521470162912" expanded="true" signature="5489:5513" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classification/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="27" column="64" lean-forward="false" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1881">
+          <caret line="99" column="31" lean-forward="false" selection-start-line="99" selection-start-column="31" selection-end-line="99" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="94" column="90" lean-forward="false" selection-start-line="94" selection-start-column="90" selection-end-line="94" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 2B.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/introduction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/TaskDetailone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/TaskDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Instruction.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/CSS/body.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12654">
-          <caret line="666" column="9" lean-forward="false" selection-start-line="666" selection-start-column="1" selection-end-line="666" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/JS/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6593">
-          <caret line="347" column="69" lean-forward="false" selection-start-line="347" selection-start-column="58" selection-end-line="347" selection-end-column="69" />
+          <caret line="105" column="38" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/JS/myscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="45" column="16" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="16" />
+        <state relative-caret-position="19">
+          <caret line="180" column="63" lean-forward="false" selection-start-line="180" selection-start-column="63" selection-end-line="180" selection-end-column="63" />
           <folding>
-            <element signature="n#!!block;n#Repeatedch#0" expanded="false" />
-            <element signature="n#!!block;n#checken#0" expanded="false" />
-            <marker date="1519136246744" expanded="true" signature="11026:11238" ph="..." />
-            <marker date="1519136246744" expanded="true" signature="11323:11349" ph="..." />
+            <marker date="1521477811451" expanded="true" signature="14580:14792" ph="..." />
+            <marker date="1521477811451" expanded="true" signature="14877:14903" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/HTML/DE/Blank/blank 1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
+        <state relative-caret-position="109">
+          <caret line="72" column="93" lean-forward="false" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/TaskDetailthree.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up1.html">
+    <entry file="file://$PROJECT_DIR$/templates/HTML/EN/TaskDetailtwo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="228">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2.html">
+    <entry file="file://$PROJECT_DIR$/static/CSS/body.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="25" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classification/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classification/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9614">
-          <caret line="744" column="27" lean-forward="false" selection-start-line="744" selection-start-column="27" selection-end-line="744" selection-end-column="27" />
-          <folding>
-            <element signature="e#24#59#0" expanded="true" />
-            <element signature="e#7056#7598#0" expanded="false" />
-            <element signature="e#7650#7711#0" expanded="false" />
-            <element signature="e#7749#8291#0" expanded="false" />
-            <element signature="e#8347#8408#0" expanded="false" />
-            <element signature="e#8447#8988#0" expanded="false" />
-            <element signature="e#9042#9099#0" expanded="false" />
-            <element signature="e#9140#9681#0" expanded="false" />
-            <element signature="e#9720#17799#0" expanded="false" />
-            <element signature="e#35314#35850#0" expanded="false" />
-            <element signature="e#42127#43241#0" expanded="false" />
-            <element signature="e#64302#64365#0" expanded="false" />
-            <element signature="e#64407#64955#0" expanded="false" />
-            <element signature="e#67563#68773#0" expanded="false" />
-            <element signature="e#68826#73497#0" expanded="false" />
-            <element signature="e#90559#92139#0" expanded="false" />
-            <element signature="e#92204#92740#0" expanded="false" />
-            <element signature="e#111299#114854#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        <state relative-caret-position="209">
+          <caret line="580" column="16" lean-forward="true" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
           <folding />
         </state>
       </provider>

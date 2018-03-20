@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html >
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
     <title>Instruction</title>
 </head>
 <body>
+<form action="{% url 'classification:LogEn' %}" class="longform" class="longform">
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-            <form action="{% url 'classification:LogEn' %}">
 			<input type="submit" name="" value="Next" id="butt-next">
-            </form>
 	</div>
 
 	<div class="bannder2">
 		
 	</div>
 
-	<div class="instructionen">
+	<div class="questionspage">
+        <div class="index-instru">
+            <br/>
+            <br/>
 				<h4>Instruction:</h4>
-				<p>The online experiment includes four steps</p>
+				<p>The online experiment includes three steps,which will take around 15 minutes.</p>
 
                 <h4>Step 1. Register</h4>
             	<p>On the next page, you need to register the online experiment, you can either use an email address or a random number to register.</p>
@@ -33,9 +34,10 @@
 				<h4>Step 2. A questionnaire</h4>
 				<p>After registering the experiment, you will at first fill out a short questionnaire.</p>
 
-				<h4>Step 3. Three tasks</h4>
-        <p>You will be asked to process one task. The task is about selecting appropriate design techniques for different design situations. Design techniques mean following a specific procedure to conduct design activities.</p><br/>
-        <p>After each task, there will be a short questionnaire.</p>
+				<h4>Step 3. A task + a questionnair</h4>
+            <p>You will be asked to process a task. The task is about selecting appropriate design techniques for different design situations. Design techniques mean following a specific procedure to conduct design activities.</p><br/>
+            </div>
 	</div>
+ </form>
 </body>
 </html>

@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/task.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
     <title>Blank</title>
 </head>
@@ -21,7 +20,7 @@
 			<div class="timing">
  			<span>Zeit</span>	<span id="mytime">0 min 00 sec</span>
  			</div>
-			<input type="submit" name="" value="Weiter" id="butt-next">
+
 	</div>
 
 	<div class="bannder13">
@@ -71,7 +70,8 @@
 					<dd id="sam1"><input type="text" id="same1" class="tijiao" name="selectedone"><img id="same11" src="{% static 'img/chacha3.png' %}" onclick="Delete(1);"></dd>
 					<dd id="sam2"><input type="text" id="same2" class="tijiao" name="selectedtwo"><img id="same22" src="{% static 'img/chacha3.png' %}" onclick="Delete(2);"></dd>
 					<dd id="sam3"><input type="text" id="same3" class="tijiao" name="selectedthree"><img src="{% static 'img/chacha3.png' %}" id="same33" onclick="Delete(3);"></dd>
-					</dl>
+					<input type="submit" class="tesinput" value="Weiter" id="butt-next-detail">
+                    </dl>
 			</div>
 		</div>
 	</div>

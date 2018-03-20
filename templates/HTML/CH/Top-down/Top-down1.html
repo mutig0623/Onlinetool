@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html style="" xmlns="http://www.w3.org/1999/html">
+<html style="overflow-y: hidden;" >
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/task.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
-
     <title>Top-Down</title>
 </head>
 <body onload="time_funch()"  >
@@ -22,43 +20,43 @@
 			<div class="timing">
  			<span>您还剩</span>	<span id="mytime">0 分 00 秒</span>
  			</div>
-			<input type="submit" name="" value="下一步" id="queren" >
+			<input type="submit" name="" value="下一步" id="butt-next" >
 	</div>
 
-	<div class="bannder8" >
-		<span>10%</span>
+	<div class="bannder13" >
 	</div>
 
-	<div class="mainbody" >
+	<div class="select-area" >
 		<div class="top-down">  <!-- Taxonomy部分 -->
 				<dl>
-                    <dt>设计阶段</dt>
-                    {% for attri in attribut1 %}
-                        <dd onclick="showtop1()" class="{% ifequal design_id attri.id|stringformat:"i"  %}active2{% endifequal %}"><a href="?design={{ attri.id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"> {{ attri.Design_Name }}</a>
-                        <a  href="?dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img  id="img1" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endfor %}
+                    <dt id="dd3">设计阶段</dt>
+                        <dd id="design1" data-select="0" name="design" >计划阶段<img id="design1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="design2" data-select="0" name="design" >草图阶段<img id="design2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="design3" data-select="0" name="design" >高保真模型阶段<img id="design3img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="design4" data-select="0" name="design" >发布阶段<img id="design4img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+
 					<dt>时间依赖性</dt>
-                    {% for attri in attribut2  %}
-                       <dd onclick="showtop2()" class="{% ifequal dependency_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?dependency={{ attri.id }}&design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}">{{ attri.Dependency_Name }}</a>
-                       <a  id="top2" href="?design={{ design_id }}&duration={{ duration_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endfor %}
+                        <dd id="dependency1" data-select="0" name="dependency" >即时的<img id="dependency1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="dependency2" data-select="0" name="dependency" >回顾的<img id="dependency2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
 
 					<dt>持续时间</dt>
-                    {% for attri in attribut3 %}
-                       <dd onclick="showtop3()" class="{% ifequal duration_id attri.id|stringformat:"i" %}active2{% endifequal %}"> <a href="?duration={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}">{{ attri.Duration_Name }}</a><a  id="top3" href="?design={{ design_id }}&dependency={{ dependency_id }}&participant={{ participant_id }}&evaluation={{ evaluation_id }}"><img class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endfor %}
+                       <dd id="duration1" data-select="0" name="duration">长期研究<img id="duration1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                       <dd id="duration2" data-select="0" name="duration">短期研究<img id="duration2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+
 
                     <dt>用户参与情况</dt>
-                    {% for attri in attribut4 %}
-                        <dd onclick="showtop4()" class="{% ifequal participant_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?participant={{ attri.id }}&design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}">{{ attri.Participation_Name }}</a><a  id="top4" href="?design={{design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&evaluation={{ evaluation_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endfor %}
+                        <dd id="participant1" data-select="0" name="participant" >有用户参与<img id="participant1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="participant2" data-select="0" name="participant" >没有用户参与<img id="participant2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
+
 
 					<dt>评估类型</dt>
-                    {% for attri in attribut5 %}
-                        <dd onclick="showtop5()" class="{% ifequal evaluation_id attri.id|stringformat:"i" %}active2{% endifequal %}"><a href="?evaluation={{ attri.id }}&design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}">{{ attri.Evaluation_Name }}</a><a id="top5" href="?design={{ design_id }}&dependency={{ dependency_id }}&duration={{ duration_id }}&participant={{ participant_id }}"><img  class="hiddeimg" src="{% static 'img/chacha3.png' %}"></a></dd>
-                    {% endfor %}
+                        <dd id="evaluation1" data-select="0" name="evaluation" >问卷<img id="evaluation1img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="evaluation2" data-select="0" name="evaluation" >访谈<img id="evaluation2img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="evaluation3" data-select="0" name="evaluation" >实验<img id="evaluation3img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="evaluation4" data-select="0" name="evaluation" >观察<img id="evaluation4img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd><br/>
+                        <dd id="evaluation5" data-select="0" name="evaluation" >小组讨论<img id="evaluation5img" class="hiddeimg" src="{% static 'img/chacha3.png' %}"></dd>
 				</dl>
-		</div>  
+		</div>
 
 		<div class="teches">
             {% for tech in all_techch %}
@@ -86,20 +84,702 @@
  			</div>
  			
  			<div class="biaoge">
- 				<form method="post" action="">
- 					<dl>
- 					<dt>您可以使用左侧的类别来选择设计技术。</dt>
-					<dt>请选择3个设计技术。</dt>
-					<dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
-					<dd id="sam1"><input type="text" id="same1" name="selectedone" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}"  onclick="Delete(1);"></dd>
-					<dd id="sam2"><input type="text" id="same2" name="selectedtwo" class="tijiao"><img id="same22" src="{% static 'img/chacha3.png' %}"  onclick="Delete(2);"></dd>
-					<dd id="sam3"><input type="text" id="same3" name="selectedthree" class="tijiao"><img id="same33" src="{% static 'img/chacha3.png' %}"  onclick="Delete(3);"></dd>
-					</dl>
-				</form>
+                <dl>
+                <dt>您可以使用左侧的类别来选择设计技术。</dt>
+                <dt>请选择3个设计技术。</dt>
+                <dt class="tone">请点击“+”，所选的设计技术将出现在这里。</dt>
+                <dd id="sam1"><input type="text" id="same1" name="selectedone" class="tijiao"><img id="same11" src="{% static 'img/chacha3.png' %}"  onclick="Delete(1);"></dd>
+                <dd id="sam2"><input type="text" id="same2" name="selectedtwo" class="tijiao"><img id="same22" src="{% static 'img/chacha3.png' %}"  onclick="Delete(2);"></dd>
+                <dd id="sam3"><input type="text" id="same3" name="selectedthree" class="tijiao"><img id="same33" src="{% static 'img/chacha3.png' %}"  onclick="Delete(3);"></dd>
+                </dl>
 			</div>
 		</div>
-		<div style="clear:both"></div>
 	</div>
     </form>
 </body>
+<script type="text/javascript">
+     $(document).ready(function(){
+             var dep1;
+             var desp1;
+             var dur1;
+             var part1;
+             var evalu1;
+             var design1Value;
+             var design2Value;
+             var design3Value;
+             var design4Value;
+             var dependency1Value;
+             var dependency2Value;
+             var duration1Value;
+             var duration2Value;
+             var participant1Value;
+             var participant2Value;
+             var evaluation1Value;
+             var evaluation2Value;
+             var evaluation3Value;
+             var evaluation4Value;
+             var evaluation5Value;
+             function AddElement(ElementA,ElementB,ElementC) {
+                 var element = '<div class="postcard">' +'<div class="lantian">' + '<h4 class="biaoti">'+ ElementA + '</h4>' +
+                     '<img class="topshow" src="/static/img/plus1.png" onclick="addtech(this)">' + '</div>'+ '<div class="contented" id="content_{{ tech.pk }}">'
+                     + '<p>' + ElementB + '</p>' + '<div class="showed">' +  '<p>' + ElementC + '</p>' + '</div>' + '</div>' + '</div>';
+                 return element;
+             }
+            $("#design1").click(function (){
+                design1Value = $('#design1').prop('data-select');
+                if (design1Value == undefined || design1Value == 0 || design2Value == 1 || design3Value ==1 || design4Value == 1) {
+                    design1Value = 1;
+                    design2Value = 0;
+                    design3Value = 0;
+                    design4Value = 0;
+                }else {
+                    design1Value = 0;
+                }
+                if(design1Value == 1){
+                    desp1 = $(this).text();
+                    $("#design1img").css("visibility","visible");
+                    $("#design2img").css("visibility","hidden");
+                    $("#design3img").css("visibility","hidden");
+                    $("#design4img").css("visibility","hidden");
+                    $("#design1").css("background-color","#41C7DB");
+                    $("#design2").css("background-color","white");
+                    $("#design3").css("background-color","white");
+                    $("#design4").css("background-color","white");
+                }else {
+                    desp1 = null;
+                    $("#design1img").css("visibility","hidden");
+                    $("#design1").css("background-color","white");
+                }
+                 $('#design1').prop('data-select', design1Value);
+                 if(design2Value == 0 && design1Value == 0 && design3Value == 0 && design4Value ==0){
+                 $("#design1").prop('data-select',0);
+                 $("#design2").prop('data-select',0);
+                 $("#design3").prop('data-select',0);
+                 $("#design4").prop('data-select',0);
+               }
+               console.log(desp1);
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    console.log(tt);
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+            });
+            $("#design2").click(function (){
+                design2Value = $('#design2').prop('data-select');
+                if (design2Value == undefined || design2Value == 0 || design1Value == 1 || design3Value == 1 || design4Value == 1) {
+                    design2Value = 1;
+                    design1Value = 0;
+                    design3Value = 0;
+                    design4Value = 0;
+                }else {
+                    design2Value = 0;
+                }
+                if(design2Value == 1){
+                    desp1 = $(this).text();
+                    $("#design2img").css("visibility","visible");
+                    $("#design1img").css("visibility","hidden");
+                    $("#design3img").css("visibility","hidden");
+                    $("#design4img").css("visibility","hidden");
+                    $("#design2").css("background-color","#41C7DB");
+                    $("#design1").css("background-color","white");
+                    $("#design3").css("background-color","white");
+                    $("#design4").css("background-color","white");
+                }else{
+                    desp1 = null;
+                    $("#design2img").css("visibility","hidden");
+                    $("#design2").css("background-color","white");
+                }
+               $('#design2').prop('data-select', design2Value);
+                 if(design2Value == 0 && design1Value == 0 && design3Value == 0 && design4Value == 0){
+                 $("#design1").prop('data-select',0);
+                 $("#design2").prop('data-select',0);
+                 $("#design3").prop('data-select',0);
+                 $("#design4").prop('data-select',0);
+             }
+                console.log(design1Value);
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#design3").click(function (){
+                design3Value = $('#design3').prop('data-select');
+                if (design3Value == undefined || design3Value == 0 || design1Value == 1 || design2Value == 1 || design4Value == 1) {
+                    design3Value = 1;
+                    design1Value = 0;
+                    design2Value = 0;
+                    design4Value = 0;
+                }else {
+                    design3Value = 0;
+                }
+                if(design3Value == 1){
+                    desp1 = $(this).text();
+                    $("#design3img").css("visibility","visible");
+                    $("#design1img").css("visibility","hidden");
+                    $("#design2img").css("visibility","hidden");
+                    $("#design4img").css("visibility","hidden");
+                    $("#design3").css("background-color","#41C7DB");
+                    $("#design1").css("background-color","white");
+                    $("#design2").css("background-color","white");
+                    $("#design4").css("background-color","white");
+                }else{
+                    desp1 = null;
+                    $("#design3img").css("visibility","hidden");
+                    $("#design3").css("background-color","white");
+                }
+               $('#design3').prop('data-select', design3Value);
+                 if(design2Value == 0 && design1Value == 0 && design3Value == 0 && design4Value == 0){
+                 $("#design1").prop('data-select',0);
+                 $("#design2").prop('data-select',0);
+                 $("#design3").prop('data-select',0);
+                 $("#design4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#design4").click(function (){
+                var design4Value = $('#design4').prop('data-select');
+                if (design4Value == undefined || design4Value == 0 || design1Value == 1 || design2Value == 1 || design3Value ==1) {
+                    design4Value = 1;
+                    design1Value = 0;
+                    design2Value = 0;
+                    design3Value = 0;
+                }else {
+                    design4Value = 0;
+                }
+               $('#design4').prop('data-select', design4Value);
+                if(design4Value == 1){
+                    $("#design4img").css("visibility","visible");
+                    $("#design1img").css("visibility","hidden");
+                    $("#design2img").css("visibility","hidden");
+                    $("#design3img").css("visibility","hidden");
+                    $("#design4").css("background-color","#41C7DB");
+                    $("#design1").css("background-color","white");
+                    $("#design3").css("background-color","white");
+                    $("#design2").css("background-color","white");
+                    desp1 = $(this).text();
+                }else {
+                    $("#design4img").css("visibility","hidden");
+                    $("#design4").css("background-color","white");
+                    desp1 = null;
+                }
+                if(design2Value == 0 && design1Value == 0 && design3Value == 0 && design4Value ==0){
+                 $("#design1").prop('data-select',0);
+                 $("#design2").prop('data-select',0);
+                 $("#design3").prop('data-select',0);
+                 $("#design4").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+
+            $("#dependency1").click(function (){
+                dependency1Value = $('#dependency1').prop('data-select');
+                if (dependency1Value == undefined || dependency1Value == 0 || dependency2Value == 1) {
+                    dependency1Value = 1;
+                    dependency2Value = 0;
+                }else {
+                    dependency1Value = 0;
+                }
+               $('#dependency1').prop('data-select', dependency1Value);
+                if(dependency1Value == 1){
+                    $("#dependency1img").css("visibility","visible");
+                    $("#dependency2img").css("visibility","hidden");
+                    $("#dependency1").css("background-color","#41C7DB")
+                    $("#dependency2").css("background-color","white")
+                    dep1 = $(this).text();
+                }else {
+                    $("#dependency1img").css("visibility","hidden");
+                    $("#dependency1").css("background-color","white")
+                    dep1 = null;
+                }
+                if(dependency1Value == 0 && dependency2Value == 0){
+                 $("#dependency1").prop('data-select',0);
+                 $("#dependency2").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#dependency2").click(function (){
+                dependency2Value = $('#dependency2').prop('data-select');
+                if (dependency2Value == undefined || dependency2Value == 0 || dependency1Value == 1) {
+                    dependency2Value = 1;
+                    dependency1Value = 0;
+                }else {
+                    dependency2Value = 0;
+                }
+               $('#dependency2').prop('data-select', dependency2Value);
+                if(dependency2Value == 1){
+                    $("#dependency2img").css("visibility","visible");
+                    $("#dependency1img").css("visibility","hidden");
+                    $("#dependency2").css("background-color","#41C7DB")
+                    $("#dependency1").css("background-color","white")
+                    dep1 = $(this).text();
+                }else {
+                    $("#dependency2img").css("visibility","hidden");
+                    $("#dependency2").css("background-color","white")
+                    dep1 = null;
+                }
+                if(dependency1Value == 0 && dependency2Value == 0){
+                 $("#dependency1").prop('data-select',0);
+                 $("#dependency2").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+            $("#duration1").click(function (){
+                duration1Value = $('#duration1').prop('data-select');
+                if (duration1Value == undefined || duration1Value == 0 || duration2Value == 1) {
+                    duration1Value = 1;
+                    duration2Value = 0;
+                }else {
+                    duration1Value = 0;
+                }
+               $('#duration1').prop('data-select', duration1Value);
+                if(duration1Value == 1){
+                    $("#duration1img").css("visibility","visible");
+                    $("#duration2img").css("visibility","hidden");
+                    $("#duration1").css("background-color","#41C7DB")
+                    $("#duration2").css("background-color","white")
+                    dur1 = $(this).text();
+                }else {
+                    $("#duration1img").css("visibility","hidden");
+                    $("#duration1").css("background-color","white")
+                    dur1 = null;
+                }
+                if(duration1Value == 0 && duration1Value == 0){
+                 $("#duration1").prop('data-select',0);
+                 $("#duration2").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#duration2").click(function (){
+                duration2Value = $('#duration2').prop('data-select');
+                if (duration2Value == undefined || duration2Value == 0 || duration1Value == 1) {
+                    duration2Value = 1;
+                    duration1Value = 0;
+                }else {
+                    duration2Value = 0;
+                }
+               $('#duration2').prop('data-select', duration2Value);
+                if(duration2Value == 1){
+                    $("#duration2img").css("visibility","visible");
+                    $("#duration1img").css("visibility","hidden");
+                    $("#duration2").css("background-color","#41C7DB")
+                    $("#duration1").css("background-color","white")
+                    dur1 = $(this).text();
+                }else {
+                    $("#duration2img").css("visibility","hidden");
+                    $("#duration2").css("background-color","white")
+                    dur1 = null;
+                }
+                if(duration2Value == 0 && duration1Value == 0){
+                 $("#duration2").prop('data-select',0);
+                 $("#duration2").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+            $("#participant1").click(function (){
+                participant1Value = $('#participant1').prop('data-select');
+                if (participant1Value == undefined || participant1Value == 0 || participant2Value == 1) {
+                    participant1Value = 1;
+                    participant2Value = 0;
+                }else {
+                    participant1Value = 0;
+                }
+               $('#participant1').prop('data-select', participant1Value);
+                if(participant1Value == 1){
+                    $("#participant1img").css("visibility","visible");
+                    $("#participant2img").css("visibility","hidden");
+                    $("#participant1").css("background-color","#41C7DB")
+                    $("#participant2").css("background-color","white")
+                    part1 = $(this).text();
+                }else {
+                    $("#participant1img").css("visibility","hidden");
+                    $("#participant1").css("background-color","white")
+                    part1 = null;
+                }
+                if(participant1Value == 0 && participant2Value == 0){
+                 $("#participant1").prop('data-select',0);
+                 $("#participant2").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#participant2").click(function (){
+                participant2Value = $('#participant2').prop('data-select');
+                if (participant2Value == undefined || participant2Value == 0 || participant1Value == 1) {
+                    participant2Value = 1;
+                    participant1Value = 0;
+                }else {
+                    participant2Value = 0;
+                }
+               $('#participant2').prop('data-select', participant2Value);
+                if(participant2Value == 1){
+                    $("#participant2img").css("visibility","visible");
+                    $("#participant1img").css("visibility","hidden");
+                    $("#participant2").css("background-color","#41C7DB")
+                    $("#participant1").css("background-color","white")
+                    part1 = $(this).text();
+                }else {
+                    $("#participant2img").css("visibility","hidden");
+                    $("#participant2").css("background-color","white")
+                    part1 = null;
+                }
+                if(participant1Value == 0 && participant2Value == 0){
+                 $("#participant1").prop('data-select',0);
+                 $("#participant2").prop('data-select',0);
+                }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+
+            $("#evaluation1").click(function (){
+                evaluation1Value = $('#evaluation1').prop('data-select');
+                if (evaluation1Value == undefined || evaluation1Value == 0 || evaluation2Value == 1 || evaluation3Value ==1 || evaluation4Value == 1 || evaluation5Value == 1) {
+                    evaluation1Value = 1;
+                    evaluation2Value = 0;
+                    evaluation3Value = 0;
+                    evaluation4Value = 0;
+                    evaluation5Value = 0;
+                }else {
+                    evaluation1Value = 0;
+                }
+                if(evaluation1Value == 1){
+                    evalu1 = $(this).text();
+                    $("#evaluation1img").css("visibility","visible");
+                    $("#evaluation2img").css("visibility","hidden");
+                    $("#evaluation3img").css("visibility","hidden");
+                    $("#evaluation4img").css("visibility","hidden");
+                    $("#evaluation5img").css("visibility","hidden");
+                    $("#evaluation1").css("background-color","#41C7DB")
+                    $("#evaluation2").css("background-color","white")
+                    $("#evaluation3").css("background-color","white")
+                    $("#evaluation4").css("background-color","white")
+                    $("#evaluation5").css("background-color","white")
+                }else {
+                    evalu1 = null;
+                    $("#evaluation1img").css("visibility","hidden");
+                    $("#evaluation1").css("background-color","white")
+                }
+                 $('#evaluation1').prop('data-select', evaluation1Value);
+                 if(evaluation1Value == 0 && evaluation2Value == 0 && evaluation3Value == 0 && evaluation4Value ==0 && evaluation5Value == 0){
+                 $("#evaluation1").prop('data-select',0);
+                 $("#evaluation2").prop('data-select',0);
+                 $("#evaluation3").prop('data-select',0);
+                 $("#evaluation4").prop('data-select',0);
+                 $("#evaluation5").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#evaluation2").click(function (){
+                evaluation2Value = $('#evaluation2').prop('data-select');
+                if (evaluation2Value == undefined || evaluation2Value == 0 || evaluation1Value == 1 || evaluation3Value ==1 || evaluation4Value == 1 || evaluation5Value == 1) {
+                    evaluation2Value = 1;
+                    evaluation1Value = 0;
+                    evaluation3Value = 0;
+                    evaluation4Value = 0;
+                    evaluation5Value = 0;
+                }else {
+                    evaluation2Value = 0;
+                }
+                if(evaluation2Value == 1){
+                    evalu1 = $(this).text();
+                    $("#evaluation2img").css("visibility","visible");
+                    $("#evaluation1img").css("visibility","hidden");
+                    $("#evaluation3img").css("visibility","hidden");
+                    $("#evaluation4img").css("visibility","hidden");
+                    $("#evaluation5img").css("visibility","hidden");
+                    $("#evaluation2").css("background-color","#41C7DB")
+                    $("#evaluation1").css("background-color","white")
+                    $("#evaluation3").css("background-color","white")
+                    $("#evaluation4").css("background-color","white")
+                    $("#evaluation5").css("background-color","white")
+                }else {
+                    evalu1 = null;
+                    $("#evaluation2img").css("visibility","hidden");
+                    $("#evaluation2").css("background-color","white")
+                }
+                 $('#evaluation2').prop('data-select', evaluation2Value);
+                 if(evaluation1Value == 0 && evaluation2Value == 0 && evaluation3Value == 0 && evaluation4Value ==0 && evaluation5Value == 0){
+                 $("#evaluation1").prop('data-select',0);
+                 $("#evaluation2").prop('data-select',0);
+                 $("#evaluation3").prop('data-select',0);
+                 $("#evaluation4").prop('data-select',0);
+                 $("#evaluation5").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#evaluation3").click(function (){
+                evaluation3Value = $('#evaluation3').prop('data-select');
+                if (evaluation3Value == undefined || evaluation3Value == 0 || evaluation2Value == 1 || evaluation1Value ==1 || evaluation4Value == 1 || evaluation5Value == 1) {
+                    evaluation3Value = 1;
+                    evaluation2Value = 0;
+                    evaluation1Value = 0;
+                    evaluation4Value = 0;
+                    evaluation5Value = 0;
+                }else {
+                    evaluation3Value = 0;
+                }
+                if(evaluation3Value == 1){
+                    evalu1 = $(this).text();
+                    $("#evaluation3img").css("visibility","visible");
+                    $("#evaluation2img").css("visibility","hidden");
+                    $("#evaluation1img").css("visibility","hidden");
+                    $("#evaluation4img").css("visibility","hidden");
+                    $("#evaluation5img").css("visibility","hidden");
+                    $("#evaluation3").css("background-color","#41C7DB")
+                    $("#evaluation2").css("background-color","white")
+                    $("#evaluation1").css("background-color","white")
+                    $("#evaluation4").css("background-color","white")
+                    $("#evaluation5").css("background-color","white")
+                }else {
+                    evalu1 = null;
+                    $("#evaluation3img").css("visibility","hidden");
+                    $("#evaluation3").css("background-color","white")
+                }
+                 $('#evaluation3').prop('data-select', evaluation3Value);
+                 if(evaluation1Value == 0 && evaluation2Value == 0 && evaluation3Value == 0 && evaluation4Value ==0 && evaluation5Value == 0){
+                 $("#evaluation1").prop('data-select',0);
+                 $("#evaluation2").prop('data-select',0);
+                 $("#evaluation3").prop('data-select',0);
+                 $("#evaluation4").prop('data-select',0);
+                 $("#evaluation5").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#evaluation4").click(function (){
+                evaluation4Value = $('#evaluation4').prop('data-select');
+                if (evaluation4Value == undefined || evaluation4Value == 0 || evaluation2Value == 1 || evaluation3Value ==1 || evaluation1Value == 1 || evaluation5Value == 1) {
+                    evaluation4Value = 1;
+                    evaluation2Value = 0;
+                    evaluation3Value = 0;
+                    evaluation1Value = 0;
+                    evaluation5Value = 0;
+                }else {
+                    evaluation4Value = 0;
+                }
+                if(evaluation4Value == 1){
+                    evalu1 = $(this).text();
+                    $("#evaluation4img").css("visibility","visible");
+                    $("#evaluation2img").css("visibility","hidden");
+                    $("#evaluation3img").css("visibility","hidden");
+                    $("#evaluation1img").css("visibility","hidden");
+                    $("#evaluation5img").css("visibility","hidden");
+                    $("#evaluation4").css("background-color","#41C7DB")
+                    $("#evaluation2").css("background-color","white")
+                    $("#evaluation3").css("background-color","white")
+                    $("#evaluation1").css("background-color","white")
+                    $("#evaluation5").css("background-color","white")
+                }else {
+                    evalu1 = null;
+                    $("#evaluation4img").css("visibility","hidden");
+                    $("#evaluation4").css("background-color","white")
+                }
+                 $('#evaluation4').prop('data-select', evaluation4Value);
+                 if(evaluation1Value == 0 && evaluation2Value == 0 && evaluation3Value == 0 && evaluation4Value ==0 && evaluation5Value == 0){
+                 $("#evaluation1").prop('data-select',0);
+                 $("#evaluation2").prop('data-select',0);
+                 $("#evaluation3").prop('data-select',0);
+                 $("#evaluation4").prop('data-select',0);
+                 $("#evaluation5").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            $("#evaluation5").click(function (){
+                evaluation5Value = $('#evaluation5').prop('data-select');
+                if (evaluation5Value == undefined || evaluation5Value == 0 || evaluation2Value == 1 || evaluation3Value ==1 || evaluation4Value == 1 || evaluation1Value == 1) {
+                    evaluation5Value = 1;
+                    evaluation2Value = 0;
+                    evaluation3Value = 0;
+                    evaluation4Value = 0;
+                    evaluation1Value = 0;
+                }else {
+                    evaluation5Value = 0;
+                }
+                if(evaluation5Value == 1){
+                    evalu1 = $(this).text();
+                    $("#evaluation5img").css("visibility","visible");
+                    $("#evaluation2img").css("visibility","hidden");
+                    $("#evaluation3img").css("visibility","hidden");
+                    $("#evaluation4img").css("visibility","hidden");
+                    $("#evaluation1img").css("visibility","hidden");
+                    $("#evaluation5").css("background-color","#41C7DB")
+                    $("#evaluation2").css("background-color","white")
+                    $("#evaluation3").css("background-color","white")
+                    $("#evaluation4").css("background-color","white")
+                    $("#evaluation1").css("background-color","white")
+                }else {
+                    evalu1 = null;
+                    $("#evaluation5img").css("visibility","hidden");
+                    $("#evaluation5").css("background-color","white")
+                }
+                 $('#evaluation5').prop('data-select', evaluation5Value);
+                 if(evaluation1Value == 0 && evaluation2Value == 0 && evaluation3Value == 0 && evaluation4Value ==0 && evaluation5Value == 0){
+                 $("#evaluation1").prop('data-select',0);
+                 $("#evaluation2").prop('data-select',0);
+                 $("#evaluation3").prop('data-select',0);
+                 $("#evaluation4").prop('data-select',0);
+                 $("#evaluation5").prop('data-select',0);
+             }
+                $.post("{% url 'classification:Ajax_CH_Top_add' %}",{"desp1":desp1,"dep1":dep1,"evalu1":evalu1,"part1":part1,"dur1":dur1},
+                function(tt){
+                    $('.teches').empty();
+                    $.each(tt,function(i,n){
+                        var title = n.fields['Tech_Name'];
+                        var showd = n.fields['Short_Description']
+                        var contents = n.fields['Long_Description']
+                        var reg = new RegExp("；","g");
+                        var contents = contents.replace(reg,"<br>");
+                        $('.teches').append(AddElement(title,showd,contents))
+                    })
+                })
+                });
+            });
+    </script>
 </html>

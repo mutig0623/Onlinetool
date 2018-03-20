@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
-    <script src="{% static 'JS/myscript.js' %}"></script>
+    <script src="{% static 'JS/index.js' %}"></script>
     <title>pre-test</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:PreAddEnB' %}" >
+<form method="post" action="{% url 'classification:PreAddEnB' %}" onsubmit="return checkPreB()" class="introde-form">
     {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
@@ -19,102 +18,102 @@
 		<input type="submit" name="" value="Next" id="butt-next">
 	</div>
 
-	<div class="bannder4"></div>
+	<div class="bannder6"></div>
 
-	<div class="mainbody">
-	  <div class="opptions">
+	  <div class="questionspage">
           <br/>
 		<p>Please answer the following question</p>
 		<table id="tab1">
 			<tr class="dark">
-				<td><span class="number">No.</span><span class="Quesen">Question</span><td>
+				<td><span class="number">No.</span><span class="Ques">Question</span></td>
 			</tr>
-			<tr class="white">
+			<tr class="white" id="eduname">
 				<td>
-                    <span class="number">1.</span><span class="Quesen">What is your highest education level?</span>
-                    <span class="onelow">
-                    <span class="seclowen"><input type="radio" name="edu" value="UG"><label class="labposition"> High School Graduation </label></span>
-                    <span class="seclowen"><input type="radio" name="edu" value="Bachelor"><label class="labposition">Apprenticeship </label></span>
-                    <span class="seclowen"><input type="radio" name="edu" value="MS"><label class ="labposition"> Bachelor’s degree </label></span>
-                    <span class="seclowen"><input type="radio" name="edu" value="Master"><label class ="labposition"> Master’s degree </label></span>
-                    <span class="seclowen"><input type="radio" name="edu" value="DS"><label class ="labposition">Doctorate degree</label></span><br/>
-                    <span class="seclowen"><input type="text" name="eduother" value="Enter here..." class="tiankong" value="Enter here..." onfocus='if(this.value=="Enter here..."){this.value="";}; 'onblur='if(this.value==""){this.value="Enter here...";};'></span>
+                    <span class="number">1.</span><span class="Ques">What is your highest education level?</span>
+                    <span class="onelowde">
+                    <span class="seclowde"><input type="radio" name="edu" value="UG"><label class="labposition"> High School Graduation </label></span>
+                    <span class="seclowde"><input type="radio" name="edu" value="Bachelor"><label class="labposition">Apprenticeship </label></span>
+                    <span class="seclowde"><input type="radio" name="edu" value="MS"><label class ="labposition"> Bachelor’s degree </label></span>
+                    <span class="seclowde"><input type="radio" name="edu" value="Master"><label class ="labposition"> Master’s degree </label></span>
+                    <span class="seclowde"><input type="radio" name="edu" value="DS"><label class ="labposition">Doctorate degree</label></span><br/>
+                    <span class="seclowde"><input type="text" name="eduother" id="eduother" value="Enter here..." class="tiankong" value="Enter here..." onfocus='if(this.value=="Enter here..."){this.value="";}; 'onblur='if(this.value==""){this.value="Enter here...";};'></span>
                     </span>
 				</td>
 			</tr>
-			<tr class="light">
+			<tr class="light" id="rolename">
 				<td><form >
-				    <span class="number">2.</span><span class="Quesen">Which of the following best describes your role?</span>
-                    <span class="onelow">
-                        <span class="seclowen"><input type="checkbox" name="role" value="Manager"><label class="labposition"> Manager </label></span>
-                        <span class="seclowen"><input type="checkbox" name="role" value="Student"><label class="labposition"> Student </label></span>
-                        <span class="seclowen"><input type="checkbox" name="role" value="Designer"><label class ="labposition"> Designer </label></span>
-                        <span class="seclowen"><input type="checkbox" name="role" value="Consultant"><label class ="labposition"> Consultant </label></span>
-                        <span class="seclowen"><input type="checkbox" name="role" value="Researcher"><label class ="labposition"> Researcher </label></span><br/>
-                        <span class="seclowen"><input type="checkbox" name="role" value="Programmer"><label class ="labposition"> Programmer </label></span>
-                        <span class="seclowen"><input type="text" name="roleother" class="tiankong" value="Enter here..." onfocus='if(this.value=="Enter here..."){this.value="";}; 'onblur='if(this.value==""){this.value="Enter here...";};'></span>
+				    <span class="number">2.</span><span class="Ques">Which of the following best describes your role?</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="checkbox" name="role" value="Manager"><label class="labposition"> Manager </label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Student"><label class="labposition"> Student </label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Designer"><label class ="labposition"> Designer </label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Consultant"><label class ="labposition"> Consultant </label></span>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Researcher"><label class ="labposition"> Researcher </label></span><br/>
+                        <span class="seclowde"><input type="checkbox" name="role" value="Programmer"><label class ="labposition"> Programmer </label></span>
+                        <span class="seclowde"><input type="text" name="roleother" id="roleother" class="tiankong" value="Enter here..." onfocus='if(this.value=="Enter here..."){this.value="";}; 'onblur='if(this.value==""){this.value="Enter here...";};'></span>
                     </span>
 				</form></td>
 			</tr>
-			<tr class="white">
+			<tr class="white" id="yearsname">
 				<td>
-                    <span class="number">3.</span><span class="Quesen">How many total years of full-time work experience do you have?</span>
-                    <span class="onelow">
-                        <span class="seclowen"><input type="text" name="years" class="tiankong" value="Enter here..." onfocus='if(this.value=="Enter here..."){this.value="";}; 'onblur='if(this.value==""){this.value="Enter here...";};'> &nbsp;Year(s)</span>
+                    <span class="number">3.</span><span class="Ques">How many total years of full-time work experience do you have?</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="text" name="years" id="years" class="tiankong" value="Enter here..." onfocus='if(this.value=="Enter here..."){this.value="";}; 'onblur='if(this.value==""){this.value="Enter here...";};'> &nbsp;Year(s)</span>
                     </span>
                     </td>
 			</tr>
-			<tr class="light">
+			<tr class="light" id="pronuname">
 				<td>
-                    <span class="number">4.</span><span class="Quesen">How many design project have you participated (including projects during your education, e.g., students‘ projects)?</span>
-                    <span class="onelow">
-                        <span class="seclowen"><input type="radio" name="pronu" value="0"><label class="labpositionshort">0</label></span>
-                        <span class="seclowen"><input type="radio" name="pronu" value="&lt;3"><label class="labpositionshort">&lt;3</label></span>
-                        <span class="seclowen"><input type="radio" name="pronu" value="3-5"><label class="labpositionshort">3-5</label></span>
-                        <span class="seclowen"><input type="radio" name="pronu" value="6-10"><label class="labpositionshort">6-10</label></span>
-                        <span class="seclowen"><input type="radio" name="pronu" value="11-15"><label class="labpositionshort">11-15</label></span>
-                        <span class="seclowen"><input type="radio" name="pronu" value="&gt;15"><label class="labpositionshort">&gt;15</label></span>
+                    <span class="number">4.</span><span class="Ques">How many design project have you participated (including projects during your education, e.g., students‘ projects)?</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="pronu" value="0"><label class="labpositionshort">0</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value="&lt;3"><label class="labpositionshort">&lt;3</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value="3-5"><label class="labpositionshort">3-5</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value="6-10"><label class="labpositionshort">6-10</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value="11-15"><label class="labpositionshort">11-15</label></span>
+                        <span class="seclowde"><input type="radio" name="pronu" value="&gt;15"><label class="labpositionshort">&gt;15</label></span>
                         </span>
 				</td>
 			</tr>
-			<tr class="white">
+			<tr class="white" id="coursname">
 				<td>
-                    <span class="number">5.</span><span class="Quesen">Have you attended any classes or lectures or seminars that relates to design?</span>
-                    <span class="onelow">
-                        <span class="seclowen"><input type="radio" name="cours" value="Y"><label class="labpositionshort"> YES </label></span>
-                        <span class="seclowen"><input type="radio" name="cours" value="N"><label class="labpositionshort"> NO </label></span>
+                    <span class="number">5.</span><span class="Ques">Have you attended any classes or lectures or seminars that relates to design?</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="cours" value="Y"><label class="labpositionshort"> YES </label></span>
+                        <span class="seclowde"><input type="radio" name="cours" value="N"><label class="labpositionshort"> NO </label></span>
                     </span>
                     </td>
 			</tr>
-			<tr class="light">
+			<tr class="light" id="techname">
 				<td>
-                    <span class="number">6.</span><span class="Quesen">Have you ever used any design techniques (design techniques mean following a specific procedure to conduct design activities) during the design process?</span>
-                    <span class="onelow">
-                        <span class="seclowen"><input type="radio" name="tech" value="Y" checked><label class="labpositionshort"> YES </label></span>
-                        <span class="seclowen"><input type="radio" name="tech" value="N" checked><label class="labpositionshort"> NO </label></span>
+                    <span class="number">6.</span><span class="Ques">Have you ever used any design techniques (design techniques mean following a specific procedure to conduct design activities) during the design process?</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="radio" name="tech" value="Y"><label class="labpositionshort"> YES </label></span>
+                        <span class="seclowde"><input type="radio" name="tech" value="N"><label class="labpositionshort"> NO </label></span>
                     </span>
                 </td>
 			</tr>
-			<tr class="white">
+			<tr class="white" id="samtechname">
 				<td>
-                    <span class="number">7.</span><span class="Quesen">Please choose the design techniques that you are familiar with?</span>
-                    <span class="onelow">
-                        <span class="seclowen"><input type="checkbox" name="samtech" value="Persona"><label class="labposition"> Persona </label></span>
-                        <span class="seclowen"><input type="checkbox" name="samtech" value="Scenario"><label class="labposition"> Scenario </label></span>
-                        <span class="seclowen"><input type="checkbox" name="samtech" value="ThinkAloud"><label class ="labposition"> Think-aloud </label></span>
-                        <span class="seclowen"><input type="checkbox" name="samtech" value="KanoAnalysis"><label class ="labposition"> Kano Analysis </label></span>
-                        <span class="seclowen"><input type="checkbox" name="samtech" value="RolePlaying"><label class ="labposition"> Role-playing </label></span>
-                        <span class="seclowen"><input type="checkbox" name="samtech" value="Behavior"><label class ="labposition"> Behavior Mapping </label></span><br/>
-                        <span class="seclowen"><input type="checkbox" name="samtech" value="None"><label class ="labposition"> None of them </label></span>
+                    <span class="number">7.</span><span class="Ques">Please choose the design techniques that you are familiar with?</span>
+                    <span class="onelowde">
+                        <span class="seclowde"><input type="checkbox" name="samtech" value="Persona"><label class="labposition"> Persona </label></span>
+                        <span class="seclowde"><input type="checkbox" name="samtech" value="Scenario"><label class="labposition"> Scenario </label></span>
+                        <span class="seclowde"><input type="checkbox" name="samtech" value="ThinkAloud"><label class ="labposition"> Think-aloud </label></span>
+                        <span class="seclowde"><input type="checkbox" name="samtech" value="KanoAnalysis"><label class ="labposition"> Kano Analysis </label></span>
+                        <span class="seclowde"><input type="checkbox" name="samtech" value="RolePlaying"><label class ="labposition"> Role-playing </label></span><br/>
+                        <span class="seclowde"><input type="checkbox" name="samtech" value="Behavior"><label class ="labposition"> Behavior Mapping </label></span>
+                        <span class="seclowde"><input type="checkbox" name="samtech" value="None"><label class ="labposition"> None of them </label></span>
                     </span>
 				</td>
 			</tr>
-			<tr style="height: 25px;" class="light" >
+			<tr style="height: 5px;" class="light" >
 				<td>
 				</td>
 			</tr>
 		</table>
 	</div>
 	</div>
+</form>
 </body>
 </html>

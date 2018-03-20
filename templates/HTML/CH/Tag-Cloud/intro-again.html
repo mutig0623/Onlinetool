@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html style="overflow-y: hidden;">
 {% load staticfiles %}
 <head>
     <meta name="renderer" content="webkit">
@@ -9,25 +9,21 @@
     <title>Introduction</title>
 </head>
 <body>
-<form method="post"  action="{% url 'classification:Chintrotag' %}" onsubmit="return remindingcncloud()">
+<form method="post"  action="{% url 'classification:Chintrotag' %}" onsubmit="return remindingcncloud()" class="introde-form" >
 {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-            {% if request.user.is_authenticated %}
-            <label name="userid">{{ request.user.id }}</label>
-            {% endif %}
-             {% csrf_token   %}
              <input type="submit" name="" value="下一步" id="butt-next" >
 	</div>
-</form>
 
-	<div class="bannder5">
+
+	<div class="bannder11">
 		
 	</div>
 
-	<div class="mainbody">
+	<div class="introde-page">
 		<p>您真的了解该网页如何使用了吗？请点击<span id="sti">“再看一遍”</span>重新学习如何使用该网页</p>
 		<div class="back-tag">
 	  		<div><input type="button" name="" value="显示介绍" id="showbutttest" onclick="removebuttoncloud()"></div>
@@ -57,5 +53,6 @@
 	  		</div>
         </div>
     </div>
+</form>
 </body>
 </html>

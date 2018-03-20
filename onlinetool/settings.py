@@ -25,7 +25,7 @@ SECRET_KEY = '!7_sg$j4+!liub!4quft-0pxm5l_2u3_*i9&owi(^b@!2_$aqb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -85,8 +85,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'experimenttool',
         'USER': 'root',
-        'PASSWORD': 'Mutig0623+-',
-        'HOST': ''
+        'PASSWORD': 'mutig0623',
+        'HOST': '127.0.0.1'
     }
 }
 

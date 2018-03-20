@@ -55,12 +55,6 @@
 	font-weight: bold;
 }
 
-.bottomupen dd:hover{
-	background-color: #00CED1;
-	cursor: pointer;
-	font-weight: bold;
-}
-
 .bottomupen ul{
 	margin-top: 0px;
 }
@@ -106,44 +100,6 @@
 	margin-top:20%;
 }
 
-.entop-down{
-	width: 15%;
-	float: left;
-	height: auto;
-	margin: 0 auto;
-	overflow:auto;
-}
-
-.entop-down dt{
-	margin-bottom:10px;
-	margin-top: 23px;
-	font-size: 18px;
-	margin-left: 15px;
-	font-weight: bold;
-}
-
-.entop-down dd{
-	margin-left: 35px;
-	margin-top: 5px;
-	border-radius: 15px;
-	font-size: 16px;
-	height: auto;
-	width: 150px;
-	padding-top: 5px;
-	padding-left: 10px;
-	padding-bottom: 5px;
-}
-
-.entop-down dd:hover{
-	background-color: #00CED1;
-	cursor: pointer;
-	font-weight: bold;
-}
-
-.entop-down a{
-	text-decoration: none;
-	color: black;
-}
 
 .biaogeen{
 	width: 90%;

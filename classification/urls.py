@@ -6,8 +6,7 @@ from . import views
 
 urlpatterns = [
         url('^$', views.home),
-url('^aa$', views.AddPost3ADe),
-        url('^31$', views.PreAddA),
+	url('^aa$', views.home),
         url('^32$', views.PreAddEnA),
         url('^10$', views.EN_Up2),
         url('^11$', views.EN_C2),

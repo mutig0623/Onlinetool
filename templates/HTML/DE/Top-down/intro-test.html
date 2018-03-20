@@ -5,18 +5,17 @@
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'JS/myscript.js' %}"></script>
     <title>post-test 3</title>
 </head>
 <body>
-<form method="post" action="{% url 'classification:DEChecktop' %}">
+<form method="post" action="{% url 'classification:DEChecktop' %}" class="longform">
     {% csrf_token %}
 	<div class="header">  <!-- logo部分 -->
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="submit" name="" value="Weiter" onclick="jumpcn6();" id="butt-next">
+
 	</div>
 
 	<div class="bannder10">
@@ -29,7 +28,7 @@
 		
 		<table id="tab2">
 			<tr class="dark">
-				<td><span class="number">No.</span><span class="Ques">Question</span><td>
+				<td><span class="number">Nr.</span><span class="Ques">Fragen</span><td>
 			</tr>
 
             <tr class="white">
@@ -59,19 +58,11 @@
                     </span>
                 </td>
             </tr>
-            <tr class="light">
-                <td>
-                <span class="number">4.</span><span class="Ques">Mit welcher Schaltfläche können Sie die ausgewählten Designtechniken einreichen?</span>
-                <span class="onelowde">
-                    <span class="seclowlong"><input type="radio" name="test4" value="1"><label class="labpositionlong">Weiter</label></span>
-                    <span class="seclowlong"><input type="radio" name="test4" value="2"><label class="labpositionlong">Submit</label></span>
-                </span>
-                </td>
-            </tr>
             <tr class="white" style="height: 2px;">
                 <td></td>
             </tr>
 		</table>
+          <input type="submit" class="tesinput" value="Weiter" onclick="jumpcn6();" id="butt-next">
 	</div>
 </form>
 </body>

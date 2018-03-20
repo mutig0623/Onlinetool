@@ -5,7 +5,6 @@
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" type="text/css" href="{% static 'CSS/body.css' %}"  />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
     <script src="{% static 'JS/index.js' %}"></script>
     <title>pre-test</title>
 </head>
@@ -17,17 +16,16 @@
 		<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 			<p>Welcome to the Online Experiment</p>
 		</div>
-		<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
 	</div>
 
 	<div class="bannder5"></div>
 
 	  <div class="questionspage">
           <br/>
-		<p>Bitte beantworten Sie die folgenden Fragen.</p>
+		<p>Bitte beantworten Sie die folgende Fragen.</p>
         <table>
 			<tr class="dark">
-				<td><span class="number">No.</span><span class="Ques">Question</span></td>
+				<td><span class="number">Nr.</span><span class="Ques">Fragen</span></td>
 			</tr>
 			<tr class="white" id="countrynamename">
 				<td>
@@ -56,7 +54,7 @@
 				<td><span style="margin-left: 35px;">Bitte wählen Sie die Antwort, die Sie am besten beschreibt, wie Sie wirklich sind.</span><td>
 			</tr>
 			<tr class="white">
-				<td><span style="margin-left: 35px;">Inwieweit stimmen Sie den folgenden Aussage zu?</span><td>
+				<td><span style="margin-left: 35px;">Inwieweit stimmen Sie die folgende Aussagen zu?</span><td>
 			</tr>
             <tr class="white">
 				<td><span style="margin-left: 35px;">1= stimme überhaupt nicht zu; 7=stimme vollkommen zu</span><td>
@@ -90,7 +88,7 @@
                </td>
             </tr>
             <tr class="light" id="F3name">
-                    <td><form>
+                    <td>
                     <span class="number">3.</span><span class="Ques">Ich kenne die kulturellen Werte und religiösen Überzeugungen dieses Landes.</span>
                     <span class="onelowde">
                         <span class="seclowde"><input type="radio" name="F3" value="1"><label class="labpositionshort">1</label></span>
@@ -101,10 +99,10 @@
                         <span class="seclowde"><input type="radio" name="F3" value="6"><label class="labpositionshort">6</label></span>
                         <span class="seclowde"><input type="radio" name="F3" value="7"><label class="labpositionshort">7</label></span>
                     </span>
-                    </form> </td>
+                    </td>
             </tr>
             <tr class="white" id="F4name">
-                <td><form >
+                <td>
                 <span class="number">4.</span><span class="Ques">Ich kenne die Regularien der Ehe in diesem Land.</span>
                     <span class="onelowde">
                         <span class="seclowde"><input type="radio" name="F4" value="1"><label class="labpositionshort">1</label></span>
@@ -115,10 +113,10 @@
                         <span class="seclowde"><input type="radio" name="F4" value="6"><label class="labpositionshort">6</label></span>
                         <span class="seclowde"><input type="radio" name="F4" value="7"><label class="labpositionshort">7</label></span>
                     </span>
-                </form></td>
+                </td>
             </tr>
             <tr class="light" id="F5name">
-                    <td><form>
+                    <td>
                     <span class="number">5.</span><span class="Ques">Ich kenne die Künste und das Handwerk dieses Landes.</span>
                     <span class="onelowde">
                         <span class="seclowde"><input type="radio" name="F5" value="1"><label class="labpositionshort">1</label></span>
@@ -129,10 +127,10 @@
                         <span class="seclowde"><input type="radio" name="F5" value="6"><label class="labpositionshort">6</label></span>
                         <span class="seclowde"><input type="radio" name="F5" value="7"><label class="labpositionshort">7</label></span>
                     </span>
-                    </form> </td>
+                   </td>
             </tr>
             <tr class="white" id="F6name">
-                <td><form >
+                <td>
                 <span class="number">6.</span><span class="Ques">Ich kenne die Regeln für nonverbales Verhalten dieses Landes.</span>
                     <span class="onelowde">
                         <span class="seclowde"><input type="radio" name="F6" value="1"><label class="labpositionshort">1</label></span>
@@ -143,12 +141,13 @@
                         <span class="seclowde"><input type="radio" name="F6" value="6"><label class="labpositionshort">6</label></span>
                         <span class="seclowde"><input type="radio" name="F6" value="7"><label class="labpositionshort">7</label></span>
                     </span>
-                </form></td>
+                </td>
             </tr>
             <tr class="light" style="height: 5px;">
                     <td></td>
             </tr>
 		</table>
+          <input type="submit" class="tesinput" value="Weiter" onclick="" id="butt-next">
 	</div>
     </form>
 </body>

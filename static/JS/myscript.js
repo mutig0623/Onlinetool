@@ -12,214 +12,265 @@ function Delete(num){
     if(num == 1){
         document.getElementById("same1").value="";
         document.getElementById("sam1").style.display="none";
+        if(document.getElementById("same1").value =="" &&  document.getElementById("same2").value =="" && document.getElementById("same3").value =="")
+        {
+            document.getElementById("butt-next-detail").style.visibility = "hidden";
+    }
         }
     if(num == 2){
         document.getElementById("same2").value="";
         document.getElementById("sam2").style.display="none";
+        if(document.getElementById("same1").value =="" &&  document.getElementById("same2").value =="" && document.getElementById("same3").value =="")
+        {
+            document.getElementById("butt-next-detail").style.visibility = "hidden";
+    }
         }
     if(num == 3){
         document.getElementById("same3").value="";
         document.getElementById("sam3").style.display="none";
+        if(document.getElementById("same1").value =="" &&  document.getElementById("same2").value =="" && document.getElementById("same3").value =="")
+        {
+            document.getElementById("butt-next-detail").style.visibility = "hidden";
+    }
         }
     }
 
-
 function two_char(n) {
             return n >= 10 ? n : "0" + n;
-        }
+}
+
 function time_funch() {
-    document.getElementById("same1").innerText = "";
-    document.getElementById("same2").innerText = "";
-    document.getElementById("same3").innerText = "";
+    document.getElementById("same1").value="";
+    document.getElementById("same2").value="";
+    document.getElementById("same3").value="";
+      var sec=300;
+      setInterval(function () {
+        sec--;
+        var date = new Date(0, 0);
+        date.setSeconds(sec);
+        var m = date.getMinutes(), s = date.getSeconds();
+        document.getElementById("mytime").innerHTML = m + " 分 " + two_char(s) + " 秒";
+    }, 1000);
+        setTimeout("peatedch()", 240000 );
+  }
+
+function peatedch(){
+    window.alert("您还有1分钟时间！")
+    var sec=60;
+    setInterval(function () {
+        sec--;
+        var date = new Date(0, 0);
+        date.setSeconds(sec);
+        var m = date.getMinutes(), s = date.getSeconds();
+        document.getElementById("mytime").innerHTML = m + " 分 " + two_char(s) + " 秒";
+    }, 1000);
+        setTimeout("Repeatedch()", 60000);
+  }
+
+function Repeatedch() {
+    if(document.getElementById("same1").value == "" && document.getElementById("same2").value == "" && document.getElementById("same2").value == "")
+    {
+        document.getElementById("same1").value = "none1";
+        document.getElementById("same2").value = "none2";
+        document.getElementById("same3").value = "none3";
+        document.getElementById("sam1").style.display ="block"
+        document.getElementById("sam2").style.display ="block"
+        document.getElementById("sam3").style.display ="block"
+        document.getElementById('butt-next').click();
+    }
+    else{
+        document.getElementById('butt-next').click();
+    }
+}
+
+
+function time_funen() {
+    document.getElementById("same1").value = "";
+    document.getElementById("same2").value = "";
+    document.getElementById("same3").value = "";
+    var sec=300;
+      setInterval(function () {
+        sec--;
+        var date = new Date(0, 0);
+        date.setSeconds(sec);
+        var m = date.getMinutes(), s = date.getSeconds();
+        document.getElementById("mytime").innerHTML =  m  + " min " + two_char(s) + " sec";
+    }, 1000);
+        setTimeout("peateden()", 240000 );
+}
+
+function peateden() {
+    window.alert("You have only one \n minute left!")
+    var sec=60;
+      setInterval(function () {
+        sec--;
+        var date = new Date(0, 0);
+        date.setSeconds(sec);
+        var s = date.getSeconds();
+        document.getElementById("mytime").innerHTML = "0" + " min " + two_char(s) + " sec";
+    }, 1000);
+        setTimeout("Repeateden()", 60000);
+}
+
+function Repeateden() {
+     if(document.getElementById("same1").value == "" && document.getElementById("same2").value == "" && document.getElementById("same2").value == "")
+        {
+            document.getElementById("same1").value = "none1";
+            document.getElementById("same2").value = "none2";
+            document.getElementById("same3").value = "none3";
+            document.getElementById("sam1").style.display ="block"
+            document.getElementById("sam2").style.display ="block"
+            document.getElementById("sam3").style.display ="block"
+            document.getElementById('butt-next').click();
+    }
+    else{
+        document.getElementById('butt-next').click();
+    }
+}
+
+function time_funde() {
+    document.getElementById("same1").value = "";
+    document.getElementById("same2").value = "";
+    document.getElementById("same3").value = "";
+     if(document.getElementById("sam1").style.display =="none" && document.getElementById("sam2").style.display =="none" && document.getElementById("sam3").style.display =="none"){
+        document.getElementById("butt-next-detail").style.visibility = "hidden";
+    }
       var sec=300;
       setInterval(function () {
         sec--;
         var date = new Date(0, 0)
         date.setSeconds(sec);
         var m = date.getMinutes(), s = date.getSeconds();
-        document.getElementById("mytime").innerText = m + " 分 " + two_char(s) + "秒";
+        document.getElementById("mytime").innerHTML = m +  " min " +  two_char(s) + " sec";
     }, 1000);
-        setTimeout("Repeatedch()", 5000 )
-  }
-
-function peatedch(){
-    window.alert("您还有1分钟时间！")
-
-  }
-
-function Repeatedch() {
-    var con = confirm("确定一个技术也不选？");
-    if (con == true){
-        document.getElementById("same1").value = "none1";
-        document.getElementById("same2").value = "none2";
-        document.getElementById("same3").value = "none3";
-        document.getElementById("sam1").style.display ="block"
-        document.getElementById("sam2").style.display ="block"
-        document.getElementById("sam3").style.display ="block"
-        document.getElementById('queren').click();
-    }
-    if (con == false){
-
-        var sec=300;
-        setInterval(function () {
-        sec--;
-        var date = new Date(0, 0)
-        date.setSeconds(sec);
-        var m = date.getMinutes(), s = date.getSeconds();
-        document.getElementById("mytime").innerText = m + " 分 " + two_char(s) + "秒";
-    }, 1000);
-        setTimeout("Repeatedch()", 300000 )
-    }
+        setTimeout("peatedde()", 240000 );
 }
 
-function time_funen() {
-    document.getElementById("same1").innerText = ""; 
-    document.getElementById("same2").innerText = "";
-    document.getElementById("same3").innerText = "";
-    var sec=300;
+function peatedde() {
+    window.alert("Sie haben nur ein \n Miunte!")
+    var sec=60;
     setInterval(function () {
-        sec--;
-        var date = new Date(0, 0)
-        date.setSeconds(sec);
-        var m = date.getMinutes(), s = date.getSeconds();
-        document.getElementById("mytime").innerText = m + " min " + two_char(s) + " sec ";
+    sec--;
+    var date = new Date(0, 0)
+    date.setSeconds(sec);
+    var m = date.getMinutes(), s = date.getSeconds();
+    document.getElementById("mytime").innerHTML = "0" +  " min " + two_char(s) + " sec";
     }, 1000);
-    setTimeout("Repeateden()", 300000 )
-  }
-
-  function Repeateden() {
-    var con = confirm("Are you sure to select none of the Technique?");
-    if (con == true){
-        document.getElementById("same1").value = "none1";
-        document.getElementById("same2").value = "none2";
-        document.getElementById("same3").value = "none3";
-        document.getElementById("sam1").style.display ="block"
-        document.getElementById("sam2").style.display ="block"
-        document.getElementById("sam3").style.display ="block"
-        document.getElementById('queren').click();
-    }
-    if (con == false){
-        var sec=300;
-        setInterval(function () {
-        sec--;
-        var date = new Date(0, 0)
-        date.setSeconds(sec);
-        var m = date.getMinutes(), s = date.getSeconds();
-        document.getElementById("mytime").innerText = m + " min " + two_char(s) + "sec";
-    }, 1000);
-        setTimeout("Repeateden()", 300000 )
-    }
-}
-
-function time_funde() {
-    document.getElementById("same1").innerText = "";
-    document.getElementById("same2").innerText = "";
-    document.getElementById("same3").innerText = "";
-    var sec=300;
-    setInterval(function () {
-        sec--;
-        var date = new Date(0, 0)
-        date.setSeconds(sec);
-        var m = date.getMinutes(), s = date.getSeconds();
-        document.getElementById("mytime").innerText = m + " min " + two_char(s) + " sec ";
-    }, 1000);
-    setTimeout("Repeatedde()", 300000 )
+        setTimeout("Repeatedde()", 60000);
 }
 
 function Repeatedde() {
-    var con = confirm("Sind Sie sicher, dass Sie keine Technik auswählen?");
-    if (con == true){
+    if(document.getElementById("same1").value == "" && document.getElementById("same2").value == "" && document.getElementById("same2").value == "")
+    {
         document.getElementById("same1").value = "none1";
         document.getElementById("same2").value = "none2";
         document.getElementById("same3").value = "none3";
         document.getElementById("sam1").style.display ="block"
         document.getElementById("sam2").style.display ="block"
         document.getElementById("sam3").style.display ="block"
-        document.getElementById('queren').click();
+        document.getElementById('butt-next').click();
     }
-    if (con == false){
-        var sec=300;
-        setInterval(function () {
-        sec--;
-        var date = new Date(0, 0)
-        date.setSeconds(sec);
-        var m = date.getMinutes(), s = date.getSeconds();
-        document.getElementById("mytime").innerText = m + " min " + two_char(s) + "sec";
-    }, 1000);
-        setTimeout("Repeatedde()", 300000 )
+    else{
+        document.getElementById('butt-next').click();
     }
 }
 
 function addtech(obj){   
     var cba = obj.previousSibling;
     if(document.getElementById("sam1").style.display!="block"){
-        document.getElementById("same1").value = cba.innerText;
+        document.getElementById("same1").value = cba.innerHTML;
         document.getElementById("sam1").style.display ="block";
-        document.getElementById("same11").style.display = "block";        
-    }
-    else if(document.getElementById("sam2").style.display!="block"){
-        document.getElementById("same2").value = cba.innerText;
-        document.getElementById("sam2").style.display ="block";
-        document.getElementById("same22").style.display = "block";  
-        }
-    else if(document.getElementById("sam3").style.display!="block"){
-        document.getElementById("same3").value = cba.innerText;
-        document.getElementById("sam3").style.display ="block";
-        document.getElementById("same33").style.display = "block";  
-        }
+        document.getElementById("same11").style.display = "block";
+        document.getElementById("butt-next-detail").style.visibility = "visible";
+    } else if(document.getElementById("sam1").style.display =="block"){
+        if(document.getElementById("same1").value == cba.innerHTML)
+            { alert("您的选择重复了！");}
+        else if(document.getElementById("sam2").style.display!="block"){
+            document.getElementById("same2").value = cba.innerText;
+            document.getElementById("sam2").style.display ="block";
+            document.getElementById("same22").style.display = "block";
+        }else if(document.getElementById("sam2").style.display =="block"){
+            if(document.getElementById("same2").value == cba.innerHTML)
+            { alert("您的选择重复了！");}
+            else if(document.getElementById("sam3").style.display!="block"){
+                document.getElementById("same3").value = cba.innerText;
+                document.getElementById("sam3").style.display ="block";
+                document.getElementById("same33").style.display = "block";
+            }else if(document.getElementById("sam3").style.display=="block"){
+                if(document.getElementById("same3").value == cba.innerHTML){
+                alert("您的选择重复了！");
+            }
+
     else{
         window.alert("超过三个了,\n 请删除一个再选择！");
-        }   
-
+        }}}}
 }
 
 function addtechen(obj){   
     var cba = obj.previousSibling;
     if(document.getElementById("sam1").style.display!="block"){
-        document.getElementById("same1").value = cba.innerText;
+        document.getElementById("same1").value = cba.innerHTML;
         document.getElementById("sam1").style.display ="block";
-        document.getElementById("same11").style.display = "block";        
-    }
-    else if(document.getElementById("sam2").style.display!="block"){
-        document.getElementById("same2").value = cba.innerText;
-        document.getElementById("sam2").style.display ="block";
-        document.getElementById("same22").style.display = "block";  
-        }
-    else if(document.getElementById("sam3").style.display!="block"){
-        document.getElementById("same3").value = cba.innerText;
-        document.getElementById("sam3").style.display ="block";
-        document.getElementById("same33").style.display = "block";  
-        }
-    else{
-        window.alert("You have select more then \nthree techniques, please \ndelete one or reselect again!");
-        }   
-
+        document.getElementById("same11").style.display = "block";
+        document.getElementById("butt-next-detail").style.visibility = "visible";
+    } else if(document.getElementById("sam1").style.display =="block"){
+        if(document.getElementById("same1").value == cba.innerHTML)
+            { alert("Your choice is repeated!");}
+        else if(document.getElementById("sam2").style.display!="block"){
+            document.getElementById("same2").value = cba.innerText;
+            document.getElementById("sam2").style.display ="block";
+            document.getElementById("same22").style.display = "block";
+        }else if(document.getElementById("sam2").style.display =="block"){
+            if(document.getElementById("same2").value == cba.innerHTML)
+            { alert("Your choice is repeated!");}
+            else if(document.getElementById("sam3").style.display!="block"){
+                document.getElementById("same3").value = cba.innerText;
+                document.getElementById("sam3").style.display ="block";
+                document.getElementById("same33").style.display = "block";
+            }else if(document.getElementById("sam3").style.display=="block"){
+                if(document.getElementById("same3").value == cba.innerHTML){
+                alert("Your choice is repeated!");
+            }
+            else{
+                window.alert("You have select more then \nthree techniques, please \ndelete one or reselect again!");
+                }}}}
 }
 
 function addtechde(obj){   
     var cba = obj.previousSibling;
-    if(document.getElementById("sam1").style.display!="block"){
-        document.getElementById("same1").innerText = cba.innerText;
+     if(document.getElementById("sam1").style.display!="block"){
+        document.getElementById("same1").value = cba.innerHTML;
         document.getElementById("sam1").style.display ="block";
-        document.getElementById("same11").style.display = "block";        
-    }
-    else if(document.getElementById("sam2").style.display!="block"){
-        document.getElementById("same2").innerText = cba.innerText;
-        document.getElementById("sam2").style.display ="block";
-        document.getElementById("same22").style.display = "block";  
-        }
-    else if(document.getElementById("sam3").style.display!="block"){
-        document.getElementById("same3").innerText = cba.innerText;
-        document.getElementById("sam3").style.display ="block";
-        document.getElementById("same33").style.display = "block";  
-        }
-    else{
-        window.alert("More than three options, \nplease delete one and choice \nagain!");
-        }        
+        document.getElementById("same11").style.display = "block";
+        document.getElementById("butt-next-detail").style.visibility = "visible";
+    } else if(document.getElementById("sam1").style.display =="block"){
+        if(document.getElementById("same1").value == cba.innerHTML)
+            { alert("Ihre Wahl ist wiederholt!");}
+        else if(document.getElementById("sam2").style.display!="block"){
+            document.getElementById("same2").value = cba.innerText;
+            document.getElementById("sam2").style.display ="block";
+            document.getElementById("same22").style.display = "block";
+        }else if(document.getElementById("sam2").style.display =="block"){
+            if(document.getElementById("same2").value == cba.innerHTML)
+            { alert("Ihre Wahl ist wiederholt!");}
+            else if(document.getElementById("sam3").style.display!="block"){
+                document.getElementById("same3").value = cba.innerText;
+                document.getElementById("sam3").style.display ="block";
+                document.getElementById("same33").style.display = "block";
+            }else if(document.getElementById("sam3").style.display=="block"){
+                if(document.getElementById("same3").value == cba.innerHTML){
+                alert("Ihre Wahl ist wiederholt!");
+            }
+            else{
+                window.alert("Mehr als drei Techniken \nausgewählt, bitte löschen \noder erneut auswählen!");
+                    }}}}
 }
 
+
+
+
+
 function checkrepeat(){
-    
   if(document.getElementById("same1").value == "" && document.getElementById("same2").value == "" 
     && document.getElementById("same3").value == "")
     {
@@ -444,7 +495,6 @@ function remindingen(){
 
 function showtop1() {
     // event.preventDefault();
-    console.log("test");
     document.getElementById("top1").style.visibility = "visible";
 
 }
