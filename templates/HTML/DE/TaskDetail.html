@@ -15,7 +15,6 @@
 			<div class="kitlogo"><img src="{% static 'img/kit2.png' %}">
 				<p>Welcome to the Online Experiment</p>
 			</div>
-			<input type="submit" name="" value="Weiter" onclick="" id="butt-next">
 	</div>
 
 	<div class="bannder12">
@@ -24,13 +23,15 @@
 
 	<div class="questionspage">
     <div class="index-instru" style="margin-top:8%;">
+    <br/>
 	  <h4>Sie arbeiten in einem Team in einem Entwicklungsprojekt für eine mobile App für den Kauf von Kinokarten.</h4>
         {% for task in taskdes  %}
             <h4>Task {{ task.id }}</h4>
 	        <p>{{ task.Description }}</p><br/>
         {% endfor %}
-	  <h4>Bitte benutzen Sie die folgende Webseite, um drei hierfür relevante Designtechniken für diese Szenario auszuwählen.</h4>
+	  <h4>Bitte benutzen Sie die folgende Webseite, um drei hierfür relevante Designtechniken für dieses Szenario auszuwählen.</h4>
 	</div>
+    <input type="submit" class="tesinput" value="Weiter" onclick="" id="butt-next">
     </div>
 </form>
 </body>
