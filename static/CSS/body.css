@@ -391,7 +391,7 @@ transform: translateX(-50%) translateY(-50%);
 	width: 100%;
 	background-color: #EEEEEE;
 	vertical-align:middle;
-	font-size: 1.1em;
+	font-size: 1.0em;
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
@@ -403,7 +403,7 @@ transform: translateX(-50%) translateY(-50%);
 
 .white{
 	vertical-align:middle;
-	font-size: 1.1em;
+	font-size: 1.0em;
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
@@ -421,7 +421,7 @@ transform: translateX(-50%) translateY(-50%);
 	display: inline-block;
 	vertical-align: middle;
 	width: 55px;
-	font-size: 1em;
+	font-size: 0.9em;
 	padding: 0 auto;
 }
 
@@ -429,7 +429,7 @@ transform: translateX(-50%) translateY(-50%);
 	display: inline-block;
 	vertical-align: middle;
 	width: 30px;
-	font-size: 1em;
+	font-size: 0.9em;
 	padding: 0 auto;
 }
 
@@ -499,7 +499,7 @@ transform: translateX(-50%) translateY(-50%);
 	width: 500px;
 	display:inline-block;
 	vertical-align:middle;
-	font-size: 0.9em;
+	font-size: 1.0em;
 }
 
 .onelow{

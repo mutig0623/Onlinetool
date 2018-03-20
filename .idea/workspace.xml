@@ -1,108 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d83393ec-f37d-4ad1-a39d-189831a18e89" name="Default" comment="final">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test1A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test1B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test2A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/post-test2B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up2copy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/Bottom-up3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test1A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test1B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test2A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Bottom-up/post-test2B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/Tag Cloud3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test1A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test1B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test2A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Tag-Cloud/post-test2B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/TaggedTaxo-detel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down2copy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/Top-down3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test1A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test1B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test2A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/post-test2B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/post-test 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/post-test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/post-test 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/post-test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/post-test 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/post-test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/TaggedTaxo-detel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/post-test 2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/post-test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 1A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 1B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 2A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/post-test 2B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 1A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 1B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 2A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/post-test 2B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/Tag Cloud3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 1A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 1B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 2A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/post-test 2B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/TaggedTaxo-detel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/TaskDetailthree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/TaskDetailtwo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 1A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 1B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 2A.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/post-test 2B.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/HTML/EN/introduction.html" afterPath="" />
+    <list default="true" id="d83393ec-f37d-4ad1-a39d-189831a18e89" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classification/urls.py" afterPath="$PROJECT_DIR$/classification/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classification/views.py" afterPath="$PROJECT_DIR$/classification/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/onlinetool/settings.py" afterPath="$PROJECT_DIR$/onlinetool/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/CSS/enlanguage.css" afterPath="$PROJECT_DIR$/static/CSS/enlanguage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/JS/index.js" afterPath="$PROJECT_DIR$/static/JS/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/JS/myscript.js" afterPath="$PROJECT_DIR$/static/JS/myscript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/CSS/body.css" afterPath="$PROJECT_DIR$/static/CSS/body.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank1.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/blank1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-again.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Blank/intro-test.html" />
@@ -121,7 +22,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-again.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/intro-test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/Top-down/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/Top-down/introduction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/end.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/end.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/indexCH.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/indexCH.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/login.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/post-test Q3.html" />
@@ -130,33 +30,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-test 1.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-test 1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-test 2.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-test 2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-test.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-testA.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-testA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/CH/pre-testB.html" afterPath="$PROJECT_DIR$/templates/HTML/CH/pre-testB.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/blank 1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-again.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/intro-test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Blank/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Blank/introduction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/Bottom-up 1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-again.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/introduction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Instruction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Instruction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/Tag Cloud 1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-again.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/introduction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/Top-down 1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-again.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/Top-down/introduction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/indexDE.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/indexDE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/login.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3A.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3A.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3B.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/post-test Q3B.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-test.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-test1.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-test1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-test2.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-test2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-testA.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-testA.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/DE/pre-testB.html" afterPath="$PROJECT_DIR$/templates/HTML/DE/pre-testB.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/blank1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-again.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Blank/intro-test.html" />
@@ -170,11 +49,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-again.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/intro-test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Tag-Cloud/introduction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/TaskDetail.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/TaskDetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down1.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-again.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-again.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-test.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/intro-test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/Top-down/introduction.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/Top-down/introduction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/end.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/end.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/indexEN.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/indexEN.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/login.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/post-test Q3.html" />
@@ -185,7 +64,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/pre-test2.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-test2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/pre-testA.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-testA.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/HTML/EN/pre-testB.html" afterPath="$PROJECT_DIR$/templates/HTML/EN/pre-testB.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -216,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/static/CSS/body.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="580" column="16" lean-forward="true" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
+              <caret line="580" column="16" lean-forward="false" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -373,11 +251,11 @@
         <option value="$PROJECT_DIR$/templates/HTML/DE/Tag Cloud/intro-test.html" />
         <option value="$PROJECT_DIR$/templates/HTML/DE/Top-down/intro-test.html" />
         <option value="$PROJECT_DIR$/templates/HTML/DE/Bottom-up/intro-test.html" />
-        <option value="$PROJECT_DIR$/static/CSS/body.css" />
         <option value="$PROJECT_DIR$/static/JS/myscript.js" />
         <option value="$PROJECT_DIR$/templates/HTML/EN/Bottom-up/Bottom-up2.html" />
         <option value="$PROJECT_DIR$/templates/HTML/EN/Top-down/Top-down2.html" />
         <option value="$PROJECT_DIR$/templates/HTML/EN/TaskDetailthree.html" />
+        <option value="$PROJECT_DIR$/static/CSS/body.css" />
       </list>
     </option>
   </component>
@@ -754,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521561677984</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="final">
+      <created>1521561877674</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1521561877674</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -830,7 +715,8 @@
     <MESSAGE value="version 12.2" />
     <MESSAGE value="version 5" />
     <MESSAGE value="final 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="final 1" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1109,7 +995,7 @@
         <state relative-caret-position="1577">
           <caret line="83" column="17" lean-forward="false" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
           <folding>
-            <marker date="1521470162912" expanded="true" signature="5489:5513" ph="..." />
+            <marker date="1521470162000" expanded="true" signature="5489:5513" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1191,8 +1077,8 @@
         <state relative-caret-position="19">
           <caret line="180" column="63" lean-forward="false" selection-start-line="180" selection-start-column="63" selection-end-line="180" selection-end-column="63" />
           <folding>
-            <marker date="1521477811451" expanded="true" signature="14580:14792" ph="..." />
-            <marker date="1521477811451" expanded="true" signature="14877:14903" ph="..." />
+            <marker date="1521477811000" expanded="true" signature="14580:14792" ph="..." />
+            <marker date="1521477811000" expanded="true" signature="14877:14903" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1224,7 +1110,7 @@
     <entry file="file://$PROJECT_DIR$/static/CSS/body.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="580" column="16" lean-forward="true" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
+          <caret line="580" column="16" lean-forward="false" selection-start-line="580" selection-start-column="16" selection-end-line="580" selection-end-column="16" />
           <folding />
         </state>
       </provider>
